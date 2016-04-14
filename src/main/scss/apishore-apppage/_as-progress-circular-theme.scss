@@ -1,0 +1,74 @@
+$as-progress-primary-color: map-get($as-palette-primary, 500);
+$as-progress-warn-color: map-get($as-palette-warn, 500);
+$as-progress-accent-color: map-get($as-palette-accent, 500);
+
+.as-progress-circular {
+  background-color: transparent;
+  .as-inner {
+    .as-gap {
+      border-top-color: $as-progress-primary-color;
+      border-bottom-color: $as-progress-primary-color;
+    }
+    .as-left, .as-right {
+      .as-half-circle {
+        border-top-color: $as-progress-primary-color;
+      }
+    }
+    .as-right {
+      .as-half-circle {
+        border-right-color: $as-progress-primary-color;
+      }
+    }
+    .as-left {
+      .as-half-circle {
+        border-left-color: $as-progress-primary-color;
+      }
+    }
+  }
+  &.as-warn {
+    .as-inner {
+      .as-gap {
+        border-top-color: $as-progress-warn-color;
+        border-bottom-color: $as-progress-warn-color;
+      }
+      .as-left, .as-right {
+        .as-half-circle {
+          border-top-color: $as-progress-warn-color;
+        }
+      }
+      .as-right {
+        .as-half-circle {
+          border-right-color: $as-progress-warn-color;
+        }
+      }
+      .as-left {
+        .as-half-circle {
+          border-left-color: $as-progress-warn-color;
+        }
+      }
+    }
+  }
+  &.as-accent {
+    .as-inner {
+      .as-gap {
+        border-top-color: $as-progress-accent-color;
+        border-bottom-color: $as-progress-accent-color;
+      }
+      .as-left, .as-right {
+        .as-half-circle {
+          border-top-color: $as-progress-accent-color;
+        }
+      }
+      .as-right {
+        .as-half-circle {
+          border-right-color: $as-progress-accent-color;
+        }
+      }
+      .as-left {
+        .as-half-circle {
+          border-left-color: $as-progress-accent-color;
+        }
+      }
+    }
+  }
+}

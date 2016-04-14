@@ -1,0 +1,37 @@
+.as-view-settings
+{
+}
+.as-view-settings-section
+{
+	&.asa-grid
+	{
+		width: 400px;
+	}
+}
+
+.as-view-settings-section-title
+{
+	padding: $as-gutter;
+	padding-bottom: 0px;
+	font-size: 18px;
+}
+.as-view-settings-section-subtitle
+{
+	padding: $as-gutter;
+	display:none;
+}
+.as-view-settings-section-content
+{
+	position: relative;
+	padding: $as-gutter;
+}
+.as-view-settings-section-content-inner
+{
+	position: absolute;
+	left: $as-gutter;
+	top: $as-gutter;
+	right: $as-gutter;
+	bottom: $as-gutter;
+	border: solid 1px map-get($as-palette-grey, 200);
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+}

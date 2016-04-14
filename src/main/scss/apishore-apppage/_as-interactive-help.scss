@@ -1,0 +1,76 @@
+$as-interactive-help-width: 500px;
+$as-interactive-help-transition: all cubic-bezier(.25,.8,.25,1) .25s;
+
+.as-body-interactive-help-enabled
+{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: $as-interactive-help-width;
+	@include transition($as-interactive-help-transition);
+}
+.as-interactive-help
+{
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	z-index: 10;
+	background-color: map-get($as-palette-yellow, 50);
+	width: 20px;
+	overflow:hidden;
+	padding-left: $as-gutter * 3;
+	padding-right: $as-gutter * 2;
+	.as-vscroll
+	{
+		padding-right: $as-gutter * 1;
+	}
+	@include transition($as-interactive-help-transition);
+}
+.as-body-interactive-help-enabled
+{
+	.as-interactive-help
+	{
+		width: $as-interactive-help-width;
+	}
+}
+.as-interactive-help-header
+{
+	height: $as-main-menu-height;
+	min-height: $as-main-menu-height;
+	line-height: $as-main-menu-height;
+	font-size: 24px;
+	color: map-get($as-palette-yellow, 800);
+}
+.as-interactive-help-title
+{
+	height: $as-appbar-height;
+	min-height: $as-appbar-height;
+	line-height: $as-appbar-height;
+	border-top: solid 2px map-get($as-palette-yellow, 800);
+	font-size: 24px;
+	color: map-get($as-palette-fg, darken);
+}
+.as-interactive-help-summary
+{
+	flex-shrink:0;
+	padding-top: $as-gutter;
+	padding-bottom: $as-gutter;
+}
+.as-interactive-help-fieldset-title
+{
+	font-size: 16px;
+	&.asa-top-navigation
+	{
+		padding: $as-gutter;
+		color: map-get($as-palette-fg, dark);
+		font-weight: bold;
+		background-color: map-get($as-palette-yellow, 900);
+	}
+}
+.as-interactive-help-property-title
+{
+	text-transform: none;
+	font-weight: bold;
+}

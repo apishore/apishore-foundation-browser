@@ -1,0 +1,130 @@
+.image-editor
+{
+// in form
+.file-upload-preview
+{
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	padding: 5px;
+	width: 100%;
+	margin-bottom: 5px;
+	text-align:left;
+	@include clearfix();
+	
+	.file-upload-preview-actions
+	{
+		width: 175px;
+		margin-right: 15px;
+		border-right: 1px solid #ddd;
+		float:left;
+		.btn-group-vertical
+		{
+			width: 160px;
+		}
+		button
+		{
+			margin-bottom: 5px;
+		}
+	}
+	.file-upload-preview-image
+	{
+		float:left;
+	}
+}
+.image-crop-panel
+{
+	position: fixed;
+	top: 0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	z-index: 1000;
+	background-color: #fff;
+	.image-crop-panel-inner
+	{
+		position: absolute;
+		top: 0px;
+		left:0px;
+		right:0px;
+		bottom:0px;
+		.areaHint
+		{
+			left: 15px;
+			position: absolute;
+			width: 200px;
+			height: 80px;
+			line-height: 80px;
+			text-align:center;
+			font-size: 24px;
+			font-weight: 400;
+			letter-spacing:2px;
+		}
+		.previewArea
+		{
+			position: relative;
+			height: 40%;
+			background-color: #666;
+			.areaHint
+			{
+				bottom: 0px;
+				background-color: #eee;
+				border-top-right-radius: 20px;
+				border-top-left-radius: 20px;
+				color: #666;
+			}
+			.croppedImage
+			{
+				display:block;
+    			margin:auto;
+    			margin-top: 30px;
+				outline: none;
+			}
+		}
+		.cropArea
+		{
+			position: relative;
+			height: 60%;
+      		background: #E4E4E4;
+			.container.image
+			{
+				background-color: #eee;
+			}
+			.crop-buttons
+			{
+				display: block;
+				margin: auto;
+				margin-top: 30px;
+				.btn:first-child
+				{
+					margin-right: 30px;
+				}
+			}
+			.areaHint
+			{
+				background-color: #666;
+				border-bottom-right-radius: 20px;
+				border-bottom-left-radius: 20px;
+				color: #ccc;
+			}
+    	}
+	}
+}
+img-crop
+{
+	width: 100%;
+	height: 300px;
+	display: block;
+	position: relative;
+	overflow: hidden;
+	canvas
+	{
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		outline: none;
+		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	}
+}
+//END
+}

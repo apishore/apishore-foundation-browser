@@ -1,0 +1,282 @@
+$as-input-transition: all cubic-bezier(.25,.8,.25,1) .25s;
+$as-input-container-height: 52px;
+
+$as-input-font-size: 16px;
+$as-input-font-weight: bold;
+$as-input-padding: 2px;
+$as-input-height: 26px;
+
+$as-input-color-disabled: map-get($as-palette-grey, 300);
+		
+$as-input-label-height: 22px;
+$as-input-label-font-size: $as-input-font-size;
+$as-input-label-font-size-focus: 12px;
+$as-input-label-color: map-get($as-palette-black, dark);
+$as-input-label-color-focus: map-get($as-palette-primary, 500);
+$as-input-label-color-disabled: map-get($as-palette-grey, 300);
+
+
+$as-input-border-width: 1px;
+$as-input-border-color: map-get($as-palette-black, light);
+$as-input-border-color-focus: map-get($as-palette-primary, 500);
+$as-input-border-color-error: map-get($as-palette-error, 800);
+$as-input-border-color-disabled: map-get($as-palette-grey, 300);
+
+$as-input-message-color-error: map-get($as-palette-error, 300);
+
+$as-input-message-height: 20px;
+
+.as-input-control-label-in-between
+{
+	min-height: $as-input-container-height;
+	line-height: $as-input-container-height;
+	margin-top: 22px;
+	
+    padding: 2px;
+	padding-left: $as-gutter;
+	padding-right: $as-gutter;
+    font-size: 16px;
+    line-height: 26px;
+    color:map-get($as-palette-grey, 500);
+}
+.as-form-sentence
+{
+	position: relative;
+	.as-form-sentence-line
+	{
+		position: absolute;
+		border-bottom: 1px solid $as-input-border-color-disabled;
+		left: 0px;
+		right: 0px;
+		top: $as-input-label-height + $as-input-height + 4px;
+	}
+	&:hover
+	{
+		.as-form-sentence-line
+		{
+			border-bottom: 1px solid $as-input-border-color-focus;
+		}
+	}
+}
+.as-input-holder
+{
+	@extend .as-vbox;
+	@extend .as-cell-fixed;
+	position: relative;
+	margin-bottom: $as-input-height;
+	min-height: $as-input-container-height;
+	
+	&.asa-checkbox,
+	&.asa-inline-radio 
+	{
+		min-height: $as-gutter*2;
+	}
+	&.asa-input-focused,
+	&.asa-input-has-value,
+	&.asa-input-has-value-view
+	{
+		&>.as-input-label
+		{
+			top: 0px;
+			@include transition($as-input-transition);
+			font-size: $as-input-label-font-size-focus;
+			padding-left: 0px;
+			&.asa-sentence-mode
+			{
+				display:none;
+			}
+		}
+	}
+	&.asa-input-focused
+	{
+		&>.as-input-label
+		{
+		    color: 	$as-input-label-color-focus;
+		}
+	}
+	&.asa-disabled
+	{
+		&>.as-input-label
+		{
+		    color: 	$as-input-label-color-disabled;
+		}
+	}
+	&.asa-has-error
+	{
+		>.as-input
+		{
+			border-color: $as-input-border-color-error;
+		}
+	}
+	&:hover
+	{
+		.as-input-control,
+		.as-input-control-addon.asa-underline,
+		.select2-selection
+		{
+			border-bottom: 1px solid $as-input-border-color-focus;
+		}
+		.select2-selection__arrow
+		{
+			border-color: $as-input-border-color-focus;
+		}
+	}
+	&.asa-input-focused
+	{
+		.as-input-control,
+		.as-input-control-addon.asa-underline,
+		.select2-selection
+		{
+			padding-bottom: $as-input-border-width;
+			border-bottom: solid $as-input-padding $as-input-border-color-focus;
+		}
+		.select2-selection__arrow
+		{
+			border-color: $as-input-border-color-focus;
+		}
+	}
+}
+.as-input-label
+{
+	@extend .as-cell-fixed;
+	pointer-events: none;
+    -webkit-font-smoothing: antialiased;
+    
+	font-size: $as-input-label-font-size;
+    font-weight: normal;
+    
+    padding: $as-input-padding;
+    padding-left: 0px;
+    color: 	$as-input-label-color;
+	position: absolute;
+	top: $as-input-label-height;
+	&.asa-sentence-mode
+	{
+		display:none;
+	}
+	&.asa-left-addon
+	{
+		padding-left: 28px;
+	}
+	&.asa-small
+	{
+		top: 0px;
+		font-size: $as-input-label-font-size-focus;
+	}
+}
+textarea.as-input-control
+{
+	height:auto;
+	max-height: 159px;
+}
+.as-input-box-control
+{
+	@extend .as-cell-fixed;
+	width: 100%;
+	margin-top: $as-input-label-height;
+}
+.as-input-control
+{
+	width: 100%;
+	&.asa-sentence-mode
+	{
+		width: auto;
+	}
+}
+.as-input-control,
+.as-input-control-addon
+{
+	@extend .as-cell-fixed;
+	display: block;
+    margin: 0px;
+	margin-top: $as-input-label-height;
+	resize:vertical;
+	
+	padding: $as-input-padding;
+	background-color: rgba(0,0,0,0.1);
+	
+	@include as-remove-outline();
+    background: 0 0;
+    padding: $as-input-padding;
+    padding-left: 0px;
+    font-size: $as-input-font-size;
+	color: #000;
+	text-decoration:none;
+    line-height: $as-input-height;
+    height: $as-input-height;
+    -ms-flex-preferred-size: $as-input-height;
+
+    border-radius: 0;
+	border:none;
+	border-bottom: solid $as-input-border-width $as-input-border-color;
+	&:disabled
+	{
+		color: $as-input-color-disabled;
+		border-bottom: solid $as-input-border-width $as-input-border-color-disabled;
+	}
+	&.asa-number-type
+	{
+		/* Remove controls from Firefox */
+		-moz-appearance: textfield;
+		/* Remove controls from Safari and Chrome */
+		&::-webkit-inner-spin-button, 
+		&::-webkit-outer-spin-button
+		{
+			-webkit-appearance: none;
+			display: none;
+  			margin: 0; /* Removes leftover margin */
+		}
+	}
+	&.asa-label
+	{
+		color: map-get($as-palette-grey, 500);
+		border-bottom: solid $as-input-border-width transparent;
+		&.asa-before-label
+		{
+			padding-right: $as-gutter / 2;
+		}
+		&.asa-after-label
+		{
+			padding-left: $as-gutter / 2;
+			width: 100%;
+		}
+	}
+	.material-icons
+	{
+		border-bottom: solid 33px transparent;
+	}
+}
+
+.as-input-messages
+{
+	@extend .as-cell-fixed;
+	height:  $as-input-message-height;
+}
+.as-input-message
+{
+	height:  $as-input-message-height;
+	line-height:  $as-input-message-height;
+	font-size: 12px;
+	&.asa-error
+	{
+		color: $as-input-message-color-error;
+	}
+}
+
+/* Spin Buttons modified */
+.as-input-control::-webkit-outer-spin-button, 
+.as-input-control::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    background: #FFF url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAKUlEQVQYlWNgwAT/sYhhKPiPT+F/LJgEsHv37v+EMGkmkuImoh2NoQAANlcun/q4OoYAAAAASUVORK5CYII=) no-repeat center center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 30px;
+    border-left: 1px solid #000;
+    opacity: .5; /* shows Spin Buttons per default (Chrome >= 39) */
+}
+.as-input-control::-webkit-outer-spin-button
+{
+    border-left: 1px solid #F00;
+}

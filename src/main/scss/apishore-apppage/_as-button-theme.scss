@@ -1,0 +1,175 @@
+.as-button {
+
+  &:not([disabled]) {
+    &:hover {
+      background-color: map-get($as-palette-bg, dark);
+    }
+    &.as-focused {
+      background-color: map-get($as-palette-bg, dark);
+    }
+    &.as-icon-button:hover {
+      background-color: transparent;
+    }
+  }
+
+  &.asa-fab {
+    background-color: map-get($as-palette-accent, 500);
+    color: map-get($as-palette-accent-contrast, dark);
+    as-icon {
+      color: map-get($as-palette-accent-contrast, dark);
+    }
+    &:not([disabled]) {
+      &:hover {
+        background-color: map-get($as-palette-accent, 500);
+      }
+      &.as-focused {
+        background-color: map-get($as-palette-accent, 700);
+      }
+    }
+  }
+
+  &.asa-primary {
+    color: map-get($as-palette-primary, 500);
+    &.asa-raised,
+    &.asa-fab {
+      color: map-get($as-palette-primary-contrast, dark);
+      background-color: map-get($as-palette-primary, 500);
+      &:not([disabled]) {
+        as-icon {
+          color: map-get($as-palette-primary-contrast, dark);
+        }
+        &:hover {
+          background-color: map-get($as-palette-primary, 500);
+        }
+        &.asa-focused {
+          background-color: map-get($as-palette-primary, 600);
+        }
+      }
+    }
+    &:not([disabled]) {
+      as-icon {
+        color: map-get($as-palette-primary, 500);
+      }
+    }
+  }
+  &.asa-fab {
+    background-color: map-get($as-palette-accent, 500);
+    color: map-get($as-palette-accent-contrast, dark);
+    &:not([disabled]) {
+      .as-icon {
+        color: map-get($as-palette-accent-contrast, dark);
+      }
+      &:hover {
+        background-color: map-get($as-palette-accent, 500);
+      }
+      &.asa-focused {
+        background-color: map-get($as-palette-accent, 700);
+      }
+    }
+  }
+
+  &.asa-raised {
+    color: map-get($as-palette-fg, dark);
+    background-color: map-get($as-palette-bg, dark);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    &:not([disabled]) {
+      .as-icon {
+        color: map-get($as-palette-fg, dark);
+      }
+      &:hover {
+        background-color: map-get($as-palette-bg, dark);
+        box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+      }
+      &.asa-focused {
+        background-color: map-get($as-palette-bg, light);
+      }
+    }
+  }
+
+  &.asa-fill {
+    color: map-get($as-palette-bg, darker);
+    background-color: map-get($as-palette-primary, 500);
+    &:not([disabled]) {
+      .as-icon {
+        color: map-get($as-palette-fg, dark);
+      }
+      &:hover {
+        background-color: map-get($as-palette-primary, 300);
+      }
+      &.asa-focused {
+        background-color: map-get($as-palette-primary, 300);
+      }
+    }
+  }
+
+  &.asa-warn {
+    color: map-get($as-palette-warn, 500);
+
+    &.asa-raised,
+    &.asa-fab {
+      color: map-get($as-palette-warn-contrast, dark);
+      background-color: map-get($as-palette-warn, 500);
+      &:not([disabled]) {
+        as-icon {
+          color: map-get($as-palette-warn-contrast, dark);
+        }
+        &:hover {
+          background-color: map-get($as-palette-warn, 500);
+        }
+        &.asa-focused {
+          background-color: map-get($as-palette-warn, 700);
+        }
+      }
+    }
+    &:not([disabled]) {
+      as-icon {
+        color: map-get($as-palette-warn, 500);
+      }
+    }
+  }
+
+  &.as-accent {
+    color: map-get($as-palette-accent, 500);
+    &.asa-raised,
+    &.asa-fab {
+      color: map-get($as-palette-accent-contrast, dark);
+      background-color: map-get($as-palette-accent, 500);
+      &:not([disabled]) {
+        as-icon {
+          color: map-get($as-palette-accent-contrast, dark);
+        }
+        &:hover {
+          background-color: map-get($as-palette-accent, 500);
+        }
+        &.asa-focused {
+          background-color: map-get($as-palette-accent, 700);
+        }
+      }
+    }
+    &:not([disabled]) {
+      as-icon {
+        color: map-get($as-palette-accent, 500);
+      }
+    }
+  }
+
+  &[disabled],
+  &.asa-raised[disabled],
+  &.asa-fab[disabled],
+  &.asa-accent[disabled],
+  &.asa-warn[disabled] {
+    color: map-get($as-palette-fg, dark);
+    cursor: not-allowed;
+
+    as-icon {
+      color: map-get($as-palette-fg, dark);
+    }
+  }
+  &.asa-raised[disabled],
+  &.asa-fab[disabled] {
+    background-color: map-get($as-palette-fg, darker);
+  }
+  &[disabled] {
+    background-color: transparent;
+  }
+}

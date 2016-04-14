@@ -1,0 +1,119 @@
+@import "as-responsive";
+@import "as-box";
+@import "as-md-list";
+@import "number-polyfill";
+@import "as-grid-system";
+@import "as-apishore-demos";
+@import "as-text";
+
+/* angular-ui requirement for missed href */
+a
+{
+	cursor: pointer;
+}
+/* in IE10/11 an annoying tooltip will show up unless you add the following css: */
+::-ms-tooltip {
+    display: none;
+}
+
+.table-scrollable{
+    overflow: auto;
+}
+
+.wrapper {
+padding: 15px;
+}
+
+// DESKTOP
+.as-device-wide-desktop
+{
+	$as-appbar-height: $as-appbar-height-desktop;
+	$as-appbar-left-margin: -$as-sidebar-width-desktop;
+	$as-appbar-icon-tooltip-display: block;
+	$as-appbar-search-area-padding-left: $as-sidebar-width-wide-desktop;
+	$as-sidebar-width: $as-sidebar-width-wide-desktop;
+	$as-sidebar-width-desktop: $as-sidebar-width-wide-desktop;
+	$as-appbar-left-margin: -$as-sidebar-width-wide-desktop;
+	@import "all-responsive";
+}
+.as-device-desktop
+{
+	$as-appbar-height: $as-appbar-height-desktop;
+	$as-appbar-left-margin: -$as-sidebar-width-desktop;
+	$as-appbar-icon-tooltip-display: block;
+	$as-appbar-search-area-padding-left: $as-sidebar-width-desktop;
+	$as-sidebar-width: $as-sidebar-width-desktop;
+	$as-appbar-left-margin: -$as-sidebar-width-desktop;
+	@import "all-responsive";
+}
+
+.as-device-tablet
+{
+	$as-appbar-height: $as-appbar-height-tablet;
+	$as-sidebar-width: $as-sidebar-width-tablet;
+
+	$apishore-shift-menu-inner-width: $apishore-shift-menu-inner-width-tablet;
+
+	$as-sidebar-padding-top: $as-sidebar-padding-top-tablet;
+	$as-sidebar-padding-bottom: $as-sidebar-padding-bottom-tablet;
+
+	@import "all-responsive";
+}
+.as-device-phone-portrait
+{
+	$as-appbar-height: $as-appbar-height-phone-portrait;
+	$as-infobar-header-bg-color: map-get($as-palette-primary, 500);
+
+	$as-sidebar-padding-top: $as-sidebar-padding-top-tablet;
+	$as-sidebar-padding-bottom: $as-sidebar-padding-bottom-tablet;
+
+	@import "all-responsive";
+	.as-infobar-holder
+	{
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		background-color: #fff;
+		z-index: 1000;
+	}
+}
+.as-device-phone-landscape
+{
+	$as-appbar-height: $as-appbar-height-phone-landscape;
+	$as-infobar-header-bg-color: map-get($as-palette-primary, 500);
+
+	@import "all-responsive";
+	.as-infobar-holder
+	{
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		background-color: #fff;
+		z-index: 1000;
+	}
+}
+
+html
+{
+	overflow:hidden;
+	-webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+     -webkit-font-smoothing: antialiased;
+}
+body
+{
+	overflow:hidden;
+}
+
+.as-panel-tools
+{
+	min-height: $as-gutter * 2;
+	background-color: #e6e6e6;
+}
+
+@import "as-text-colors";

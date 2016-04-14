@@ -1,0 +1,174 @@
+$as-timeline-date-width: 200px;
+$as-timeline-avatar-size: 48px;
+$as-timeline-line-width: 2px;
+$as-timeline-avatar-border-width: $as-timeline-line-width;
+
+$as-timeline-circle-radius: 8px;
+$as-timeline-width: 2px;
+$as-timeline-vmargin: 16px;
+
+.as-timeline
+{
+	padding-top: $as-gutter;
+	padding-bottom: 8px;
+}
+.as-timeline-vertial
+{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: $as-timeline-date-width;
+	width: $as-timeline-line-width;
+	background-color: map-get($as-palette-grey, 200);
+}
+.as-timeline-item
+{
+	position: relative;
+	min-height: 60px;
+	padding-bottom: $as-timeline-vmargin * 3 / 2;
+}
+.as-timeline-item-user-avatar
+{
+	position: absolute;
+	left: $as-timeline-date-width - ($as-timeline-avatar-size - $as-timeline-avatar-border-width) / 2;
+	top: $as-timeline-vmargin;
+	background-color: #fff;
+	border-radius: $as-timeline-avatar-size;
+	border: solid $as-timeline-avatar-border-width map-get($as-palette-grey, 500);
+	width: $as-timeline-avatar-size;
+	height: $as-timeline-avatar-size;
+	cursor: default;
+	@include user-select(none);
+	&.asa-list
+	{
+		border-color: map-get($as-palette-grey, 500);
+	}
+	&.asa-create
+	{
+		border-color: map-get($as-palette-grey, 600);
+	}
+	&.asa-update
+	{
+		border-color: map-get($as-palette-grey, 500);
+	}
+	&.asa-view
+	{
+		border-color: map-get($as-palette-grey, 500);
+	}
+}
+.as-timeline-item-user-avatar-letter
+{
+	position: absolute;
+	width: $as-timeline-avatar-size - $as-timeline-avatar-border-width*2;
+	height: $as-timeline-avatar-size - $as-timeline-avatar-border-width*2;
+	text-align: center;
+	font-size: 18px;
+	text-transform: capitalize;
+	color: map-get($as-palette-grey, 500);
+	line-height: $as-timeline-avatar-size;
+}
+
+.as-timeline-item-date
+{
+	font-size: 13px;
+	color: map-get($as-palette-grey, 400);
+	position: absolute;
+	top: $as-timeline-vmargin + 8px;
+	width: $as-timeline-date-width - $as-timeline-vmargin * 2 - $as-timeline-avatar-size / 2 + $as-gutter/2;
+	left: $as-timeline-vmargin;
+	text-align: right;
+}
+.as-timeline-item-time
+{
+	font-size: 15px;
+	color: map-get($as-palette-grey, 600);
+	position: absolute;
+	top: $as-timeline-vmargin + 22px;
+	width: $as-timeline-date-width - $as-timeline-vmargin * 2 - $as-timeline-avatar-size / 2 + $as-gutter/2;
+	left: $as-timeline-vmargin;
+	text-align: right;
+}
+.as-timeline-item-box
+{
+	position: relative;
+	top: $as-timeline-vmargin;
+	left: $as-timeline-date-width + $as-timeline-avatar-size / 2 + $as-gutter;
+	right: 0px;
+	padding-left: $as-gutter;
+	max-width: 300px;
+	min-width: 300px;
+	font-weight: bold;
+	border: solid 1px map-get($as-palette-grey, 200);
+	border-left: solid 2px map-get($as-palette-grey, 200);
+	padding: $as-gutter;
+	border-radius: 4px;
+	&:hover
+	{
+		border-color: map-get($as-palette-grey, 300);
+		.as-timeline-item-title
+		{
+			color: map-get($as-palette-primary, 900);
+		}
+	}
+}
+.as-timeline-item-box-arrow1
+{
+	border: solid 11px transparent;
+	border-right-color: map-get($as-palette-grey, 200);
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	top: 13px;
+	left: -11px;
+	margin-left: -11px;
+	pointer-events: none;
+}
+.as-timeline-item-box-arrow2
+{
+	border: solid 9px transparent;
+	border-right-color: #fff;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	top: 15px;
+	left: -9px;
+	margin-left: -9px;
+	pointer-events: none;
+}
+.as-timeline-item-title
+{
+	font-size: 16px;
+	font-weight: normal;
+	color: map-get($as-palette-primary, 800);
+}
+.as-timeline-item-subtitle
+{
+	font-size: 14px;
+	font-weight: normal;
+	color: map-get($as-palette-grey, 600);
+	&.asa-list
+	{
+		color: map-get($as-palette-grey, 500);
+	}
+	&.asa-create
+	{
+		color: map-get($as-palette-red, 300);
+	}
+	&.asa-update
+	{
+		color: map-get($as-palette-grey, 800);
+	}
+	&.asa-view
+	{
+		color: map-get($as-palette-grey, 500);
+	}
+}
+.as-timeline-item-author
+{
+	font-size: 12px;
+	font-weight: normal;
+	font-style: italic;
+	color: map-get($as-palette-grey, 500);
+}

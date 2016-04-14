@@ -1,0 +1,90 @@
+$as-palette-bg: $as-palette-white;
+$as-palette-fg: $as-palette-black;
+$as-palette-dev: $as-palette-red;
+$as-palette-sidebar: $as-palette-blue-grey;
+
+$as-palette-primary: $as-palette-red;
+$as-palette-primary-contrast: $as-palette-bg;
+
+$as-palette-accent: $as-palette-blue;
+$as-palette-accent-contrast: $as-palette-bg;
+
+$as-palette-warn: $as-palette-pink;
+$as-palette-warn-contrast: $as-palette-bg;
+
+$as-palette-error: $as-palette-red;
+$as-palette-error-contrast: $as-palette-bg;
+
+$as-dialog-bg-color: map-get($as-palette-bg, darker);
+
+$brand-bg: map-get($as-palette-primary, 500);
+$font-size-small: 12px;
+$as-baseline-grid: $as-gutter / 2 !default;
+$as-grid-gutter: $as-gutter / 2 !default;
+
+// data table
+$as-data-table-column-padding: 24px !default;
+$as-sidebar-bg: #ebebeb !default;
+
+// panel
+$as-panel-header-height: 60px !default;
+
+// SHIFT MENU
+
+$apishore-shift-menu-inner-width: 80% !default;
+$apishore-shift-menu-inner-width-tablet: 40% !default;
+
+//APPBAR
+$as-appbar-left-margin: 0px !default;
+$as-appbar-height-desktop: 64px !default;
+$as-appbar-height-tablet: 64px !default;
+$as-appbar-height-phone-portrait: 56px !default;
+$as-appbar-height-phone-landscape: 48px !default;
+$as-appbar-bg-color: map-get($as-palette-primary, 50) !default;
+$as-appbar-icon-color: #555 !default;
+$as-appbar-icon-hover-color: #222 !default;
+$as-appbar-icon-tooltip-display: none !default;
+$as-appbar-search-area-padding-left: 0px !default;
+
+//DROP DOWN
+$as-dropdown-menu-title-height: 48px !default;
+// INFOBAR
+$as-infobar-header-bg-color: transparent !default;
+
+// SIDEBAR
+$as-sidebar-top-menu-bg-image: url('../img/as-sidebar-top-menu-bg.jpg') !default;
+$as-sidebar-top-menu-selector-color: rgba(#595D67,0.7) !default;
+$as-sidebar-width: 220px !default;
+$as-sidebar-width-wide-desktop: 320px !default;
+$as-sidebar-width-desktop: 250px !default;
+$as-sidebar-width-tablet: 220px !default;
+
+// SIDEBAR ITEM
+
+$as-sidebar-padding-top: 8px !default;
+$as-sidebar-padding-top-tablet: 14px !default;
+$as-sidebar-padding-bottom: 8px !default;
+$as-sidebar-padding-bottom-tablet: 14px !default;
+
+// MAIN-MENU
+$as-main-menu-height: 60px !default;
+$as-main-menu-bg-image: none !default;//url('/img/as-sidebar-top-menu-bg.jpg') !default;
+$as-main-menu-bg-color: #fff !default;
+
+// BREADCRUMB
+$as-breadcrumb-padding-vertical: $as-gutter*4/3 !default;
+$as-breadcrumb-padding-horizontal: $as-gutter/3 !default;
+$as-breadcrumb-color: #555 !default;
+$as-breadcrumb-current-color: #333 !default;
+
+//DIALOG
+$as-dialog-zindex: 10 !default;
+$as-dialog-bg-color: #fff !default;
+
+// branding images
+$as-brand-bg-color: rgba(#595D67, 0.7) !default;
+$as-brand-bg-image: none !default;
+$as-brand-logo: url('../img/logo.svg') !default;
+
+
+$as-zlevel-sidebar: 1000 !default;

@@ -1,0 +1,27 @@
+.as-responsive-info
+{
+	padding: $as-gutter;
+	color: #fff;
+	text-align:center;
+	font-size: 16px;
+	background-color: rgba(0,0,0,0.3);
+}
+.as-device-mobile
+{
+	.asd-phone { display:block; }
+	.asd-mobile { display:block; }
+}
+.as-device-tablet
+{
+	.asd-tablet { display:block; }
+	.asd-mobile { display:block; }
+	.asd-wide { display:block; }
+}
+.as-device-desktop
+{
+	.asd-desktop { display:block; }
+	.asd-wide { display:block; }
+}
+.asd-mobile { display:none; }
+.asd-tablet { display:none; }
+.asd-desktop { display:none; }

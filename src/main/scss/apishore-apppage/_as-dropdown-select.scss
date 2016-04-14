@@ -1,0 +1,117 @@
+$as-input-color-disabled: map-get($as-palette-grey, 300);
+$as-input-border-color-disabled: map-get($as-palette-grey, 300);
+$as-input-border-width: 1px;
+
+.as-dropdown-select-holder
+{
+	&:hover
+	{
+		.as-dropdown-select-arrow
+		{
+			border-color: map-get($as-palette-primary, 400) transparent transparent transparent;
+		}
+	}
+	-height: 53px;
+}
+
+.as-dropdown-select-arrow
+{
+	position: absolute;
+	top: 12px;
+	right: 4px;
+	height: 0px;
+	width:  0px;
+	border: solid 5px map-get($as-palette-grey, 400);
+	border-color: map-get($as-palette-grey, 400) transparent transparent transparent;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.asa-disabled
+{
+  .as-input-control {
+    color: $as-input-color-disabled;
+    border-bottom: solid $as-input-border-width $as-input-border-color-disabled;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+.as-dropdown-select-popup-bg
+{
+	display:none;
+	position: fixed;
+	left:0px; top: 0px; right: 0px; bottom:0px;
+}
+.as-dropdown-select-popup
+{
+	position: relative;
+}
+.as-dropdown-select-popup-content
+{
+	display:none;
+	max-height: 30vh;
+	overflow: auto;
+	margin-top: $as-gutter / 2;
+}
+.as-dropdown-select-popup-opened
+{
+	.as-dropdown-select-popup-bg
+	{
+		display:block;
+	}
+	.as-dropdown-select-arrow
+	{
+		display:none;
+	}
+	.as-dropdown-select-popup-outer
+	{
+		position: fixed;
+		left:0px; top: 0px; right: 0px; bottom:0px;
+		z-index: 1000;
+	}
+	.as-dropdown-select-popup
+	{
+		margin: -($as-gutter / 2 + 1px);
+		margin-top: - ($as-gutter / 2 + 4px);
+		z-index: 1001;
+		background-color: #fff;
+		border: solid 1px map-get($as-palette-grey, 100);
+		box-shadow: $as-whiteframe-shadow-2dp;
+		.asa-hide-in-popup
+		{
+			overflow:hidden;
+			height: 0px;
+			border: none;
+			margin: 0px;
+			padding: 0px;
+		}
+		.as-dropdown-select-popup-input-wrapper
+		{
+			padding-left: $as-gutter / 2;
+			padding-right: $as-gutter / 2;
+		}
+	}
+	.as-dropdown-select-popup-content
+	{
+		display: block;
+	}
+}
+.as-dropdown-select-popup-item
+{
+	padding: $as-gutter / 2;
+	&:hover
+	{
+		background-color: map-get($as-palette-grey, 100);
+	}
+	&.asa-selected
+	{
+		background-color: map-get($as-palette-primary, 500);
+		color: #fff;
+		&:hover
+		{
+			background-color: map-get($as-palette-grey, 100);
+			color: #000;
+		}
+	}
+}

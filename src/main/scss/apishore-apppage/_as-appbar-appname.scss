@@ -1,0 +1,25 @@
+.as-appbar-appname
+{
+	width: $as-sidebar-width;
+	font-weight: bold;
+   	font-size: 16px;
+   	font-weight: bold;
+   	color: map-get($as-palette-black, dark);
+   	line-height: $as-appbar-height;
+   	white-space:nowrap;
+   	padding-left: $as-gutter;
+	text-overflow: ellipsis;
+}
+.as-appbar-appname-decor
+{
+   	color: map-get($as-palette-black, light);
+}
+.as-appbar-appname-title
+{
+	color: map-get($as-palette-black, darken);
+	line-height: $as-appbar-height;
+	i
+	{
+		line-height: $as-appbar-height;
+	}
+}

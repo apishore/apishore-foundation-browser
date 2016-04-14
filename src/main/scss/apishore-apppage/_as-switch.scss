@@ -1,0 +1,115 @@
+$switch-width: 36px !default;
+$switch-height: $as-baseline-grid * 3 !default;
+$switch-bar-height: 14px !default;
+$switch-thumb-size: 20px !default;
+$switch-margin: 16px !default;
+
+.as-input-control-switch-label
+{
+	@extend .as-cell-fixed;
+	@extend .as-hbox;
+	line-height: $as-checkbox-size;
+	margin: 0px;
+	font-weight: normal;
+	span
+	{
+		@extend .as-cell-wide;
+		padding-left: $as-gutter / 2;
+	}
+}
+.as-input-control-switch-holder
+{
+	@extend .as-cell-fixed;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	height: $switch-height;
+	width: $switch-width;
+	margin-right: $as-checkbox-size * 0.3;
+	overflow:hidden;
+	cursor: pointer;
+	align-items: center;
+  	display: flex;
+	input
+	{
+	  	position: relative;
+  		display: block;
+  		top: -100px;
+	}
+	&:last-of-type
+	{
+		@include rtl(margin-left, inherit, 0);
+		@include rtl(margin-right, 0, inherit);
+  	}
+  	&:asa-disabled
+  	{
+    	cursor: default;
+		.as-container
+		{
+      		cursor: default;
+    	}
+  	}
+}
+.as-input-control-switch-bar
+{
+    left: 1px;
+    width: $switch-width - 2px;
+    top: $switch-height / 2 - $switch-bar-height / 2;
+    height: $switch-bar-height;
+    border-radius: 8px;
+    position: absolute;
+}
+
+.as-input-control-switch-thumb
+{
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 1px;
+    outline: none;
+    height: $switch-thumb-size;
+    width: $switch-thumb-size;
+    border-radius: 50%;
+    box-shadow: $as-whiteframe-shadow-1dp;
+	&.asa-checked
+	{
+		left: $switch-width - $switch-thumb-size;
+	}
+    &:before {
+      background-color: transparent;
+      border-radius: 50%;
+      content: '';
+      position: absolute;
+      display: block;
+      height: auto;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      transition: all 0.5s;
+      width: auto;
+    }
+}
+
+.as-inline-form {
+  .as-input-control-switch-holder {
+    margin-top: 18px;
+    margin-bottom: 19px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active)
+{
+	.as-input-control-switch-bar
+	{
+    	background-color: #666;
+	}
+	.as-input-control-switch-bar.asa-checked
+	{
+    	background-color: #9E9E9E;
+	}
+	.as-input-control-switch-thumb.asa-checked
+	{
+	    background-color: #fff;
+	}
+}

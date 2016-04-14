@@ -1,0 +1,31 @@
+.as-grid
+{
+	&.asa-page-header
+	{
+		border-bottom: solid 4px map-get($as-palette-primary, 500);
+	}
+}
+.as-grid-cell
+{
+	>.as-text-panel
+	{
+		padding-top: $as-gutter;
+	}
+	&.asa-intro
+	{
+		font-size: 22px;
+		color: map-get($as-palette-fg, light);
+		a
+		{
+			color: map-get($as-palette-primary, 800);
+			text-decoration:none;
+			font-size: 18px;
+		}
+	}
+	&.asa-info
+	{
+		margin: $as-gutter;
+		padding-left: $as-gutter;
+		border-left: solid 1px #999;
+	}
+}

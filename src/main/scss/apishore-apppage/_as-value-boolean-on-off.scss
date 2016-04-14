@@ -1,0 +1,30 @@
+.as-value-boolean-on-off
+{
+	margin-right: $as-gutter / 2;
+}
+.as-value-boolean-on-off-start,
+.as-value-boolean-on-off-end
+{
+	width: 6px;
+	height: 20px;
+	margin-top: 2px;
+	border: solid 2px map-get($as-palette-grey, 500);
+}
+.as-value-boolean-on-off-start
+{
+	border-right: none;
+}
+.as-value-boolean-on-off-end
+{
+	border-left: none;
+}
+.as-value-boolean-on-off-value
+{
+	width: 30px;
+	text-align: center;
+	color: map-get($as-palette-grey, 500);
+	&.asa-true
+	{
+		color: map-get($as-palette-primary, 500);
+	}
+}

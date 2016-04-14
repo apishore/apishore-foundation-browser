@@ -1,0 +1,13 @@
+$as-list-type-2cols-content-border-color: map-get($as-palette-grey, 200);
+
+.as-list-type-2cols
+{
+	border: solid 1px $as-list-type-2cols-content-border-color;
+}
+.as-list-type-2cols-title
+{
+	padding: $as-gutter;
+}
+.as-list-type-2cols-content
+{
+}

@@ -1,0 +1,24 @@
+.as-geo-area-picker
+{
+}
+.as-geo-area-picker-control
+{
+	width: 100%;
+	height: 400px;
+	margin-top: $as-gutter;
+	border: solid 1px map-get($as-palette-grey, 500);
+}
+.angular-google-map
+{
+	position:relative;
+	width: 100%;
+	height: 400px;
+}
+.angular-google-map-container
+{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}

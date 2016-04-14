@@ -1,0 +1,28 @@
+.as-infobar-workflow-holder
+{
+	background-color: map-get($as-palette-white, darker);
+	border: solid 1px map-get($as-palette-black, lighter);
+	border-bottom: solid 3px map-get($as-palette-black, lighter);
+}
+.as-infobar-workflow-state-info
+{
+	padding: $as-gutter;
+	&.asa-normal
+	{
+		border-top: solid 2px map-get($as-palette-black, dark);
+		color: map-get($as-palette-black, dark);
+	}
+	&.asa-warn
+	{
+		color: map-get($as-palette-warn, 500);
+		font-weight: bold;
+	}
+	&.asa-attention
+	{
+		border-top: solid 2px map-get($as-palette-warn, 500);
+		color: map-get($as-palette-black, darker);
+	}
+}
+
+
+

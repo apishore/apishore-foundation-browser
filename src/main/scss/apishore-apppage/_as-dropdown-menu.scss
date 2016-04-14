@@ -1,0 +1,66 @@
+.as-dropdown-menu-holder
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: $as-z-index-menu-bg;
+	cursor:default;
+}
+.as-dropdown-menu
+{
+	@include user-select(none);
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background-color: #fff;
+	z-index: $as-z-index-menu;
+	@extend .as-whiteframe-8dp;
+	&.asa-for-appbar-icon
+	{
+		top: $as-appbar-height - $as-dropdown-menu-title-height;
+	}
+}
+.as-dropdown-menu-title
+{
+	height: $as-dropdown-menu-title-height;
+	line-height: $as-dropdown-menu-title-height;
+	padding-left: $as-gutter;
+	padding-right: $as-gutter * 5;
+	font-size: 16px;
+	white-space: nowrap;
+	background-color: map-get($as-palette-black, light);
+}
+.as-dropdown-menu-item
+{
+	@extend .as-hbox;
+	text-decoration:none;
+	background-color: map-get($as-palette-grey, 50);
+	border-left: solid 4px transparent;
+	padding: $as-gutter / 2;
+	padding-left: $as-gutter / 4;
+	&:hover
+	{
+		text-decoration:none;
+		background-color: map-get($as-palette-grey, 100);
+		border-left: solid 4px map-get($as-palette-primary, 500);
+		color: map-get($as-palette-primary, 500);
+	}
+}
+.as-dropdown-menu-item-right-icon
+{
+	width: 32px;
+	margin-left: $as-gutter;
+}
+.as-dropdown-menu-item-icon
+{
+	padding: $as-gutter;
+	line-height: 16px;
+}
+.as-dropdown-menu-item-label
+{
+	padding-left: $as-gutter;
+	line-height: 24px;
+	white-space: nowrap;
+}

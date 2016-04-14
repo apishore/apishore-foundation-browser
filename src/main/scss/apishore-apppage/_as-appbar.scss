@@ -1,0 +1,249 @@
+@import "as-appbar-appname";
+@import "as-appbar-apptitle";
+.as-appbar
+{
+	height: $as-appbar-height;
+	margin-left: $as-appbar-left-margin;
+	background-color: map-get($as-palette-grey,100);//$as-appbar-bg-color;
+	border-top: solid 1px map-get($as-palette-black, lighter);
+	box-shadow: 0px 3px 3px rgba(0,0,0,0.15);
+	z-index:1;
+	h1
+	{
+		padding: 0px;
+		text-transform:none;
+		line-height: $as-appbar-height;
+		margin:0px;
+		font-weight: bold;
+    	font-size: 16px;
+    	font-weight: bold;
+    	color: map-get($as-palette-grey, 700);
+    	line-height: $as-appbar-height;
+		white-space:nowrap;
+		text-overflow: ellipsis;
+		&:first-child
+		{
+			padding-left: 24px;
+		}
+	}
+}
+$as-appbar-icon-width: $as-appbar-height * 7 / 10;
+
+.as-appbar-icon-group
+{
+	@extend .as-hbox;
+	height: 30px;
+	margin-top: 16px;
+	margin-right: 16px;
+	border: solid 1px rgba(0,0,0,0.1);
+	border-radius: 4px;
+	overflow: hidden;
+	.as-appbar-icon
+	{
+		height: 100%;
+		min-width: $as-appbar-icon-width * 3 / 4;
+		border-right: 1px solid rgba(0,0,0,0.1);
+		.material-icons
+		{
+			width: 100%;
+			margin: 0;
+			text-align: center;
+		}
+		&:last-child
+		{
+			margin-right: 0;
+			border-right: 0;
+		}
+		&.asa-checked
+		{
+			.material-icons
+			{
+				background-color: map-get($as-palette-grey, 300);
+				box-shadow: none;
+				color: map-get($as-palette-primary, 500);
+				border-radius: 0;
+			}
+		}
+	}	
+}
+.as-appbar-icon
+{
+	@include user-select(none);
+	font-size: 18px;
+	min-width: $as-appbar-icon-width;
+	position:relative;
+	color: $as-appbar-icon-color;
+	background-color:transparent;
+	border:none;
+	outline: none;
+	margin:0px;
+	padding: 0px;
+	@extend .as-hbox;
+	
+	&.asa-checked
+	{
+		.material-icons
+		{
+			background-color: rgba(255,255,255, 0.7);
+			box-shadow: inset 1px 1px 5px rgba(0,0,0,0.2);
+			border-radius: 4px;
+			color: map-get($as-palette-primary, 500);
+		}
+	}
+	&:last-child
+	{
+		margin-right: ($as-appbar-icon-width - 24px)/2;
+	}
+	i
+	{
+		display: inline-block;
+	}		
+	span
+	{
+		line-height: $as-appbar-height;
+		margin-left: -$as-gutter / 3;
+		padding-right: $as-gutter;
+		display: inline-block;
+		font-size: 16px;
+	}
+	.material-icons
+	{
+		margin-left: ($as-appbar-icon-width - 24px)/2 - 2px;
+		margin-right: ($as-appbar-icon-width - 24px)/2 - 2px;
+		margin-top: ($as-appbar-height - 24px)/2 - 2px;
+		margin-bottom: ($as-appbar-height - 24px)/2 - 2px;
+		padding: 2px;
+	}
+	&:hover, &:focus
+	{
+		text-decoration:none;
+	}
+	&:focus
+	{
+		.as-appbar-icon-tooltip
+		{
+			display: none;
+		}
+	}
+	&:hover
+	{
+		color: map-get($as-palette-primary, 500);
+		.as-appbar-icon-tooltip
+		{
+			display: $as-appbar-icon-tooltip-display;
+		}
+	}
+	&.asa-clicked:hover
+	{
+		.as-appbar-icon-tooltip
+		{
+			display: none;
+		}
+	}
+}
+.as-appbar-workflow
+{
+	@extend .as-hbox;
+	height: $as-appbar-height;
+}
+
+.as-appbar-button
+{
+	@extend .as-cell-fixed;
+	@include user-select(none);
+	font-size: 16px;
+	color: $as-appbar-icon-color;
+	background-color:transparent;
+	outline: none;
+	margin:0px;
+	padding: 0px;
+	padding-left: $as-gutter / 2;
+	padding-right: $as-gutter / 2;
+	line-height: $as-appbar-height;
+	&:hover
+	{
+		color: map-get($as-palette-primary, 500);
+	}
+}
+
+.as-appbar-icon-tooltip
+{
+	display: none;
+	@include transition(All 0.5s ease);
+	position: absolute;
+	top: $as-appbar-height - 3;
+	right: 0px;
+	padding: 0px;
+	padding: $as-gutter / 2;
+	padding-left: $as-gutter * 2;
+	padding-right: $as-gutter * 2;
+	font-size: 13px;
+	background-color: #fff;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	color: #333;
+	color: map-get($as-palette-fg, darken);
+	box-shadow: 2px 10px 10px rgba(0,0,0,0.5);
+	white-space: nowrap;
+	border-top: solid 2px map-get($as-palette-primary, 500);//map-get($as-palette-yellow, 800);
+	.asa-details
+	{
+		color: #555;
+		font-size: 12px;
+	}
+	&:before
+	{
+		bottom: 100%;
+		right: $as-appbar-icon-width / 3;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-color: transparent;
+		border-bottom-color: map-get($as-palette-primary, 500);//map-get($as-palette-yellow, 800);
+		border-width: 6px;
+	}
+}
+.as-appbar-search-area
+{
+	.asa-icon-back {color: #333}
+	overflow:hidden;
+	position:absolute;
+	right:0px;
+	width: 0px;
+	top:0px;
+	bottom: 2px;
+	height: $as-appbar-height - 2px;
+	@include transition(background-color 0.2s ease);
+	z-index:1;
+	&.asa-show
+	{
+		@include transition(background-color 0.2s ease);
+		padding-left: $as-appbar-search-area-padding-left;
+		width: 100%;
+		background-color: #fff;
+	}
+	.asa-input-holder
+	{
+	}
+	i
+	{
+		&:hover, &:focus
+		{
+			color: map-get($as-palette-cyan, 500);
+		}
+	}
+}
+.as-appbar-search-area-input
+{
+	width: 100%;
+	background-color:transparent;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	height: $as-appbar-height - 2px;
+	padding-left: 4px;
+	line-height: $as-appbar-height - 2px;
+}

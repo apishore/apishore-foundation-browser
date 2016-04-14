@@ -1,0 +1,263 @@
+$as-button-border-radius: 2px !default;
+$as-button-fab-border-radius: 50% !default;
+$as-button-icon-border-radius: $as-button-fab-border-radius;
+
+$as-button-line-height: rem(3.60) !default;
+$as-button-padding: 0 rem(0.600) !default;
+$as-button-margin: rem(0.600) rem(0.800) !default;
+$as-button-min-width: rem(8.800) !default;
+
+// Fab buttons
+$as-button-fab-line-height: rem(5.600) !default;
+$as-button-fab-mini-width: rem(4.00) !default;
+$as-button-fab-mini-height: rem(4.00) !default;
+$as-button-fab-mini-line-height: rem(4.00) !default;
+
+$as-button-fab-toast-offset: $as-button-fab-height * 0.75 !default;
+
+$as-icon-button-height: rem(4.800) !default;
+$as-icon-button-width: rem(4.800) !default;
+$as-icon-button-margin: rem(0.600) !default;
+
+.as-button
+{
+	border-radius: $as-button-border-radius;
+	box-sizing: border-box;
+	color: currentColor;
+	@include user-select(none);
+	position: relative; //for child absolute-positioned <canvas>
+
+  outline: none;
+  border: 0;
+  display: inline-block;
+  align-items: center;
+  padding: $as-button-padding;
+  margin: $as-button-margin;
+  line-height: $as-button-line-height;
+  min-height: $as-button-line-height;
+  background: transparent;
+  white-space: nowrap;
+  // override for FAB, icon buttons, etc.
+  min-width: $as-button-min-width;
+
+  text-align: center;
+
+  // Always uppercase buttons
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: $as-body-font-size-base;
+  font-style: inherit;
+  font-variant: inherit;
+  font-family: inherit;
+  text-decoration: none;
+
+  cursor: pointer;
+  overflow: hidden;   // for ink containment
+
+  transition: box-shadow $as-swift-ease-out-duration $as-swift-ease-out-timing-function,
+              background-color $as-swift-ease-out-duration $as-swift-ease-out-timing-function;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+
+  &.ng-hide, &.ng-leave {
+    transition: none;
+  }
+
+  &.as-cornered {
+    border-radius: 0;
+  }
+
+  &.asa-icon {
+    padding: 0;
+    background: none;
+    min-width: initial;
+    line-height: 37px;
+  }
+
+  &.asa-inline
+  {
+  	margin: 0px;
+  	&.asa-primary
+  	{
+  		background-color: map-get($as-palette-primary, 500);
+  		color: map-get($as-palette-bg, darker);
+  	}
+  	&:hover
+  	{
+  		&.asa-primary
+  		{
+  			background-color: map-get($as-palette-primary, 600);
+  			color: map-get($as-palette-bg, darker);
+	  	}
+  	}
+  }
+  &.asa-flat {
+    &:not([disabled]) {
+    	&:hover,
+    	&:focus
+    	{
+    		background-color: map-get($as-palette-grey, 100);
+    	}
+    }
+  }
+
+  &.asa-raised {
+    &:not([disabled]) {
+      @include as-shadow-bottom-z-1();
+    }
+  }
+  &.asa-round {
+    border-radius: 50%;
+  }
+  &.as-icon-button {
+    margin: 0 $as-icon-button-margin;
+    height: $as-icon-button-height;
+    min-width: 0;
+    line-height: $as-icon-button-height;
+    padding-left: 0;
+    padding-right: 0;
+    width: $as-icon-button-width;
+    border-radius: $as-button-icon-border-radius;
+    .as-ripple-container {
+      border-radius: $as-button-icon-border-radius;
+      background-clip: padding-box;
+      overflow: hidden;
+      // The following hack causes Safari/Chrome to respect overflow hidden for ripples
+      -webkit-mask-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC');
+    }
+  }
+
+  &.as-fab {
+
+    // Include the top/left/bottom/right fab positions
+    @include fab-all-positions();
+
+    z-index: $as-z-index-fab;
+
+    line-height: $as-button-fab-line-height;
+    min-width: 0;
+    width: $as-button-fab-width;
+    height: $as-button-fab-height;
+    vertical-align: middle;
+
+    @include as-shadow-bottom-z-1();
+    border-radius: $as-button-fab-border-radius;
+    background-clip: padding-box;
+    overflow: hidden;
+
+    transition: 0.2s linear;
+    transition-property: background-color, box-shadow;
+    .as-ripple-container {
+      border-radius: $as-button-fab-border-radius;
+      background-clip: padding-box;
+      overflow: hidden;
+      // The following hack causes Safari/Chrome to respect overflow hidden for ripples
+      -webkit-mask-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC');
+    }
+
+    &.as-mini {
+      line-height: $as-button-fab-mini-line-height;
+      width: $as-button-fab-mini-width;
+      height: $as-button-fab-mini-height;
+    }
+
+  }
+
+  &:not([disabled]) {
+    &.as-raised,
+    &.as-fab {
+      &.as-focused {
+        @include as-shadow-bottom-z-1();
+      }
+      &:active {
+        @include as-shadow-bottom-z-2();
+      }
+    }
+  }
+
+  .as-ripple-container {
+    border-radius: $as-button-border-radius;
+    background-clip: padding-box;
+    overflow: hidden;
+    // The following hack causes Safari/Chrome to respect overflow hidden for ripples
+    -webkit-mask-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC');
+  }
+}
+
+.as-toast-open-top {
+  .as-button.as-fab-top-left,
+  .as-button.as-fab-top-right {
+    transform: translate3d(0, $as-button-fab-toast-offset, 0);
+    &:not([disabled]) {
+      &.as-focused,
+      &:hover {
+        transform: translate3d(0, $as-button-fab-toast-offset - 1, 0);
+      }
+    }
+  }
+}
+
+.as-toast-open-bottom {
+  .as-button.as-fab-bottom-left,
+  .as-button.as-fab-bottom-right {
+    transform: translate3d(0, -$as-button-fab-toast-offset, 0);
+    &:not([disabled]) {
+      &.as-focused,
+      &:hover {
+        transform: translate3d(0, -$as-button-fab-toast-offset - 1, 0);
+      }
+    }
+  }
+}
+
+.as-button-group {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
+.as-button-group > .as-button {
+  flex: 1;
+
+  display: block;
+
+  overflow: hidden;
+
+  width: 0;
+
+  border-width: 1px 0px 1px 1px;
+  border-radius: 0;
+
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &:first-child {
+    border-radius: 2px 0px 0px 2px;
+  }
+  &:last-child {
+    border-right-width: 1px;
+    border-radius: 0px 2px 2px 0px;
+  }
+}
+@media screen and (-ms-high-contrast: active) {
+  .as-button.as-raised,
+  .as-button.as-fab {
+    border: 1px solid #fff;
+  }
+}
+
+///
+/// @private
+///
+.btn-actions-group
+{
+	display:inline-block;
+	float:left;
+}

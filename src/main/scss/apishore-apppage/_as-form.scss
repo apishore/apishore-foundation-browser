@@ -1,0 +1,16 @@
+.as-form
+{
+	@extend .as-panel;
+}
+.as-form-content
+{
+	padding: $as-gutter;
+	padding-top: 0px;
+}
+.as-form-delimiter-label
+{
+	&:last-child
+	{
+		display:none;
+	}
+}

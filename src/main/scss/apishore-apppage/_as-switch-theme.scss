@@ -1,0 +1,22 @@
+.as-input-control-switch-bar
+{
+    &.asa-primary
+    {
+		background-color: map-get($as-palette-grey, 500);
+    	&.asa-checked
+    	{
+        	background-color: map-get($as-palette-primary, 300);
+        }    
+    }
+}
+.as-input-control-switch-thumb
+{
+    &.asa-primary
+    {
+    	background-color: map-get($as-palette-grey, 200);
+    	&.asa-checked
+    	{
+        	background-color: map-get($as-palette-primary, 500);
+        }
+    }
+}

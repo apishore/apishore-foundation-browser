@@ -1,0 +1,17 @@
+.as-cell-wide,
+.as-cell-fixed
+{
+	.asa-form-block
+	{
+		padding-left: $as-gutter;
+		padding-right: $as-gutter;
+		&:first-child
+		{
+			padding-left: 0px;
+		}
+		&:last-child
+		{
+			padding-right: 0px;
+		}
+	}
+}

@@ -1,0 +1,21 @@
+.as-input-suggestion-group
+{
+	position: relative;
+	font-size: 12px;
+	padding-top: $as-gutter / 4;
+}
+.as-input-suggestion-group-label
+{
+	color: map-get($as-palette-grey, 600);
+}
+.as-input-suggestion
+{
+	color: map-get($as-palette-accent, 500);
+	border-left: solid 1px map-get($as-palette-grey, 400);
+	padding-left: $as-gutter / 4;
+	padding-left: $as-gutter / 4;
+	&:hover
+	{
+		color: map-get($as-palette-accent, 800);
+	}
+}

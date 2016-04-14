@@ -1,0 +1,44 @@
+.as-progress-linear {
+  .as-container {
+    background-color: map-get($as-palette-primary, 100)inherit;
+  }
+
+  .as-bar {
+    background-color: map-get($as-palette-primary, 500);
+  }
+
+  &.as-warn .as-container {
+    background-color: map-get($as-palette-warn, 100);
+  }
+
+  &.as-warn .as-bar {
+    background-color: map-get($as-palette-warn, 500);
+  }
+
+  &.as-accent .as-container {
+    background-color: map-get($as-palette-accent, 100);
+  }
+
+  &.as-accent .as-bar {
+    background-color: map-get($as-palette-accent, 500);
+  }
+
+  &[as-mode=buffer] {
+    &.as-warn {
+      .as-bar1 {
+        background-color: map-get($as-palette-warn, 100);
+      }
+      .as-dashed:before {
+        background: radial-gradient(map-get($as-palette-warn, 100) 0%, map-get($as-palette-warn, 100) 16%, transparent 42%);
+      }
+    }
+    &.as-accent {
+      .as-bar1 {
+        background-color: map-get($as-palette-accent, 100);
+      }
+      .as-dashed:before {
+        background: radial-gradient(map-get($as-palette-accent, 100) 0%, map-get($as-palette-accent, 100) 16%, transparent 42%);
+      }
+    }
+  }
+}

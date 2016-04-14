@@ -1,0 +1,17 @@
+.as-inline-form-holder
+{
+	background-color: map-get($as-palette-grey, 200);
+	padding: $as-gutter;
+}
+.as-inline-form
+{
+	&.asa-top
+	{
+		
+	}
+}
+.as-inline-form-content
+{
+	@extend .as-vscroll;
+	max-height: 300px;
+}

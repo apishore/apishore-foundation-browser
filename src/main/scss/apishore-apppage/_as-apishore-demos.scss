@@ -1,0 +1,39 @@
+.as-device-demo
+{
+	border: solid 10px map-get($as-palette-blue, 500);
+	padding: 10px;
+}
+
+.as-grid-container
+{
+	&.as-grid-container-demo
+	{
+		margin: 0px;
+		margin-bottom: $as-grid-gutter;
+		border-top: solid 1px map-get($as-palette-grey, 500);
+		border-left: solid 1px map-get($as-palette-grey, 500);	
+	}
+	&.as-grid-container-demo-gutter
+	{
+	}
+	
+	.as-grid-cell-demo
+	{
+		background-color: map-get($as-palette-grey, 200);
+		text-align: center;
+		padding: $as-grid-gutter;
+		border-right: solid 1px map-get($as-palette-grey, 500);
+		border-bottom: solid 1px map-get($as-palette-grey, 500);
+	}
+	.asa-gutter
+	{
+		&.as-grid-container-demo
+		{
+			border: none;
+		}
+		.as-grid-cell-demo
+		{
+			border:none;
+		}
+	}
+}

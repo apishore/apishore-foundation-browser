@@ -1,0 +1,67 @@
+$as-code-border: solid 1px map-get($as-palette-fg, light);
+$as-code-border-radius: 2px;
+
+.as-code
+{
+	font: Courier;
+	padding: $as-gutter/8 $as-gutter/2;
+	border-radius: $as-code-border-radius;
+	background-color: map-get($as-palette-fg, lighter);
+	font-size: 13px;
+	&.asa-path
+	{
+		border: $as-code-border;
+	}
+	&.asa-http-method
+	{
+		border: $as-code-border;
+		margin-right: $as-gutter/2;
+		>a
+		{
+			text-decoration:none;
+		}
+	}
+	&.asa-name
+	{
+		background-color: transparent;
+		border:none;
+		color: map-get($as-palette-green, 800);
+		font-size: inherit;
+		padding:0px;
+	}
+}
+.as-code-path-id
+{
+	color: map-get($as-palette-green, 800);
+}
+.as-http-method-doc
+{
+	@extend .as-vbox;
+	background-color:#eee;
+	border: $as-code-border;
+	font-size: 13px;
+}
+.as-http-method-doc-url
+{
+	border-bottom: $as-code-border;
+	border-radius: $as-code-border-radius;
+	padding: $as-gutter;
+}
+.as-http-method-doc-parameter
+{
+	@extend .as-hbox;
+}
+.as-http-method-doc-parameter-name
+{
+	@extend .as-cell-fixed;
+	padding: $as-gutter;
+	border-right: $as-code-border;
+	min-width: 40%;
+	max-width: 40%;
+	text-align: right;
+}
+.as-http-method-doc-parameter-desc
+{
+	@extend .as-cell-wide;
+	padding: $as-gutter;
+}

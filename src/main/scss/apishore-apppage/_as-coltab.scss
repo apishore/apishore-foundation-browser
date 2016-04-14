@@ -1,0 +1,23 @@
+.as-coltab
+{
+	
+}
+.as-coltab-tabs-holder
+{
+}
+.as-coltab-panel-holder
+{
+}
+.as-coltab-panel
+{
+	&.asa-recent
+	{
+		min-width: 25%;
+	}
+}
+.as-coltab-panel-header
+{
+	padding: $as-gutter;
+	font-size: 18px;
+	color: map-get($as-palette-grey, 600);
+}

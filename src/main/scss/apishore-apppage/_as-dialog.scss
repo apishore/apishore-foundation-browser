@@ -1,0 +1,164 @@
+// Variables
+$as-dialog-padding: $as-baseline-grid * 3;
+
+//
+.as-dialog-holder
+{
+	display:none;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background-color: rgba(0,0,0,0);
+	z-index: $as-dialog-zindex;
+	&.asa-show
+	{
+		display: block;
+	}
+	&.asa-transition-in
+	{
+		background-color: rgba(0,0,0,0.1);
+		@include transition($as-swift-ease-out);
+	}
+}
+.as-dialog-holder-inner
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	&.asa-auto
+	{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+.as-dialog
+{
+	position: relative;
+	top: 0px;
+	left: 0px;
+	display:inline-block;
+	min-width: 20%;
+	background-color: $as-dialog-bg-color;
+	&.asa-form
+	{
+		min-width: 50%;
+	}
+	&.asa-login-form
+	{
+		min-width: 450px;
+		max-width: 450px;
+		box-shadow: $as-whiteframe-shadow-5dp;
+	}
+}
+.as-dialog-header
+{
+	padding: $as-dialog-padding;
+	background-color: map-get($as-palette-grey, 50);
+	border-bottom: solid 1px map-get($as-palette-grey, 200);
+}
+
+.as-dialog-is-showing {
+  max-height: 100%;
+}
+
+.as-dialog {
+  &.asa-transition-in {
+    opacity: 1;
+    transition: $as-swift-ease-out;
+    transform: translate3d(0,0,0) scale(1.0);
+  }
+  &.asa-transition-out {
+    opacity: 0;
+    transition: $as-swift-ease-out;
+    transform: translate3d(0,100%,0) scale(0.2);
+  }
+
+  opacity: 0;
+  min-width: 240px;
+  max-width: 80%;
+  max-height: 80%;
+  position: relative;
+  overflow: auto; // stop content from leaking out of dialog parent and fix IE
+
+  box-shadow: $as-whiteframe-shadow-13dp;
+
+  display: flex;
+  flex-direction: column;
+
+  &> form {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+  .as-dialog-content {
+    order: 1;
+    flex-direction: column;
+    padding: $as-dialog-padding;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    &:not([layout=row]) > *:first-child:not(.as-subheader) {
+      margin-top: 0;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    .as-subheader {
+      margin: 0;
+
+      &.sticky-clone {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+      }
+    }
+    &.sticky-container {
+      padding: 0;
+
+      &> div {
+        padding: $as-dialog-padding;
+        padding-top: 0;
+      }
+    }
+
+    .as-dialog-content-body {
+      width:100%;
+    }
+  }
+
+  &.as-content-overflow .as-actions {
+    border-top-width: 1px;
+    border-top-style: solid;
+  }
+
+}
+.as-dialog-actions {
+    display: flex;
+    order: 2;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 0;
+    padding-right: $as-baseline-grid;
+    padding-left: $as-baseline-grid * 2;
+    min-height: $as-baseline-grid * 6.5;
+    overflow: hidden;
+
+    .as-button {
+      margin-bottom: $as-baseline-grid;
+      margin-left: $as-baseline-grid;
+      margin-right: 0;
+      margin-top: $as-baseline-grid;
+    }
+  }
+  
+@media screen and (-ms-high-contrast: active) {
+  .as-dialog {
+    border: 1px solid #fff;
+  }
+}

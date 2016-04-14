@@ -1,0 +1,137 @@
+$as-input-select-transition: all cubic-bezier(.25,.8,.25,1) .25s;
+$as-input-select-container-height: 52px;
+
+$as-input-select-font-size: 16px;
+$as-input-select-font-weight: bold;
+$as-input-select-padding: 2px;
+$as-input-select-height: 24px;
+
+$as-input-select-font-size-sm: 12px;
+$as-input-select-font-weight-sm: bold;
+$as-input-select-padding-sm: 2px;
+$as-input-select-height-sm: 18px;
+$as-input-select-label-height-sm: 18px;
+
+$as-input-select-label-height: 22px;
+$as-input-select-label-font-size: $as-input-select-font-size;
+$as-input-select-label-font-size-focus: 12px;
+$as-input-select-label-color: map-get($as-palette-black, dark);
+$as-input-select-label-color-focus: map-get($as-palette-primary, 500);
+
+
+$as-input-select-border-width: 1px;
+$as-input-select-border-color: map-get($as-palette-black, light);
+$as-input-select-border-color-focus: map-get($as-palette-primary, 500);
+$as-input-select-border-color-error: map-get($as-palette-error, 800);
+$as-input-select-border-color-disabled: map-get($as-palette-grey, 300);
+$as-input-select-message-color-error: map-get($as-palette-error, 500);
+
+$as-input-select-message-height: 20px;
+
+$as-input-select-border-color-dark: map-get($as-palette-white, light);
+$as-input-select-border-color-focus-dark: map-get($as-palette-primary, 100);
+
+
+.as-input-select-control-wrap
+{
+	position: relative;
+	@extend .as-cell-wide;
+    margin: 0px;
+	margin-top: $as-input-select-label-height;
+}
+
+.as-input-select-control
+{
+	@extend .as-cell-fixed;
+	
+	-webkit-appearance:none;
+	
+    margin: 0px;
+    margin-top: 4px;
+	width: 100%;
+	
+	padding: $as-input-select-padding;
+	background-color: rgba(0,0,0,0.1);
+	
+	@include as-remove-outline();
+    background: 0 0;
+    padding: $as-input-select-padding;
+    padding-bottom: $as-input-select-padding*2;
+    padding-left: 0px;
+    font-size: $as-input-select-font-size;
+
+    -ms-flex-preferred-size: $as-input-select-height;
+
+    border-radius: 0;
+	border:none;
+	border-bottom: solid $as-input-select-border-width $as-input-select-border-color;
+
+	&:hover
+	{
+		border-bottom: 1px solid $as-input-select-border-color-focus;
+		& + .as-input-select-control-arrow
+		{
+			i
+			{
+				color: map-get($as-palette-cyan, 500);
+			}
+		}
+	}
+	&:focus
+	{
+		padding-bottom: $as-input-select-border-width;
+		border-bottom: solid $as-input-select-padding $as-input-select-border-color-focus;
+		& + .as-input-select-control-arrow
+		{
+			height: 25px;
+			background: #ffffff;
+		}
+		& + .as-input-select-control-arrow.asa-area
+		{
+			height: 25px;
+			background-color: map-get($as-palette-grey, 100);
+		}
+	}
+	&:disabled
+	{
+		color: $as-input-color-disabled;
+		border-bottom: solid $as-input-border-width $as-input-select-border-color-disabled;
+	}
+	&.asa-small
+	{
+		margin-top: $as-input-select-label-height-sm;
+	
+		padding: $as-input-select-padding-sm;
+    	font-size: $as-input-select-font-size-sm;
+    	line-height: $as-input-select-height-sm;
+	    -ms-flex-preferred-size: $as-input-select-height-sm;
+		border-bottom: solid $as-input-select-border-width $as-input-select-border-color;
+	}
+	&.asa-dark
+	{
+		border-bottom: solid $as-input-select-border-width $as-input-select-border-color-dark;
+		&:focus
+		{
+			border-bottom: solid $as-input-select-padding $as-input-select-border-color-focus-dark;
+		}
+	}
+}
+
+.as-input-select-control-arrow
+{
+	position: absolute;
+	top: 22px;
+	right: 0px;
+	height: 26px;
+	width: 26px;
+	background: #ffffff;
+	pointer-events: none;
+	i
+	{
+		color: map-get($as-palette-grey, 400);
+	}
+	&.asa-area
+	{
+		background-color: map-get($as-palette-grey, 100);
+	}
+}
