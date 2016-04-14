@@ -99,6 +99,7 @@ $as-input-message-height: 20px;
 		*
 		{
 		    color: $as-input-label-color-disabled;
+		    cursor: default;
 		}
 		&:hover
 		{

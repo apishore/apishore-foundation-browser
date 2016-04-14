@@ -100,6 +100,8 @@ $as-input-border-width: 1px;
 .as-dropdown-select-popup-item
 {
 	padding: $as-gutter / 2;
+	cursor: pointer;
+	@include user-select(none);
 	&:hover
 	{
 		background-color: map-get($as-palette-grey, 100);
