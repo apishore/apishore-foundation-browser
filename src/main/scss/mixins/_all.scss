@@ -22,7 +22,8 @@
 }
 
 /// 
-/// Clearfix
+/// Cross browser transition-property
+/// @param $property
 ///
 @mixin transition-property($property...)
 {
