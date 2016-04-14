@@ -1,9 +1,28 @@
+////
+///
+/// @group grid
+///
+
+
+///
+/// Container for grid layout.
+/// @example css
+/// <div class="as-grid-container">
+/// </div>
+///
 .as-grid-container
 {
 	display: block;
 	position: relative;
 	margin: 0px;
 }
+
+///
+/// Row for grid layout.
+/// @example css
+/// <div class="as-grid-container">
+/// </div>
+///
 .as-grid-row
 {
 	display: flex;

@@ -6,22 +6,12 @@
 @import "as-apishore-demos";
 @import "as-text";
 
-/* angular-ui requirement for missed href */
-a
-{
-	cursor: pointer;
-}
-/* in IE10/11 an annoying tooltip will show up unless you add the following css: */
-::-ms-tooltip {
-    display: none;
-}
-
 .table-scrollable{
     overflow: auto;
 }
 
 .wrapper {
-padding: 15px;
+	padding: 15px;
 }
 
 // DESKTOP
