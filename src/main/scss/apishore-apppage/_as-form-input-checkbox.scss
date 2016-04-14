@@ -2,9 +2,24 @@ $as-checkbox-size: 24px;
 $as-checkbox-checked-color: map-get($as-palette-grey, 700);
 $as-checkbox-unchecked-color: $as-checkbox-checked-color;
 
-.as-input-holder.asa-checkbox
+.as-input-holder.asa-checkbox,
+.as-input-holder.asa-radio
 {
 	margin-bottom: 0px;
+	&:hover
+	{
+		.as-input-control-checkbox
+		{
+			color: map-get($as-palette-primary, 500);
+		}
+	}
+	&.asa-disabled
+	{
+		.as-input-control-checkbox
+		{
+			color: $as-input-label-color-disabled;
+		}
+	}
 }
 .as-input-control-checkbox-label
 {
@@ -51,44 +66,30 @@ $as-checkbox-unchecked-color: $as-checkbox-checked-color;
 	margin-right: $as-checkbox-size * 0.3;
 	overflow:hidden;
 	cursor: pointer;
-	&:hover
-	{
-		i
-		{
-			color: map-get($as-palette-primary, 500);
-		}
-	}
-	.as-input-control-checkbox-checked
+	.as-input-control-checkbox
 	{
 		position: absolute;
 		left:0px;
 		top:0px;
 		height: $as-checkbox-size;
 		width: $as-checkbox-size;
-		opacity: 0;
-		color: map-get($as-palette-primary, 500);
-		&:hover
+		color: map-get($as-palette-grey, 800);
+		&.asa-checked
 		{
-			color: map-get($as-palette-primary, 500);
+			opacity: 0;
 		}
-	}
-	.as-input-control-checkbox-unchecked
-	{
-		position: absolute;
-		left:0px;
-		top:0px;
-		height: $as-checkbox-size;
-		width: $as-checkbox-size;
-		opacity: 1;
-		color: $as-checkbox-unchecked-color;
-	}
-	&.asa-checked
-	{
-		.as-input-control-checkbox-checked
+		&.asa-unchecked
 		{
 			opacity: 1;
 		}
-		.as-input-control-checkbox-unchecked
+	}
+	&.asa-checked
+	{
+		.asa-checked
+		{
+			opacity: 1;
+		}
+		.asa-unchecked
 		{
 			opacity: 0;
 		}
@@ -99,7 +100,4 @@ $as-checkbox-unchecked-color: $as-checkbox-checked-color;
   		display: block;
   		top: -100px;
 	}
-}
-.as-input-control-checkbox
-{
 }

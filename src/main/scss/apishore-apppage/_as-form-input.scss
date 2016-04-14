@@ -96,14 +96,27 @@ $as-input-message-height: 20px;
 	}
 	&.asa-disabled
 	{
-		&>.as-input-label
+		*
 		{
-		    color: 	$as-input-label-color-disabled;
+		    color: $as-input-label-color-disabled;
+		}
+		&:hover
+		{
+			.as-input-control,
+			.as-input-control-addon.asa-underline,
+			.select2-selection
+			{
+				border-bottom: 1px solid $as-input-border-color-disabled;
+			}
+			*
+			{
+				color: $as-input-label-color-disabled;
+			}
 		}
 	}
 	&.asa-has-error
 	{
-		>.as-input
+		.as-input
 		{
 			border-color: $as-input-border-color-error;
 		}
