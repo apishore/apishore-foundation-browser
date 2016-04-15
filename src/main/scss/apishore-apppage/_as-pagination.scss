@@ -1,0 +1,51 @@
+.as-desktop-pagination-panel
+{
+	background-color: map-get($as-palette-grey, 50);
+	height: 40px;
+	@include user-select(none);
+}
+.as-desktop-pagination-info
+{
+	padding-left: $as-gutter;
+	line-height: 40px;
+	font-size: 12px;
+	color: map-get($as-palette-grey, 800);
+	font-weight: bold;
+}
+.as-desktop-pagination-button
+{
+	display: block;
+	min-width: 40px;
+	min-height: 40px;
+	padding: 0px;
+	&:hover
+	{
+		color: map-get($as-palette-primary, 500);
+		background-color: map-get($as-palette-grey, 300);
+	}
+	&.asa-active
+	{
+		color: map-get($as-palette-primary, 500);
+	}
+	&.asa-disabled
+	{
+		color: map-get($as-palette-grey, 400);
+		&:hover
+		{
+			color: map-get($as-palette-grey, 400);
+			background-color: transparent;
+		}
+	}
+	.material-icons
+	{
+		margin: 8px;
+	}
+	span
+	{
+		display: block;
+		line-height: 40px;
+		height: 40px;
+		width: 100%;
+		text-align:center;
+	}
+}
