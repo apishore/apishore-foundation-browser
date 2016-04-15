@@ -33,14 +33,20 @@
     transition-property:         $property;
 }
 
-@mixin transition-duration($v)
+/// 
+/// Cross browser transition-duration
+/// @param $delay
+///
+@mixin transition-duration($delay)
 {
-  transition-delay: $v;
+  transition-delay: $delay;
 }
+
 @mixin transition-timing-function($v)
 {
   transition-timing-function: $v;
 }
+
 // Rotate an object around the z axis  (2D)
 // @include rotate( [ rotation, perspective, 3D-only ] )
 // where 'rotation' is an angle set in degrees (deg) or radian (rad) units
