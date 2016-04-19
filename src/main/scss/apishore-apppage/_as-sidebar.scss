@@ -64,11 +64,12 @@
 }
 .as-sidebar-menu-group-title
 {
-	color: map-get($as-palette-primary, 800);
-	font-size: 16px;
+	color: map-get($as-palette-grey, 600);
+	font-weight: bold;
+	font-size: 14px;
 	
-	padding: $as-gutter;
-	border-top: solid 1px map-get($as-palette-black, light);
+	padding: $as-gutter / 2;
+	padding-left: $as-gutter + 2px;
 }
 .as-sidebar-menu
 {
