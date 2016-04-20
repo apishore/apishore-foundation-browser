@@ -89,7 +89,15 @@ $as-list2-header-height: 30px;
 .as-alert-icon
 {
 }
+
 .as-list2-row-secondary-action
 {
+	height: $as-list2-row-height;
+	width: $as-list2-row-height;
+	.as-row-icon
+	{
+		display: block;
+		padding: ($as-list2-row-height - 24px) / 2;
+	}
 	
 }
