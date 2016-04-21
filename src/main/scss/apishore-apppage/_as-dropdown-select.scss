@@ -117,3 +117,22 @@ $as-input-border-width: 1px;
 		}
 	}
 }
+.as-dropdown-select-popup-filters
+{
+	width: 30%;
+	border-left: solid 1px map-get($as-palette-grey, 200);
+	margin-bottom: $as-gutter;
+	padding-left:$as-gutter * 1.5;
+}
+.as-dropdown-select-popup-filter
+{
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	cursor: pointer;
+	&:hover,
+	&.asa-selected
+	{
+		color: map-get($as-palette-primary, 500);
+	}
+}
