@@ -1,0 +1,23 @@
+///
+/// Holder of chips in view mode
+///
+.as-md-chips-view
+{
+	margin-top: 26px;
+}
+///
+/// Chip container
+///
+.as-md-chips-view-item
+{
+	margin: $as-gutter / 2;
+	margin-left: 0px;
+	display: inline-block;
+}
+
+.as-md-chips-view-item-content
+{
+	border: solid 1px map-get($as-palette-grey, 500);
+	border-radius: $md-chips-radius;
+	padding: $as-gutter / 4;
+}
