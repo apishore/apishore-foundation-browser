@@ -45,17 +45,14 @@ $as-input-message-height: 20px;
 	.as-form-sentence-line
 	{
 		position: absolute;
-		border-bottom: 1px solid $as-input-border-color-disabled;
 		left: 0px;
 		right: 0px;
 		top: $as-input-label-height + $as-input-height + 4px;
 	}
-	&:hover
+	.as-input-control
 	{
-		.as-form-sentence-line
-		{
-			border-bottom: 1px solid $as-input-border-color-focus;
-		}
+		width: auto;
+		@extend .as-cell-wide;
 	}
 }
 .as-input-holder
@@ -244,6 +241,11 @@ textarea.as-input-control
 	&.asa-label
 	{
 		color: map-get($as-palette-grey, 500);
+		&:hover
+		{
+			color: map-get($as-palette-grey, 500);
+		}
+		font-size: 14px;
 		border-bottom: solid $as-input-border-width transparent;
 		&.asa-before-label
 		{
@@ -252,7 +254,6 @@ textarea.as-input-control
 		&.asa-after-label
 		{
 			padding-left: $as-gutter / 2;
-			width: 100%;
 		}
 	}
 	.material-icons

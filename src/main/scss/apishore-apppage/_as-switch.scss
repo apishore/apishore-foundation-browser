@@ -17,6 +17,13 @@ $switch-margin: 16px !default;
 		padding-left: $as-gutter / 2;
 	}
 }
+.asa-switch-enable
+{
+	.as-input-control-switch-holder
+	{
+		margin-top: 26px;
+	}
+}
 .as-input-control-switch-holder
 {
 	@extend .as-cell-fixed;
