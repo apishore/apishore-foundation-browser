@@ -5,6 +5,7 @@
 {
 	margin-top: 26px;
 }
+
 ///
 /// Chip container
 ///
@@ -14,7 +15,7 @@
 	margin-left: 0px;
 	display: inline-block;
 	border: solid 1px map-get($as-palette-grey, 500);
-	border-radius: $md-chips-radius;
+	border-radius: $as-md-chips-editor-item-height;
 }
 
 ///
@@ -23,6 +24,8 @@
 .as-md-chips-viewer-item-content
 {
 	padding: $as-gutter / 4;
+	padding-left: $as-gutter / 2;
+	padding-right: $as-gutter / 2;
 }
 ///
 /// Chip content title
