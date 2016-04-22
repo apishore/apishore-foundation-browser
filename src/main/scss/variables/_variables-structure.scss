@@ -97,6 +97,11 @@ input {
   transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@mixin as-control-transition()
+{
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /*
  * A container inside of a rippling element (eg a button),
  * which contains all of the individual ripples
