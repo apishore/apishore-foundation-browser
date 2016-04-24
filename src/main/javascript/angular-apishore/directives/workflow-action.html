@@ -1,0 +1,3 @@
+<button ng-repeat="transition in state" class="btn btn-primary" ng-click="doTransition(transition.id)" ng-disabled="disabled(transition.id)" ng-hide="hidden(transition.id)" type="button">
+    {{transition.label}}
+</button>

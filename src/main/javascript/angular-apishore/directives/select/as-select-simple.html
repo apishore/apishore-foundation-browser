@@ -1,0 +1,37 @@
+<div class="as-dropdown-select-holder" ng-class="{'as-dropdown-select-popup-opened' : isOpened}">
+	<div class="as-dropdown-select-popup-outer">
+		<div class="as-dropdown-select-popup-bg" ng-click="cancel()">
+		</div>
+		<div class="as-dropdown-select-popup" ng-style="{left:popupRect.left,top:popupRect.top,width:popupRect.width}">
+			<div class="as-dropdown-select-popup-input-wrapper">
+			<a
+				class="as-input-control asa-string-type asa-hide-in-popup"
+			  	ng-change="asChange()"
+				ng-click="openPopup()"
+				ng-model="label"
+				ng-bind="label"
+				ng-keypress="keypress($event)"
+				ng-keydown="keydown($event)"
+				ng-focus="asFocus()"
+				ng-blur="asBlur()"
+				tab-index="0"
+				href="#"
+			></a>
+			<div class="as-dropdown-select-arrow"></div>
+			</div>
+			<div class="as-dropdown-select-popup-content">
+				<div class="as-dropdown-select-popup-content-items">
+                    <div class="as-dropdown-select-popup-item" ng-if="undefinedMenuLabel"
+                         ng-click="selectItem()"
+                         ng-class="{'asa-selected': $index == selectedIndex}">
+                        <span class="as-dropdown-select-popup-item-title">{{undefinedMenuLabel}}</span>
+                    </div>
+					<div class="as-dropdown-select-popup-item" ng-repeat="option in asOptions" ng-click="selectItem(option)" item-id="{{option.id}}"
+						ng-class="{'asa-selected': $index == selectedIndex}">
+						<span class="as-dropdown-select-popup-item-title">{{option.text}}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

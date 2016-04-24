@@ -1,0 +1,24 @@
+<div class="image-editor">
+	<div flow-init
+     flow-file-added="added=true;true"
+     flow-files-submitted="$flow.upload()"
+     flow-file-success="uploaded($file, $message)">
+		<div class="file-upload-preview">
+			<div class="file-upload-preview-actions">
+				<div class="btn-group-vertical">
+				    <button type="button" class="btn btn-sm btn-primary" flow-btn flow-attrs="{accept:'*/*'}">Upload</button>
+				</div>
+			</div>
+			<div class="file-upload-preview-image">
+				<span ng-hide="model">Please upload the file</span>
+				<b ng-show="model" ng-bind="filename"></b>
+				<br>
+				<img ng-src="{{imageSource}}" ng-if="isImage" height="100" ng-show="model"/>
+			    <div class="help-inline" ng-show="(form.$submitted || formField.$dirty) && formField.$invalid">
+			        <small class="error" ng-show="formField.$error.required">Image is required</small>
+					<small class="error" ng-repeat="(key, message) in formField.$error.server">{{message}}</small>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>

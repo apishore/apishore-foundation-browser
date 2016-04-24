@@ -1,0 +1,49 @@
+<div class="image-editor">
+	<div class="image-crop-panel" ng-show="cropMode">
+		<div class="image-crop-panel-inner">
+			<div class="previewArea">
+				<div class="areaHint">
+					<?xml.text.labelPreview?>
+				</div>
+				<div class="container">
+					<img class="croppedImage" ng-src="{{croppedImage}}" />
+				</div>
+			</div>
+			<div class="cropArea">
+				<div class="areaHint">
+					<?xml.text.labelCrop?>
+				</div>
+				<div class="container image">
+			    	<img-crop image="imageSource" result-image="croppedImage"></img-crop>
+			    </div>
+				<div class="container">
+					<div class="crop-buttons text-center">
+						<a class="btn btn-lg btn-primary" ng-click="crop()" ng-show="model">Crop</a>
+						<a class="btn btn-lg btn-default" ng-click="exitCropMode()" ng-show="model">Cancel</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div flow-init
+     flow-file-added="added=true;!!{png:1,jpg:1,jpeg:1}[$file.getExtension()]"
+     flow-files-submitted="$flow.upload()"
+     flow-file-success="uploaded($file, $message)">
+		<div class="file-upload-preview">
+			<div class="file-upload-preview-actions">
+				<div class="btn-group-vertical">
+				    <button type="button" class="btn btn-sm btn-primary" flow-btn flow-attrs="{accept:'image/*'}">Upload</button>
+				    <button type="button"  class="btn btn-sm btn-info" ng-click="toCropMode()" ng-show="model">Crop</button>
+				    <button type="button"  class="btn btn-sm btn-danger" ng-click="remove()" ng-show="model">Remove</button>
+				</div>
+			</div>
+			<div class="file-upload-preview-image">
+				<img ng-src="{{imageSource}}" height="100" ng-show="model"/>
+			    <div class="help-inline" ng-show="(form.$submitted || formField.$dirty) && formField.$invalid">
+			        <small class="error" ng-show="formField.$error.required">Image is required</small>
+					<small class="error" ng-repeat="(key, message) in formField.$error.server">{{message}}</small>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>

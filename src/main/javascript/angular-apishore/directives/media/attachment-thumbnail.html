@@ -1,0 +1,8 @@
+<div>
+	<span ng-hide="loaded"><i class="fa fa-spin"></i></span>
+	<img ng-show="isImage" apishore-image-id="fileId" style="max-width: 200px;">
+	<div ng-show="loaded">
+		<b>File: {{filename}}</b>
+		<br>
+		{{size | filesize:2}}</div>
+</div>

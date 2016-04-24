@@ -1,0 +1,7 @@
+<div class="apishore-expandable-text">
+	<div class="apishore-expandable-text-content" ng-class="{'expanded':expanded || !expandable}" ng-bind-html="model"></div>
+	<a class="apishore-expandable-text-button" ng-click="toggle()" ng-if="expandable">
+		<span ng-if="!expanded"><i class="fa fa-arrow-down"></i> More</span>
+		<span ng-if="expanded"><i class="fa fa-arrow-up"></i> Less</span>
+	</a>
+</div>

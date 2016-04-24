@@ -1,0 +1,72 @@
+<div class="as-input-control-addon asa-time">
+	<i class="material-icons as-date-picker-icon" ng-click="openPicker()">date_range</i>
+
+    <!-- Date picker -->
+    <div class="as-date-picker">
+        <div ng-if="ctrlData.isOpen" class="as-vbox">
+            <div class="as-date-picker__header">
+                <!-- Current day of week -->
+                <div class="as-date-picker__current-day-of-week">
+                    <span>{{ moment(selected.date).format('dddd') }}</span>
+                </div>
+
+                <!-- Current date -->
+                <div class="as-date-picker__current-date">
+                    <span ng-class="{ 'tc-white-1': !yearSelection, 'tc-white-3': yearSelection }">{{ moment(selected.date).format('MMM') }}</span>
+                    <strong ng-class="{ 'tc-white-1': !yearSelection, 'tc-white-3': yearSelection }">{{ moment(selected.date).format('DD') }}</strong>
+                    <a ng-class="{ 'tc-white-3': !yearSelection, 'tc-white-1': yearSelection }" ng-click="displayYearSelection()">{{ moment(selected.date).format('YYYY') }}</a>
+                </div>
+            </div>
+
+            <div class="as-date-picker__content">
+                <!-- Calendar -->
+                <div class="as-date-picker__calendar" ng-if="!yearSelection">
+                    <div class="as-date-picker__nav">
+                        <button class="as-button asa-round asa-xs asa-icon" as-ripple ng-click="previousMonth()">
+                             <i class="material-icons">chevron_left</i>
+                        </button>
+
+                        <span>{{ activeDate.format('MMMM YYYY') }}</span>
+
+                        <button class="as-button asa-round asa-xs asa-icon" as-ripple ng-click="nextMonth()">
+                            <i class="material-icons">chevron_right</i>
+                        </button>
+                    </div>
+
+                    <div class="as-date-picker__days-of-week">
+                        <span ng-repeat="day in daysOfWeek">{{ day }}</span>
+                    </div>
+
+                    <div class="as-date-picker__days">
+                        <span class="as-date-picker__day as-date-picker__day--is-empty"
+                              ng-repeat="x in emptyFirstDays">&nbsp;</span><!--
+                     --><div class="as-date-picker__day"
+                             ng-class="{ 'as-date-picker__day--is-selected': day.selected,
+                                         'as-date-picker__day--is-today': day.today }"
+                             ng-repeat="day in days">
+                            <a ng-click="select(day)">{{ day ? day.format('D') : '' }}</a>
+                        </div><!--
+                     --><span class="as-date-picker__day as-date-picker__day--is-empty"
+                              ng-repeat="x in emptyLastDays">&nbsp;</span>
+                    </div>
+                </div>
+
+                <!-- Year selection -->
+                <div class="as-date-picker__year-selector" ng-if="yearSelection">
+                    <a class="as-date-picker__year"
+                         ng-class="{ 'as-date-picker__year--is-active': year == activeDate.format('YYYY') }"
+                         ng-repeat="year in years"
+                         ng-click="selectYear(year)"
+                         ng-if="yearSelection">
+                        <span>{{ year }}</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="as-date-picker__actions">
+                <button class="as-button asa-flat asa-primary" as-ripple ng-click="closePicker()">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
