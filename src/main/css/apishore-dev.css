@@ -1,0 +1,106 @@
+/* line 4, ../scss/apishore-dev/_all.scss */
+.apishore-data-preview {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  width: 100px;
+  z-index: 9999;
+  overflow: scroll;
+  opacity: 0.6;
+}
+/* line 14, ../scss/apishore-dev/_all.scss */
+.apishore-data-preview:hover {
+  width: 400px;
+  opacity: 1;
+}
+
+/* line 21, ../scss/apishore-dev/_all.scss */
+.dev-panel-holder {
+  position: fixed;
+  right: 0px;
+  top: 50%;
+  margin-top: -25px;
+  width: 50px;
+  height: 50px;
+  z-index: 10000;
+  background-color: #FFA500;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+/* line 33, ../scss/apishore-dev/_all.scss */
+.dev-panel-holder.active {
+  top: 10%;
+  margin-top: 0px;
+  bottom: 10%;
+  height: auto;
+  width: 40%;
+}
+/* line 41, ../scss/apishore-dev/_all.scss */
+.dev-panel-holder .panel-switch {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 50px;
+  height: 50px;
+  font-size: 36px;
+  line-height: 50px;
+  text-align: center;
+  color: #eee;
+}
+/* line 53, ../scss/apishore-dev/_all.scss */
+.dev-panel-holder .panel-switch:hover, .dev-panel-holder .panel-switch.active {
+  color: #fff;
+}
+/* line 58, ../scss/apishore-dev/_all.scss */
+.dev-panel-holder .dev-panel-title {
+  font-size: 36px;
+  font-weight: 100;
+  color: #fff;
+  line-height: 50px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+/* line 66, ../scss/apishore-dev/_all.scss */
+.dev-panel-holder .dev-panel {
+  position: absolute;
+  right: 0px;
+  top: 50px;
+  bottom: 0px;
+  left: 0px;
+  color: #333;
+  padding: 30px;
+}
+/* line 75, ../scss/apishore-dev/_all.scss */
+.dev-panel-holder .dev-panel a {
+  color: #333;
+}
+/* line 79, ../scss/apishore-dev/_all.scss */
+.dev-panel-holder .dev-panel .tab-content {
+  min-height: 300px;
+  background-color: #fff;
+  border: solid 1px orange;
+  border-top: none;
+  position: absolute;
+  left: 14px;
+  top: 70px;
+  right: 15px;
+  bottom: 30px;
+  overflow: scroll;
+}
+/* line 92, ../scss/apishore-dev/_all.scss */
+.dev-panel-holder .dev-panel textarea {
+  min-height: 100px;
+}
+/* line 96, ../scss/apishore-dev/_all.scss */
+.dev-panel-holder .dev-panel .tab-spinner {
+  position: relative;
+}
+/* line 99, ../scss/apishore-dev/_all.scss */
+.dev-panel-holder .dev-panel .tab-spinner .tab-spinner-label {
+  font-size: 32px;
+  font-wight: 100;
+  text-align: center;
+  padding: 15px;
+  color: orange;
+}
