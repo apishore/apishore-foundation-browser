@@ -86,6 +86,20 @@ $as-list2-header-height: 30px;
 		color: map-get($as-palette-blue, 500);
 	}
 }
+.as-list2-column
+{
+	line-height: $as-list2-row-height;
+	font-size: 16px;
+	color: map-get($as-palette-fg, dark);
+	width: 100px;
+	padding-left: $as-gutter;
+	padding-right: $as-gutter;
+	&.asa-right
+	{
+		text-align: right;
+	}
+}
+
 .as-alert-icon
 {
 }
