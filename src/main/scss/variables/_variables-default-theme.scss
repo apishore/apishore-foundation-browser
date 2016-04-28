@@ -45,6 +45,7 @@ $as-appbar-icon-color: #555 !default;
 $as-appbar-icon-hover-color: #222 !default;
 $as-appbar-icon-tooltip-display: none !default;
 $as-appbar-search-area-padding-left: 0px !default;
+$as-appbar-bg-color: map-get($as-palette-grey,100) !default;
 
 //DROP DOWN
 $as-dropdown-menu-title-height: 48px !default;

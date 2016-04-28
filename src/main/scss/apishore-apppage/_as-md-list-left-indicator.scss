@@ -17,6 +17,10 @@
 	position: relative;
 	left: ($as-list2-left-indicator-width - 24px)/2;
 	top: ($as-list2-row-height - 24px)/2;
+	&.asa-ok
+	{
+		color: map-get($as-palette-green, 300);
+	}
 	&.asa-normal
 	{
 		color: map-get($as-palette-grey, 300);
