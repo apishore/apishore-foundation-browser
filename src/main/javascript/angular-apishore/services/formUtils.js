@@ -1,4 +1,4 @@
-apishore.factory("apishoreFormUtils", function($state, apishoreUtils)
+apishore.factory("apishoreFormUtils", function($state, apishoreUtils, asInlineDialog)
 {
     return {
         findParentStateData: function(state, parent)
@@ -285,25 +285,34 @@ apishore.factory("apishoreFormUtils", function($state, apishoreUtils)
                 }
             });
         },
-        addTrigger: function addTrigger($scope, api, field, value, operation)
+        addTrigger: function addTrigger($scope, elem, name, api, field, value, operation)
         {
-            console.trace('addTrigger ', field, value);
+        	console.trace('addTrigger ', field, value);
+			var dialog = $scope['valueTrigger'+name+'Dialog'] = asInlineDialog.init($scope, elem.find(".id-value-trigger-dialog-"+name), {});
             $scope.$watch('itemData.data.' + field, function triggerWatch(nv, ov)
             {
-                if(!nv || nv != value || ov == value)
+                if(!nv || nv != value || ov == value || ov == undefined)
                 {
                     return;
                 }
                 // we have new value and new value changed to expected value
                 console.log('trigger', value, ov, nv);
-                $scope.triggerProgress = true;
-                api.customOperation(operation, $scope.itemData.data).then(function(data){
-                    $scope.itemData = data.data;
-                    $scope.permission = data.data.permissions;
-                    $scope.triggerProgress = false;
-                }, function(){
-                    $scope.triggerProgress = false;
-                });
+                dialog.callback.rollback = function()
+                {
+                	$scope.itemData.data[field] = ov;
+                }
+                dialog.callback.trigger = function()
+                {
+                	$scope.triggerProgress = true;
+                	api.customOperation(operation, $scope.itemData.data).then(function(data){
+                		$scope.itemData = data.data;
+                		$scope.permission = data.data.permissions;
+                		$scope.triggerProgress = false;
+                	}, function(){
+                		$scope.triggerProgress = false;
+                	});
+                }
+                dialog.open();
             });
         }
     };
