@@ -14,12 +14,17 @@
 {
    	color: map-get($as-palette-black, light);
 }
-.as-appbar-appname-title
+.as-appbar-appname-link
 {
 	color: map-get($as-palette-black, darken);
+   	text-decoration: none;
 	line-height: $as-appbar-height;
-	i
+	&:visited
 	{
-		line-height: $as-appbar-height;
+		color: map-get($as-palette-black, darken);
+	}
+	&:hover
+	{
+		color: map-get($as-palette-primary, 500);
 	}
 }
