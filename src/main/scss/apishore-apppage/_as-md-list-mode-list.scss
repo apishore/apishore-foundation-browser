@@ -100,6 +100,13 @@ $as-list2-header-height: 30px;
 	width: 100px;
 	padding-left: $as-gutter;
 	padding-right: $as-gutter;
+	&.asa-icon
+	{
+		width: $as-list2-row-height;
+		padding: 0px;
+		text-align: center;
+		padding-top: 6px;
+	}
 	&.asa-right
 	{
 		text-align: right;
