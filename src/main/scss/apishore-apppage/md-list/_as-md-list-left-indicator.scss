@@ -4,24 +4,24 @@
 	padding: $as-gutter;
 	border-bottom: solid 8px map-get($as-palette-grey, 500);
 }
-.as-list2-left-indicator
+.as-md-list-left-indicator
 {
 	position: relative;
-	width: $as-list2-left-indicator-width;
-	height: $as-list2-row-height;
+	width: $as-md-list-left-indicator-width;
+	height: $as-md-list-row-height;
 }
-.as-list2-header-item
+.as-md-list-header-item
 {
 	&.asa-left-indicator
 	{
-		width: $as-list2-left-indicator-width;
+		width: $as-md-list-left-indicator-width;
 	}
 }
-.as-list2-left-indicator-item-icon
+.as-md-list-left-indicator-item-icon
 {
 	position: relative;
-	left: ($as-list2-left-indicator-width - 24px)/2;
-	top: ($as-list2-row-height - 24px)/2;
+	left: ($as-md-list-left-indicator-width - 24px)/2;
+	top: ($as-md-list-row-height - 24px)/2;
 	&.asa-ok
 	{
 		color: map-get($as-palette-green, 300);
@@ -39,7 +39,7 @@
 		color: map-get($as-palette-red, 300);
 	}
 }
-.as-list2-left-indicator-item-big-number-value
+.as-md-list-left-indicator-item-big-number-value
 {
 	font-size: 18px;
 	padding-top: 10px;
@@ -57,17 +57,17 @@
 		color: map-get($as-palette-red, 500);
 	}
 }
-.as-list2-left-indicator-item-big-number-title
+.as-md-list-left-indicator-item-big-number-title
 {
 	font-size: 11px;
 	text-align:center;
 	color: map-get($as-palette-grey, 500);
 }
-.as-list2-left-indicator-item-progress
+.as-md-list-left-indicator-item-progress
 {
 	position: relative;
 }
-.as-list2-left-indicator-item-progress-value
+.as-md-list-left-indicator-item-progress-value
 {
 	position: relative;
 	margin: 6px 20px;
@@ -75,7 +75,7 @@
 	background-color: map-get($as-palette-grey, 100);
 	overflow: hidden;
 }
-.as-list2-left-indicator-item-progress-value-inner
+.as-md-list-left-indicator-item-progress-value-inner
 {
 	position: absolute;
 	top: 0px;
@@ -94,7 +94,7 @@
 		color: map-get($as-palette-red, 500);
 	}
 }
-.as-list2-left-indicator-item-progress-title
+.as-md-list-left-indicator-item-progress-title
 {
 	font-size: 10px;
 	text-align:center;
