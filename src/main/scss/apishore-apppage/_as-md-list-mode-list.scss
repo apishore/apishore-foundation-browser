@@ -64,12 +64,15 @@ $as-list2-header-height: 30px;
 }
 .as-list2-row-content
 {
+	overflow:hidden;
 }
 .as-list2-row-title
 {
 	padding-top: 10px;
 	font-size: 16px;
 	color: map-get($as-palette-fg, darker);
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 .as-list2-row-subtitle
 {
@@ -77,6 +80,9 @@ $as-list2-header-height: 30px;
 	font-size: 14px;
 	padding-bottom: 20px;
 	color: map-get($as-palette-fg, dark);
+	text-overflow: ellipsis;
+	overflow:hidden;
+	white-space: nowrap;
 }
 .as-list2-row-alert-holder
 {

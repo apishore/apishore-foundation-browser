@@ -1,4 +1,9 @@
-
+.as-list-view-top-help
+{
+	background-color: map-get($as-palette-yellow, 200);
+	padding: $as-gutter;
+	border-bottom: solid 8px map-get($as-palette-grey, 500);
+}
 .as-list2-left-indicator
 {
 	position: relative;
