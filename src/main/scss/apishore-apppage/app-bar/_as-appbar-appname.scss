@@ -16,15 +16,16 @@
 }
 .as-appbar-appname-link
 {
-	color: map-get($as-palette-black, darken);
+	color: map-get($as-palette-black, darker);
    	text-decoration: none;
 	line-height: $as-appbar-height;
-	&:visited
-	{
-		color: map-get($as-palette-black, darken);
-	}
-	&:hover
+	&:hover,
+	&:focus
 	{
 		color: map-get($as-palette-primary, 500);
+	}
+	&:visited
+	{
+		color: map-get($as-palette-black, darker);
 	}
 }

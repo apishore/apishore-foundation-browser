@@ -26,6 +26,12 @@ $as-input-message-color-error: map-get($as-palette-error, 300);
 
 $as-input-message-height: 20px;
 
+.as-input-help
+{
+	font-size: 13px;
+	color: map-get($as-palette-grey, 600);
+	margin-top: $as-gutter / 4;
+}
 .as-input-control-label-in-between
 {
 	min-height: $as-input-container-height;
