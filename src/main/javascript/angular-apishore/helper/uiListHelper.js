@@ -190,14 +190,10 @@ apishore.factory("uiListHelper", function($injector, $http, $stateParams, $state
 				}
 				if($event) $event.stopPropagation();
 			};
-			$scope.clickItem = function(item, dblClick, $event)
+			$scope.clickItem = function(item, force, $event)
 			{
-				if($rootScope.asDevice.isDesktop && !dblClick)
-				{
-					$scope.selectItem(item, $event);
-					return;
-				}
-				else
+				$scope.selectItem(item, $event);
+				if(!$rootScope.asDevice.isDesktop || force)
 				{
 					$scope.viewItem(item, $event);
 				}
