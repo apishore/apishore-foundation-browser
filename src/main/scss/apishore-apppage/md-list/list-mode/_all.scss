@@ -1,8 +1,5 @@
-$as-md-list-row-height : 60px;
-$as-md-list-left-indicator-width: 80px;
-$as-md-list-gutter: 8px;
-$as-md-list-header-height: 30px;
-
+@import "as-md-list-nav-row";
+@import "as-md-list-row";
 @import "as-md-list-column";
 
 .as-md-list
@@ -37,76 +34,7 @@ $as-md-list-header-height: 30px;
 		color: map-get($as-palette-grey, 600);
 	}
 }
-.as-md-list-row
-{
-	border-bottom: solid 1px map-get($as-palette-grey, 50);
-	cursor: default;
-	height: $as-md-list-row-height;
-	padding-left: $as-gutter / 2;
-	padding-right: $as-gutter / 2;
-	@include user-select(none);
-	&:last-child
-	{
-		border-bottom: none;
-	}
-	&:hover,
-	&:focus
-	{
-		background-color: map-get($as-palette-primary, 50);
-	}
-	&.asa-selected
-	{
-		background-color: map-get($as-palette-primary, 500);
-		color: #fff;
-		.asa-alert-action
-		{
-			color: #fff;
-		}
-	}
-}
-.as-md-list-row-content
-{
-	overflow:hidden;
-}
-.as-md-list-row-title
-{
-	padding-top: 10px;
-	font-size: 16px;
-	color: map-get($as-palette-fg, darker);
-	text-overflow: ellipsis;
-	white-space: nowrap;
-}
-.as-md-list-row-subtitle
-{
-	padding-top: 0px;
-	font-size: 14px;
-	padding-bottom: 20px;
-	color: map-get($as-palette-fg, dark);
-	text-overflow: ellipsis;
-	overflow:hidden;
-	white-space: nowrap;
-}
-.as-md-list-row-alert-holder
-{
-	padding-top: $as-gutter * 2;
-	&.asa-alert-action
-	{
-		color: map-get($as-palette-blue, 500);
-	}
-}
 
 .as-alert-icon
 {
-}
-
-.as-md-list-row-secondary-action
-{
-	height: $as-md-list-row-height;
-	width: $as-md-list-row-height;
-	.as-row-icon
-	{
-		display: block;
-		padding: ($as-md-list-row-height - 24px) / 2;
-	}
-	
 }
