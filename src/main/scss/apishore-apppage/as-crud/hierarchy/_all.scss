@@ -1,22 +1,13 @@
 .as-crud-hierarchy-list-holder
 {
 	width: 400px;
+	border-right: solid 1px map-get($as-palette-grey, 100);
 }
 .as-crud-hierarchy-list-inner
 {
 	
 }
-.as-crud-hierarchy-view-holder
+.as-view-edit-hierarchy
 {
-	
-}
-.as-crud-hierarchy-view-inner
-{
-	
-}
-.as-crud-hierarchy-wild-holder
-{
-}
-.as-crud-hierarchy-wild-inner
-{
+	background-color: map-get($as-palette-grey, 100);
 }

@@ -1,5 +1,7 @@
 @import "bars/all";
-@import "as-sidebar/all";
+@import "sidebar/all";
+@import "card/all";
+@import "fieldset/all";
 
 @import "as-data-table";
 @import "as-data-card";
@@ -31,8 +33,6 @@
 @import "as-switch.scss";
 @import "as-switch-theme.scss";
 
-@import "as-card";
-@import "as-card-theme";
 
 @import "as-crud/all";
 @import "md-list/all";
