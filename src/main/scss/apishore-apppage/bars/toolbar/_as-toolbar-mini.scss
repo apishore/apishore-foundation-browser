@@ -9,8 +9,46 @@ $as-toolbar-height: 36px;
 .as-mini-toolbar-title
 {
 	height: $as-toolbar-height;
-	min-height: $as-toolbar-height;
 	line-height: $as-toolbar-height;
 	padding-left: $as-gutter;
+	text-transform: uppercase;
 	color:map-get($as-palette-white, darker);
+}
+$as-mini-toolbar-tab-height: 16px;
+
+.as-mini-toolbar-tabs
+{
+	@extend .as-hbox;
+	height: $as-toolbar-height;
+}
+.as-mini-toolbar-tabs-delimiter
+{
+	
+}
+.as-mini-toolbar-tab
+{
+	@extend .as-hbox;
+	font-size: 12px;
+	font-weight: bold;
+	color: #fff;
+	padding: ($as-toolbar-height - $as-mini-toolbar-tab-height) / 2;
+	padding-left: 2px;
+	padding-right: 2px;
+	&.asa-active
+	{
+		.as-mini-toolbar-tab-label
+		{
+			background-color: map-get($as-palette-white, dark);
+			color: map-get($as-palette-blue-grey, 500);
+		}
+	}
+}
+.as-mini-toolbar-tab-label
+{
+	height: $as-mini-toolbar-tab-height;
+	line-height: $as-mini-toolbar-tab-height;
+	border-radius: $as-mini-toolbar-tab-height;
+	padding-left: $as-gutter / 2;
+	padding-right: $as-gutter / 2;
+	color: map-get($as-palette-white, dark);
 }

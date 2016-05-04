@@ -307,6 +307,7 @@ apishore.factory("uiListHelper", function($injector, $http, $stateParams, $state
 						$scope.selectedItem = undefined;
 						$scope.selectedItemId = undefined;
 					}
+					if($scope.onSelect) $scope.onSelect();
 				}, function(res) {
 					if($scope.listStateName != $state.current.name) return;//prevent unexpected back if state is changed
 					$scope.itemsData = {data:[]};
