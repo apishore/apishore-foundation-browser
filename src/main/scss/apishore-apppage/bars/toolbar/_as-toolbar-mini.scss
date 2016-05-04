@@ -1,18 +1,46 @@
 $as-toolbar-height: 36px;
 
+$as-toolbar-title-arrow-size: $as-toolbar-height / 2; 
 .as-mini-toolbar
 {
+	position: relative;
 	@extend .as-hbox;
 	height: $as-toolbar-height;
 	background-color: map-get($as-palette-blue-grey, 500);
+	&:before
+	{
+		//		content: "";
+ 		position: absolute;
+		left: 0px;
+		width: 0px;
+		height: 0px;
+		top: 0px;
+		border-style: solid;
+		border-width: $as-toolbar-title-arrow-size 0 $as-toolbar-title-arrow-size $as-toolbar-title-arrow-size;
+		border-color: transparent transparent transparent map-get($as-palette-blue-grey, 700);
+	}
+	&:after
+	{
+		//content: "";
+		position: absolute;
+		left: 0px;
+		width: 0px;
+		height: 0px;
+		top: 0px;
+		border-style: solid;
+		border-width: $as-toolbar-title-arrow-size 0 $as-toolbar-title-arrow-size ($as-toolbar-title-arrow-size / 3);
+		border-color: transparent transparent transparent map-get($as-palette-blue-grey, 500);
+	}
 }
 .as-mini-toolbar-title
 {
+	position: relative;
 	height: $as-toolbar-height;
 	line-height: $as-toolbar-height;
-	padding-left: $as-gutter;
+	padding-left: $as-gutter / 4 + $as-toolbar-title-arrow-size;
 	text-transform: uppercase;
 	color:map-get($as-palette-white, darker);
+	
 }
 $as-mini-toolbar-tab-height: 16px;
 
