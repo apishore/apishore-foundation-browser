@@ -1,0 +1,16 @@
+$as-toolbar-height: 36px;
+
+.as-mini-toolbar
+{
+	@extend .as-hbox;
+	height: $as-toolbar-height;
+	background-color: map-get($as-palette-blue-grey, 500);
+}
+.as-mini-toolbar-title
+{
+	height: $as-toolbar-height;
+	min-height: $as-toolbar-height;
+	line-height: $as-toolbar-height;
+	padding-left: $as-gutter;
+	color:map-get($as-palette-white, darker);
+}
