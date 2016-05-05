@@ -19,8 +19,11 @@ apishore.factory("uiEmbeddedCreateFormHelper", function($injector, $http, $state
             $scope.submitForm = function(form)
             {
                 return false;
-
             };
+			$scope.submitFromEmbeddedForm = function()
+			{
+				this.$parent.submitFromEmbeddedForm();
+			}            
             $scope.afterSave = function(item)
             {
             };
