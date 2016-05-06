@@ -1,0 +1,26 @@
+.as-form-content .as-card.studio-project-kind
+{
+	height: 260px;
+	.as-card-header
+	{
+		background-color: map-get($as-palette-grey, 100);
+		color: map-get($as-palette-black, dark);
+	}
+	&.asa-selected
+	{
+		.as-card-header
+		{
+			background-color: map-get($as-palette-orange, 500);
+			color: map-get($as-palette-white, darker);
+		}
+		box-shadow: $as-whiteframe-shadow-16dp;
+	}
+}
+.studio-project-kind-cell
+{
+	margin-right: 20px;
+	&:last-child
+	{
+		margin-right: 0px;
+	}
+}
