@@ -1,10 +1,12 @@
 apishore.directive("apishoreImageUpload", function($http, apishoreUtils, apishoreImageUrl, apishoreImageToData) {
 	return {
         restrict: 'E',
-        require : "^form",
+        //require : "^form",
         replace : true,
 		scope : {
-			model : '='
+			model : '=',
+            api : '=',
+            field : '@'
 		},
         templateUrl: '$ng/apishore/directives/media/image-upload.html',
 
@@ -17,7 +19,8 @@ apishore.directive("apishoreImageUpload", function($http, apishoreUtils, apishor
 			
 			var handleFileSelect=function()
 			{
-				$scope.imageSource=apishoreImageUrl($scope.model, $scope.modelVersion);
+				var url = $scope.api.buildUrl($scope.api.stateParams(), true) + '?field=' + $scope.field;
+				$scope.imageSource= url + '&ts=' + $scope.modelVersion;
 			};
 			$scope.$watchGroup(['model', 'modelVersion'], function(newValue)
 			{
@@ -58,7 +61,13 @@ apishore.directive("apishoreImageUpload", function($http, apishoreUtils, apishor
             		$scope.modelVersion = new Date().getTime();
             		$scope.exitCropMode();
             	});
-            }
+            };
+			$scope.fileUploadSubmit =  function fileUploadSubmit($files, $event, $flow) {
+				var url = $scope.api.buildUrl($scope.api.stateParams(), true) + '?field=' + $scope.field;
+				console.log('File upload url: ' + url);
+				$flow.opts.target = url;
+				$flow.upload();
+			};
         }
     };
 });

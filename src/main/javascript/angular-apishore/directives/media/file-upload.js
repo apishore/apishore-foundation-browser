@@ -1,10 +1,12 @@
 apishore.directive("apishoreFileUpload", function($http, apishoreUtils, apishoreImageUrl) {
 	return {
         restrict: 'E',
-        require : "^form",
+        //require : "^form",
         replace : true,
 		scope : {
-			model : '='
+			model : '=',
+            api : '=',
+            field : '@'
 		},
         templateUrl: '$ng/apishore/directives/media/file-upload.html',
 
@@ -35,7 +37,13 @@ apishore.directive("apishoreFileUpload", function($http, apishoreUtils, apishore
             $scope.remove = function()
             {
             	$scope.model = "";
-            }
+            };
+            var url = $scope.api.buildUrl($scope.api.stateParams(), true) + '?field=' + $scope.field;
+            $scope.fileUploadSubmit =  function fileUploadSubmit($files, $event, $flow) {
+                console.log('File upload url: ' + url);
+                $flow.opts.target = url;
+                $flow.upload();
+            };
         }
     };
 });

@@ -1,7 +1,7 @@
 <div class="image-editor">
 	<div flow-init
      flow-file-added="added=true;true"
-     flow-files-submitted="$flow.upload()"
+     flow-files-submitted="fileUploadSubmit($file, $event, $flow)"
      flow-file-success="uploaded($file, $message)">
 		<div class="file-upload-preview">
 			<div class="file-upload-preview-actions">
