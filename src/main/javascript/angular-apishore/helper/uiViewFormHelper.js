@@ -48,10 +48,13 @@ apishore.factory("uiViewFormHelper", function($injector, $http, $stateParams, $s
 						$scope.progress = false;
 						$scope.scheduleDataReload();
 					}, function(res) {
-						$scope.itemData = { data:{}};
-						$scope.accessViolation = true;
-						$scope.permissions = {};
-						$scope.dataRoles = [];
+						if(!automatic)
+						{
+							$scope.itemData = { data:{}};
+							$scope.accessViolation = true;
+							$scope.permissions = {};
+							$scope.dataRoles = [];
+						}
 						$scope.progress = false;
 						$scope.scheduleDataReload();
 					});
