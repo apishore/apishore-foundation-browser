@@ -24,7 +24,7 @@ apishore.factory("uiViewFormHelper", function($injector, $http, $stateParams, $s
 				if($event) $event.stopPropagation();
 			};
 			
-			$scope.reload = function()
+			$scope.reload = function(automatic)
 			{
 				if(angular.isDefined(attrs.data))
 				{
@@ -33,8 +33,11 @@ apishore.factory("uiViewFormHelper", function($injector, $http, $stateParams, $s
 				}
 				else
 				{
-					$scope.itemData = {data: {}};
-					$scope.progress = true;
+					if(!automatic)
+					{
+						$scope.itemData = {data: {}};
+						$scope.progress = true;
+					}
 					api.getByState("view").then(function(res){
 						$scope.itemData = res.data;
 						$scope.permissions = res.data.permissions;
@@ -43,16 +46,34 @@ apishore.factory("uiViewFormHelper", function($injector, $http, $stateParams, $s
 						$scope.settings.data = res.data.settings || $scope.settings;
 						
 						$scope.progress = false;
+						$scope.scheduleDataReload();
 					}, function(res) {
 						$scope.itemData = { data:{}};
 						$scope.accessViolation = true;
 						$scope.permissions = {};
 						$scope.dataRoles = [];
 						$scope.progress = false;
+						$scope.scheduleDataReload();
 					});
 				}
 			};
-			
+			$scope.scheduleDataReload = function()
+			{
+				if($scope.reloadDataInterval > 0)
+				{
+					console.info("schedule reload in " + $scope.reloadDataInterval + " seconds");
+					function onTimeout()
+					{
+						$scope.reload(true);
+					};
+					$scope.reloadDataTimeout = $timeout(onTimeout, $scope.reloadDataInterval*1000);
+				};
+			}
+			$scope.$on("$destroy", function() {
+		        if ($scope.reloadDataTimeout) {
+		            $timeout.cancel($scope.reloadDataTimeout);
+		        }
+		    });
 			$scope.deleteItem = function(){
 				api.remove();
 			};
