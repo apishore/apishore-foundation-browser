@@ -1,0 +1,14 @@
+.as-chart-value-total-vline-label
+{
+	color: map-get($as-palette-grey, 800);
+	margin-top: $as-gutter;
+}
+.as-chart-value-total-vline-line
+{
+	background-color: map-get($as-palette-grey, 100);
+}
+.as-chart-value-total-vline-line-inner
+{
+	background-color: map-get($as-palette-green, 500);
+	height: 8px;
+}
