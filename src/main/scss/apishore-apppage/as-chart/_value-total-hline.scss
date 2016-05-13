@@ -1,3 +1,9 @@
+.as-chart-value-total-hline-cell
+{
+	margin-left: $as-gutter;
+	margin-right: $as-gutter;
+}
+
 .as-chart-value-total-hline-label
 {
 	color: map-get($as-palette-grey, 800);
