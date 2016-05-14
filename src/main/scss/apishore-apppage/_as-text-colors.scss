@@ -2,6 +2,18 @@
 {
 	color: map-get($as-palette-primary, 500);
 }
+.as-color-red
+{
+	color: map-get($as-palette-red, 500);
+}
+.as-color-green
+{
+	color: map-get($as-palette-green, 500);
+}
+.as-color-orange
+{
+	color: map-get($as-palette-orange, 500);
+}
 code
 {
 	background-color: #e8e8e8;
