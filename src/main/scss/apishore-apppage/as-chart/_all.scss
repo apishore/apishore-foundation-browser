@@ -1,3 +1,25 @@
 @import "value-total-hline";
 @import "value-total-vline";
 @import "value-total-donat";
+
+.as-chart-axis
+{
+  fill: none;
+  stroke: map-get($as-palette-grey, 300);
+  stroke-width: 2px;
+}
+.as-chart-line-dot
+{
+	fill: map-get($as-palette-primary, 300);
+	r: 8px;
+	&:hover
+	{
+		r: 12px;
+	}
+}
+.as-chart-line
+{
+  fill: none;
+  stroke: map-get($as-palette-grey, 500);
+  stroke-width: 4px;
+}
