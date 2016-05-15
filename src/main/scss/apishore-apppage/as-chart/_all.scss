@@ -2,6 +2,31 @@
 @import "value-total-vline";
 @import "value-total-donat";
 
+$as-chart-gutter: 80px;
+$as-chart-axis-labels-size: 30px;
+.as-chart-axis-labels
+{
+	position: absolute;
+	height: $as-chart-axis-labels-size;
+	line-height: $as-chart-axis-labels-size;
+	&.asa-x
+	{
+		bottom: $as-chart-gutter - $as-chart-axis-labels-size;
+		left: $as-chart-gutter;
+		right: $as-chart-gutter;
+	}
+}
+.as-chart-axis-label
+{
+	font-size: 12px;
+	color: map-get($as-palette-grey, 500);
+	text-overflow: ellipsis;
+	overflow: hidden;
+	&.asa-x
+	{
+		text-align: center;
+	}
+}
 .as-chart-axis
 {
   fill: none;
