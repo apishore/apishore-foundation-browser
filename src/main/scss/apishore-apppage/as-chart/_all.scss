@@ -4,6 +4,24 @@
 
 $as-chart-gutter: 80px;
 $as-chart-axis-labels-size: 30px;
+
+.as-chart-container
+{
+	opacity: 1;
+	transition: all 1s ease;
+	*
+	{
+		transition: all 0.5s ease;
+	}
+	&.asa-loaded
+	{
+		opacity: 1;
+	}	
+}
+.as-chart-axis-y-label
+{
+	
+}
 .as-chart-axis-labels
 {
 	position: absolute;
@@ -32,6 +50,11 @@ $as-chart-axis-labels-size: 30px;
   fill: none;
   stroke: map-get($as-palette-grey, 300);
   stroke-width: 2px;
+  &.asa-level
+  {
+	stroke: map-get($as-palette-grey, 200);
+  	stroke-width: 1px;
+  }
 }
 .as-chart-line-dot
 {

@@ -264,6 +264,7 @@ apishore.factory("uiListHelper", function($injector, $http, $stateParams, $state
 				$scope.error = false;
 				delete $scope.alertId;
 				$scope.listStateName = $state.current.name;
+				if($scope.onBeforeLoad) $scope.onBeforeLoad();
 				var promise = api.listByState($scope.query).then(function(res){
 					if($scope.listStateName != $state.current.name) return;//prevent unexpected back if state is changed
 					$scope.itemsData = res.data;
@@ -308,6 +309,7 @@ apishore.factory("uiListHelper", function($injector, $http, $stateParams, $state
 						$scope.selectedItemId = undefined;
 					}
 					if($scope.onSelect) $scope.onSelect();
+					if($scope.onLoad) $scope.onLoad();
 				}, function(res) {
 					if($scope.listStateName != $state.current.name) return;//prevent unexpected back if state is changed
 					$scope.itemsData = {data:[]};
