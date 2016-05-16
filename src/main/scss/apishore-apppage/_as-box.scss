@@ -1,3 +1,6 @@
+///
+/// Holder of vertically aligned children
+///
 .as-vbox
 {
 	position:relative;
@@ -11,6 +14,9 @@ body.as-vbox
 	min-height: 100vh;
 	overflow: hidden;
 }
+///
+/// Holder of horizontally aligned children
+///
 .as-hbox
 {
 	position:relative;
@@ -47,7 +53,7 @@ body.as-vbox
 	}
 	&.asa-count-3
 	{
-		width: 33.33333%;
+		width: (100% / 3);
 	}
 	&.asa-count-4
 	{

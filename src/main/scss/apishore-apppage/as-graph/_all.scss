@@ -1,0 +1,46 @@
+.as-graph-container
+{
+
+}
+.as-graph-node
+{
+  position: absolute;
+  border: solid 1px map-get($as-palette-grey, 500);
+  width: 100px;
+  heigth: 80px;
+  box-shadow: $as-whiteframe-shadow-2dp;
+}
+.as-graph-node-header
+{
+  background-color: map-get($as-palette-grey, 500);
+  color: map-get($as-palette-white, darker);
+  width: 100px;
+  heigth: 24px;
+  line-heigth: 24px;
+  @extend .as-hbox;
+  padding-right: $as-gutter / 2;
+  cursor:move;
+  @include user-select(none);
+  &:hover
+  {
+  	background-color: map-get($as-palette-primary, 500);
+  }
+  i
+  {
+  	padding-right: $as-gutter / 3;
+  }
+}
+.as-graph-node-title
+{
+  padding-left: $as-gutter / 2;
+  padding-right: $as-gutter / 2;
+  line-heigth: 24px;
+}
+.as-graph-new-node
+{
+	position: absolute;
+	top: $as-gutter;
+	right: $as-gutter;
+	width: 20%;
+	box-shadow: $as-whiteframe-shadow-4dp;
+}
