@@ -2,6 +2,12 @@
 {
 
 }
+.as-graph-grid-line
+{
+	fill: none;
+	stroke: map-get($as-palette-grey, 100);
+	stroke-width: 1px;
+}
 .as-graph-node
 {
   position: absolute;
