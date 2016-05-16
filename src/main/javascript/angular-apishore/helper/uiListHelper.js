@@ -242,6 +242,14 @@ apishore.factory("uiListHelper", function($injector, $http, $stateParams, $state
 					$scope.onCreate();
 				}
 			};
+			$scope.afterCreate = function(id, item)
+			{
+				$scope.selectAll();
+				if($scope.onAfterCreate)
+				{
+					$scope.onAfterCreate({id:id, item:item});
+				}
+			}
 
 			$scope.isComplexQuery = function()
 			{
