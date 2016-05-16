@@ -39,8 +39,9 @@
 .as-graph-new-node
 {
 	position: absolute;
-	top: $as-gutter;
-	right: $as-gutter;
+	top: 0px;
+	right: 0px;
 	width: 20%;
-	box-shadow: $as-whiteframe-shadow-4dp;
+	bottom: 0px;
+	border-left: solid 1px map-get($as-palette-grey, 500);
 }
