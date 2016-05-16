@@ -12,15 +12,15 @@
 {
   position: absolute;
   border: solid 1px map-get($as-palette-grey, 500);
-  width: 100px;
+  width: 200px;
   heigth: 80px;
   box-shadow: $as-whiteframe-shadow-2dp;
+  background-color: #fff;
 }
 .as-graph-node-header
 {
   background-color: map-get($as-palette-grey, 500);
   color: map-get($as-palette-white, darker);
-  width: 100px;
   heigth: 24px;
   line-heigth: 24px;
   @extend .as-hbox;
@@ -46,3 +46,29 @@
 	width: 20%;
 	border-left: solid 1px map-get($as-palette-grey, 500);
 }
+.as-graph-node-section-header
+{
+	font-size: 12px;
+	padding: $as-gutter / 4;
+	text-transform: lowercase;
+	background-color: map-get($as-palette-grey, 100);
+	color: map-get($as-palette-grey, 800);
+}
+.as-graph-drag-start
+{
+	font-size: 12px;
+	margin: $as-gutter / 2;
+	padding: $as-gutter;
+	text-transform: lowercase;
+	border: dashed 1px map-get($as-palette-grey, 500);
+	color: map-get($as-palette-grey, 800);
+	cursor: move;
+	background-color: #fff;
+	z-index:100;
+	&:hover
+	{
+		border: dashed 1px map-get($as-palette-primary, 500);
+		color: map-get($as-palette-primary, 500);
+	}
+}
+
