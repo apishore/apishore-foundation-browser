@@ -27,21 +27,16 @@
   }
   i
   {
-  	padding-right: $as-gutter / 3;
   }
 }
 .as-graph-node-title
 {
   padding-left: $as-gutter / 2;
-  padding-right: $as-gutter / 2;
   line-heigth: 24px;
+  @extend .as-cell-wide;
 }
 .as-graph-new-node
 {
-	position: absolute;
-	top: 0px;
-	right: 0px;
 	width: 20%;
-	bottom: 0px;
 	border-left: solid 1px map-get($as-palette-grey, 500);
 }

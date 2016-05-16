@@ -17,6 +17,12 @@
 	background-color: #fff;
 	z-index: $as-z-index-menu;
 	@extend .as-whiteframe-8dp;
+	&.asa-freestyle
+	{
+		right: auto;
+		left: $as-gutter;
+		top: $as-gutter;
+	}
 	&.asa-for-appbar-icon
 	{
 		top: $as-appbar-height - $as-dropdown-menu-title-height;
@@ -40,6 +46,7 @@
 	border-left: solid 4px transparent;
 	padding: $as-gutter / 2;
 	padding-left: $as-gutter / 4;
+	color: map-get($as-palette-grey, 800);
 	&:hover
 	{
 		text-decoration:none;

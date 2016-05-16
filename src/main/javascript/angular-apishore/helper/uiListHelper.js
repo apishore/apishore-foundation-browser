@@ -203,6 +203,10 @@ apishore.factory("uiListHelper", function($injector, $http, $stateParams, $state
 				$scope.selectedItem = item;
 				$scope.selectedItemId = item.data.id;
 				$scope.infoItem(item, $event);
+				if($scope.onSelectItem)
+				{
+					$scope.onSelectItem({id: item.data.id, item: item});
+				}
 			};
 			$scope.infoItem = function(item, $event)
 			{
