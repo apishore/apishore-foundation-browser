@@ -1,0 +1,159 @@
+$as-tree-light-line-color: map-get($as-palette-grey, 500);
+$as-tree-light-line-color-hover: map-get($as-palette-primary, 500);
+
+.as-tree-light-container
+{
+	padding: 30px;
+}
+
+.as-tree-light-node
+{
+	@extend .as-hbox;
+	&::before
+	{
+		content: "";
+		position: absolute;
+		top: 20px;
+		left: -40px;
+		height: 1px;
+		width: 40px;
+		background-color: $as-tree-light-line-color;
+	}
+	&::after
+	{
+		content: "";
+		position: absolute;
+		top: 0px;
+		left: -40px;
+		width: 1px;
+		bottom: 0px;
+		background-color: $as-tree-light-line-color;
+	}
+	&:first-child
+	{
+		&::before
+		{
+			content: "";
+			position: absolute;
+			top: 20px;
+			left: -80px;
+			height: 1px;
+			width: 80px;
+			background-color: $as-tree-light-line-color;
+		}
+		&::after
+		{
+			content: "";
+			position: absolute;
+			top: 20px;
+			left: -40px;
+			width: 1px;
+			bottom: 0px;
+			background-color: $as-tree-light-line-color;
+		}
+	}
+	&:last-child
+	{
+		&::after
+		{
+			content: "";
+			position: absolute;
+			top: 0px;
+			left: -40px;
+			width: 1px;
+			height: 20px;
+			background-color: $as-tree-light-line-color;
+		}
+	}
+}
+
+.as-tree-light-node-info
+{
+	@extend .as-hbox;
+}
+
+.as-tree-light-node-box
+{
+	position: relative;
+	@extend .as-cell-fixed;
+	@extend .as-hbox;
+	border: solid 1px $as-tree-light-line-color;
+	line-height: 32px;
+	height: 40px;
+	border-radius: 2px;
+	margin-bottom: 10px;
+	width: 150px;
+	box-shadow: $as-whiteframe-shadow-2dp;
+	background-color: #fff;
+	span
+	{
+		@extend .as-cell-fixed;
+		padding-left: $as-gutter / 2;
+		padding-right: $as-gutter;
+		text-overflow: ellipsis;
+	}
+	.as-tree-light-node-box-drag
+	{
+		padding: 0px;
+		width: 40px;
+		padding-left: $as-gutter / 2;
+		padding-right: $as-gutter / 2;
+		background-color: $as-tree-light-line-color;
+		color: #fff;
+		text-align:center;
+		font-weight: bolder;
+		font-size: 18px;
+		&:hover
+		{
+				background-color: $as-tree-light-line-color-hover;
+				color: #fff;
+				cursor: move;
+		}
+	}
+}
+.as-tree-light-node-nav
+{
+	position: relative;
+	@extend .as-cell-fixed;
+	width: 80px;
+	.hline
+	{
+		position: absolute;
+		left: 0px;
+		top: 20px;
+		width: 25px;
+		height: 1px;
+		background-color: $as-tree-light-line-color;
+	}
+	.vline
+	{
+		position: absolute;
+		left: 40px;
+		top: 10px;
+		bottom: 0px;
+		width: 1px;
+		background-color: $as-tree-light-line-color;
+	}
+	.icon
+	{
+		z-index:1;
+		position: absolute;
+		left: 25px;
+		top: 4px;
+		height: 30px;
+		width: 30px;
+		border-radius: 30px;
+		line-height: 30px;
+		text-align: center;
+		color: #fff;
+		font-weight: bold;
+		font-size: 24px;
+		cursor: default;
+		@include user-select(none);
+		background-color: $as-tree-light-line-color;
+		&:hover
+		{
+			background-color: $as-tree-light-line-color-hover;
+		}
+	}
+}
