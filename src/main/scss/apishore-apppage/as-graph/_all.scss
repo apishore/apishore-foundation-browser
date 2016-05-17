@@ -64,6 +64,50 @@
 	background-color: map-get($as-palette-grey, 100);
 	color: map-get($as-palette-grey, 800);
 }
+.as-graph-title
+{
+	position: absolute;
+	left: $as-gutter * 2;
+	top: $as-gutter * 2;
+	font-size: 36px;
+	color: map-get($as-palette-grey, 200);
+}
+.as-graph-node-section-reference
+{
+	list-style: none;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	&:hover
+	{
+		.as-graph-node-section-reference-empty-list-placeholder
+		{
+			opacity:0;
+		}
+	}
+}
+.as-graph-node-reference
+{
+	height: 32px;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	padding: $as-gutter / 2;
+	margin: $as-gutter / 2;
+	border: solid 1px map-get($as-palette-grey, 500);
+	a.material-icons
+	{
+		float:right;
+		font-size: 16px;
+		&:hover
+		{
+			color: map-get($as-palette-red, 600);
+		}
+	}
+}
+.as-graph-node-section-reference-placeholder,
+.as-graph-node-section-reference-empty-list-placeholder,
 .as-graph-drag-start
 {
 	font-size: 12px;
