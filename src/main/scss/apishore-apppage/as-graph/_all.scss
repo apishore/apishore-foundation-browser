@@ -64,7 +64,11 @@
 	color: map-get($as-palette-grey, 800);
 	cursor: move;
 	background-color: #fff;
-	z-index:100;
+	&.dndDragging
+	{
+		z-index:100;
+		border: solid 1px map-get($as-palette-grey, 500);
+	}
 	&:hover
 	{
 		border: dashed 1px map-get($as-palette-primary, 500);
