@@ -8,6 +8,16 @@
 	stroke: map-get($as-palette-grey, 100);
 	stroke-width: 1px;
 }
+.as-graph-reference
+{
+	fill: none;
+	stroke: map-get($as-palette-grey, 600);
+	stroke-width: 3px;
+}
+.as-graph-reference-arrow
+{
+	fill: map-get($as-palette-grey, 600);
+}
 .as-graph-node
 {
   position: absolute;
