@@ -1,5 +1,10 @@
 $as-tree-light-line-color: map-get($as-palette-grey, 500);
 $as-tree-light-line-color-hover: map-get($as-palette-primary, 500);
+$as-tree-light-line-width: 2px;
+$as-tree-light-line-pos: 15px;
+$as-tree-light-node-height: 32px;
+$as-tree-light-node-width: 150px;
+$as-tree-light-node-hgutter: 80px;
 
 .as-tree-light-container
 {
@@ -13,10 +18,10 @@ $as-tree-light-line-color-hover: map-get($as-palette-primary, 500);
 	{
 		content: "";
 		position: absolute;
-		top: 20px;
-		left: -40px;
-		height: 1px;
-		width: 40px;
+		top: $as-tree-light-line-pos;
+		left: -$as-tree-light-node-hgutter/2;
+		height: $as-tree-light-line-width;
+		width: $as-tree-light-node-hgutter/2;
 		background-color: $as-tree-light-line-color;
 	}
 	&::after
@@ -24,8 +29,8 @@ $as-tree-light-line-color-hover: map-get($as-palette-primary, 500);
 		content: "";
 		position: absolute;
 		top: 0px;
-		left: -40px;
-		width: 1px;
+		left: -$as-tree-light-node-hgutter/2;
+		width: $as-tree-light-line-width;
 		bottom: 0px;
 		background-color: $as-tree-light-line-color;
 	}
@@ -35,19 +40,19 @@ $as-tree-light-line-color-hover: map-get($as-palette-primary, 500);
 		{
 			content: "";
 			position: absolute;
-			top: 20px;
-			left: -80px;
-			height: 1px;
-			width: 80px;
+			top: $as-tree-light-line-pos;
+			left: -$as-tree-light-node-hgutter;
+			height: $as-tree-light-line-width;
+			width: $as-tree-light-node-hgutter;
 			background-color: $as-tree-light-line-color;
 		}
 		&::after
 		{
 			content: "";
 			position: absolute;
-			top: 20px;
-			left: -40px;
-			width: 1px;
+			top: $as-tree-light-line-pos;
+			left: -$as-tree-light-node-hgutter/2;
+			width: $as-tree-light-line-width;
 			bottom: 0px;
 			background-color: $as-tree-light-line-color;
 		}
@@ -59,9 +64,9 @@ $as-tree-light-line-color-hover: map-get($as-palette-primary, 500);
 			content: "";
 			position: absolute;
 			top: 0px;
-			left: -40px;
-			width: 1px;
-			height: 20px;
+			left: -$as-tree-light-node-hgutter/2;
+			width: 2px;
+			height: $as-tree-light-line-pos;
 			background-color: $as-tree-light-line-color;
 		}
 	}
@@ -78,36 +83,38 @@ $as-tree-light-line-color-hover: map-get($as-palette-primary, 500);
 	@extend .as-cell-fixed;
 	@extend .as-hbox;
 	border: solid 1px $as-tree-light-line-color;
-	line-height: 32px;
-	height: 40px;
+	line-height: $as-tree-light-node-height;
+	height: $as-tree-light-node-height;
 	border-radius: 2px;
 	margin-bottom: 10px;
 	width: 150px;
-	box-shadow: $as-whiteframe-shadow-2dp;
+	-box-shadow: $as-whiteframe-shadow-2dp;
 	background-color: #fff;
+	&:hover
+	{
+		border-color: $as-tree-light-line-color-hover;
+	}
 	span
 	{
-		@extend .as-cell-fixed;
+		@extend .as-cell-wide;
 		padding-left: $as-gutter / 2;
 		padding-right: $as-gutter;
 		text-overflow: ellipsis;
 	}
 	.as-tree-light-node-box-drag
 	{
+		@extend .as-cell-fixed;
 		padding: 0px;
-		width: 40px;
-		padding-left: $as-gutter / 2;
-		padding-right: $as-gutter / 2;
-		background-color: $as-tree-light-line-color;
-		color: #fff;
+		color: $as-tree-light-line-color;
+		padding-top: 2px;
 		text-align:center;
-		font-weight: bolder;
-		font-size: 18px;
-		&:hover
-		{
-				background-color: $as-tree-light-line-color-hover;
-				color: #fff;
-				cursor: move;
+		&:hover {
+			i{
+				color: map-get($as-palette-red, 500);
+			}
+		}
+		i{
+			cursor: move;
 		}
 	}
 }
@@ -115,45 +122,50 @@ $as-tree-light-line-color-hover: map-get($as-palette-primary, 500);
 {
 	position: relative;
 	@extend .as-cell-fixed;
-	width: 80px;
-	.hline
-	{
-		position: absolute;
-		left: 0px;
-		top: 20px;
-		width: 25px;
-		height: 1px;
-		background-color: $as-tree-light-line-color;
-	}
-	.vline
-	{
-		position: absolute;
-		left: 40px;
-		top: 10px;
-		bottom: 0px;
-		width: 1px;
-		background-color: $as-tree-light-line-color;
-	}
+	width: $as-tree-light-node-hgutter;
+
 	.icon
 	{
 		z-index:1;
 		position: absolute;
-		left: 25px;
+		left: 28px;
 		top: 4px;
-		height: 30px;
-		width: 30px;
-		border-radius: 30px;
-		line-height: 30px;
+		height: 24px;
+		width: 24px;
 		text-align: center;
-		color: #fff;
-		font-weight: bold;
-		font-size: 24px;
 		cursor: default;
+		background-color: #fff;
 		@include user-select(none);
-		background-color: $as-tree-light-line-color;
+		transition: all 03s ease;
+		.asc-minus
+		{
+			opacity: 1;
+		}
+		.asc-minus-hover
+		{
+			opacity: 0;
+		}
+		i {
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				font-size: 24px;
+				color: $as-tree-light-line-color;
+		}
 		&:hover
 		{
-			background-color: $as-tree-light-line-color-hover;
+			.asc-minus
+			{
+				opacity: 0;
+			}
+			.asc-minus-hover
+			{
+				opacity: 1;
+			}
+			i {
+					font-size: 24px;
+					color: $as-tree-light-line-color-hover;
+			}
 		}
 	}
 }
