@@ -82,23 +82,30 @@ $as-tree-light-node-hgutter: 80px;
 	position: relative;
 	@extend .as-cell-fixed;
 	@extend .as-hbox;
-	border: solid 1px $as-tree-light-line-color;
+	border: solid 2px $as-tree-light-line-color;
 	line-height: $as-tree-light-node-height;
 	height: $as-tree-light-node-height;
-	border-radius: 2px;
+	border-radius: 4px;
 	margin-bottom: 10px;
 	width: 150px;
 	-box-shadow: $as-whiteframe-shadow-2dp;
 	background-color: #fff;
+	&.asa-selected
+	{
+		box-shadow: $as-whiteframe-shadow-2dp;
+		border-color: $as-tree-light-line-color-hover;
+	}
 	&:hover
 	{
 		border-color: $as-tree-light-line-color-hover;
 	}
-	span
+	.as-tree-light-node-box-title
 	{
 		@extend .as-cell-wide;
 		padding-left: $as-gutter / 2;
-		padding-right: $as-gutter;
+		padding-right: $as-gutter / 2;
+		font-size: 13px;
+		line-height: $as-tree-light-node-height - 2px;
 		text-overflow: ellipsis;
 	}
 	.as-tree-light-node-box-drag
@@ -107,6 +114,7 @@ $as-tree-light-node-hgutter: 80px;
 		padding: 0px;
 		color: $as-tree-light-line-color;
 		padding-top: 2px;
+		padding-right: 4px;
 		text-align:center;
 		&:hover {
 			i{
@@ -137,6 +145,7 @@ $as-tree-light-node-hgutter: 80px;
 		background-color: #fff;
 		@include user-select(none);
 		transition: all 03s ease;
+
 		.asc-minus
 		{
 			opacity: 1;
