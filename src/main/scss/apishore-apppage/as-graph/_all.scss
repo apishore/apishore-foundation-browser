@@ -120,6 +120,7 @@
 	background-color: #fff;
 	&.dndDragging
 	{
+		overflow:hidden;
 		z-index:100;
 		border: solid 1px map-get($as-palette-grey, 500);
 	}
