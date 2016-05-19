@@ -6,6 +6,8 @@ $as-tree-light-node-height: 32px;
 $as-tree-light-node-width: 150px;
 $as-tree-light-node-hgutter: 80px;
 
+@import "selection_info";
+
 .as-tree-light-container
 {
 	padding: 30px;

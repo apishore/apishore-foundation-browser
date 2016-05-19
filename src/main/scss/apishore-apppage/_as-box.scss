@@ -88,6 +88,19 @@ body.as-vbox
 {
 	padding: $as-gutter;
 }
+.as-left-gutter
+{
+	padding-left: $as-gutter;
+}
+.as-right-gutter
+{
+	padding-right: $as-gutter;
+}
+.as-h-gutter
+{
+	padding-left: $as-gutter;
+	padding-right: $as-gutter;
+}
 .as-panel
 {
 	position:absolute;
