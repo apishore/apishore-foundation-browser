@@ -244,3 +244,17 @@ $as-tree-light-node-vgutter: 10px;
 		}
 	}
 }
+.as-tree-light-shortcuts
+{
+	@extend .as-panel;
+	left: auto;
+	color: map-get($as-palette-grey, 800);
+	padding: $as-gutter *2;
+	font-size: 16px;
+	
+	@include transition(all 10s ease);
+	&.asa-off
+	{
+		opacity: 0;
+	}
+}
