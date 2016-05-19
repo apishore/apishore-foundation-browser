@@ -16,6 +16,14 @@ $as-tree-light-node-hgutter: 80px;
 .as-tree-light-node
 {
 	@extend .as-hbox;
+
+	&.asa-root
+	{
+			&::before
+			{
+				display:none;
+			}
+	}
 	&::before
 	{
 		content: "";
@@ -92,6 +100,23 @@ $as-tree-light-node-hgutter: 80px;
 	width: 150px;
 	-box-shadow: $as-whiteframe-shadow-2dp;
 	background-color: #fff;
+	&.asa-root
+	{
+		width: $as-tree-light-node-height;
+		border-radius: $as-tree-light-node-height;
+		.as-tree-light-node-box-title
+		{
+			text-align: center;
+		}
+	}
+	&.asa-disabled
+	{
+		border-style: dashed;
+		.as-tree-light-node-box-drag
+		{
+			display:none;
+		}
+	}
 	&.asa-selected
 	{
 		box-shadow: $as-whiteframe-shadow-2dp;
