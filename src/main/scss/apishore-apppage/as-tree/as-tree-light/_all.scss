@@ -19,19 +19,36 @@ $as-tree-light-node-hgutter: 80px;
 
 	&.asa-root
 	{
-			&::before
-			{
-				display:none;
-			}
+		>.as-tree-light-node-line-hr
+		{
+			left: $as-tree-light-node-height;
+		}
+		>.as-tree-light-node-line-hl
+		{
+			display:none;
+		}
+		&::after
+		{
+			display:none;
+		}
 	}
-	&::before
+	///horizontal line
+	.as-tree-light-node-line-hl
 	{
-		content: "";
 		position: absolute;
 		top: $as-tree-light-line-pos;
 		left: -$as-tree-light-node-hgutter/2;
-		height: $as-tree-light-line-width;
 		width: $as-tree-light-node-hgutter/2;
+		height: $as-tree-light-line-width;
+		background-color: $as-tree-light-line-color;
+	}
+	.as-tree-light-node-line-hr
+	{
+		position: absolute;
+		top: $as-tree-light-line-pos;
+		left: $as-tree-light-node-width;
+		width: $as-tree-light-node-hgutter/2;
+		height: $as-tree-light-line-width;
 		background-color: $as-tree-light-line-color;
 	}
 	&::after
@@ -44,18 +61,16 @@ $as-tree-light-node-hgutter: 80px;
 		bottom: 0px;
 		background-color: $as-tree-light-line-color;
 	}
+	&:only-child
+	{
+		&::after
+		{
+			display:none;
+		}
+	}
 	&:first-child
 	{
-		&::before
-		{
-			content: "";
-			position: absolute;
-			top: $as-tree-light-line-pos;
-			left: -$as-tree-light-node-hgutter;
-			height: $as-tree-light-line-width;
-			width: $as-tree-light-node-hgutter;
-			background-color: $as-tree-light-line-color;
-		}
+		///vertical line
 		&::after
 		{
 			content: "";
@@ -69,6 +84,10 @@ $as-tree-light-node-hgutter: 80px;
 	}
 	&:last-child
 	{
+		&::before
+		{
+			right: 0px;
+		}
 		&::after
 		{
 			content: "";
@@ -86,7 +105,11 @@ $as-tree-light-node-hgutter: 80px;
 {
 	@extend .as-hbox;
 }
-
+.as-tree-light-node-box-input
+{
+	outline:none;
+	border: none;
+}
 .as-tree-light-node-box
 {
 	position: relative;
@@ -105,7 +128,7 @@ $as-tree-light-node-hgutter: 80px;
 		border:none;
 		border-bottom: solid 1px map-get($as-palette-grey, 500);
 		border-radius: 0px;
-		color: map-get($as-palette-red, 500);
+		color: map-get($as-palette-primary, 500);
 	}
 	&.asa-root
 	{
@@ -165,19 +188,6 @@ $as-tree-light-node-hgutter: 80px;
 	position: relative;
 	@extend .as-cell-fixed;
 	width: $as-tree-light-node-hgutter;
-	&.asa-last
-	{
-		&::before
-		{
-			content: "";
-			position: absolute;
-			top: $as-tree-light-line-pos;
-			left: 0;
-			height: $as-tree-light-line-width;
-			width: $as-tree-light-node-hgutter / 2;
-			background-color: $as-tree-light-line-color;
-		}
-	}
 	.icon
 	{
 		z-index:1;
