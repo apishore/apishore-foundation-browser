@@ -120,8 +120,8 @@ $as-tree-light-node-hgutter: 80px;
 	height: $as-tree-light-node-height;
 	border-radius: 4px;
 	margin-bottom: 10px;
-	width: 150px;
-	-box-shadow: $as-whiteframe-shadow-2dp;
+	width: $as-tree-light-node-width;
+	@include user-select(none);
 	background-color: #fff;
 	cursor:default;
 	&.asa-new
@@ -138,6 +138,8 @@ $as-tree-light-node-hgutter: 80px;
 		.as-tree-light-node-box-title
 		{
 			text-align: center;
+			padding: 0px;
+			width: $as-tree-light-node-height;
 		}
 	}
 	&.asa-disabled
@@ -167,11 +169,13 @@ $as-tree-light-node-hgutter: 80px;
 	.as-tree-light-node-box-title
 	{
 		@extend .as-cell-wide;
+		width: 120px;
 		padding-left: $as-gutter / 2;
 		padding-right: $as-gutter / 2;
 		font-size: 13px;
 		line-height: $as-tree-light-node-height - 2px;
 		text-overflow: ellipsis;
+		overflow: hidden;
 	}
 	.as-tree-light-node-box-drag
 	{
@@ -190,6 +194,7 @@ $as-tree-light-node-hgutter: 80px;
 {
 	position: relative;
 	@extend .as-cell-fixed;
+	@include user-select(none);
 	width: $as-tree-light-node-hgutter;
 	.icon
 	{
