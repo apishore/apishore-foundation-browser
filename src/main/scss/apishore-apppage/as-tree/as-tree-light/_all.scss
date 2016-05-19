@@ -100,6 +100,13 @@ $as-tree-light-node-hgutter: 80px;
 	width: 150px;
 	-box-shadow: $as-whiteframe-shadow-2dp;
 	background-color: #fff;
+	&.asa-new
+	{
+		border:none;
+		border-bottom: solid 1px map-get($as-palette-grey, 500);
+		border-radius: 0px;
+		color: map-get($as-palette-red, 500);
+	}
 	&.asa-root
 	{
 		width: $as-tree-light-node-height;
@@ -158,7 +165,19 @@ $as-tree-light-node-hgutter: 80px;
 	position: relative;
 	@extend .as-cell-fixed;
 	width: $as-tree-light-node-hgutter;
-
+	&.asa-last
+	{
+		&::before
+		{
+			content: "";
+			position: absolute;
+			top: $as-tree-light-line-pos;
+			left: 0;
+			height: $as-tree-light-line-width;
+			width: $as-tree-light-node-hgutter / 2;
+			background-color: $as-tree-light-line-color;
+		}
+	}
 	.icon
 	{
 		z-index:1;
