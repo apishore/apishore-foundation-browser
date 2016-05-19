@@ -123,6 +123,7 @@ $as-tree-light-node-hgutter: 80px;
 	width: 150px;
 	-box-shadow: $as-whiteframe-shadow-2dp;
 	background-color: #fff;
+	cursor:default;
 	&.asa-new
 	{
 		border:none;
@@ -151,6 +152,13 @@ $as-tree-light-node-hgutter: 80px;
 	{
 		box-shadow: $as-whiteframe-shadow-2dp;
 		border-color: $as-tree-light-line-color-hover;
+		background-color: $as-tree-light-line-color-hover;
+		color: #fff;
+		font-weight: bold;
+		.as-tree-light-node-box-drag
+		{
+			color: #fff;
+		}
 	}
 	&:hover
 	{
@@ -173,11 +181,6 @@ $as-tree-light-node-hgutter: 80px;
 		padding-top: 2px;
 		padding-right: 4px;
 		text-align:center;
-		&:hover {
-			i{
-				color: map-get($as-palette-red, 500);
-			}
-		}
 		i{
 			cursor: move;
 		}
