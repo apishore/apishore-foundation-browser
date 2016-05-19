@@ -5,6 +5,7 @@ $as-tree-light-line-pos: 15px;
 $as-tree-light-node-height: 32px;
 $as-tree-light-node-width: 150px;
 $as-tree-light-node-hgutter: 80px;
+$as-tree-light-node-vgutter: 10px;
 
 @import "selection_info";
 
@@ -13,10 +14,26 @@ $as-tree-light-node-hgutter: 80px;
 	padding: 30px;
 }
 
+.as-tree-light-children-inner
+{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	position: relative;
+}
+.as-tree-light-node-no-drag
+{
+	display: block;
+	@extend .as-hbox;
+	width: 100%;
+	position: relative;
+}
 .as-tree-light-node
 {
+	position: relative;
 	@extend .as-hbox;
-
+	margin: 0px;
+	padding: 0px;
 	&.asa-root
 	{
 		>.as-tree-light-node-line-hr
@@ -27,13 +44,13 @@ $as-tree-light-node-hgutter: 80px;
 		{
 			display:none;
 		}
-		&::after
+		>.as-tree-light-node-line-vl
 		{
 			display:none;
 		}
 	}
 	///horizontal line
-	.as-tree-light-node-line-hl
+	&>.as-tree-light-node-line-hl
 	{
 		position: absolute;
 		top: $as-tree-light-line-pos;
@@ -42,7 +59,7 @@ $as-tree-light-node-hgutter: 80px;
 		height: $as-tree-light-line-width;
 		background-color: $as-tree-light-line-color;
 	}
-	.as-tree-light-node-line-hr
+	&>.as-tree-light-node-line-hr
 	{
 		position: absolute;
 		top: $as-tree-light-line-pos;
@@ -51,9 +68,8 @@ $as-tree-light-node-hgutter: 80px;
 		height: $as-tree-light-line-width;
 		background-color: $as-tree-light-line-color;
 	}
-	&::after
+	&>.as-tree-light-node-line-vl
 	{
-		content: "";
 		position: absolute;
 		top: 0px;
 		left: -$as-tree-light-node-hgutter/2;
@@ -61,42 +77,27 @@ $as-tree-light-node-hgutter: 80px;
 		bottom: 0px;
 		background-color: $as-tree-light-line-color;
 	}
-	&:only-child
-	{
-		&::after
-		{
-			display:none;
-		}
-	}
 	&:first-child
 	{
 		///vertical line
-		&::after
+		&>.as-tree-light-node-line-vl
 		{
-			content: "";
-			position: absolute;
 			top: $as-tree-light-line-pos;
-			left: -$as-tree-light-node-hgutter/2;
-			width: $as-tree-light-line-width;
-			bottom: 0px;
-			background-color: $as-tree-light-line-color;
 		}
 	}
 	&:last-child
 	{
-		&::before
+		&>.as-tree-light-node-line-vl
 		{
-			right: 0px;
-		}
-		&::after
-		{
-			content: "";
-			position: absolute;
-			top: 0px;
-			left: -$as-tree-light-node-hgutter/2;
-			width: 2px;
+			bottom: auto;
 			height: $as-tree-light-line-pos;
-			background-color: $as-tree-light-line-color;
+		}
+	}
+	&:only-child
+	{
+		&>.as-tree-light-node-line-vl
+		{
+			display: none;
 		}
 	}
 }
@@ -119,7 +120,7 @@ $as-tree-light-node-hgutter: 80px;
 	line-height: $as-tree-light-node-height;
 	height: $as-tree-light-node-height;
 	border-radius: 4px;
-	margin-bottom: 10px;
+	margin-bottom: $as-tree-light-node-vgutter;
 	width: $as-tree-light-node-width;
 	@include user-select(none);
 	background-color: #fff;
