@@ -113,6 +113,7 @@ $as-tree-light-node-vgutter: 10px;
 }
 .as-tree-light-node-box
 {
+	outline:none;
 	position: relative;
 	@extend .as-cell-fixed;
 	@extend .as-hbox;
