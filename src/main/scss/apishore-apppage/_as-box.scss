@@ -101,6 +101,38 @@ body.as-vbox
 	padding-left: $as-gutter;
 	padding-right: $as-gutter;
 }
+.as-screen-panel
+{
+	position:fixed;
+	left:0px;
+	top:0px;
+	right:0px;
+	bottom:0px;
+	background-color: #fff;
+}
+.as-screen-panel-close-button
+{
+	display: block;
+	position: fixed;
+	top: $as-gutter * 2;
+	right: $as-gutter * 2;
+	background-color: map-get($as-palette-grey, 500);
+	border-radius: 48px;
+	width: 48px;
+	height: 48px;
+	i
+	{
+		position: absolute;
+		left: 6px;
+		top: 6px;
+		font-size: 36px;
+		color: #fff;
+	}
+	&:hover
+	{
+		background-color: map-get($as-palette-primary, 500);
+	}
+}
 .as-panel
 {
 	position:absolute;

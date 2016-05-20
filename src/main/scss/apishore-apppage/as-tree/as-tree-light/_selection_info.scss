@@ -5,6 +5,9 @@
   background-color: map-get($as-palette-grey, 100);
   font-size: 13px;
   color: map-get($as-palette-grey, 600);
+  max-height: 300px;
+  min-height: 100px;
+  overflow: scroll;
   a{
     color: map-get($as-palette-indigo, 500);
     text-decoration: none;
