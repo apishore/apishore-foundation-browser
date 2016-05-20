@@ -63,16 +63,16 @@ apishore.factory("uiListHelper", function($injector, $http, $stateParams, $state
 						
 			$scope.navigateBack = function($event)
 			{
-				if(!$window.history.back())
+				if(angular.isDefined($scope.cancelState))
 				{
-		    		if(angular.isDefined($scope.cancelState))
-					{
-						$state.go($scope.cancelState);
-					}
-			    	if(angular.isDefined($scope.backState))
-			    	{
-						$state.go($scope.backState);
-					}
+					$state.go($scope.cancelState);
+				}
+				else if(angular.isDefined($scope.backState))
+				{
+					$state.go($scope.backState);
+				}
+				else if(!$window.history.back())
+				{
 		    	}
 			};
 			$scope.toggleInteractiveHelp = function()
