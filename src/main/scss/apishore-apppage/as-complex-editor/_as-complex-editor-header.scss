@@ -20,5 +20,5 @@
 	@extend .as-cell-fixed;
 	@extend .as-hbox;
 	color: map-get($as-palette-grey, 100);
-	margin-right: $as-gutter *2;
+	margin-right: $as-gutter;
 }
