@@ -5,7 +5,6 @@
   background-color: map-get($as-palette-grey, 100);
   font-size: 13px;
   color: map-get($as-palette-grey, 600);
-  max-height: 300px;
   min-height: 100px;
   overflow: scroll;
   a{
@@ -21,6 +20,10 @@
     font-weight: bold;
     margin: 0px;
     padding: 0px;
+    .material-icons
+    {
+    	font-size: 16px;
+    }
   }
   h2
   {
@@ -30,4 +33,30 @@
 
     color: map-get($as-palette-grey, 700);
   }
+}
+.as-tree-light-selection-info-expand
+{
+	margin-top: $as-gutter;
+	margin-left: -$as-gutter;
+	margin-right: -$as-gutter;
+	margin-bottom: -$as-gutter;
+	text-align:center;
+	background-color: map-get($as-palette-grey, 200);
+	line-height: 32px;
+	height: 32px;
+	font-size: 16px;
+	.material-icons
+	{
+		padding-top: 4px;
+	}
+	span
+	{
+		display: inline-block;
+		height: 32px;
+		font-size: 16px;
+	}
+	&:hover
+	{
+		background-color: map-get($as-palette-grey, 300);
+	}
 }
