@@ -1,0 +1,7 @@
+&.asa-raised
+{
+	&:not([disabled])
+	{
+		@include as-shadow-bottom-z-1();
+	}
+}

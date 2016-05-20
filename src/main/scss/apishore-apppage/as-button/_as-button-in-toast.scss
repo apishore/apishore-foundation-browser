@@ -1,0 +1,26 @@
+
+.as-toast-open-top {
+  .as-button.as-fab-top-left,
+  .as-button.as-fab-top-right {
+    transform: translate3d(0, $as-button-fab-toast-offset, 0);
+    &:not([disabled]) {
+      &.as-focused,
+      &:hover {
+        transform: translate3d(0, $as-button-fab-toast-offset - 1, 0);
+      }
+    }
+  }
+}
+
+.as-toast-open-bottom {
+  .as-button.as-fab-bottom-left,
+  .as-button.as-fab-bottom-right {
+    transform: translate3d(0, -$as-button-fab-toast-offset, 0);
+    &:not([disabled]) {
+      &.as-focused,
+      &:hover {
+        transform: translate3d(0, -$as-button-fab-toast-offset - 1, 0);
+      }
+    }
+  }
+}

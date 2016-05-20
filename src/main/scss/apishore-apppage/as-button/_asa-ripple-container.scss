@@ -1,0 +1,8 @@
+.as-ripple-container
+{
+    border-radius: $as-button-border-radius;
+    background-clip: padding-box;
+    overflow: hidden;
+    // The following hack causes Safari/Chrome to respect overflow hidden for ripples
+    -webkit-mask-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC');
+}

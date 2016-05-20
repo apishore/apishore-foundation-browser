@@ -1,0 +1,30 @@
+&.as-fab
+{
+
+    // Include the top/left/bottom/right fab positions
+    @include fab-all-positions();
+
+    z-index: $as-z-index-fab;
+
+    line-height: $as-button-fab-line-height;
+    min-width: 0;
+    width: $as-button-fab-width;
+    height: $as-button-fab-height;
+    vertical-align: middle;
+
+    @include as-shadow-bottom-z-1();
+    border-radius: $as-button-fab-border-radius;
+    background-clip: padding-box;
+    overflow: hidden;
+
+    transition: 0.2s linear;
+    transition-property: background-color, box-shadow;
+    .as-ripple-container
+    {
+      border-radius: $as-button-fab-border-radius;
+      background-clip: padding-box;
+      overflow: hidden;
+      // The following hack causes Safari/Chrome to respect overflow hidden for ripples
+      -webkit-mask-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC');
+    }
+}
