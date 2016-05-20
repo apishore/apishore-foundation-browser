@@ -26,6 +26,14 @@
   heigth: 80px;
   box-shadow: $as-whiteframe-shadow-2dp;
   background-color: #fff;
+  &.asa-selected
+  {
+  	border: solid 1px map-get($as-palette-primary, 500);
+  	.as-graph-node-header
+  	{
+  		background-color: map-get($as-palette-primary, 500);
+  	}
+  }
 }
 .as-graph-node-header
 {
@@ -53,8 +61,13 @@
 }
 .as-graph-new-node
 {
-	width: 20%;
-	border-left: solid 1px map-get($as-palette-grey, 500);
+	position: absolute;
+	left: $as-gutter;
+	top: $as-gutter;
+	right: $as-gutter;
+	bottom: $as-gutter;
+	border: solid 1px map-get($as-palette-grey, 200);
+	box-shadow: $as-whiteframe-shadow-2dp;
 }
 .as-graph-node-section-header
 {

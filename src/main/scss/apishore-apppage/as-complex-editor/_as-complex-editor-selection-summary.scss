@@ -4,6 +4,12 @@ $as-complex-editor-summary-gutter: $as-gutter * 1.5;
 {
 	border-bottom: solid 1px map-get($as-palette-grey, 100);
 	background-color: map-get($as-palette-grey, 100);
+	@include transition(all 0.5s ease);
+	&.asa-hidden
+	{
+		height: 0px;
+		overflow: hidden;
+	}
 }
 .as-complex-editor-selection-summary-inner
 {
