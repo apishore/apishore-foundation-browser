@@ -1,6 +1,7 @@
 .as-button
 {
 	@extend .as-hbox;
+	align-items: center;
 	@include user-select(none);
 	position: relative; //for child absolute-positioned <canvas>
 	border-radius: $as-button-border-radius;
@@ -16,7 +17,7 @@
 
 	transition: box-shadow $as-swift-ease-out-duration $as-swift-ease-out-timing-function,
               background-color $as-swift-ease-out-duration $as-swift-ease-out-timing-function;
-
+	
 	&:focus
 	{
 		outline: none;
