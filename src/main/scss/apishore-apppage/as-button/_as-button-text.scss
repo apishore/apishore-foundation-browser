@@ -4,7 +4,8 @@
 	
 	align-items: center;
 	text-align: center;
-	line-height: $as-button-line-height;
+	padding-top: 2px;
+	line-height: $as-button-line-height - 2px;
 	background: transparent;
 	white-space: nowrap;
 	// override for FAB, icon buttons, etc.
