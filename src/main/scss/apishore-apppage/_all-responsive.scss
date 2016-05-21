@@ -1,16 +1,27 @@
+
 @import "bars/all";
 @import "sidebar/all";
+
 @import "card/all";
+
 @import "fieldset/all";
-@import "as-chart/all";
-@import "as-image/all";
-@import "as-tabs/all";
-@import "as-graph/all";
-@import "as-tree/all";
-@import "as-dnd/all";
-@import "as-button/all";
-@import "as-complex-editor/all";
-@import "as-menu/all";
+@import "chart/all";
+
+@import "image/all";
+@import "tabs/all";
+
+@import "graph/all";
+@import "tree/all";
+
+@import "dnd/all";
+
+@import "button/all";
+@import "complex-editor/all";
+@import "menu/all";
+
+@import "crud/all";
+@import "md-list/all";
+
 
 @import "as-data-table";
 @import "as-data-card";
@@ -41,9 +52,6 @@
 @import "as-switch.scss";
 @import "as-switch-theme.scss";
 
-
-@import "as-crud/all";
-@import "md-list/all";
 
 @import "as-embedded-editors-list";
 
