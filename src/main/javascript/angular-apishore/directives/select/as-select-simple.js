@@ -39,7 +39,7 @@ apishore.directive("asSelectSimple", function(apishoreAuth, $rootScope, $http, $
         						itemDom[0].scrollIntoView();
         					}
         				}
-        				$event.stopPropagation();
+        				if($event) $event.stopPropagation();
         				return false;
         			}
         			case 38:
@@ -56,7 +56,7 @@ apishore.directive("asSelectSimple", function(apishoreAuth, $rootScope, $http, $
         						itemDom[0].scrollIntoView();
         					}
         				}
-        				$event.stopPropagation();
+        				if($event) $event.stopPropagation();
         				return false;
         			}
 	        		case 13:
@@ -69,8 +69,8 @@ apishore.directive("asSelectSimple", function(apishoreAuth, $rootScope, $http, $
 	        				$scope.openPopup();
 	        			}
 
-	        			$event.stopPropagation();
-	        			$event.preventDefault();
+	        			if($event) $event.stopPropagation();
+	        			if($event) $event.preventDefault();
 	        			return false;
 	        		}
         			case 27:

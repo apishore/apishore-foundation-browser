@@ -53,7 +53,7 @@ apishore.directive("asTypeahead", function(apishoreAuth, $rootScope, $http, $sta
         						itemDom[0].scrollIntoView();
         					}
         				}
-        				$event.stopPropagation();
+        				if($event) $event.stopPropagation();
         				return false;
         			}
         			case 38:
@@ -70,7 +70,7 @@ apishore.directive("asTypeahead", function(apishoreAuth, $rootScope, $http, $sta
         						itemDom[0].scrollIntoView();
         					}
         				}
-        				$event.stopPropagation();
+        				if($event) $event.stopPropagation();
         				return false;
         			}
         			case 27:
@@ -94,8 +94,8 @@ apishore.directive("asTypeahead", function(apishoreAuth, $rootScope, $http, $sta
 	        				$scope.openPopup();
 	        			}
 	        			
-	        			$event.stopPropagation();
-	        			$event.preventDefault();
+	        			if($event) $event.stopPropagation();
+	        			if($event) $event.preventDefault();
 	        			return false;
 	        		}
 	        		default:

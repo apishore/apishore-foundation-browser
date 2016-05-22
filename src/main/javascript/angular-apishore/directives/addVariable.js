@@ -35,8 +35,8 @@ apishore.directive('apishoreAddVariableMenu', function(taSelection, $timeout) {
 				$scope.isopen = false;
             	var editor = $scope.$parent.$editor();
                 editor.wrapSelection('inserthtml', v.v);
-                $event.stopPropagation();
-                $event.preventDefault();
+                if($event) $event.stopPropagation();
+                if($event) $event.preventDefault();
             };
 			
 		}

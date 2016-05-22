@@ -5,8 +5,8 @@ apishore.directive('apishoreDateTypeHelper', function() {
 		{
 			$scope.openApishoreFormPopup = function(name, $event)
 			{
-				$event.stopPropagation();
-				$event.preventDefault();
+				if($event) $event.stopPropagation();
+				if($event) $event.preventDefault();
 				$scope.apishoreFormPopups = {};//close othe popups in form
 				$scope.apishoreFormPopups[name] = true;
 			}

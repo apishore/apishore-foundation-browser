@@ -227,14 +227,14 @@ apishore.factory("uiListHelper", function($injector, $http, $stateParams, $state
 			
 			$scope.editItem = function(item, $event){
 				$scope.go($scope.editState, item);
-				$event.stopPropagation();
+				if($event) $event.stopPropagation();
 			};
 			
 			$scope.deleteItem = function(item, $event){
 				factory.removeByState(item.id).then(function(){
 					$scope.selectAll();
 				});
-				$event.stopPropagation();
+				if($event) $event.stopPropagation();
 			};
 			$scope.createItem = function()
 			{
