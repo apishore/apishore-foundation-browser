@@ -22,34 +22,20 @@
 
 @import "crud/all";
 @import "list/all";
+@import "file-upload/all";
 
 @import "form/all";
 
 @import "navigation/all";
 @import "progress/all";
 
+@import "dialog/all";
+@import "avatar/all";
 @import "dashboard/all";
 @import "viewer/all";
+@import "help/all";
+@import "typography/all";
+@import "integration/all";
+@import "workflow/all";
 
-@import "as-view-settings";
-@import "as-infobar";
-@import "as-universal-search";
-@import "as-dropdown-select";
 
-@import "as-dialog";
-@import "as-text-panel";
-@import "as-status-label";
-
-@import "as-recent-list";
-@import "as-coltab";
-
-@import "as-interactive-help";
-
-@import "as-dev-panel";
-@import "as-code";
-
-//ext
-@import "as-tree-diagram-hor";
-@import "as-qa-scenario";
-@import "pretty-print";
-@import "as-scrum";

@@ -17,19 +17,6 @@ a
 	padding: 15px;
 }
 
-@import "apishore-apppage/all";
-@import "avatar/all";
-@import "file-upload/all";
-@import "ng-table/all";
-@import "dev/all";
+@import "components/all";
 @import "security/all";
-
-@import "apishore-forms/all";
-@import "apishore-workflow/all";
-@import "apishore-print/all";
-
-.btn-actions-group
-{
-	display: inline-block;
-	float: left;
-}
+@import "print/all";

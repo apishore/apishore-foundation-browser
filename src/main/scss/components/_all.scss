@@ -1,9 +1,5 @@
+@import "integration/all-top";
 @import "layout/all";
-
-@import "as-responsive";
-@import "number-polyfill";
-@import "as-apishore-demos";
-@import "as-text";
 
 .table-scrollable{
     overflow: auto;
@@ -107,4 +103,4 @@ body
 	background-color: #e6e6e6;
 }
 
-@import "as-text-colors";
+
