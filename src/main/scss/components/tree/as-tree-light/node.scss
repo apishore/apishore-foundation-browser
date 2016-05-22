@@ -1,0 +1,81 @@
+.as-tree-light-node-no-drag
+{
+	display: block;
+	@extend .as-hbox;
+	width: 100%;
+	position: relative;
+}
+
+.as-tree-light-node
+{
+	position: relative;
+	@extend .as-hbox;
+	margin: 0px;
+	padding: 0px;
+	&.asa-root
+	{
+		>.as-tree-light-node-line-hr
+		{
+			left: $as-tree-light-node-height;
+		}
+		>.as-tree-light-node-line-hl
+		{
+			display:none;
+		}
+		>.as-tree-light-node-line-vl
+		{
+			display:none;
+		}
+	}
+	///horizontal line
+	&>.as-tree-light-node-line-hl
+	{
+		position: absolute;
+		top: $as-tree-light-line-pos;
+		left: -$as-tree-light-node-hgutter/2;
+		width: $as-tree-light-node-hgutter/2;
+		height: $as-tree-light-line-width;
+		background-color: $as-tree-light-line-color;
+	}
+	&>.as-tree-light-node-line-hr
+	{
+		position: absolute;
+		top: $as-tree-light-line-pos;
+		left: $as-tree-light-node-width;
+		width: $as-tree-light-node-hgutter/2;
+		height: $as-tree-light-line-width;
+		background-color: $as-tree-light-line-color;
+	}
+	&>.as-tree-light-node-line-vl
+	{
+		position: absolute;
+		top: 0px;
+		left: -$as-tree-light-node-hgutter/2;
+		width: $as-tree-light-line-width;
+		bottom: 0px;
+		background-color: $as-tree-light-line-color;
+	}
+	&:first-child
+	{
+		///vertical line
+		&>.as-tree-light-node-line-vl
+		{
+			top: $as-tree-light-line-pos;
+		}
+	}
+	&:last-child
+	{
+		&>.as-tree-light-node-line-vl
+		{
+			bottom: auto;
+			height: $as-tree-light-line-pos;
+		}
+	}
+	&:only-child
+	{
+		&>.as-tree-light-node-line-vl
+		{
+			display: none;
+		}
+	}
+}
