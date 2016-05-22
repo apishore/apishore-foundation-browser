@@ -4,7 +4,6 @@
 @import "number-polyfill";
 @import "as-apishore-demos";
 @import "as-text";
-@import "as-pagination";
 
 .table-scrollable{
     overflow: auto;
@@ -16,7 +15,7 @@
 
 ///
 /// DESKTOP
-/// 
+///
 .as-device-wide-desktop
 {
 	$as-appbar-height: $as-appbar-height-desktop;

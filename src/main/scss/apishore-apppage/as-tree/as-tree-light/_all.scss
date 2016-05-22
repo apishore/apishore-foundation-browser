@@ -1,0 +1,260 @@
+$as-tree-light-line-color: map-get($as-palette-grey, 500);
+$as-tree-light-line-color-hover: map-get($as-palette-primary, 500);
+$as-tree-light-line-width: 2px;
+$as-tree-light-line-pos: 15px;
+$as-tree-light-node-height: 32px;
+$as-tree-light-node-width: 150px;
+$as-tree-light-node-hgutter: 80px;
+$as-tree-light-node-vgutter: 10px;
+
+@import "selection_info";
+
+.as-tree-light-container
+{
+	padding: 30px;
+}
+
+.as-tree-light-children-inner
+{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	position: relative;
+}
+.as-tree-light-node-no-drag
+{
+	display: block;
+	@extend .as-hbox;
+	width: 100%;
+	position: relative;
+}
+.as-tree-light-node
+{
+	position: relative;
+	@extend .as-hbox;
+	margin: 0px;
+	padding: 0px;
+	&.asa-root
+	{
+		>.as-tree-light-node-line-hr
+		{
+			left: $as-tree-light-node-height;
+		}
+		>.as-tree-light-node-line-hl
+		{
+			display:none;
+		}
+		>.as-tree-light-node-line-vl
+		{
+			display:none;
+		}
+	}
+	///horizontal line
+	&>.as-tree-light-node-line-hl
+	{
+		position: absolute;
+		top: $as-tree-light-line-pos;
+		left: -$as-tree-light-node-hgutter/2;
+		width: $as-tree-light-node-hgutter/2;
+		height: $as-tree-light-line-width;
+		background-color: $as-tree-light-line-color;
+	}
+	&>.as-tree-light-node-line-hr
+	{
+		position: absolute;
+		top: $as-tree-light-line-pos;
+		left: $as-tree-light-node-width;
+		width: $as-tree-light-node-hgutter/2;
+		height: $as-tree-light-line-width;
+		background-color: $as-tree-light-line-color;
+	}
+	&>.as-tree-light-node-line-vl
+	{
+		position: absolute;
+		top: 0px;
+		left: -$as-tree-light-node-hgutter/2;
+		width: $as-tree-light-line-width;
+		bottom: 0px;
+		background-color: $as-tree-light-line-color;
+	}
+	&:first-child
+	{
+		///vertical line
+		&>.as-tree-light-node-line-vl
+		{
+			top: $as-tree-light-line-pos;
+		}
+	}
+	&:last-child
+	{
+		&>.as-tree-light-node-line-vl
+		{
+			bottom: auto;
+			height: $as-tree-light-line-pos;
+		}
+	}
+	&:only-child
+	{
+		&>.as-tree-light-node-line-vl
+		{
+			display: none;
+		}
+	}
+}
+
+.as-tree-light-node-info
+{
+	@extend .as-hbox;
+}
+.as-tree-light-node-box-input
+{
+	outline:none;
+	border: none;
+}
+.as-tree-light-node-box
+{
+	outline:none;
+	position: relative;
+	@extend .as-cell-fixed;
+	@extend .as-hbox;
+	border: solid 2px $as-tree-light-line-color;
+	line-height: $as-tree-light-node-height;
+	height: $as-tree-light-node-height;
+	border-radius: 4px;
+	margin-bottom: $as-tree-light-node-vgutter;
+	width: $as-tree-light-node-width;
+	@include user-select(none);
+	background-color: #fff;
+	cursor:default;
+	&.asa-new
+	{
+		border:none;
+		border-bottom: solid 1px map-get($as-palette-grey, 500);
+		border-radius: 0px;
+		color: map-get($as-palette-primary, 500);
+	}
+	&.asa-root
+	{
+		width: $as-tree-light-node-height;
+		border-radius: $as-tree-light-node-height;
+		.as-tree-light-node-box-title
+		{
+			text-align: center;
+			padding: 0px;
+			width: $as-tree-light-node-height;
+		}
+	}
+	&.asa-disabled
+	{
+		border-style: dashed;
+		.as-tree-light-node-box-drag
+		{
+			display:none;
+		}
+	}
+	&.asa-selected
+	{
+		box-shadow: $as-whiteframe-shadow-2dp;
+		border-color: $as-tree-light-line-color-hover;
+		background-color: $as-tree-light-line-color-hover;
+		color: #fff;
+		font-weight: bold;
+		.as-tree-light-node-box-drag
+		{
+			color: #fff;
+		}
+	}
+	&:hover
+	{
+		border-color: $as-tree-light-line-color-hover;
+	}
+	.as-tree-light-node-box-title
+	{
+		@extend .as-cell-wide;
+		width: 120px;
+		padding-left: $as-gutter / 2;
+		padding-right: $as-gutter / 2;
+		font-size: 13px;
+		line-height: $as-tree-light-node-height - 2px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	.as-tree-light-node-box-drag
+	{
+		@extend .as-cell-fixed;
+		padding: 0px;
+		color: $as-tree-light-line-color;
+		padding-top: 2px;
+		padding-right: 4px;
+		text-align:center;
+		i{
+			cursor: move;
+		}
+	}
+}
+.as-tree-light-node-nav
+{
+	position: relative;
+	@extend .as-cell-fixed;
+	@include user-select(none);
+	width: $as-tree-light-node-hgutter;
+	.icon
+	{
+		z-index:1;
+		position: absolute;
+		left: 28px;
+		top: 4px;
+		height: 24px;
+		width: 24px;
+		text-align: center;
+		cursor: default;
+		background-color: #fff;
+		@include user-select(none);
+		transition: all 03s ease;
+
+		.asc-minus
+		{
+			opacity: 1;
+		}
+		.asc-minus-hover
+		{
+			opacity: 0;
+		}
+		i {
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				font-size: 24px;
+				color: $as-tree-light-line-color;
+		}
+		&:hover
+		{
+			.asc-minus
+			{
+				opacity: 0;
+			}
+			.asc-minus-hover
+			{
+				opacity: 1;
+			}
+			i {
+					font-size: 24px;
+					color: $as-tree-light-line-color-hover;
+			}
+		}
+	}
+}
+.as-tree-light-shortcuts
+{
+	@extend .as-panel;
+	left: auto;
+	color: map-get($as-palette-grey, 800);
+	padding: $as-gutter *2;
+	font-size: 16px;
+
+	@include transition(all 10s ease);
+	&.asa-off
+	{
+		opacity: 0;
+	}
+}

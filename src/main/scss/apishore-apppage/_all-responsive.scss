@@ -23,65 +23,25 @@
 @import "crud/all";
 @import "list/all";
 
+@import "form/all";
+
 @import "navigation/all";
 @import "progress/all";
 
-@import "as-data-table";
-@import "as-data-card";
+@import "dashboard/all";
+@import "viewer/all";
 
-@import "as-form";
-@import "as-form-inline";
-@import "as-form-input";
-@import "as-form-input-select";
-@import "as-form-input-select2";
-@import "as-form-input-checkbox";
-@import "as-form-input-checkbox-set";
-@import "as-form-input-inline-radio";
-@import "as-form-input-suggestions";
-@import "as-form-input-slider";
-@import "as-form-input-color-swatch";
-@import "as-form-input-thumbnail";
-@import "as-input-incrementers";
 @import "as-view-settings";
-@import "as-view-control";
-@import "as-two-list-selection";
 @import "as-infobar";
-@import "as-login-form";
 @import "as-universal-search";
-@import "as-date-picker";
 @import "as-dropdown-select";
-@import "as-datetime-picker";
-
-@import "as-switch.scss";
-@import "as-switch-theme.scss";
-
-
-@import "as-embedded-editors-list";
-
-@import "as-geo-area-picker";
-@import "as-value-boolean-on-off";
-
-@import "as-fieldset";
-@import "as-fieldset-normal";
-@import "as-fieldset-blocks";
 
 @import "as-dialog";
 @import "as-text-panel";
-@import "as-grid";
 @import "as-status-label";
-@import "as-md-card-indicator";
-@import "as-login-form";
 
 @import "as-recent-list";
 @import "as-coltab";
-
-@import "as-md-chips";
-
-@import "as-timeline";
-@import "as-dashboard";
-@import "ag-grid";
-@import "ag-grid-ext";
-@import "ag-grid-settings";
 
 @import "as-interactive-help";
 
