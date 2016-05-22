@@ -39,6 +39,7 @@ $as-dialog-padding: $as-baseline-grid * 3;
 .as-dialog
 {
 	position: relative;
+	z-index: 100;
 	top: 0px;
 	left: 0px;
 	display:inline-block;
@@ -53,6 +54,21 @@ $as-dialog-padding: $as-baseline-grid * 3;
 		min-width: 450px;
 		max-width: 450px;
 		box-shadow: $as-whiteframe-shadow-5dp;
+	}
+	&.asa-huge
+	{
+		position: absolute;
+		max-width: none;
+		max-height: none;
+		opacity:1;
+		left: $as-gutter * 8;
+		top: 0;
+		right: $as-gutter * 8;
+		bottom: $as-gutter * 6;
+		.as-dialog-content
+		{
+			@extend .as-cell-wide;
+		}
 	}
 }
 .as-dialog-header
@@ -148,7 +164,10 @@ $as-dialog-padding: $as-baseline-grid * 3;
     padding-left: $as-baseline-grid * 2;
     min-height: $as-baseline-grid * 6.5;
     overflow: hidden;
-
+	&.asa-left-align
+	{
+		justify-content: flex-start;
+	}
     .as-button {
       margin-bottom: $as-baseline-grid;
       margin-left: $as-baseline-grid;

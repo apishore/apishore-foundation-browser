@@ -12,7 +12,7 @@
 	padding: $as-button-padding;
 	min-height: $as-button-line-height;
 	min-width: $as-button-min-width;
-
+	background-color: transparent;
 	overflow: hidden;   // for ink containment
 
 	transition: box-shadow $as-swift-ease-out-duration $as-swift-ease-out-timing-function,
