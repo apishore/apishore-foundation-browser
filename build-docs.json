@@ -1,3 +1,14 @@
 {
-	package:"./src/main/sassdoc-theme";
+	package: "package.json",
+	display: {
+        access: [
+            "public",
+            "private"
+        ],
+        alias: false,
+        watermark: true
+    },
+    groups: {
+        "undefined": "General"
+    }
 }
