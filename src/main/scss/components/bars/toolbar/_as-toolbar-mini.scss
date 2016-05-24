@@ -1,11 +1,8 @@
-$as-toolbar-height: 36px;
-
-$as-toolbar-title-arrow-size: $as-toolbar-height / 2; 
 .as-mini-toolbar
 {
 	position: relative;
 	@extend .as-hbox;
-	height: $as-toolbar-height;
+	height: $as-minitoolbar-height;
 	background-color: map-get($as-palette-blue-grey, 500);
 	&:before
 	{
@@ -16,7 +13,7 @@ $as-toolbar-title-arrow-size: $as-toolbar-height / 2;
 		height: 0px;
 		top: 0px;
 		border-style: solid;
-		border-width: $as-toolbar-title-arrow-size 0 $as-toolbar-title-arrow-size $as-toolbar-title-arrow-size;
+		border-width: $as-minitoolbar-title-arrow-size 0 $as-minitoolbar-title-arrow-size $as-minitoolbar-title-arrow-size;
 		border-color: transparent transparent transparent map-get($as-palette-blue-grey, 700);
 	}
 	&:after
@@ -28,30 +25,30 @@ $as-toolbar-title-arrow-size: $as-toolbar-height / 2;
 		height: 0px;
 		top: 0px;
 		border-style: solid;
-		border-width: $as-toolbar-title-arrow-size 0 $as-toolbar-title-arrow-size ($as-toolbar-title-arrow-size / 3);
+		border-width: $as-minitoolbar-title-arrow-size 0 $as-minitoolbar-title-arrow-size ($as-minitoolbar-title-arrow-size / 3);
 		border-color: transparent transparent transparent map-get($as-palette-blue-grey, 500);
 	}
 }
 .as-mini-toolbar-title
 {
 	position: relative;
-	height: $as-toolbar-height;
-	line-height: $as-toolbar-height;
-	padding-left: $as-gutter / 4 + $as-toolbar-title-arrow-size;
+	height: $as-minitoolbar-height;
+	line-height: $as-minitoolbar-height;
+	padding-left: $as-gutter / 4 + $as-minitoolbar-title-arrow-size;
 	text-transform: uppercase;
 	color:map-get($as-palette-white, darker);
-	
+
 }
 $as-mini-toolbar-tab-height: 16px;
 
 .as-mini-toolbar-tabs
 {
 	@extend .as-hbox;
-	height: $as-toolbar-height;
+	height: $as-minitoolbar-height;
 }
 .as-mini-toolbar-tabs-delimiter
 {
-	
+
 }
 .as-mini-toolbar-tab
 {
@@ -59,7 +56,7 @@ $as-mini-toolbar-tab-height: 16px;
 	font-size: 12px;
 	font-weight: bold;
 	color: #fff;
-	padding: ($as-toolbar-height - $as-mini-toolbar-tab-height) / 2;
+	padding: ($as-minitoolbar-height - $as-mini-toolbar-tab-height) / 2;
 	padding-left: 2px;
 	padding-right: 2px;
 	&.asa-active

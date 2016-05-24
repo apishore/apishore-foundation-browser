@@ -1,2 +1,38 @@
+///@group components.bars.toolbar
+///
+/// <h1>Toolbars</h1>
+///
+
+///@label Toolbar height
+///@fieldset dimensions
+///@editor dimension
+$as-toolbar-height: 44px;
+
+///@label Background color
+///@fieldset colors
+///@editor color
+$as-toolbar-bg-color: map-get($as-palette-fg, lighter);
+
+///@label Icon color
+///@fieldset colors
+///@editor color
+$as-toolbar-icon-color: map-get($as-palette-fg, dark);
+
+///@label Icon hover color
+///@fieldset colors
+///@editor color
+$as-toolbar-icon-hover-color: map-get($as-palette-fg, darken);
+
+
+///@label Mini toolbar height
+///@fieldset mini
+///@editor dimension
+$as-minitoolbar-height: 36px;
+
+///@label Mini toolbar arrow size
+///@fieldset mini
+///@editor dimension
+$as-minitoolbar-title-arrow-size: $as-minitoolbar-height / 2;
+
 @import "as-toolbar";
 @import "as-toolbar-mini";

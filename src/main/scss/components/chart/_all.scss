@@ -1,9 +1,12 @@
+///@group components.charts
+
+$as-chart-gutter: 80px;
+$as-chart-axis-labels-size: 30px;
+
 @import "value-total-hline";
 @import "value-total-vline";
 @import "value-total-donat";
 
-$as-chart-gutter: 80px;
-$as-chart-axis-labels-size: 30px;
 
 .as-chart-container
 {
@@ -16,11 +19,11 @@ $as-chart-axis-labels-size: 30px;
 	&.asa-loaded
 	{
 		opacity: 1;
-	}	
+	}
 }
 .as-chart-axis-y-label
 {
-	
+
 }
 .as-chart-axis-labels
 {

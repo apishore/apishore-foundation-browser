@@ -1,3 +1,8 @@
+///@group components.bars.appbar
+///@label Width of applicaiton bar icon
+///@editor dimension
+$as-appbar-icon-width: $as-appbar-height * 7 / 10;
+
 @import "as-appbar";
 @import "as-appbar-appname";
 @import "as-appbar-apptitle";

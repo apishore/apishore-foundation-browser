@@ -1,5 +1,3 @@
-// Variables
-$as-dialog-padding: $as-baseline-grid * 3;
 
 //
 .as-dialog-holder
@@ -175,7 +173,7 @@ $as-dialog-padding: $as-baseline-grid * 3;
       margin-top: $as-baseline-grid;
     }
   }
-  
+
 @media screen and (-ms-high-contrast: active) {
   .as-dialog {
     border: 1px solid #fff;

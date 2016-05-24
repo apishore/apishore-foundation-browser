@@ -1,4 +1,18 @@
+///@group components.image.avatar
+
+///@label Avatar size
+///@fieldset dimension
+///@editor dimension
 $as-avatar-size: 48px;
+
+///@label Big avatar size
+///@fieldset dimension
+///@editor dimension
+$as-avatar-size-big: 48px;
+
+///@label Avatar broder size
+///@fieldset dimension
+///@editor dimension
 $as-avatar-border-size: 4px;
 
 .as-avatar-outer
