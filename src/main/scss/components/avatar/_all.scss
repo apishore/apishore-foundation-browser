@@ -1,5 +1,13 @@
+///@group components.avatar
+
+///@label Avatar Size
+///@editor dimension
+///@suggestion $as-gutter * 4 | big
+///@suggestion $as-gutter * 2 | small
+$as-avatar-size: $as-gutter * 4;
+
 .person-avatar
 {
-	width: 80px;
-	height: 80px;
+	width: $as-avatar-person-size;
+	height: $as-avatar-person-size;
 }
