@@ -1,4 +1,5 @@
-
+///@group layout
+///
 $as-gutter: 16px;
 
 $as-grid-max-cols: 16 !default;
@@ -10,12 +11,12 @@ $container-sm: 600px;
 $container-md: 600px;
 $container-lg: 600px;
 $breadcrumb-separator: '/';
-//
-// Icons
-//
+
+///@group icons
+///
 $as-icon-size: 24px;
 
-// Typography
+///@group typography
 // ------------------------------
 $as-font-family: Roboto, 'Helvetica Neue', sans-serif !default;
 $as-font-size:   10px;
@@ -31,7 +32,7 @@ $as-subhead-font-size-base:   rem(1.600) !default;
 $as-body-font-size-base:      rem(1.400) !default;
 $as-caption-font-size-base:   rem(1.200) !default;
 
-// Layout
+///@group layout
 // ------------------------------
 
 $as-baseline-grid:            8px !default;
@@ -40,15 +41,17 @@ $as-layout-breakpoint-md:     960px !default;
 $as-layout-breakpoint-lg:     1200px !default;
 $as-layout-gutter-width:      ($as-baseline-grid * 2) !default;
 
-
+///@group components.appbar
 // App bar variables
 $as-app-bar-height: 64px;
 
+///@group components.toast
 $as-toast-height: $as-baseline-grid * 3 !default;
 $as-toast-margin: $as-baseline-grid * 1 !default;
 
 // Whiteframes
 
+///@group core.whiteframes
 $as-shadow-key-umbra-opacity:      0.2;
 $as-shadow-key-penumbra-opacity:   0.14;
 $as-shadow-ambient-shadow-opacity: 0.12;
@@ -80,9 +83,9 @@ $as-whiteframe-shadow-22dp: 0px 10px 14px -6px rgba(0, 0, 0, $as-shadow-key-umbr
 $as-whiteframe-shadow-23dp: 0px 11px 14px -7px rgba(0, 0, 0, $as-shadow-key-umbra-opacity), 0px 23px 36px 3px rgba(0, 0, 0, $as-shadow-key-penumbra-opacity), 0px 9px 44px 8px rgba(0, 0, 0, $as-shadow-ambient-shadow-opacity) !default;
 $as-whiteframe-shadow-24dp: 0px 11px 15px -7px rgba(0, 0, 0, $as-shadow-key-umbra-opacity), 0px 24px 38px 3px rgba(0, 0, 0, $as-shadow-key-penumbra-opacity), 0px 9px 46px 8px rgba(0, 0, 0, $as-shadow-ambient-shadow-opacity) !default;
 
-// Z-indexes
-//--------------------------------------------
-
+///@group core.zindexes
+///
+/// Z-indexes
 $as-z-index-tooltip: 100 !default;
 $as-z-index-menu-bg: 7;
 $as-z-index-menu-parent: 98;
@@ -96,9 +99,9 @@ $as-z-index-sidenav: 60 !default;
 $as-z-index-backdrop: 50 !default;
 $as-z-index-fab: 20 !default;
 
-// Easing Curves
-//--------------------------------------------
-
+///@group core.transitions.easingcurves
+///
+/// Easing Curves
 $as-swift-ease-out-duration: 0.4s !default;
 $as-swift-ease-out-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1) !default;
 $as-swift-ease-out: all $as-swift-ease-out-duration $as-swift-ease-out-timing-function !default;
@@ -115,13 +118,14 @@ $as-swift-linear-duration: 0.08s !default;
 $as-swift-linear-timing-function: linear !default;
 $as-swift-linear: all $as-swift-linear-duration $as-swift-linear-timing-function !default;
 
+///@group components.button.fab
 // Fab Buttons (shared between buttons.scss and fab*.scss)
 // -------------------------------------------
 $as-button-fab-width: rem(5.600) !default;
 $as-button-fab-height: rem(5.600) !default;
 $as-button-fab-padding: rem(1.60) !default;
 
-
+///@group layout
 $as-breakpoint-xxsmall: 480px;
 $as-breakpoint-xsmall: 600px;
 $as-breakpoint-smallx: 840px;
@@ -131,21 +135,28 @@ $as-breakpoint-xxlarge: 1440px;
 $as-breakpoint-xlarge: 1600px;
 $as-breakpoint-large: 1920px;
 
+///@group components.button.fab
 $as-baseline-grid: $as-gutter / 2;
 $as-grid-gutter: $as-gutter / 2;
 
-// data table
+///@group components.list.datatable
+/// data table
 $as-data-table-column-padding: 24px;
+
+///@group components.bars.sidebar
 $as-sidebar-bg: #ebebeb;
 
+///@group components.panel
 // panel
 $as-panel-header-height: 60px;
 
 // SHIFT MENU
 
+///@group components.shiftmenu
 $apishore-shift-menu-inner-width: 80%;
 $apishore-shift-menu-inner-width-tablet: 40%;
 
+///@group components.bars.appbar
 //APPBAR
 $as-appbar-left-margin: 0px;
 $as-appbar-height-desktop: 64px;
@@ -158,11 +169,15 @@ $as-appbar-icon-tooltip-display: none;
 $as-appbar-search-area-padding-left: 0px;
 
 
+///@group components.menu.dropdown
 //DROP DOWN
 $as-dropdown-menu-title-height: 48px;
+
+///@group components.bars.info
 // INFOBAR
 $as-infobar-header-bg-color: transparent;
 
+///@group components.bars.sidebar
 // SIDEBAR
 $as-sidebar-top-menu-bg-image: url('../img/as-sidebar-top-menu-bg.jpg');
 $as-sidebar-width: 220px;
@@ -177,24 +192,29 @@ $as-sidebar-padding-top-tablet: 14px;
 $as-sidebar-padding-bottom: 8px;
 $as-sidebar-padding-bottom-tablet: 14px;
 
-// MAIN-MENU
+///@group components.menu.main
+/// MAIN-MENU
 $as-main-menu-height: 60px;
 $as-main-menu-bg-image: none;//url('/img/as-sidebar-top-menu-bg.jpg');
 $as-main-menu-bg-color: #fff;
 
+///@group components.navigation.breadcrumb
 // BREADCRUMB
 $as-breadcrumb-color: #555;
 $as-breadcrumb-current-color: #333;
 
+///@group components.dialog
 //DIALOG
 $as-dialog-zindex: 10;
 $as-dialog-bg-color: #fff;
 
+///@group components.chips
 //CHIPS
 $md-chips-radius: 2px;
 $as-md-chips-editor-item-height: 28px;
 
 // branding images
+///@group branding
 $as-brand-bg-color: rgba(#595D67, 0.7);
 $as-brand-bg-image: none;
 
