@@ -1,1 +1,7 @@
+///@group components.dashboard
+
+///@label Text color
+///@editor color
+$as-dashboard-text-color: map-get($as-palette-grey, 600);
+
 @import "as-dashboard";
