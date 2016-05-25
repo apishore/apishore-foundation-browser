@@ -1,4 +1,7 @@
-/// 
+@function dp($d){
+  @return $d+'px';
+}
+///
 /// Convert rem to pixels my multipliing to 10px
 /// @param $as-multiplier - count of rems
 ///
@@ -11,7 +14,7 @@
   @return $as-multiplier * $as-font-size;
 }
 
-/// 
+///
 /// Clearfix
 ///
 @mixin clearfix
@@ -21,7 +24,7 @@
 	zoom: 1;
 }
 
-/// 
+///
 /// Cross browser transition-property
 /// @param $property
 ///
@@ -33,7 +36,7 @@
     transition-property:         $property;
 }
 
-/// 
+///
 /// Cross browser transition-duration
 /// @param $delay
 ///
