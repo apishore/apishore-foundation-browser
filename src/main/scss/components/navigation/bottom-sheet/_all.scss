@@ -10,15 +10,25 @@
 ///@editor font-size
 $as-bottom-sheet-font-size: dp(16);
 
-///@label Default color of bottom sheet test
-///@editor font-size
+///@label Text color
+///@editor color
 $as-bottom-sheet-color: map-get($as-palette-fg, darker);
 
-///@label Max number of columns in the grid system
-///@editor number
-///@suggestion 12|12 cols
-///@help Big number will significally increase side of CSS. 16 by default.
-$as-bottom-sheet-hpadding: 24px;
+///@label Title
+///@editor color
+$as-bottom-sheet-color: map-get($as-palette-fg, dark);
+
+///@label Title
+///@editor color
+$as-bottom-sheet-bgcolor: #fff;
+
+///@label Screen edge left &amp; right margins
+///@editor dimension
+$as-bottom-sheet-list-style-hpadding: 16px;
+
+///@label Top and bottom margins
+///@editor dimension
+$as-bottom-sheet-list-style-vpadding: 24px;
 
 $as-bottom-sheet-large-width: 64px;
 $as-bottom-sheet-phone-hpadding: 12px;
