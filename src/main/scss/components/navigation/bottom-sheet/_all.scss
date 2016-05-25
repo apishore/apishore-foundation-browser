@@ -1,40 +1,64 @@
-///@group components.navigation.bottom
+///@group components.navigation.bottom_sheet
 /// Bottom navigation provides quick navigation between top-level views of an app.
 /// It is primarily designed for use on mobile.
 /// Larger displays, like desktop, may achieve a similar effect by using side navigation.
 /// For instance, the compact “rail” treatment displays navigational icons by default.
 ///
 ///
-#as-bottom-sheet-phone-height: 56px;
-#as-bottom-sheet-large-width: 64px;
-#as-bottom-sheet-phone-hpadding: 12px;
-#as-bottom-sheet-icon-size: 24px;
 
-#as-bottom-sheet-action-min-width: 80px;
-#as-bottom-sheet-action-max-width: 168px;
+///@label Default font size of bottom sheet
+///@editor font-size
+$as-bottom-sheet-font-size: dp(16);
 
-#as-bottom-sheet-bgcolor: map-get($as-palette-grey, 100);
-#as-bottom-sheet-color: map-get($as-palette-grey, 500);
-#as-bottom-sheet-active-color: map-get($as-palette-grey, 500);
+///@label Default color of bottom sheet test
+///@editor font-size
+$as-bottom-sheet-color: map-get($as-palette-fg, darker);
 
-.as-bottom-navigation-contaner
+///@label Max number of columns in the grid system
+///@editor number
+///@suggestion 12|12 cols
+///@help Big number will significally increase side of CSS. 16 by default.
+$as-bottom-sheet-hpadding: 24px;
+
+$as-bottom-sheet-large-width: 64px;
+$as-bottom-sheet-phone-hpadding: 12px;
+$as-bottom-sheet-icon-size: 24px;
+
+$as-bottom-sheet-action-min-width: 80px;
+$as-bottom-sheet-action-max-width: 168px;
+
+$as-bottom-sheet-bgcolor: map-get($as-palette-grey, 100);
+$as-bottom-sheet-bgcolor: map-get($as-palette-grey, 100);
+$as-bottom-sheet-color: map-get($as-palette-grey, 500);
+$as-bottom-sheet-active-color: map-get($as-palette-grey, 500);
+
+.as-bottom-sheet-container
 {
+  &.asa-modal
+  {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
 
+    background-color: rgba(0,0,0,0.1);
+  }
 }
 .as-bottom-navigation-action
 {
-  color: #as-bottom-sheet-color;
-  padding-left: #as-bottom-sheet-phone-hpadding;
-  padding-right: #as-bottom-sheet-phone-hpadding;
+  color: $as-bottom-sheet-color;
+  padding-left: $as-bottom-sheet-phone-hpadding;
+  padding-right: $as-bottom-sheet-phone-hpadding;
   padding-top: 8px;
   text-align:center;
-  min-width: #as-bottom-sheet-action-min-width;
-  max-width: #as-bottom-sheet-action-max-width;
+  min-width: $as-bottom-sheet-action-min-width;
+  max-width: $as-bottom-sheet-action-max-width;
   font-size: dp(12);
   &:hover,
   &.asa-selected
   {
-    color: #as-bottom-sheet-active-color;
+    color: $as-bottom-sheet-active-color;
     padding-top: 6px;
     font-size: dp(14);
   }
