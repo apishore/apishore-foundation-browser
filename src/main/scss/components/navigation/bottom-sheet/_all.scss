@@ -1,0 +1,49 @@
+///@group components.navigation.bottom
+/// Bottom navigation provides quick navigation between top-level views of an app.
+/// It is primarily designed for use on mobile.
+/// Larger displays, like desktop, may achieve a similar effect by using side navigation.
+/// For instance, the compact “rail” treatment displays navigational icons by default.
+///
+///
+#as-bottom-sheet-phone-height: 56px;
+#as-bottom-sheet-large-width: 64px;
+#as-bottom-sheet-phone-hpadding: 12px;
+#as-bottom-sheet-icon-size: 24px;
+
+#as-bottom-sheet-action-min-width: 80px;
+#as-bottom-sheet-action-max-width: 168px;
+
+#as-bottom-sheet-bgcolor: map-get($as-palette-grey, 100);
+#as-bottom-sheet-color: map-get($as-palette-grey, 500);
+#as-bottom-sheet-active-color: map-get($as-palette-grey, 500);
+
+.as-bottom-navigation-contaner
+{
+
+}
+.as-bottom-navigation-action
+{
+  color: #as-bottom-sheet-color;
+  padding-left: #as-bottom-sheet-phone-hpadding;
+  padding-right: #as-bottom-sheet-phone-hpadding;
+  padding-top: 8px;
+  text-align:center;
+  min-width: #as-bottom-sheet-action-min-width;
+  max-width: #as-bottom-sheet-action-max-width;
+  font-size: dp(12);
+  &:hover,
+  &.asa-selected
+  {
+    color: #as-bottom-sheet-active-color;
+    padding-top: 6px;
+    font-size: dp(14);
+  }
+}
+.as-bottom-navigation-action-icon
+{
+
+}
+.as-bottom-navigation-action-label
+{
+
+}
