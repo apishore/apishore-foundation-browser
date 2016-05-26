@@ -1,4 +1,7 @@
 ///@group components.navigation.bottom_sheet
+///@fieldset-def base{label:"Font and color"}
+///@fieldset-def list{label:"List style"}
+///@fieldset-def grid{label:'Grid-style bottom sheet with icons'}
 /// Bottom navigation provides quick navigation between top-level views of an app.
 /// It is primarily designed for use on mobile.
 /// Larger displays, like desktop, may achieve a similar effect by using side navigation.
@@ -7,77 +10,77 @@
 ///
 
 ///@label Default font size of bottom sheet
+///@fieldset base
 ///@editor font-size
 $as-bottom-sheet-font-size: dp(16);
-
 ///@label Text color
+///@fieldset base
 ///@editor color
 $as-bottom-sheet-color: map-get($as-palette-fg, darker);
-
-///@label Title
+///@label Title color
+///@fieldset base
 ///@editor color
-$as-bottom-sheet-color: map-get($as-palette-fg, dark);
-
-///@label Title
+$as-bottom-sheet-title-color: map-get($as-palette-fg, dark);
+///@label Default bottom sheet background fill
+///@fieldset base
 ///@editor color
 $as-bottom-sheet-bgcolor: #fff;
+///@label Transparent overlay fill
+///@fieldset base
+///@editor color
+$as-bottom-sheet-transparent-overlay-fill: map-get($as-palette-black, 20);
+
 
 ///@label Screen edge left &amp; right margins
+///@fieldset list
 ///@editor dimension
 $as-bottom-sheet-list-style-hpadding: 16px;
-
 ///@label Top and bottom margins
+///@fieldset list
 ///@editor dimension
 $as-bottom-sheet-list-style-vpadding: 24px;
+///@label List-item height
+///@fieldset list
+///@editor dimension
+$as-bottom-sheet-list-style-item-height: 48px;
+///@label List icons size
+///@fieldset list
+///@editor dimension
+$as-bottom-sheet-list-style-icon-size: 24px;
+///@label Padding of text associated with icon
+///@fieldset list
+///@editor dimension
+$as-bottom-sheet-list-style-icon-right-padding: 32px;
+///@label Divider line height
+///@fieldset list
+///@editor dimension
+$as-bottom-sheet-list-style-divider-line-height: 1px;
+///@label Space below the top list
+///@fieldset list
+///@editor dimension
+$as-bottom-sheet-list-style-space-below-top-list: 7px;
+///@label Space above second bottom sheet
+///@fieldset list
+///@editor dimension
+$as-bottom-sheet-list-style-space-above-second-list: 8px;
+///@label List title height
+///@fieldset list
+///@editor dimension
+$as-bottom-sheet-list-style-title-height: 56px;
 
-$as-bottom-sheet-large-width: 64px;
-$as-bottom-sheet-phone-hpadding: 12px;
-$as-bottom-sheet-icon-size: 24px;
-
-$as-bottom-sheet-action-min-width: 80px;
-$as-bottom-sheet-action-max-width: 168px;
-
-$as-bottom-sheet-bgcolor: map-get($as-palette-grey, 100);
-$as-bottom-sheet-bgcolor: map-get($as-palette-grey, 100);
-$as-bottom-sheet-color: map-get($as-palette-grey, 500);
-$as-bottom-sheet-active-color: map-get($as-palette-grey, 500);
-
-.as-bottom-sheet-container
-{
-  &.asa-modal
-  {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-
-    background-color: rgba(0,0,0,0.1);
-  }
-}
-.as-bottom-navigation-action
-{
-  color: $as-bottom-sheet-color;
-  padding-left: $as-bottom-sheet-phone-hpadding;
-  padding-right: $as-bottom-sheet-phone-hpadding;
-  padding-top: 8px;
-  text-align:center;
-  min-width: $as-bottom-sheet-action-min-width;
-  max-width: $as-bottom-sheet-action-max-width;
-  font-size: dp(12);
-  &:hover,
-  &.asa-selected
-  {
-    color: $as-bottom-sheet-active-color;
-    padding-top: 6px;
-    font-size: dp(14);
-  }
-}
-.as-bottom-navigation-action-icon
-{
-
-}
-.as-bottom-navigation-action-label
-{
-
-}
+///@label Screen edge left & right margins
+///@fieldset grid
+///@editor dimension
+$as-bottom-sheet-grid-style-hpadding: 24px;
+///@label Padding below grid
+///@fieldset grid
+///@editor dimension
+$as-bottom-sheet-grid-style-bpadding: 24px;
+///@label Vertical space between grid lists
+///@fieldset grid
+///@editor dimension
+$as-bottom-sheet-grid-style-row-margin: 16px;
+///@label Grids list icon size
+///@fieldset grid
+///@editor dimension
+$as-bottom-sheet-grid-style-icon-size: 48px;
