@@ -81,7 +81,7 @@ apishore.directive('asSplitter', function()
 	};
 });
 
-apishore.directive('as-splitter-panel', function()
+apishore.directive('asSplitterPanel', function()
 {
 	return {
 		restrict : 'E',
@@ -92,7 +92,7 @@ apishore.directive('as-splitter-panel', function()
 		{
 			minSize : '='
 		},
-		template : '<div class="as-splitter-panel asa-index-{{index}}" ng-transclude></div>',
+		template : '<div class="as-splitter-panel asa-splitter-panel-index-{{index}}"><div class="as-panel as-vscroll" ng-transclude></div></div>',
 		link : function(scope, element, attrs, bgSplitterCtrl)
 		{
 			scope.elem = element;

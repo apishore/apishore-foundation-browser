@@ -18,8 +18,7 @@
 		position: absolute;
 		z-index: 999;
 	}
-	/* Horizontal */
-	&.asa-horizontal
+	&.asa-vertical
 	{
 	 	>.as-splitter-handler
 		{
@@ -28,16 +27,17 @@
 			left: 50%;
 			bottom: 0px;
 			cursor: ew-resize;
+			background-color: map-get($as-palette-grey, 500);
 		}
-		>.splitter-panel
+		>.as-splitter-panel
 		{
   			position: absolute;
   			height: 100%;
-			&.asa-index1
+			&.asa-splitter-panel-index-1
 			{
 				width: 50%; 
 			}
-			&.asa-index2
+			&.asa-splitter-panel-index-2
 			{
 				left: 50%;
 				right: 0px;
@@ -45,8 +45,7 @@
 			}
 		}
 	}
-	/* Vertical */
-	&.asa-vertical
+	&.asa-horizontal
 	{
 		>.as-splitter-handler
 		{
@@ -56,15 +55,15 @@
 			right: 0px;
 			cursor: ns-resize;
 		}
-		.splitter-panel
+		>.as-splitter-panel
 		{
 			position: absolute;
 			width: 100%;
-			&.asa-index1
+			&.asa-splitter-panel-index-1
 			{
 			  height: 50%; 
 			}
-			&.asa-index2
+			&.asa-splitter-panel-index-2
 			{
 			  top: 50%;
 			  bottom: 0px;
