@@ -40,21 +40,7 @@ apishore.directive('asSplitter', function()
 	
 				if (vertical)
 				{
-	
-					var height = bounds.bottom - bounds.top;
-					pos = ev.clientY - bounds.top;
-	
-					if (pos < pane1Min) return;
-					if (height - pos < pane2Min) return;
-	
-					handler.css('top', pos + 'px');
-					pane1.elem.css('height', pos + 'px');
-					pane2.elem.css('top', pos + 'px');
-	
-				}
-				else
-				{
-	
+					
 					var width = bounds.right - bounds.left;
 					pos = ev.clientX - bounds.left;
 	
@@ -64,6 +50,19 @@ apishore.directive('asSplitter', function()
 					handler.css('left', pos + 'px');
 					pane1.elem.css('width', pos + 'px');
 					pane2.elem.css('left', pos + 'px');
+				}
+				else
+				{
+					var height = bounds.bottom - bounds.top;
+					pos = ev.clientY - bounds.top;
+					
+					if (pos < pane1Min) return;
+					if (height - pos < pane2Min) return;
+					
+					handler.css('top', pos + 'px');
+					pane1.elem.css('height', pos + 'px');
+					pane2.elem.css('top', pos + 'px');
+					
 				}
 			});
 	

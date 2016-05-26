@@ -2,6 +2,27 @@
 {
 	border: solid 10px map-get($as-palette-blue, 500);
 	padding: 10px;
+	&.as-device-wide-desktop
+	{
+		width: 1900px;
+	}
+	&.as-device-desktop
+	{
+		width: 1900px;
+	}
+	&.as-device-tablet
+	{
+		width: 960px;
+	}
+	&.as-device-phone-portrait
+	{
+		width: 400px;
+		height: 800px;
+	}
+	&.as-device-phone-landscape
+	{
+		width: 600px;
+	}
 }
 
 .as-grid-container

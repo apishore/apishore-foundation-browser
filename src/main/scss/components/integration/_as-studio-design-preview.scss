@@ -1,6 +1,24 @@
 .as-studio-design-preview
 {
-	background-color: map-get($as-palette-grey, 300);
-	border-left: solid 1px red;
+	background-color: #fff;
+	z-index: 1000;
+	&.asa-expanded
+	{
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+	}
+}
+
+.as-studio-design-preview-header
+{
+	background-color: map-get($as-palette-grey, 200);
+}
+.as-studio-design-preview-header-title
+{
+	font-size: 18px;
+	line-height: 24px;
 	padding: $as-gutter;
 }
