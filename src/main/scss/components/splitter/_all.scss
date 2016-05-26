@@ -1,0 +1,75 @@
+///@group components.splitter
+///
+///
+///
+///
+
+.as-splitter-container 
+{
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	position: absolute;
+
+	>.as-splitter-handler 
+	{
+		background: transparent;
+		position: absolute;
+		z-index: 999;
+	}
+	/* Horizontal */
+	&.asa-horizontal
+	{
+	 	>.as-splitter-handler
+		{
+			width: 4px;
+			top: 0px; 
+			left: 50%;
+			bottom: 0px;
+			cursor: ew-resize;
+		}
+		>.splitter-panel
+		{
+  			position: absolute;
+  			height: 100%;
+			&.asa-index1
+			{
+				width: 50%; 
+			}
+			&.asa-index2
+			{
+				left: 50%;
+				right: 0px;
+				border-left: 1px solid #aaa;
+			}
+		}
+	}
+	/* Vertical */
+	&.asa-vertical
+	{
+		>.as-splitter-handler
+		{
+			height: 4px;
+			top: 50%; 
+			left: 0px;
+			right: 0px;
+			cursor: ns-resize;
+		}
+		.splitter-panel
+		{
+			position: absolute;
+			width: 100%;
+			&.asa-index1
+			{
+			  height: 50%; 
+			}
+			&.asa-index2
+			{
+			  top: 50%;
+			  bottom: 0px;
+			  border-top: 1px solid #aaa;
+			}
+		}
+	}
+}
