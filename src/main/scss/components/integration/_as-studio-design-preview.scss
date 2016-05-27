@@ -1,9 +1,11 @@
 .as-studio-design-preview
 {
 	background-color: #fff;
-	z-index: 1000;
+	@extend .as-vbox;
+	@extend .as-panel;
 	&.asa-expanded
 	{
+		z-index: 1000;
 		position: fixed;
 		left: 0px;
 		top: 0px;
@@ -11,7 +13,10 @@
 		bottom: 0px;
 	}
 }
-
+.as-device-demo
+{
+	@extend .as-cell-wide;
+}
 .as-studio-design-preview-header
 {
 	background-color: map-get($as-palette-grey, 200);
