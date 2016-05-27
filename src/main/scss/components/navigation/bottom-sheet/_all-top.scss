@@ -84,3 +84,14 @@ $as-bottom-sheet-grid-style-row-margin: 16px;
 ///@fieldset grid
 ///@editor dimension
 $as-bottom-sheet-grid-style-icon-size: 48px;
+
+.as-bottom-sheet-contaner
+{
+	@extend .as-panel;
+	background-color: $as-bottom-sheet-transparent-overlay-fill; 
+}
+.as-bottom-sheet-bar
+{
+	@extend .as-panel;
+	top: auto;
+}
