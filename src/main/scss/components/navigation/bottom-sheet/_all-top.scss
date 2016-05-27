@@ -79,15 +79,19 @@ $as-bottom-sheet-list-style-title-height: 56px;
 ///@label Screen edge left & right margins
 ///@fieldset grid
 ///@editor dimension
-$as-bottom-sheet-grid-style-hpadding: 24px;
-///@label Padding below grid
-///@fieldset grid
-///@editor dimension
-$as-bottom-sheet-grid-style-bpadding: 24px;
+$as-bottom-sheet-grid-style-padding: 24px;
 ///@label Vertical space between grid lists
 ///@fieldset grid
 ///@editor dimension
 $as-bottom-sheet-grid-style-row-margin: 16px;
+///@label Label height
+///@fieldset grid
+///@editor dimension
+$as-bottom-sheet-grid-style-label-height: 16px;
+///@label Label font size
+///@fieldset grid
+///@editor dimension
+$as-bottom-sheet-grid-style-label-font-size: 12px;
 ///@label Grids list icon size
 ///@fieldset grid
 ///@editor dimension
@@ -97,7 +101,6 @@ $as-bottom-sheet-grid-style-icon-size: 48px;
 ///@editor dimension
 $as-bottom-sheet-shadow: $as-whiteframe-shadow-2dp;
 
-.as-device-preview,
 .as-device-wide-desktop,
 .as-device-desktop,
 .as-device-tablet,
@@ -131,6 +134,12 @@ $as-bottom-sheet-shadow: $as-whiteframe-shadow-2dp;
 		&.asa-list
 		{
 			padding: $as-bottom-sheet-list-style-vpadding $as-bottom-sheet-list-style-hpadding;
+		}
+		&.asa-grid
+		{
+			padding-left: $as-bottom-sheet-grid-style-padding;
+			padding-right: $as-bottom-sheet-grid-style-padding;
+			padding-bottom: $as-bottom-sheet-grid-style-padding;
 		}
 	}
 	.as-bottom-sheet-header
@@ -171,5 +180,66 @@ $as-bottom-sheet-shadow: $as-whiteframe-shadow-2dp;
 		color: $as-bottom-sheet-color;
 		height: $as-bottom-sheet-list-style-item-height;
 		line-height: $as-bottom-sheet-list-style-item-height;		
+	}
+	.as-bottom-sheet-grid-row
+	{
+		@extend .as-hbox;
+		padding-top: $as-bottom-sheet-grid-style-row-margin;
+	}
+	.as-bottom-sheet-grid-item
+	{
+		@extend .as-vbox;
+		@extend .as-cell-wide;
+		flex-grow: 1;
+	    flex-basis: 0;
+		@include user-select(none);
+		&:hover,
+		&:focus,
+		&.asa-selected
+		{
+			.as-bottom-sheet-grid-item-icon,
+			.as-bottom-sheet-grid-item-label
+			{	
+				color: $as-bottom-sheet-selected-color;
+			}
+		}		
+		&:first-child
+		{
+			.as-bottom-sheet-grid-item-icon,
+			.as-bottom-sheet-grid-item-label
+			{
+				text-align:left;
+			}
+		}
+		&:last-child
+		{
+			.as-bottom-sheet-grid-item-icon,
+			.as-bottom-sheet-grid-item-label
+			{
+				text-align: right;
+			}
+		}
+	}
+	.as-bottom-sheet-grid-item-icon
+	{
+		@extend .as-cell-fixed;
+		height: $as-bottom-sheet-grid-style-icon-size;
+		line-height: $as-bottom-sheet-grid-style-icon-size;
+		color: $as-bottom-sheet-color;
+		
+		text-align: center;
+		>.material-icons
+		{
+			font-size: $as-bottom-sheet-grid-style-icon-size;
+		}
+	}
+	.as-bottom-sheet-grid-item-label
+	{
+		@extend .as-cell-wide;
+		color: $as-bottom-sheet-color;
+		text-align:center;
+		font-size:$as-bottom-sheet-grid-style-label-font-size;
+		height: $as-bottom-sheet-grid-style-label-height;
+		line-height: $as-bottom-sheet-grid-style-label-height;		
 	}
 }
