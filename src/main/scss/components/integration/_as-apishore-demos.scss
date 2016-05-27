@@ -14,17 +14,19 @@ $as-device-demo-table-width: 500px;
 
 .as-device-demo
 {
+	@extend .as-cell-wide;
 	&.as-device-preview
 	{
 		padding: $as-gutter;
-	}
-	&.as-device-wide-desktop
-	{
-		width: 1900px;
-	}
-	&.as-device-wide-desktop
-	{
-		width: 1900px;
+		.as-device-demo-outer
+		{
+			@extend .as-panel;
+			position: relative;
+		}
+		.as-device-demo-inner
+		{
+			position: relative;
+		}
 	}
 	&.as-device-desktop
 	{
@@ -64,6 +66,7 @@ $as-device-demo-table-width: 500px;
 		.as-device-demo-inner
 		{
 			@extend .as-scrollable;
+			position: relative;
 			text-align:left;
 			margin: 10px;
 			margin-bottom: 40px;
@@ -101,6 +104,7 @@ $as-device-demo-table-width: 500px;
 		.as-device-demo-inner
 		{
 			@extend .as-scrollable;
+			position: relative;
 			text-align:left;
 			margin: $as-device-demo-table-border;
 			margin-top:$as-device-demo-table-top;
@@ -141,6 +145,7 @@ $as-device-demo-table-width: 500px;
 		.as-device-demo-inner
 		{
 			@extend .as-scrollable;
+			position: relative;
 			text-align:left;
 			margin: $as-device-demo-phone-border;
 			margin-top:$as-device-demo-phone-top;
@@ -179,6 +184,7 @@ $as-device-demo-table-width: 500px;
 		.as-device-demo-inner
 		{
 			@extend .as-scrollable;
+			position: relative;
 			text-align:left;
 			margin: $as-device-demo-phone-border;
 			margin-left:$as-device-demo-phone-top;
