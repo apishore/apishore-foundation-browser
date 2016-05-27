@@ -17,10 +17,18 @@ $as-bottom-sheet-font-size: dp(16);
 ///@fieldset base
 ///@editor color
 $as-bottom-sheet-color: map-get($as-palette-fg, darker);
+///@label Text color of pressed item
+///@fieldset base
+///@editor color
+$as-bottom-sheet-selected-color: map-get($as-palette-primary, 500);
 ///@label Title color
 ///@fieldset base
 ///@editor color
 $as-bottom-sheet-title-color: map-get($as-palette-fg, dark);
+///@label Title height
+///@fieldset base
+///@editor dimension
+$as-bottom-sheet-title-height: 56px;
 ///@label Default bottom sheet background fill
 ///@fieldset base
 ///@editor color
@@ -38,7 +46,7 @@ $as-bottom-sheet-list-style-hpadding: 16px;
 ///@label Top and bottom margins
 ///@fieldset list
 ///@editor dimension
-$as-bottom-sheet-list-style-vpadding: 24px;
+$as-bottom-sheet-list-style-vpadding: 8px;
 ///@label List-item height
 ///@fieldset list
 ///@editor dimension
@@ -84,14 +92,84 @@ $as-bottom-sheet-grid-style-row-margin: 16px;
 ///@fieldset grid
 ///@editor dimension
 $as-bottom-sheet-grid-style-icon-size: 48px;
+///@label Bottom sheet shadow
+///@fieldset grid
+///@editor dimension
+$as-bottom-sheet-shadow: $as-whiteframe-shadow-2dp;
 
-.as-bottom-sheet-contaner
+.as-device-preview,
+.as-device-wide-desktop,
+.as-device-desktop,
+.as-device-tablet,
+.as-device-phone-portrait,
+.as-device-phone-landscape
 {
-	@extend .as-panel;
-	background-color: $as-bottom-sheet-transparent-overlay-fill; 
-}
-.as-bottom-sheet-bar
-{
-	@extend .as-panel;
-	top: auto;
+	.as-bottom-sheet-contaner
+	{
+		position:absolute;
+		left:0px; right:0px; bottom:0px;
+		height: 0px;
+		background-color: $as-bottom-sheet-transparent-overlay-fill;
+		overflow: hidden;
+		&.asa-opened
+		{
+			height: 100%;
+			.as-bottom-sheet-bar
+			{
+				
+			}
+		}
+	}
+	.as-bottom-sheet-bar
+	{
+		position:absolute;
+		left:0px; right:0px; bottom:0px;
+		background-color: $as-bottom-sheet-bgcolor;
+		font-size: $as-bottom-sheet-font-size;
+		color: $as-bottom-sheet-color;
+		box-shadow:$as-bottom-sheet-shadow;
+		&.asa-list
+		{
+			padding: $as-bottom-sheet-list-style-vpadding $as-bottom-sheet-list-style-hpadding;
+		}
+	}
+	.as-bottom-sheet-header
+	{
+		font-size: $as-bottom-sheet-font-size;
+		color: $as-bottom-sheet-title-color;
+		margin-top: -$as-bottom-sheet-list-style-vpadding;
+		height: $as-bottom-sheet-title-height;
+		line-height: $as-bottom-sheet-title-height;
+	}
+	.as-bottom-sheet-list-item
+	{
+		@extend .as-hbox;
+		height: $as-bottom-sheet-list-style-item-height;
+		@include user-select(none);
+		&:hover,
+		&:focus,
+		&.asa-selected
+		{
+			.as-bottom-sheet-list-item-icon,
+			.as-bottom-sheet-list-item-label
+			{	
+				color: $as-bottom-sheet-selected-color;
+			}
+		}		
+	}
+	.as-bottom-sheet-list-item-icon
+	{
+		@extend .as-cell-fixed;
+		height: $as-bottom-sheet-list-style-item-height;
+		color: $as-bottom-sheet-color;
+		padding-right: $as-bottom-sheet-list-style-icon-right-padding;
+		padding-top: ($as-bottom-sheet-list-style-item-height - $as-bottom-sheet-list-style-icon-size) / 2;
+	}
+	.as-bottom-sheet-list-item-label
+	{
+		@extend .as-cell-wide;
+		color: $as-bottom-sheet-color;
+		height: $as-bottom-sheet-list-style-item-height;
+		line-height: $as-bottom-sheet-list-style-item-height;		
+	}
 }
