@@ -37,9 +37,6 @@ $as-bottom-navigation-active-color: map-get($as-palette-primary, 500);
 }
 .as-bottom-navigation-action
 {
-	@extend .as-cell-wide;
-	flex-grow: 1;
-    flex-basis: 0;	
 	color: $as-bottom-navigation-color;
 	background-color: $as-bottom-navigation-bgcolor;
 	padding-left: $as-bottom-navigation-phone-hpadding;
@@ -63,7 +60,7 @@ $as-bottom-navigation-active-color: map-get($as-palette-primary, 500);
 }
 .as-bottom-navigation-action-icon
 {
-
+	
 }
 .as-bottom-navigation-action-label
 {
@@ -85,19 +82,78 @@ $as-bottom-navigation-active-color: map-get($as-palette-primary, 500);
 	.as-bottom-navigation-bar
 	{
 		@extend .as-vbox;
+		width: $as-bottom-navigation-large-width;
 	}
 	.as-bottom-navigation-action
 	{
 		@extend .as-cell-fixed;
+		width: $as-bottom-navigation-large-width;
+		min-width: $as-bottom-navigation-large-width;
+		height: $as-bottom-navigation-large-width;
+		padding-left: ($as-bottom-navigation-large-width - $as-bottom-navigation-icon-size) / 2;
+		padding-top: ($as-bottom-navigation-large-width - $as-bottom-navigation-icon-size) / 2;
+		cursor: pointer;
+		&:hover,
+		&.asa-selected
+		{
+			color: $as-bottom-navigation-active-color;
+			padding-left: ($as-bottom-navigation-large-width - $as-bottom-navigation-icon-size) / 2 + 2;
+			font-size: dp(14);
+			@include transition(all 0.3s ease);
+			.as-bottom-navigation-action-label
+			{
+				font-size: dp(14);
+			}
+		}
+	}	
+	.as-bottom-navigation-action
+	{
+		@extend .as-cell-fixed;
+		&:hover
+		{
+			.as-bottom-navigation-action-label
+			{
+				display:block;
+			}
+		}
 	}
 	.as-bottom-navigation-action-label
 	{
 		display:none;
+		position: absolute;
+		min-width: $as-bottom-navigation-large-width * 2;
+		left: $as-bottom-navigation-large-width + 2px;
+		top: $as-bottom-navigation-large-width / 2 - $as-gutter;
+		padding: $as-gutter / 2;
+		background-color: map-get($as-palette-grey, 800);
+		border-radius: 2px;
+		color: #fff;
+		pointer-events: none;
+		&:after {
+			right: 100%;
+			top: 50%;
+			border: solid transparent;
+			content: "";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-color: transparent;
+			border-right-color: map-get($as-palette-grey, 800);
+			border-width: 8px;
+			margin-top: -8px;
+		}
+	}
+	.as-bottom-navigation-action-icon
+	{
+		width: $as-bottom-navigation-icon-size;
+		height: $as-bottom-navigation-icon-size;
 	}
 	.as-bottom-navigation-bar-space
 	{
 		display:block;
 		@extend .as-cell-wide;
+		width: $as-bottom-navigation-large-width;
 	}
 }
 .as-device-tablet,
@@ -112,9 +168,13 @@ $as-bottom-navigation-active-color: map-get($as-palette-primary, 500);
 	{
 		@extend .as-hbox;
 		box-shadow: $as-bottom-navigation-shadow;
+		height: $as-bottom-navigation-phone-height;
 	}
 	.as-bottom-navigation-action
 	{
+		@extend .as-cell-wide;
+		flex-grow: 1;
+	    flex-basis: 0;	
 	}
 	.as-bottom-navigation-bar-space
 	{
