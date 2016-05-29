@@ -10,6 +10,13 @@
 				{
 					color: #fff;
 				}
+				&.asa-primary
+				{
+					.as-button-text
+		 			{
+						color: map-get($as-palette-primary, 100);
+					}
+				}
 			}
 			&[disabled],
 			&:disabled,
@@ -21,7 +28,7 @@
   				}
 				.as-button-text
 				{
-					color: opacify(#ffffff, 0.7);
+					color: transparentize(#ffffff, 0.7);
 				}
 			}
 		}

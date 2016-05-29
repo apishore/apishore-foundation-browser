@@ -6,18 +6,25 @@
  		{
  			color: #000;
 		}
+		&.asa-primary
+		{
+			.as-button-text
+ 			{
+				color: map-get($as-palette-primary, 500);
+			}
+		}
  	
 		&:hover,
 		&:focus,
 		&.asa-hover,
 		&.asa-focused
 		{
-			background-color: opacify(#999999, 0.60);
+			background-color: transparentize(#999999, 0.80);
 		}
 		&.asa-pressed,
 		&:active
 		{
-			background-color: opacify(#999999, 0.80);
+			background-color: transparentize(#999999, 0.60);
 		}
 		&.as-icon-button:hover
 		{
@@ -26,8 +33,13 @@
 	}
 	
 	&[disabled],
+	&.asa-disabled,
 	&:disabled
 	{
-		color: opacify(#000000, 0.74);
+		.as-button-text,
+		.as-button-icon
+ 		{
+			color: transparentize(#000000, 0.74);
+		}
 	}
 }

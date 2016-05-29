@@ -57,23 +57,6 @@
     }
   }
 
-  &.asa-raised {
-    color: map-get($as-palette-fg, dark);
-    background-color: map-get($as-palette-bg, dark);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-    &:not([disabled]) {
-      .as-icon {
-        color: map-get($as-palette-fg, dark);
-      }
-      &:hover {
-        background-color: map-get($as-palette-bg, dark);
-        box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-      }
-      &.asa-focused {
-        background-color: map-get($as-palette-bg, light);
-      }
-    }
-  }
 
   &.asa-fill {
     color: map-get($as-palette-bg, darker);
