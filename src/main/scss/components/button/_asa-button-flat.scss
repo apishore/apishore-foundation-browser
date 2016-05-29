@@ -1,0 +1,33 @@
+&.asa-flat
+{
+	&:not([disabled])
+	{
+		.as-button-text
+ 		{
+ 			color: #000;
+		}
+ 	
+		&:hover,
+		&:focus,
+		&.asa-hover,
+		&.asa-focused
+		{
+			background-color: opacify(#999999, 0.60);
+		}
+		&.asa-pressed,
+		&:active
+		{
+			background-color: opacify(#999999, 0.80);
+		}
+		&.as-icon-button:hover
+		{
+			background-color: transparent;
+		}
+	}
+	
+	&[disabled],
+	&:disabled
+	{
+		color: opacify(#000000, 0.74);
+	}
+}

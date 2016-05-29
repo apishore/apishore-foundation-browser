@@ -1,16 +1,5 @@
 .as-button {
 
-  &:not([disabled]) {
-    &:hover {
-      background-color: map-get($as-palette-bg, dark);
-    }
-    &.as-focused {
-      background-color: map-get($as-palette-bg, dark);
-    }
-    &.as-icon-button:hover {
-      background-color: transparent;
-    }
-  }
 
   &.asa-fab {
     background-color: map-get($as-palette-accent, 500);

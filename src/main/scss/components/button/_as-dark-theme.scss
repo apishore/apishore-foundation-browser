@@ -1,0 +1,29 @@
+.as-dark-theme
+{
+	.as-button
+	{
+		&.asa-flat
+		{
+			&:not([disabled])
+  			{
+				.as-button-text
+				{
+					color: #fff;
+				}
+			}
+			&[disabled],
+			&:disabled,
+			&.asa-disabled
+  			{
+  				&:hover
+  				{
+  					background-color:transparent;
+  				}
+				.as-button-text
+				{
+					color: opacify(#ffffff, 0.7);
+				}
+			}
+		}
+	}
+}

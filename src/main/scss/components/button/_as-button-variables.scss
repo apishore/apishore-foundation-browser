@@ -1,5 +1,4 @@
 ///@group components.button.normal
-
 ///@label Button radius
 ///@fieldset dimension
 ///@editor small-radius
@@ -9,7 +8,7 @@ $as-button-border-radius: 2px !default;
 ///@fieldset dimension
 ///@readonly
 ///@editor radius
-$as-button-icon-border-radius: 50% !default;
+$as-button-icon-border-radius: 2px;
 
 ///@label Button line height
 ///@fieldset dimension

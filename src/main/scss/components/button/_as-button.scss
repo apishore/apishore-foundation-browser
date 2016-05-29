@@ -1,7 +1,7 @@
 .as-button
 {
-	display: inline-block;
 	@extend .as-hbox;
+	display: inline-flex;
 	align-items: center;
 	@include user-select(none);
 	position: relative; //for child absolute-positioned <canvas>
@@ -15,7 +15,7 @@
 	min-width: $as-button-min-width;
 	background-color: transparent;
 	overflow: hidden;   // for ink containment
-
+	text-decoration:none;
 	transition: box-shadow $as-swift-ease-out-duration $as-swift-ease-out-timing-function,
               background-color $as-swift-ease-out-duration $as-swift-ease-out-timing-function;
 	

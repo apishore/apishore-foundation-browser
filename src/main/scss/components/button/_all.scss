@@ -11,11 +11,15 @@
 ///
 .as-button
 {
+	///@skip
+	$as-button-flat-color: #000;
+	
 	@import "asa-button-raised";
 	@import "asa-button-cornered";
 	@import "asa-button-rounded";
 	@import "asa-button-fab";
 	@import "asa-button-raised";
+	@import "asa-button-flat";
 	@import "asa-button-mini";
 	@import "asa-selected";
 	@import "asa-ripple-container";
@@ -27,3 +31,5 @@
 @import "as-ms-high-contrast";
 @import "as-button-in-toast";
 @import "as-button-delimiter";
+@import "as-dark-theme";
+
