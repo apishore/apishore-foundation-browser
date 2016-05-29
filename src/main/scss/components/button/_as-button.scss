@@ -1,5 +1,6 @@
 .as-button
 {
+	display: inline-block;
 	@extend .as-hbox;
 	align-items: center;
 	@include user-select(none);
