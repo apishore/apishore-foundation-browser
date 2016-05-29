@@ -3,17 +3,17 @@
 ///@label Card padding
 ///@fieldset dimension
 ///@editor dimension
-$card-padding: $as-gutter !default;
+$as-card-padding: $as-gutter !default;
 
 ///@label Card shadow
 ///@fieldset dimension
 ///@editor shadow
-$card-box-shadow: $as-whiteframe-shadow-1dp !default;
+$as-card-box-shadow: $as-whiteframe-shadow-1dp !default;
 
 ///@label Card border radius
 ///@fieldset dimension
 ///@editor small-radius
-$card-border-radius: 2px !default;
+$as-card-border-radius: 2px !default;
 
 @import "as-card";
 @import "as-card-theme";
