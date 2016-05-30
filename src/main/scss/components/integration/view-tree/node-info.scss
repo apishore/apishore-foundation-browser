@@ -1,4 +1,16 @@
 .studio-view-tree-node-info
 {
 	@extend .as-hbox;
+	&.asa-expanded
+	{
+		.studio-view-tree-node-details
+		{
+			display: block;
+		}
+	}
+}
+.studio-view-tree-node-details
+{
+	@extend .as-vbox;
+	display: none;
 }
