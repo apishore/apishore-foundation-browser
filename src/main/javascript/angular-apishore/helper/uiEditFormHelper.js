@@ -64,7 +64,7 @@ apishore.factory("uiEditFormHelper", function($injector, $http, $stateParams, $s
                 item.id = $scope.itemData.data.id;
                 api.transform($scope.itemData.data, item);
                 $scope.submitting = true;
-                api.updateByState(item).then(function(res){
+                api.updateByStateAndId(item).then(function(res){
                     $scope.submitting = false;
                     $scope.afterSave(res.data.data);
                     window.apishoreQA.submitting = false;
