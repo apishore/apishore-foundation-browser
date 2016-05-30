@@ -18,6 +18,13 @@
 	line-height: $studio-view-tree-node-height - 2px;
 	text-overflow: ellipsis;
 	overflow: hidden;
+	&.asa-expanded
+	{
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
+		border-bottom: none;
+		margin-bottom: 0px;
+	}
 	&.asa-new
 	{
 		border:none;

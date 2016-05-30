@@ -1,6 +1,5 @@
 .studio-view-tree-node-info
 {
-	@extend .as-hbox;
 	&.asa-expanded
 	{
 		.studio-view-tree-node-details
@@ -8,9 +7,36 @@
 			display: block;
 		}
 	}
+	&:hover
+	{
+		.studio-view-tree-node-details
+		{
+			border-color: $studio-view-tree-line-color-hover;
+		}
+	}
+	&>.studio-view-tree-node-line-hr
+	{
+		position: absolute;
+		top: $studio-view-tree-line-pos;
+		right: -$studio-view-tree-node-hgutter/2;
+		width: $studio-view-tree-node-hgutter/2;
+		height: $studio-view-tree-line-width;
+		background-color: $studio-view-tree-line-color;
+	}	
 }
 .studio-view-tree-node-details
 {
-	@extend .as-vbox;
 	display: none;
+	border-radius: 4px;
+	border: solid 2px $studio-view-tree-line-color;
+	margin-bottom: $studio-view-tree-node-vgutter;
+	min-width: 200px;
+	padding:$as-gutter;
+	&.asa-selected,
+	{
+		box-shadow: $as-whiteframe-shadow-2dp;
+		border-color: $studio-view-tree-line-color-hover;
+		background-color: #ff;
+		font-weight: bold;
+	}
 }
