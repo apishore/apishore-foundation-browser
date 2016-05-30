@@ -1,7 +1,7 @@
 /**
  * UI Edit Form Helper provides common code for generated js
  */
-apishore.factory("uiEmbeddedEditFormHelper", function($injector, $http, $stateParams, $state, $window, $timeout, $location, uiEntityHelper) {
+apishore.factory("uiInlineEditFormHelper", function($injector, $http, $stateParams, $state, $window, $timeout, $location, uiEntityHelper) {
     return {
     	init : function(api, $scope, elem, attrs, itemId)
         {
@@ -18,7 +18,7 @@ apishore.factory("uiEmbeddedEditFormHelper", function($injector, $http, $statePa
             }
             $scope.submitForm = function(form)
             {
-                return false;
+            	if($scope.onSave) $scope.onSave({itemData:itemData});
             };
 			$scope.submitFromEmbeddedForm = function()
 			{
