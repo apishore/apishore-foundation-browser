@@ -18,7 +18,7 @@ apishore.factory("uiInlineEditFormHelper", function($injector, $http, $statePara
             }
             $scope.submitForm = function(form)
             {
-            	if($scope.onSave) $scope.onSave({itemData:itemData});
+            	if($scope.onSave) $scope.onSave({itemData:$scope.itemData});
             };
 			$scope.submitFromEmbeddedForm = function()
 			{
@@ -29,7 +29,7 @@ apishore.factory("uiInlineEditFormHelper", function($injector, $http, $statePara
             };
             $scope.cancel = function()
             {
-            	if($scope.onCancel) $scope.onCancel({itemData:itemData});
+            	if($scope.onCancel) $scope.onCancel({itemData:$scope.itemData});
             };
             $scope.clearItemForm = function()
             {

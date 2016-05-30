@@ -34,11 +34,10 @@
 	border: solid 2px $studio-view-tree-line-color;
 	margin-bottom: $studio-view-tree-node-vgutter;
 	min-width: 400px;
-	&.asa-selected,
+	&.asa-selected
 	{
 		box-shadow: $as-whiteframe-shadow-2dp;
 		border-color: $studio-view-tree-line-color-hover;
 		background-color: #fff;
-		font-weight: bold;
 	}
 }
