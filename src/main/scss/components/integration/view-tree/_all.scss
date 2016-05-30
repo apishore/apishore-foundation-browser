@@ -87,8 +87,9 @@ $studio-view-tree-node-vgutter: 10px;
 }
 .studio-view-tree-shortcuts
 {
-	@extend .as-panel;
-	left: auto;
+	position: absolute;
+	top: 0px;
+	right: 0px;
 	color: map-get($as-palette-grey, 800);
 	padding: $as-gutter *2;
 	font-size: 16px;
