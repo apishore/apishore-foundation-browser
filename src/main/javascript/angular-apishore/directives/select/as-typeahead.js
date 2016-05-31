@@ -20,6 +20,7 @@ apishore.directive("asTypeahead", function(apishoreAuth, $rootScope, $http, $sta
 			asOptions: '=',
 			asOptionsApi: '@',
 			asSearchAfter: '@',
+			asInplaceCreate: '@',
 			asTitleField: '@',
 			undefinedMenuLabel: '@',
 			filters: '@',
@@ -86,11 +87,17 @@ apishore.directive("asTypeahead", function(apishoreAuth, $rootScope, $http, $sta
         		{
 	        		case 13:
 	        		{
-	        			if($scope.isOpened)
+	        			if($scope.filteredItemd.length == 0)
+	        			{
+	        				$scope.create();
+	        			}
+	        			else if($scope.isOpened)
 	        			{
 		        			$scope.selectedIndex = $scope.selectedIndex < 0 ? 0 : $scope.selectedIndex;
 		        			$scope.selectItem($scope.items[$scope.selectedIndex]);
-	        			} else {
+	        			}
+	        			else
+	        			{
 	        				$scope.openPopup();
 	        			}
 	        			
@@ -192,6 +199,22 @@ apishore.directive("asTypeahead", function(apishoreAuth, $rootScope, $http, $sta
 				$scope.serverSearchIsRequired = true;
 				$scope.search();
 			};
+			$scope.create = function()
+			{
+				var itemData = { };
+				
+				itemData[$scope.asTitleField] = $scope.label;
+				api.createByState(itemData).then(function(resp){
+					debugger;
+					$scope.model = resp.data.data.id;
+					$scope.initialValue = $scope.model;
+					$scope.initialLabel = $scope.label;
+					$scope.dirty = true;
+					$scope.closePopup();
+				}, function(){
+					debugger;
+				});
+			}
         	$scope.search = function()
         	{
 				var query = {
