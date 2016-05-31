@@ -25,13 +25,16 @@ apishore.factory("uiCreateFormHelper", function($injector, $http, $stateParams, 
             {
             	if($scope.onFormFieldChange) $scope.onFormFieldChange(fieldId);
             };
+			$scope.onDropDownSelect = function(){};
+            
 			$scope.submitFromEmbeddedForm = function()
 			{
 				this.submitForm(this.itemForm);
 			};
             $scope.submitForm = function(form)
             {
-                window.apishoreQA.submitting = true;
+            	form = form || $scope.itemForm;
+            	window.apishoreQA.submitting = true;
                 $scope.serverError = false;
                 $scope.topFormIsSubmitted = true;
                 for(var f in form)

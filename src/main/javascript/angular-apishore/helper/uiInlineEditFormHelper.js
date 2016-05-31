@@ -16,8 +16,10 @@ apishore.factory("uiInlineEditFormHelper", function($injector, $http, $statePara
             {
             	if($scope.onFormFieldChange) $scope.onFormFieldChange(fieldId);
             }
+			$scope.onDropDownSelect = function(){};
             $scope.submitForm = function(form)
             {
+            	form = form || $scope.itemForm;
                 window.apishoreQA.submitting = true;
                 $scope.serverError = false;
                 $scope.topFormIsSubmitted = true;

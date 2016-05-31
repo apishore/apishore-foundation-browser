@@ -25,7 +25,8 @@ apishore.directive("asTypeahead", function(apishoreAuth, $rootScope, $http, $sta
 			undefinedMenuLabel: '@',
 			filters: '@',
 			filtersOptions: '=',
-			defaultFilter:'@'
+			defaultFilter:'@',
+			onSelect: '&'
 		},
 		templateUrl : "$ng/apishore/directives/select/as-typeahead.html",
         link : function($scope, $elem, $attrs) {
@@ -143,7 +144,10 @@ apishore.directive("asTypeahead", function(apishoreAuth, $rootScope, $http, $sta
         		$timeout.cancel(window.resizedFinished);
         	    $scope.closePopup();
         	    window.resizedFinished = $timeout(function(){
-            	    $scope.openPopup();
+        	    	if($scope.isOpened)
+        	    	{
+        	    		$scope.openPopup();
+        	    	}
             	    delete window.resizedFinished;
         	    }, 250);
         	});
@@ -191,6 +195,7 @@ apishore.directive("asTypeahead", function(apishoreAuth, $rootScope, $http, $sta
 					$scope.initialLabel = $scope.label = undefined;
 					$scope.dirty = true;
 				}
+				if($scope.onSelect) $scope.onSelect();
         		$scope.closePopup();
         	};
 			$scope.setFilter = function(filterId)
@@ -205,14 +210,14 @@ apishore.directive("asTypeahead", function(apishoreAuth, $rootScope, $http, $sta
 				
 				itemData[$scope.asTitleField] = $scope.label;
 				api.createByState(itemData).then(function(resp){
-					debugger;
 					$scope.model = resp.data.data.id;
 					$scope.initialValue = $scope.model;
 					$scope.initialLabel = $scope.label;
 					$scope.dirty = true;
+					if($scope.onSelect) $scope.onSelect();
 					$scope.closePopup();
-				}, function(){
-					debugger;
+				}, function(resp){
+					console.error(resp);
 				});
 			}
         	$scope.search = function()

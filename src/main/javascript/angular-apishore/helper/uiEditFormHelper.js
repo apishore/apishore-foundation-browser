@@ -31,7 +31,8 @@ apishore.factory("uiEditFormHelper", function($injector, $http, $stateParams, $s
             		$scope.permissions = data.data.permissions;
     			});
             }
-            
+			$scope.onDropDownSelect = function(){};
+
             $scope.onFieldChange = function(fieldId)
             {
             	if($scope.onFormFieldChange) $scope.onFormFieldChange(fieldId);
