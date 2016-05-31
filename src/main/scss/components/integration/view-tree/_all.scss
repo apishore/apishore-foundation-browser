@@ -42,7 +42,6 @@
 		cursor: default;
 		background-color: #fff;
 		@include user-select(none);
-		transition: all 03s ease;
 
 		.asc-minus
 		{
