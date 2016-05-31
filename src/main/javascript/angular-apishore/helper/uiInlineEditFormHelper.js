@@ -17,6 +17,16 @@ apishore.factory("uiInlineEditFormHelper", function($injector, $http, $statePara
             	if($scope.onFormFieldChange) $scope.onFormFieldChange(fieldId);
             }
 			$scope.onDropDownSelect = function(){};
+			$scope.deleteItem = function()
+			{
+				api.removeByState($scope.itemData.data.id).then(
+				function(){
+					if($scope.onDelete) $scope.onDelete({id:$scope.itemData.data.id});
+				},
+				function(){
+					if($scope.onDelete) $scope.onDelete({id:$scope.itemData.data.id});
+				});
+			}
             $scope.submitForm = function(form)
             {
             	form = form || $scope.itemForm;
