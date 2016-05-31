@@ -34,6 +34,10 @@ apishore.factory("uiCreateFormHelper", function($injector, $http, $stateParams, 
             $scope.submitForm = function(form)
             {
             	form = form || $scope.itemForm;
+            	if($scope.onBeforeSubmit)
+            	{
+            		$scope.onBeforeSubmit({itemData:$scope.itemData});
+            	}
             	window.apishoreQA.submitting = true;
                 $scope.serverError = false;
                 $scope.topFormIsSubmitted = true;
@@ -114,7 +118,10 @@ apishore.factory("uiCreateFormHelper", function($injector, $http, $stateParams, 
                     }
                     $state.go($scope.saveState, p);
                 }
-                $scope.onSave({id: item.id, item: item});
+                if($scope.onSave)
+                {
+                	$scope.onSave({id: item.id, item: item});
+                }
             };
             $scope.cancel = function(item)
             {

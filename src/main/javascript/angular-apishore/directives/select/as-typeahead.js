@@ -195,9 +195,15 @@ apishore.directive("asTypeahead", function(apishoreAuth, $rootScope, $http, $sta
 					$scope.initialLabel = $scope.label = undefined;
 					$scope.dirty = true;
 				}
-				if($scope.onSelect) $scope.onSelect();
+				$scope.invokeOnSelect();
         		$scope.closePopup();
         	};
+        	$scope.invokeOnSelect = function()
+        	{
+        		$timeout(function(){
+        			if($scope.onSelect) $scope.onSelect();
+        		});
+        	}
 			$scope.setFilter = function(filterId)
 			{
 				$scope.currentFilter = filterId;
@@ -214,7 +220,7 @@ apishore.directive("asTypeahead", function(apishoreAuth, $rootScope, $http, $sta
 					$scope.initialValue = $scope.model;
 					$scope.initialLabel = $scope.label;
 					$scope.dirty = true;
-					if($scope.onSelect) $scope.onSelect();
+					$scope.invokeOnSelect();
 					$scope.closePopup();
 				}, function(resp){
 					console.error(resp);
