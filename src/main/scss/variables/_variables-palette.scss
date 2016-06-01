@@ -339,7 +339,8 @@ $as-palette-white : (
 // Black palette from google material design
 $as-palette-black : (
 	lighter: rgba(0,0,0,.12), // Dividers
-	20:   	 rgba(0,0,0,.20), // Disabled / Hint Text
+	20:   	 rgba(0,0,0,.20), //
+	38:   	 rgba(0,0,0,.38), //
 	light:   rgba(0,0,0,.26), // Disabled / Hint Text
 	dark:    rgba(0,0,0,.54), // Secondary text / Icons
 	darker:  rgba(0,0,0,.87) // Text

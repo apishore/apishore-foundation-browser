@@ -1,0 +1,61 @@
+///@group expansionpanel
+///
+///
+
+$as-expansion-panel-height: 48px;
+$as-expansion-panel-icon-size: 24px;
+$as-expansion-panel-left-padding: 24px;
+$as-expansion-panel-expanded-margin: 16px;
+
+.as-expansion-panel
+{
+	@extend .as-hbox;
+	box-shadow: $as-whiteframe-shadow-1dp;
+
+	&.asa-expanded
+	{
+
+	}
+	&.asa-focused,
+	&:focus
+	{
+		background-color: map-get($as-palette-grey, 200);
+	}
+}
+
+.as-expansion-panel-collapsed-content
+{
+	min-height: $as-expansion-panel-height;
+}
+
+.as-expansion-panel-expand-icon
+{
+		width: $as-expansion-panel-height;
+		padding: ($as-expansion-panel-height - $as-expansion-panel-icon-size) / 2;
+		.material-icon
+		{
+			width: $as-expansion-panel-icon-size;
+			height: $as-expansion-panel-icon-size;
+			color: map-get($as-palette-black, 38);
+		}
+		&.asa-focused,
+		&:focus,
+		&:active,
+		&:hover
+		{
+			.material-icon
+			{
+					color: map-get($as-palette-black, dark);
+			}
+		}
+}
+.as-expansion-panel-list-content
+{
+		font-size: dp(15);
+		color: map-get($as-palette-black, darker);
+}
+.as-expansion-panel-secondary-content
+{
+		font-size: dp(12);
+		color: map-get($as-palette-black, dark);
+}
