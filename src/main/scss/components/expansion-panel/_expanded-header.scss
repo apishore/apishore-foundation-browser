@@ -1,0 +1,42 @@
+.as-expansion-panel-expanded-header
+{
+	@extend .as-hbox;
+	@include user-select(none);
+	min-height: $as-expansion-panel-expanded-header-height;
+	background-color: #fff;
+	z-index:1;
+	&.asa-focused,
+	&:focus,
+	&:active,
+	&:hover
+	{
+		.material-icons
+		{
+				color: map-get($as-palette-black, dark);
+		}
+	}
+	*
+	{
+		cursor: default;
+	}	
+}
+.as-expansion-panel-expanded-header-title
+{
+	@extend .as-cell-wide;
+	height: $as-expansion-panel-expanded-header-height;
+	line-height: $as-expansion-panel-expanded-header-height;
+	padding-left: $as-expansion-panel-left-padding;
+	padding-right: $as-expansion-panel-left-padding;
+}
+.as-expansion-panel-expanded-header-icon
+{
+	padding-top: ($as-expansion-panel-expanded-header-height - $as-expansion-panel-icon-size) / 2;
+	padding-left: $as-expansion-panel-header-item-padding;
+	padding-right: $as-expansion-panel-left-padding;
+	.material-icons
+	{
+		width: $as-expansion-panel-icon-size;
+		height: $as-expansion-panel-icon-size;
+		color: map-get($as-palette-black, 38);
+	}
+}
