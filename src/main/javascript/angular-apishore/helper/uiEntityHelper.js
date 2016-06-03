@@ -31,7 +31,7 @@ apishore.factory("uiEntityHelper", function($injector, $http, $stateParams, $sta
 				var width = elem.find(".as-input-slider").width();
 				var px = ((norm - min) * width) / (max-min);
 				return px;
-			}
+			};
 			$scope.moveSlider = function($event, val, min, max)
 			{
 				if($event.buttons == 1)
@@ -42,7 +42,7 @@ apishore.factory("uiEntityHelper", function($injector, $http, $stateParams, $sta
 					val = (offsetX * (max-min)) / width + min;
 				}
 				return val;
-			}			
+			};		
 			$scope.setSlider = function($event, min, max)
 			{
 				var gap = 24;
@@ -50,7 +50,7 @@ apishore.factory("uiEntityHelper", function($injector, $http, $stateParams, $sta
 				var offsetX = Math.min(width, Math.max(0, $event.offsetX - gap)); 
 				var val = (offsetX * (max-min)) / width + min;
 				return val;
-			}
+			};
 			$scope.dialogs = {};
 			$scope.dialogHelper = function(id)
 			{
@@ -138,6 +138,35 @@ apishore.factory("uiEntityHelper", function($injector, $http, $stateParams, $sta
 	                }, 200);
 	            });
             }
+			if($scope.realtimeCustomEval)
+			{
+				$rootScope.realtimeCustomEvalForbidden = false;
+				var realtimeEvalRequest = null;
+				function getRealtimeEval()
+				{
+					if(realtimeEvalRequest || $rootScope.realtimeCustomEvalForbidden)
+					{
+						return;
+					}
+					var item = {};
+					api.transform($scope.itemData.data, item);
+					realtimeEvalRequest = api.customCreateOperation("realtime_custom", item, $scope.saveState);
+					realtimeEvalRequest.then(function realtimeCustomResponse(res){
+						console.log(res);
+						if(res.data.data)
+						{
+							$scope.realtimeCustomEval(res.data.data);
+						}
+						realtimeEvalRequest = undefined;
+					}, function realtimeCustomError(res){
+						console.log(res);
+						realtimeEvalRequest = undefined;
+					});
+				}
+				$scope.$watch("itemData.data", function (nv, ov) {
+					getRealtimeEval();
+				}, true);
+			}
 		}
 	};
 });

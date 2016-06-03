@@ -138,34 +138,6 @@ apishore.factory("uiCreateFormHelper", function($injector, $http, $stateParams, 
                     data: {}
                 };
             };
-            if($scope.realtimeCustomEval)
-            {
-                var realtimeEvalRequest = null;
-                function getRealtimeEval()
-                {
-                    if(realtimeEvalRequest)
-                    {
-                        return;
-                    }
-                    var item = {};
-                    api.transform($scope.itemData.data, item);
-                    realtimeEvalRequest = api.customCreateOperation("realtime_custom", item, $scope.saveState);
-                    realtimeEvalRequest.then(function realtimeCustomResponse(res){
-                        console.log(res);
-                        if(res.data.data)
-                        {
-                            $scope.realtimeCustomEval(res.data.data);
-                        }
-                        realtimeEvalRequest = undefined;
-                    }, function realtimeCustomError(res){
-                        console.log(res);
-                        realtimeEvalRequest = undefined;
-                    });
-                }
-                $scope.$watch("itemData.data", function (nv, ov) {
-                    getRealtimeEval();
-                }, true);
-            }
     	},
         initNamedFilter : function(api, $scope, elem, attrs)
         {
