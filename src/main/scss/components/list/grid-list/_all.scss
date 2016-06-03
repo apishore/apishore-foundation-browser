@@ -1,0 +1,51 @@
+///@group list.grid
+///
+///
+///
+
+$as-grid-list-single-line-header-height: 48px;
+$as-grid-list-single-line-header-padding: 16px;
+$as-grid-list-single-line-font-size: 16px;
+
+$as-grid-list-two-lines-header-height: 68px;
+$as-grid-list-two-lines-header-padding: 16px;
+
+$as-grid-list-two-lines-font-size: 14px;
+$as-grid-list-two-lines-big-font-size: 16px;
+$as-grid-list-two-lines-small-font-size: 12px;
+
+$as-grid-list-normal-padding: 4px;
+$as-grid-list-small-padding: 1px;
+
+
+.as-grid-list
+{
+
+}
+
+.as-grid-list-tile
+{
+  margin: $as-grid-list-normal-padding;
+
+  &.asa-small-padding
+  {
+    margin: $as-grid-list-small-padding;
+  }
+}
+.as-grid-list-tile-bg
+{
+  @extend .as-panel;
+}
+.as-grid-list-tile-info
+{
+  margin: $as-grid-list-normal-padding;
+
+  &.asa-single-line
+  {
+    height: $as-grid-list-single-line-header-height;
+  }
+  &.asa-two-lines
+  {
+    height: $as-grid-list-two-lines-header-height;
+  }
+}
