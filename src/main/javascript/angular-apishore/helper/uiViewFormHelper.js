@@ -64,7 +64,15 @@ apishore.factory("uiViewFormHelper", function($injector, $http, $stateParams, $s
 			{
 				if($scope.reloadDataInterval > 0)
 				{
-					console.info("schedule reload in " + $scope.reloadDataInterval + " seconds");
+					if($scope.reloadState && $scope.reloadState != $state.current)
+					{
+						return;
+					}
+					if(!$scope.reloadState)
+					{
+						 $scope.reloadState = $state.current;
+					}
+					//console.info("schedule reload in " + $scope.reloadDataInterval + " seconds");
 					function onTimeout()
 					{
 						$scope.reload(true);
