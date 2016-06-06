@@ -7,3 +7,8 @@
 {
   @extend .as-cell-wide;
 }
+.as-snackbar-actions
+{
+  @extend .as-cell-fixed;
+	@extend .as-hbox;
+}
