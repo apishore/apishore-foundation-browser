@@ -64,7 +64,9 @@ $as-view-control-border-color: map-get($as-palette-grey, 100);
     margin: 0px;
 	margin-top: $as-view-control-label-height;
 	width: 100%;
+	min-width: 100%;
 	resize:vertical;
+	text-overflow: ellipsis;
 	
 	padding: $as-view-control-padding;
 	background-color: rgba(0,0,0,0.1);
