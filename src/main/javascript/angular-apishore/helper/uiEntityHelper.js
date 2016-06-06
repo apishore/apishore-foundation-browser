@@ -163,7 +163,12 @@ apishore.factory("uiEntityHelper", function($injector, $http, $stateParams, $sta
 						realtimeEvalRequest = undefined;
 					});
 				}
-				$scope.$watch("itemData.data", function (nv, ov) {
+				$scope.$watch("itemData.data", function(nv, ov)
+				{
+					if(!nv || !ov || angular.equals(ov, {}))
+					{
+						return;
+					}
 					getRealtimeEval();
 				}, true);
 			}
