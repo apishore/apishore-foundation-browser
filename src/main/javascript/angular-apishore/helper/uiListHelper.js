@@ -210,8 +210,11 @@ apishore.factory("uiListHelper", function($injector, $http, $stateParams, $state
 			};
 			$scope.infoItem = function(item, $event)
 			{
-				$rootScope.infoPanel.show = true;
-				$scope.go($scope.infoState, item);
+				if(angular.isDefined($scope.infoState))
+				{
+					$rootScope.infoPanel.show = true;
+					$scope.go($scope.infoState, item);
+				}
 				if($event) $event.stopPropagation();
 			};
 			// ui handlers
@@ -253,7 +256,7 @@ apishore.factory("uiListHelper", function($injector, $http, $stateParams, $state
 				{
 					$scope.onAfterCreate({id:id, item:item});
 				}
-			}
+			};
 
 			$scope.isComplexQuery = function()
 			{
@@ -313,7 +316,10 @@ apishore.factory("uiListHelper", function($injector, $http, $stateParams, $state
 					
 					if($rootScope.infoPanel.show && $scope.items && $scope.items.length>0)
 					{
-						$scope.selectItem($scope.items[0]);
+						var item = $scope.items[0];
+						$scope.selectedItem = item;
+						$scope.selectedItemId = item.id;
+						$scope.infoItem(item);
 					}
 					else
 					{
