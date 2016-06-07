@@ -110,16 +110,43 @@
 	margin: 0px;
 	padding: 0px;
 	font-size: 12px;
-	padding: $as-gutter / 2;
+	padding: 0px;
 	margin: $as-gutter / 2;
 	border: solid 1px map-get($as-palette-grey, 500);
+	@extend .as-hbox;
+	input
+	{
+		outline: none;
+		@extend .as-cell-wide;
+		border:none;
+		margin: 0px;
+		padding-left: $as-gutter / 2;
+		line-height: 32px;
+		font-size: 13px;
+	}
+	span
+	{
+		height: 32px;
+		line-height: 32px;
+		padding: 0px;
+		@extend .as-cell-wide;
+		text-overflow: ellipsis;
+	}
 	a.material-icons
 	{
-		float:right;
+		@extend .as-cell-fixed;
 		font-size: 16px;
+		margin: 8px;
 		&:hover
 		{
-			color: map-get($as-palette-red, 600);
+			color: map-get($as-palette-primary, 600);
+		}
+		&.asa-remove
+		{
+			&:hover
+			{
+				color: map-get($as-palette-red, 600);
+			}
 		}
 	}
 }
