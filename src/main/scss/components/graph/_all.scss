@@ -23,9 +23,13 @@
   position: absolute;
   border: solid 1px map-get($as-palette-grey, 500);
   width: 200px;
-  heigth: 80px;
   box-shadow: $as-whiteframe-shadow-2dp;
   background-color: #fff;
+  @include user-select(none);
+  *
+  {
+  	@include user-select(none);
+  }
   &.asa-selected
   {
   	border: solid 1px map-get($as-palette-primary, 500);
@@ -39,10 +43,9 @@
 {
   background-color: map-get($as-palette-grey, 500);
   color: map-get($as-palette-white, darker);
-  heigth: 24px;
-  line-heigth: 24px;
+  height: 24px;
+  line-height: 24px;
   @extend .as-hbox;
-  padding-right: $as-gutter / 2;
   cursor:move;
   @include user-select(none);
   &:hover
@@ -56,7 +59,8 @@
 .as-graph-node-title
 {
   padding-left: $as-gutter / 2;
-  line-heigth: 24px;
+  line-height: 24px;
+  height: 24px;
   @extend .as-cell-wide;
 }
 .as-graph-new-node
