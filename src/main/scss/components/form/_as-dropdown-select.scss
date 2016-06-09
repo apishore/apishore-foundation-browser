@@ -121,9 +121,11 @@ $as-input-border-width: 1px;
 .as-dropdown-select-popup-filters
 {
 	width: 30%;
+	min-width: 150px;
 	border-left: solid 1px map-get($as-palette-grey, 200);
 	margin-bottom: $as-gutter;
 	padding-left:$as-gutter * 1.5;
+	padding-right:$as-gutter * 1.5;
 }
 
 .as-dropdown-select-popup-filter
