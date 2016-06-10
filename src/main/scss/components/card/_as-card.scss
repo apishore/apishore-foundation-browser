@@ -6,6 +6,10 @@
 	margin: $as-baseline-grid;
 	box-shadow: $as-card-box-shadow;
 	background-color: #fff;
+	&.asa-compact
+	{
+		@extend .as-hbox;
+	}
 	.as-card-header
 	{
 		padding: $as-card-padding;
@@ -115,6 +119,10 @@
   .as-card-content {
     display: block;
     padding: $as-card-padding;
+	&.asa-compact
+	{
+		@extend .as-cell-wide;
+	}
 
     & > p {
       &:first-child {
@@ -132,8 +140,13 @@
     }
   }
 
-  .as-card-actions {
+  .as-card-actions
+  {
     margin: $as-baseline-grid;
+	&.asa-compact
+	{
+		@extend .as-cell-fixed;
+	}
 
     &.layout-column {
       .as-button {
