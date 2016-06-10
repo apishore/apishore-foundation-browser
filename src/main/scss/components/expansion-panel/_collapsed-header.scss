@@ -5,6 +5,8 @@
 	min-height: $as-expansion-panel-collapsed-header-height;
 	background-color: #fff;
 	z-index:1;
+	outline: none;
+	border: none;
 	&.asa-focused,
 	&:focus,
 	&:active
