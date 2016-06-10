@@ -88,7 +88,7 @@ apishore.directive("asTypeahead", function(apishoreAuth, $rootScope, $http, $sta
         		{
 	        		case 13:
 	        		{
-	        			if($scope.filteredItemd.length == 0)
+	        			if($scope.filteredItems.length == 0)
 	        			{
 	        				$scope.create();
 	        			}
