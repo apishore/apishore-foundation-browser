@@ -29,15 +29,22 @@ $as-expansion-panel-action-height: 36px;
 .as-expansion-panel-expanded-actions
 {
 	text-align: right;
-	margin-left: $as-expansion-panel-left-padding;
-	margin-right: $as-expansion-panel-right-padding;
-	margin-bottom: $as-expansion-panel-content-margin;
+	padding-left: $as-expansion-panel-right-padding;
+	padding-right: $as-expansion-panel-right-padding;
+	padding-top: $as-expansion-panel-content-margin;
+	padding-bottom: $as-expansion-panel-content-margin;
+	border-top: solid 1px map-get($as-palette-black, lighter);
 	.as-button
 	{
 		margin: 0px;
 		margin-left: $as-expansion-panel-right-padding;
 		height: $as-expansion-panel-action-height;
 		line-height: $as-expansion-panel-action-height;
+		&.as-float-left
+		{
+			margin: 0px;
+			margin-right: $as-expansion-panel-right-padding;
+		}
 		*
 		{
 			height: $as-expansion-panel-action-height;
