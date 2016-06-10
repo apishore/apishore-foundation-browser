@@ -29,7 +29,7 @@
                 <div class="as-dropdown-select-popup-content-items">
                     <div class="as-hbox">
                         <div class="as-cell-wide">
-                        	<a class="as-button asa-flat asa-primary" ng-click="create($event)" ng-if="asInplaceCreate && filteredItemd.length == 0">
+                        	<a class="as-button asa-flat asa-primary" ng-click="create($event)" ng-if="asInplaceCreate && filteredItems.length == 0">
                         		<span class="as-button-text">Create</span>
                         	</a>
                             <div class="as-dropdown-select-popup-item" ng-if="undefinedMenuLabel"
@@ -37,7 +37,7 @@
                                  ng-class="{'asa-selected': $index == selectedIndex}">
                                 <span class="as-dropdown-select-popup-item-title">{{undefinedMenuLabel}}</span>
                             </div>
-                            <div class="as-dropdown-select-popup-item" ng-repeat="item in filteredItemd = (items | filter:label)"
+                            <div class="as-dropdown-select-popup-item" ng-repeat="item in filteredItems = (items | filter:label)"
                                  ng-click="selectItem(item)" item-id="{{item.data.id}}"
                                  ng-class="{'asa-selected': $index == selectedIndex}">
                                 <span class="as-dropdown-select-popup-item-title">{{item.as_typeahead_item_title}}</span>

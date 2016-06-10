@@ -7,12 +7,18 @@
 	z-index:1;
 	&.asa-focused,
 	&:focus,
+	&:active
+	{
+		background-color: map-get($as-palette-grey, 200);
+	}
+	&.asa-focused,
+	&:focus,
 	&:active,
 	&:hover
 	{
 		.material-icons
 		{
-				color: map-get($as-palette-black, dark);
+			color: map-get($as-palette-black, dark);
 		}
 	}
 	*
@@ -49,5 +55,15 @@
 		width: $as-expansion-panel-icon-size;
 		height: $as-expansion-panel-icon-size;
 		color: map-get($as-palette-black, 38);
+	}
+	&.asa-focused,
+	&:focus,
+	&:active,
+	&:hover
+	{
+		.material-icons
+		{
+			color: map-get($as-palette-black, dark);
+		}
 	}
 }

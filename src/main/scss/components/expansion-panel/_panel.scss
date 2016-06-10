@@ -1,7 +1,11 @@
 
 .as-expansion-panels
 {
-
+	.as-card
+	{
+		margin: 0px;
+		margin-bottom: $as-gutter;
+	}
 }
 
 .as-expansion-panel

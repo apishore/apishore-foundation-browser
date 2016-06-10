@@ -91,7 +91,7 @@ apishore.directive('asSplitterPanel', function()
 		{
 			minSize : '='
 		},
-		template : '<div class="as-splitter-panel asa-splitter-panel-index-{{index}}"><div class="as-panel as-vscroll" ng-transclude></div></div>',
+		template : '<div class="as-splitter-panel asa-splitter-panel-index-{{index}}" ng-transclude></div>',
 		link : function(scope, element, attrs, bgSplitterCtrl)
 		{
 			scope.elem = element;

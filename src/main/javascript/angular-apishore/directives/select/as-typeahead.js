@@ -232,7 +232,7 @@ apishore.directive("asTypeahead", function(apishoreAuth, $rootScope, $http, $sta
 					query: $scope.label || "",
 					filters: $scope.currentFilter
 				};
-				if($scope.serverSearchIsRequired && $scope.timer == undefined)
+				if($scope.filteredItems && $scope.filteredItems.length < 10 && $scope.timer == undefined)
 				{
 					$scope.timer = $timeout(function(){$scope.searchInProgress = true;}, 300);
 					api.listByState(query, "list").then(
@@ -241,7 +241,7 @@ apishore.directive("asTypeahead", function(apishoreAuth, $rootScope, $http, $sta
 							var items = $scope.items = resp.data.data || [];
 							if(query.query.length == 0)
 							{
-								$scope.serverSearchIsRequired = resp.data.pagination.totalPages;
+								$scope.serverSearchIsRequired = true;//resp.data.pagination.totalPages;
 							}
 							for(var i=0; i < items.length; i++)
 							{
