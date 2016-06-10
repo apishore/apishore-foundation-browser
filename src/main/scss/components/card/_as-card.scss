@@ -23,24 +23,29 @@
 			}
 		}
 
-    &:last-child {
-      .as-card-avatar {
-        margin-left: 12px;
-      }
-    }
+		&:last-child
+		{
+			.as-card-avatar
+			{
+				margin-left: 12px;
+			}
+		}
 
-    .as-card-avatar {
-      width: 40px;
-      height: 40px;
+		.as-card-avatar
+		{
+			width: 40px;
+			height: 40px;
 
-      .as-user-avatar,
-      .as-icon{
-        border-radius: 50%;
-      }
+			.as-user-avatar,
+			.as-icon
+			{
+				border-radius: 50%;
+			}
 
-      .as-icon {
-        padding: 8px;
-      }
+			.as-icon
+			{
+				padding: 8px;
+			}
 
       & + .as-card-header-text {
         max-height: 40px;
@@ -122,6 +127,11 @@
 	&.asa-compact
 	{
 		@extend .as-cell-wide;
+		padding: $as-card-padding / 2;
+		.as-input-holder
+		{
+			margin: 0px;
+		}
 	}
 
     & > p {
@@ -146,6 +156,7 @@
 	&.asa-compact
 	{
 		@extend .as-cell-fixed;
+		margin-top: $as-gutter * 2;
 	}
 
     &.layout-column {
