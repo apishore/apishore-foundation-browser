@@ -1,85 +1,12 @@
 @import "variables";
 @import "selection-info";
 
-.studio-view-tree-container
-{
-	padding: 30px;
-}
-
-.studio-view-tree-children-inner
-{
-	margin: 0px;
-	padding: 0px;
-	list-style: none;
-	position: relative;
-}
-
 @import "node";
 @import "node-info";
 @import "box";
 
-.studio-view-tree-node-box-input
+.studio-structure-fields-shortcuts
 {
-	outline:none;
-	border: none;
-}
-
-.studio-view-tree-node-nav
-{
-	position: relative;
-	@extend .as-cell-fixed;
-	@include user-select(none);
-	width: $studio-view-tree-node-hgutter;
-	.icon
-	{
-		z-index:1;
-		position: absolute;
-		left: 28px;
-		top: 4px;
-		height: 24px;
-		width: 24px;
-		text-align: center;
-		cursor: default;
-		background-color: #fff;
-		@include user-select(none);
-
-		.asc-minus
-		{
-			opacity: 1;
-		}
-		.asc-minus-hover
-		{
-			opacity: 0;
-		}
-		i {
-				position: absolute;
-				left: 0px;
-				top: 0px;
-				font-size: 24px;
-				color: $studio-view-tree-line-color;
-		}
-		&:hover
-		{
-			.asc-minus
-			{
-				opacity: 0;
-			}
-			.asc-minus-hover
-			{
-				opacity: 1;
-			}
-			i {
-					font-size: 24px;
-					color: $studio-view-tree-line-color-hover;
-			}
-		}
-	}
-}
-.studio-view-tree-shortcuts
-{
-	position: absolute;
-	top: 0px;
-	right: 0px;
 	color: map-get($as-palette-grey, 800);
 	padding: $as-gutter *2;
 	font-size: 16px;
@@ -87,6 +14,10 @@
 	@include transition(all 10s ease);
 	&.asa-off
 	{
-		opacity: 0;
+		opacity: 0.5;
+		&:hover
+		{
+			opacity: 1;
+		}
 	}
 }
