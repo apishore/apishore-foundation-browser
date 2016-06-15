@@ -5,16 +5,16 @@ apishore.factory("uiInlineEditFormHelper", function($injector, $http, $statePara
     return {
     	init : function(api, $scope, elem, attrs, itemId)
         {
-    		uiEntityHelper.init(api,$scope, elem, attrs);
+    			uiEntityHelper.init(api,$scope, elem, attrs);
 
             $scope.serverError = false;
             $scope.permissions = {};
             $scope.accessViolation = false;
             $scope.submitting = false;
-
+            $scope.itemDataCopy = angular.copy($scope.itemData.data);
             $scope.onFieldChange = function(fieldId)
             {
-            	if($scope.onFormFieldChange) $scope.onFormFieldChange(fieldId);
+            		if($scope.onFormFieldChange) $scope.onFormFieldChange(fieldId);
             }
 			$scope.onDropDownSelect = function(){};
 			$scope.deleteItem = function()
@@ -29,7 +29,7 @@ apishore.factory("uiInlineEditFormHelper", function($injector, $http, $statePara
 			}
             $scope.submitForm = function(form)
             {
-            	form = form || $scope.itemForm;
+            		form = form || $scope.itemForm;
                 window.apishoreQA.submitting = true;
                 $scope.serverError = false;
                 $scope.topFormIsSubmitted = true;
@@ -43,9 +43,9 @@ apishore.factory("uiInlineEditFormHelper", function($injector, $http, $statePara
                 form.$setSubmitted(true);
                 if(!form.$valid)
                 {
-                	$scope.scrollToFirstError();
+                		$scope.scrollToFirstError();
                     window.apishoreQA.submitting = false;
-                	return false;
+                    return false;
                	}
 
                 var item = {};
@@ -55,7 +55,7 @@ apishore.factory("uiInlineEditFormHelper", function($injector, $http, $statePara
                 if($scope.onBeforeSave) $scope.onBeforeSave({itemData:$scope.itemData});
                 api.updateByState(item).then(function(res){
                     $scope.submitting = false;
-                    $scope.afterSave(res.data.data);
+                    $scope.afterSave(res.data);
                     window.apishoreQA.submitting = false;
                     $scope.topFormIsSubmitted = false;
                     $scope.$emit('changed$' + api.view,
@@ -100,11 +100,12 @@ apishore.factory("uiInlineEditFormHelper", function($injector, $http, $statePara
 			}            
             $scope.afterSave = function(item)
             {
-            	if($scope.onSave) $scope.onSave({itemData:$scope.itemData});
+            		if($scope.onSave) $scope.onSave({itemData:item});
             };
             $scope.cancel = function()
             {
-            	if($scope.onCancel) $scope.onCancel({itemData:$scope.itemData});
+            		$scope.itemData.data = $scope.itemDataCopy;
+            		if($scope.onCancel) $scope.onCancel({itemData:$scope.itemData});
             };
             $scope.clearItemForm = function()
             {

@@ -5,7 +5,7 @@ apishore.factory("uiEditFormHelper", function($injector, $http, $stateParams, $s
     return {
     	init : function(api, $scope, elem, attrs, itemId)
         {
-    		uiEntityHelper.init(api,$scope, elem, attrs);
+    			uiEntityHelper.init(api,$scope, elem, attrs);
 
             $scope.options ={
                 showHeader : angular.isDefined(attrs.headerText),
@@ -25,11 +25,11 @@ apishore.factory("uiEditFormHelper", function($injector, $http, $stateParams, $s
             }
             else
             {
-            	api.getByState("edit").then(function(data)
-    			{
-            		$scope.itemData = data.data;
-            		$scope.permissions = data.data.permissions;
-    			});
+	            	api.getByState("edit").then(function(data)
+	    			{
+	            		$scope.itemData = data.data;
+	            		$scope.permissions = data.data.permissions;
+	    			});
             }
 			$scope.onDropDownSelect = function(){};
 
@@ -67,7 +67,7 @@ apishore.factory("uiEditFormHelper", function($injector, $http, $stateParams, $s
                 $scope.submitting = true;
                 api.updateByStateAndId(item).then(function(res){
                     $scope.submitting = false;
-                    $scope.afterSave(res.data.data);
+                    $scope.afterSave(res.data);
                     window.apishoreQA.submitting = false;
                     $scope.topFormIsSubmitted = false;
                     $scope.$emit('changed$' + api.view,
