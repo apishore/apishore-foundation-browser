@@ -20,14 +20,16 @@ $as-expansion-panel-action-height: 36px;
 
 .as-expansion-panel-expanded-content
 {
-	margin: $as-expansion-panel-left-padding;
-	margin-top: 0px;
-	margin-bottom: $as-expansion-panel-content-margin;
+	padding: $as-expansion-panel-left-padding;
+	padding-top: 0px;
+	padding-bottom: $as-expansion-panel-content-margin;
 	font-size: dp(15);
 	color: map-get($as-palette-black, dark);
+	background-color: $as-expansion-panel-bg;
 }
 .as-expansion-panel-expanded-actions
 {
+	background-color: $as-expansion-panel-bg;
 	text-align: right;
 	padding-left: $as-expansion-panel-right-padding;
 	padding-right: $as-expansion-panel-right-padding;
