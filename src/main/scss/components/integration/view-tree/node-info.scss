@@ -2,13 +2,6 @@
 
 .studio-view-tree-node-info
 {
-	&.asa-expanded
-	{
-		.studio-view-tree-node-details
-		{
-			display: block;
-		}
-	}
 	&:hover
 	{
 		.studio-view-tree-node-details
@@ -28,7 +21,6 @@
 }
 .studio-view-tree-node-details
 {
-	display: none;
 	@include user-select(auto);
 	margin: -$as-gutter;
 	margin-bottom: $studio-view-tree-node-vgutter;
