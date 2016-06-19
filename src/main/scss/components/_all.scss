@@ -23,6 +23,7 @@
 	$as-sidebar-width: $as-sidebar-width-wide-desktop;
 	$as-sidebar-width-desktop: $as-sidebar-width-wide-desktop;
 	$as-appbar-left-margin: -$as-sidebar-width-wide-desktop;
+	$as-apptitle-breadcrumbs-margin-left: 0px;
 	@import "all-responsive";
 }
 .as-device-desktop
@@ -33,6 +34,7 @@
 	$as-appbar-search-area-padding-left: $as-sidebar-width-desktop;
 	$as-sidebar-width: $as-sidebar-width-desktop;
 	$as-appbar-left-margin: -$as-sidebar-width-desktop;
+	$as-apptitle-breadcrumbs-margin-left: 0px;
 	@import "all-responsive";
 }
 
@@ -45,7 +47,7 @@
 
 	$as-sidebar-padding-top: $as-sidebar-padding-top-tablet;
 	$as-sidebar-padding-bottom: $as-sidebar-padding-bottom-tablet;
-
+	$as-apptitle-breadcrumbs-margin-left: $as-gutter;
 	@import "all-responsive";
 }
 .as-device-phone-portrait
@@ -55,7 +57,7 @@
 
 	$as-sidebar-padding-top: $as-sidebar-padding-top-tablet;
 	$as-sidebar-padding-bottom: $as-sidebar-padding-bottom-tablet;
-
+	$as-apptitle-breadcrumbs-margin-left: $as-gutter;
 	@import "all-responsive";
 	.as-infobar-holder
 	{
@@ -72,7 +74,7 @@
 {
 	$as-appbar-height: $as-appbar-height-phone-landscape;
 	$as-infobar-header-bg-color: map-get($as-palette-primary, 500);
-
+	$as-apptitle-breadcrumbs-margin-left: $as-gutter;
 	@import "all-responsive";
 	.as-infobar-holder
 	{

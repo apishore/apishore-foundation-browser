@@ -8,6 +8,10 @@
 {
 	z-index: $as-z-index-menu-parent;
 }
+.as-apptitle-breadcrumbs
+{
+	margin-left: $as-apptitle-breadcrumbs-margin-left; 
+}
 .as-apptitle-breadcrumb
 {
 	@include user-select(none);
