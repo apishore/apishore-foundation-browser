@@ -75,7 +75,8 @@
 {
 	margin: 0;
 	padding: 1px;
-	padding-top: 16px;
+	padding-top: $as-gutter;
+	padding-bottom: $as-gutter * 4;
 	list-style: none;
 	@include clearfix();
 	display: block;
