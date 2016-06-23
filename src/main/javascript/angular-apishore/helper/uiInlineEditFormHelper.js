@@ -3,7 +3,7 @@
  */
 apishore.factory("uiInlineEditFormHelper", function($injector, $http, $stateParams, $state, $window, $timeout, $location, uiEntityHelper) {
     return {
-    	init : function(api, $scope, elem, attrs, itemId)
+    	init : function(api, $scope, elem, attrs)
         {
     			uiEntityHelper.init(api,$scope, elem, attrs);
 
@@ -15,7 +15,7 @@ apishore.factory("uiInlineEditFormHelper", function($injector, $http, $statePara
             $scope.onFieldChange = function(fieldId)
             {
             		if($scope.onFormFieldChange) $scope.onFormFieldChange(fieldId);
-            }
+            };
 			$scope.onDropDownSelect = function(){};
 			$scope.deleteItem = function()
 			{
@@ -26,10 +26,10 @@ apishore.factory("uiInlineEditFormHelper", function($injector, $http, $statePara
 				function(){
 					if($scope.onDelete) $scope.onDelete({id:$scope.itemData.data.id});
 				});
-			}
+			};
             $scope.submitForm = function(form)
             {
-            		form = form || $scope.itemForm;
+                form = form || $scope.itemForm;
                 window.apishoreQA.submitting = true;
                 $scope.serverError = false;
                 $scope.topFormIsSubmitted = true;
@@ -53,7 +53,7 @@ apishore.factory("uiInlineEditFormHelper", function($injector, $http, $statePara
                 api.transform($scope.itemData.data, item);
                 $scope.submitting = true;
                 if($scope.onBeforeSave) $scope.onBeforeSave({itemData:$scope.itemData});
-                api.updateByState(item).then(function(res){
+                api.updateByStateAndId(item).then(function(res){
                     $scope.submitting = false;
                     $scope.afterSave(res.data);
                     window.apishoreQA.submitting = false;
@@ -97,7 +97,7 @@ apishore.factory("uiInlineEditFormHelper", function($injector, $http, $statePara
 			$scope.submitFromEmbeddedForm = function()
 			{
 				this.$parent.submitFromEmbeddedForm();
-			}            
+			};
             $scope.afterSave = function(item)
             {
             		if($scope.onSave) $scope.onSave({itemData:item});
