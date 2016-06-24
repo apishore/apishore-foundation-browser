@@ -1,7 +1,7 @@
 /**
  * UI View Form Helper provides common code for generated js
  */
-apishore.factory("uiViewFormHelper", function($injector, $http, $stateParams, $state, $window, $timeout, $location, uiEntityHelper) {
+apishore.factory("uiViewFormHelper", function($injector, $http, $stateParams, $state, $window, $timeout, $location, uiEntityHelper, apishoreDataUtils) {
     return {
     	init : function(api, $scope, elem, attrs)
     	{
@@ -39,11 +39,11 @@ apishore.factory("uiViewFormHelper", function($injector, $http, $stateParams, $s
 						$scope.progress = true;
 					}
 					api.getByState("view").then(function(res){
-						$scope.itemData = res.data;
-						$scope.permissions = res.data.permissions;
-						$scope.dataRoles = res.data.roles;
-						$scope.dashboard = res.data.dashboard;
-						$scope.settings.data = res.data.settings || $scope.settings;
+						$scope.itemData = apishoreDataUtils.merge($scope.itemData,res.data);
+						$scope.permissions = apishoreDataUtils.merge($scope.permissions,res.data.permissions);
+						$scope.dataRoles = apishoreDataUtils.merge($scope.dataRoles,res.data.roles);
+						$scope.dashboard = apishoreDataUtils.merge($scope.dashboard,res.data.dashboard);
+						$scope.settings.data = apishoreDataUtils.merge($scope.settings.data,res.data.settings || $scope.settings);
 						
 						$scope.progress = false;
 						$scope.scheduleDataReload();

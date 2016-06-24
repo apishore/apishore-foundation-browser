@@ -1,7 +1,7 @@
 /**
  * UI List Helper provides common code for generated js
  */
-apishore.factory("uiListHelper", function($injector, $http, $stateParams, $state, $window, $timeout, $location, $rootScope, uiGridHelper, asInlineDialog) {
+apishore.factory("uiListHelper", function($injector, $http, $stateParams, $state, $window, $timeout, $location, $rootScope, uiGridHelper, asInlineDialog, apishoreDataUtils) {
     return {
     	init : function(api, $scope, elem, attrs)
     	{
@@ -269,27 +269,30 @@ apishore.factory("uiListHelper", function($injector, $http, $stateParams, $state
 				return false;
 			};
 			// api call
-			$scope.reload = function()
+			$scope.reload = function(automatic)
 			{
-				$scope.selectAll();
+				$scope.selectAll(automatic);
 			};
-			$scope.selectAll = function()
+			$scope.selectAll = function(automatic)
 			{
-				$scope.progress = true;
-				$scope.error = false;
-				delete $scope.alertId;
+				if(!automatic)
+				{
+					$scope.progress = true;
+					$scope.error = false;
+					delete $scope.alertId;
+				}
 				$scope.listStateName = $state.current.name;
 				if($scope.onBeforeLoad) $scope.onBeforeLoad();
 				var promise = api.listByState($scope.query).then(function(res){
 					if($scope.listStateName != $state.current.name) return;//prevent unexpected back if state is changed
-					$scope.itemsData = res.data;
-					$scope.items = res.data.data;
-					$scope.roles = res.data.roles;
-					$scope.permissions = res.data.permissions;
-					$scope.dashboard = res.data.dashboard;
-					$scope.settings.data = res.data.settings || $scope.settings;
+					$scope.itemsData = apishoreDataUtils.merge($scope.itemsData, res.data);
+					$scope.items = apishoreDataUtils.merge($scope.items,res.data.data);
+					$scope.roles = apishoreDataUtils.merge($scope.roles,res.data.roles);
+					$scope.permissions = apishoreDataUtils.merge($scope.permissions,res.data.permissions);
+					$scope.dashboard = apishoreDataUtils.merge($scope.dashboard,res.data.dashboard);
+					$scope.settings.data = apishoreDataUtils.merge($scope.settings.data,res.data.settings || $scope.settings);
 					{
-						var p = $scope.pagination = res.data.pagination;
+						var p = $scope.pagination = apishoreDataUtils.merge($scope.pagination,res.data.pagination);
 						p.currentPage = p.offset / p.pageSize;
 						var tmp = p.pages = [];
 						if(p.totalPages == 1)
@@ -314,22 +317,27 @@ apishore.factory("uiListHelper", function($injector, $http, $stateParams, $state
 
 					uiGridHelper.onResultOk(api, $scope, elem, attrs, res.data);
 					
-					if($rootScope.infoPanel.show && $scope.items && $scope.items.length>0)
+					if(!automatic)
 					{
-						var item = $scope.items[0];
-						$scope.selectedItem = item;
-						$scope.selectedItemId = item.id;
-						$scope.infoItem(item);
+						if($rootScope.infoPanel.show && $scope.items && $scope.items.length>0)
+						{
+							var item = $scope.items[0];
+							$scope.selectedItem = item;
+							$scope.selectedItemId = item.id;
+							$scope.infoItem(item);
+						}
+						else
+						{
+							$scope.selectedItem = undefined;
+							$scope.selectedItemId = undefined;
+						}
+						if($scope.onSelect) $scope.onSelect();
 					}
-					else
-					{
-						$scope.selectedItem = undefined;
-						$scope.selectedItemId = undefined;
-					}
-					if($scope.onSelect) $scope.onSelect();
 					if($scope.onLoad) $scope.onLoad();
+					$scope.scheduleDataReload();
 				}, function(res) {
 					if($scope.listStateName != $state.current.name) return;//prevent unexpected back if state is changed
+					if(automatic) return; // fail of auto reload should change nothings
 					$scope.itemsData = {data:[]};
 					$scope.items = [];
 					uiGridHelper.onResultFail($scope);
@@ -342,9 +350,30 @@ apishore.factory("uiListHelper", function($injector, $http, $stateParams, $state
 					$scope.progress = false;
 					$scope.error = true;
 					$scope.alertId = "apiError";
+					$scope.scheduleDataReload();
 				});
 				return promise;
 			};
+			$scope.scheduleDataReload = function()
+			{
+				if($scope.reloadDataInterval > 0)
+				{
+					if($scope.reloadState && $scope.reloadState != $state.current)
+					{
+						return;
+					}
+					if(!$scope.reloadState)
+					{
+						 $scope.reloadState = $state.current;
+					}
+					//console.info("schedule reload in " + $scope.reloadDataInterval + " seconds");
+					function onTimeout()
+					{
+						$scope.reload(true);
+					};
+					$scope.reloadDataTimeout = $timeout(onTimeout, $scope.reloadDataInterval*1000);
+				};
+			}
 			// search
 			$scope.onSearchModify = function(delay, minLength)
 			{
