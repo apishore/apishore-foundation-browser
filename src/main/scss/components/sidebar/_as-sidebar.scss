@@ -1,3 +1,7 @@
+$as-sidebar-menu-item-color: map-get($as-palette-primary,300) !default;
+$as-sidebar-menu-item-hover-color: #000 !default;
+$as-sidebar-menu-item-hover-bgcolor: map-get($as-palette-grey,300) !default;
+
 .as-sidebar-swipe
 {
 	position: fixed;
@@ -140,21 +144,21 @@
 	}
 	&.asa-dark
 	{
-		color: map-get($as-palette-primary,300);
+		color: $as-sidebar-menu-item-color;
 		&.asa-secondary
 		{
 			color: #333;
 		}
 		>a
 		{
-			color: #555;
+			color: $as-sidebar-menu-item-color;
 		}
 		&:hover, &:focus
 		{
-			background-color: map-get($as-palette-grey,300);
+			background-color: $as-sidebar-menu-item-hover-bgcolor;
 			>a
 			{
-				color: #000;
+				color: $as-sidebar-menu-item-hover-color;
 			};
 			&:before {
 				content: '';
@@ -181,11 +185,9 @@
 		&:active,
 		&.active
 		{
-			-background: #dfdfdf;
 			>a
 			{ 
-				//color: map-get($as-palette-primary, 800);
-				color: #333333;
+				color: $as-sidebar-menu-item-hover-color;
 			};
 			&:before {
 				content: '';
