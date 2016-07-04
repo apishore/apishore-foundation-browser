@@ -1,0 +1,48 @@
+///
+/// Holder of vertically aligned children
+///
+.as-vbox
+{
+	position:relative;
+	display:flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	align-items: stretch;
+}
+body.as-vbox
+{
+	min-height: 100vh;
+	overflow: hidden;
+}
+///
+/// Holder of horizontally aligned children
+///
+.as-hbox
+{
+	position:relative;
+	display:flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	align-items: stretch;
+}
+.as-cell-fixed
+{
+	position:relative;
+	/** Set `flex-shrink` to `0` to prevent Chrome, Opera, and Safari from
+ 	 *  letting these items shrink to smaller than their content's default
+ 	 *  minimum size.
+ 	 */
+	flex-shrink: 0;
+}
+.as-cell-wide
+{
+	position:relative;
+//	flex-grow:1;
+ 	flex: 1 0 auto;
+}
+.as-cell-default
+{
+	position:relative;
+//	flex-grow:1;
+ 	flex: 1 0 auto;
+}
