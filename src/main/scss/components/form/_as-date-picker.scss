@@ -1,0 +1,242 @@
+.as-date-picker-icon
+{
+	cursor:pointer;
+	color: map-get($as-palette-grey, 500);
+	&:hover
+	{
+		color: map-get($as-palette-primary, 500);
+	}
+}
+
+// Date filter
+.as-date-filter {
+    position: fixed;
+    left: 0px;
+    top:0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, .6);
+    @include transition-property(opacity);
+    @include transition-duration(.6s);
+    @include transition-timing-function(ease-out-quint);
+}
+
+.as-date-filter--is-shown {
+    opacity: 1;
+}
+
+
+
+
+// Date picker base styles
+.as-date-picker {
+    display: none;
+    position: fixed;
+    top: $as-gutter * 4;
+    left: 50%;
+    opacity: 0;
+    z-index: 1000;
+    margin-left: -140px;
+    background-color: map-get($as-palette-bg, darker);
+    width: 280px;
+    z-index: 1000;
+    transform: translateY(-50px);
+    transition-property: opacity, transform;
+    @include transition-duration(.6s);
+    @include transition-timing-function(ease-in-out);
+}
+
+.as-date-picker--is-shown {
+    opacity: 1;
+    @include transform(translateY(0));
+}
+.as-date-picker-current-month
+{
+	line-height: 37px;
+	text-align:center;
+}
+
+.as-date-picker__header {
+}
+
+    // Date picker current day of week
+    .as-date-picker__current-day-of-week {
+        background-color: map-get($as-palette-primary, 700);
+
+        span {
+            display: block;
+            font-size: 14px;
+            text-align: center;
+            text-transform: capitalize;
+            line-height: 32px;
+            color: map-get($as-palette-bg, dark);
+        }
+    }
+
+    // Date picker current date
+    .as-date-picker__current-date {
+        background-color: map-get($as-palette-primary, 500);
+        padding: $as-gutter 0;
+
+        span,
+        strong,
+        a {
+            display: block;
+            text-align: center;
+            font-weight: 400;
+        }
+
+        span,
+        a {
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        span {
+            text-transform: uppercase;
+        }
+
+        strong {
+            font-size: 60px;
+            line-height: 1;
+        }
+
+        a {
+            cursor: pointer;
+            font-style: normal;
+        }
+    }
+
+    // Date picker navigation
+   
+    .as-date-picker__nav {
+        position: relative;
+
+        span {
+            display: block;
+            font-size: 14px;
+            text-align: center;
+            text-transform: capitalize;
+            line-height: 40px;
+            font-weight: 500;
+        }
+
+         .as-date-picker_nav_button {
+            position: absolute !important;
+            display: block;
+            top: $as-gutter / 2;
+			width: 60px;
+			text-align: center;
+            &:first-child {
+                left: $as-gutter * 2;
+            }
+
+            &:last-child {
+                right: $as-gutter * 2;
+            }
+        }
+    }
+
+    // Date picker days of week
+    .as-date-picker__days-of-week {
+        padding: 0 $as-gutter * 2;
+
+        span {
+            display: inline-block;
+            width: percentage(1/7);
+            vertical-align: top;
+            font-size: 12px;
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 24px;
+            color: map-get($as-palette-fg, dark);
+            font-weight: 400;
+        }
+    }
+
+    // Date picker days
+    .as-date-picker__days {
+        padding: 0 $as-gutter * 2;
+    }
+
+    // Date picker day
+    .as-date-picker__day {
+        display: inline-block;
+        padding: $as-gutter / 2 0;
+        width: percentage(1/7);
+        vertical-align: top;
+
+        a {
+            display: block;
+            width: 32px;
+            height: 32px;
+            margin: 0 auto;
+            border-radius: 50%;
+            font-size: 12px;
+            text-align: center;
+            line-height: 32px;
+            font-weight: 400;
+        }
+    }
+
+    .as-date-picker__day--is-today a {
+        color: map-get($as-palette-primary, 700);
+        font-weight: 500;
+    }
+
+    .as-date-picker__day a:hover
+    {
+        background-color: map-get($as-palette-primary, 500);
+        cursor: pointer;
+        color: map-get($as-palette-bg, darker);
+    }
+    .as-date-picker__day--is-selected a {
+        background-color: map-get($as-palette-primary, 800);
+        cursor: pointer;
+        color: map-get($as-palette-bg, darker);
+    }
+
+    // Year selector
+    .as-date-picker__year-selector {
+        position: relative;
+        height: 5 * 65px;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .as-date-picker__year {
+        display: block;
+        cursor: pointer;
+
+        span {
+            display: block;
+            width: 65px;
+            height: 65px;
+            margin: 0 auto;
+            border-radius: 50%;
+            font-size: 16px;;
+            text-align: center;
+            line-height: 65px;
+        }
+    }
+
+    .as-date-picker__year:hover {
+        span {
+            color: map-get($as-palette-primary, 700);
+        }
+    }
+
+    .as-date-picker__year--is-active {
+        span {
+            background-color: map-get($as-palette-primary, 500);
+            color: map-get($as-palette-bg, darker) !important;
+        }
+    }
+
+    // Date picker actions
+    .as-date-picker__actions {
+        border-top: 1px solid map-get($as-palette-grey, 300);
+        text-align: center;
+    }

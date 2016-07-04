@@ -1,0 +1,71 @@
+.as-expansion-panel-collapsed-header
+{
+	@extend .as-hbox;
+	@include user-select(none);
+	min-height: $as-expansion-panel-collapsed-header-height;
+	background-color: #fff;
+	z-index:1;
+	outline: none;
+	border: none;
+	&.asa-focused,
+	&:focus,
+	&:active
+	{
+		background-color: map-get($as-palette-grey, 200);
+	}
+	&.asa-focused,
+	&:focus,
+	&:active,
+	&:hover
+	{
+		.material-icons
+		{
+			color: map-get($as-palette-black, dark);
+		}
+	}
+	*
+	{
+		cursor: default;
+	}
+}
+.as-expansion-panel-collapsed-header-title
+{
+	width: 50%;
+	height: $as-expansion-panel-collapsed-header-height;
+	line-height: $as-expansion-panel-collapsed-header-height;
+	padding-left: $as-expansion-panel-left-padding;
+	padding-right: $as-expansion-panel-header-item-padding;
+	font-size: dp(15);
+	color: map-get($as-palette-black, darker);
+}
+.as-expansion-panel-collapsed-header-info
+{
+	@extend .as-cell-wide;
+	height: $as-expansion-panel-collapsed-header-height;
+	line-height: $as-expansion-panel-collapsed-header-height;
+	padding-left: $as-expansion-panel-left-padding;
+	font-size: dp(15);
+	color: map-get($as-palette-black, dark);
+}
+.as-expansion-panel-collapsed-header-icon
+{
+	padding-top: ($as-expansion-panel-collapsed-header-height - $as-expansion-panel-icon-size) / 2;
+	padding-left: $as-expansion-panel-header-item-padding;
+	padding-right: $as-expansion-panel-left-padding;
+	.material-icons
+	{
+		width: $as-expansion-panel-icon-size;
+		height: $as-expansion-panel-icon-size;
+		color: map-get($as-palette-black, 38);
+	}
+	&.asa-focused,
+	&:focus,
+	&:active,
+	&:hover
+	{
+		.material-icons
+		{
+			color: map-get($as-palette-black, dark);
+		}
+	}
+}

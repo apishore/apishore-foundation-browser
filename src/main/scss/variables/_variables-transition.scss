@@ -1,0 +1,4 @@
+@mixin as-transition($method)
+{
+	transition: $method;
+}

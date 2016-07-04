@@ -1,0 +1,116 @@
+$as-tree-diagram-hor-transition: all 0.3s;
+$as-tree-diagram-hor-bg-color: map-get($as-palette-blue, 500);
+$as-tree-diagram-hor-hover-bg-color: map-get($as-palette-blue, 500);
+$as-tree-diagram-hor-hover-color: #fff;
+$as-tree-diagram-hor-hover-hover-border-color: map-get($as-palette-blue, 400);
+
+.as-tree-diagram-hor
+{
+	display: block;
+	@include clearfix();
+	
+	* {margin: 0; padding: 0;}
+
+	ul
+	{
+		padding-top: 20px; position: relative;
+		@include transition($as-tree-diagram-hor-transition);
+
+		/*Time to add downward connectors from parents*/
+		&.asa-second::before
+		{
+			content: '';
+			position: absolute; top: 0; left: 50%;
+			border-left: 1px solid #ccc;
+			width: 0; height: 20px;
+		}
+	}
+
+	li
+	{
+		float: left; text-align: center;
+		list-style-type: none;
+		position: relative;
+		padding: 20px 5px 0 5px;
+		@include transition($as-tree-diagram-hor-transition);
+		/*We will use ::before and ::after to draw the connectors*/
+		&::before,
+		&::after
+		{
+			content: '';
+			position: absolute; top: 0; right: 50%;
+			border-top: 1px solid #ccc;
+			width: 50%; height: 20px;
+		}
+		&::after
+		{
+			right: auto; left: 50%;
+			border-left: 1px solid #ccc;
+		}
+		/*We need to remove left-right connectors from elements without any siblings*/
+		&:only-child::after,
+		&:only-child::before
+		{
+			display: none;
+		}
+		
+		/*Remove space from the top of single children*/
+		&:only-child
+		{
+			padding-top: 0;
+		}
+
+		/*Remove left connector from first child and right connector from last child*/
+		&:first-child::before,
+		&:last-child::after
+		{
+			border: 0 none;
+		}
+		
+		/*Adding back the vertical connector to the last nodes*/
+		&:last-child::before
+		{
+			border-right: 1px solid #ccc;
+			border-radius: 0 5px 0 0;
+		}
+		&:first-child::after
+		{
+			border-radius: 5px 0 0 0;
+		}
+		
+		a
+		{
+			border: 1px solid #ccc;
+			padding: 5px 10px;
+			text-decoration: none;
+			color: #666;
+			font-size: 14px;
+			display: inline-block;
+		
+			border-radius: 5px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+	
+			@include transition($as-tree-diagram-hor-transition);
+
+			/*Time for some hover effects*/
+			/*We will apply the hover effect the the lineage of the element also*/
+			&:hover,
+			&:hover+ul li a
+			{
+				background: $as-tree-diagram-hor-hover-bg-color;
+				color: $as-tree-diagram-hor-hover-color;
+				border: 1px solid $as-tree-diagram-hor-hover-hover-border-color;
+			}
+		
+			/*Connector styles on hover*/
+			&:hover+ul li::after, 
+			&:hover+ul li::before, 
+			&:hover+ul::before, 
+			&:hover+ul ul::before
+			{
+				border-color:  #94a0b4;
+			}
+		}
+	}
+}

@@ -1,0 +1,103 @@
+$as-checkbox-size: 24px;
+$as-checkbox-checked-color: map-get($as-palette-grey, 700);
+$as-checkbox-unchecked-color: $as-checkbox-checked-color;
+
+.as-input-holder.asa-checkbox,
+.as-input-holder.asa-radio
+{
+	margin-bottom: 0px;
+	&:hover
+	{
+		.as-input-control-checkbox
+		{
+			color: map-get($as-palette-primary, 500);
+		}
+	}
+	&.asa-disabled
+	{
+		.as-input-control-checkbox
+		{
+			color: $as-input-label-color-disabled;
+		}
+	}
+}
+.as-input-control-checkbox-label
+{
+	@extend .as-cell-fixed;
+	@extend .as-hbox;
+	line-height: $as-checkbox-size;
+	margin: 0px;
+	font-weight: normal;
+	span
+	{
+		@extend .as-cell-wide;
+	}
+}
+.as-input-control-radio-label
+{
+	@extend .as-cell-fixed;
+	@extend .as-hbox;
+	line-height: $as-checkbox-size * 1.2;
+	margin: 0px;
+	font-weight: normal;
+	span
+	{
+		@extend .as-cell-wide;
+	}
+}
+.as-input-control-inline-radio-label
+{
+	line-height: $as-checkbox-size * 1.2;
+	margin: 0px;
+	font-weight: normal;
+	span
+	{
+		@extend .as-cell-wide;
+	}
+}
+.as-input-control-checkbox-holder
+{
+	@extend .as-cell-fixed;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	height: $as-checkbox-size;
+	width: $as-checkbox-size;
+	margin-right: $as-checkbox-size * 0.3;
+	overflow:hidden;
+	cursor: pointer;
+	.as-input-control-checkbox
+	{
+		position: absolute;
+		left:0px;
+		top:0px;
+		height: $as-checkbox-size;
+		width: $as-checkbox-size;
+		color: map-get($as-palette-grey, 800);
+		&.asa-checked
+		{
+			opacity: 0;
+		}
+		&.asa-unchecked
+		{
+			opacity: 1;
+		}
+	}
+	&.asa-checked
+	{
+		.asa-checked
+		{
+			opacity: 1;
+		}
+		.asa-unchecked
+		{
+			opacity: 0;
+		}
+	}
+	input
+	{
+	  	position: relative;
+  		display: block;
+  		top: -100px;
+	}
+}

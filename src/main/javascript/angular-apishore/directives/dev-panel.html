@@ -1,0 +1,100 @@
+<div class="dev-panel-holder" ng-class="{'active':showDevPanel}">
+	<a ng-click="showDevPanel = true" class="panel-switch" ng-show="!showDevPanel"><i class="fa fa-dot-circle-o"></i></a>
+	<a ng-click="showDevPanel = false" class="panel-switch" ng-show="showDevPanel"><i class="fa fa-close"></i></a>
+
+	<div class="dev-panel-title" ng-show="showDevPanel">Статус разработки
+	</div>	
+	<div class="container-fluid dev-panel" ng-show="showDevPanel">
+		<div class="row">
+			<tabset>
+				<tab heading="Предложение">
+					<div class="container-fluid">
+						<div class="tab-spinner" ng-show="sending">
+							<div class="tab-spinner-label">Сохраняем</div>
+							<span us-spinner="{radius:30, width:2, length: 16, top: '120px', color:'orange'}"></span>
+						</div>
+						<form role="form" ng-submit="submitForm(itemForm)" name="itemForm" novalidate ng-hide="sending">
+								<!-- Default panel contents -->
+								<div class="panel-body">
+						              <generic-title-input-directive
+						              	model="itemData.data.summary"
+						              	label="Название"
+						              	required="true"
+						              	control-id="summary"
+						              ></generic-title-input-directive>
+						              <rich-text-input-directive
+						              	model="itemData.data.details"
+						              	label="Текст"
+						              	required="true"
+						              	control-id="details"
+						              ></rich-text-input-directive>
+						        </div>
+						        <div class="panel-footer">
+									<div class="btn-group">
+										<button type="submit" class="btn btn-primary">Создать</button>
+										<button type="button" class="btn btn-default" ng-click="cancel()">Отменить</button>
+									</div>
+						        </div>
+						</form>
+					</div>
+				</tab>
+				<tab heading="Page">
+				<div class="container-fluid">
+					<dl>
+						<dt>Dev Status</dt>
+						<dd>{{devStatus().dev}}</dd>
+						<dt>UI status</dt>
+						<dd>{{devStatus().ui}}</dd>
+						<dt>Page id:</dt>
+						<dd>{{pageId()}}</dd>
+						<dt>Page i18n key:</dt>
+						<dd>{{pageI18N()}}</dd>
+						<dt>State data:</dt>
+						<pre>{{$state.current.data | json}}</pre>
+					</dl>
+				</div>
+				</tab>
+				<tab heading="User">
+				<div class="container-fluid">
+					<dl>
+						<dt>Dev Status</dt>
+						<dd>{{devStatus().dev}}</dd>
+						<dt>UI status</dt>
+						<dd>{{devStatus().ui}}</dd>
+						<dt>Page id:</dt>
+						<dd>{{pageId()}}</dd>
+						<dt>Page i18n key:</dt>
+						<dd>{{pageI18N()}}</dd>
+						<dt>User data:</dt>
+						<pre>{{userData() | json}}</pre>
+					</dl>
+				</div>
+				</tab>
+				<tab heading="Login as">
+				<div class="container-fluid">
+					<table class="table table-hover">
+						<thead>
+						<th></th>
+						<th width="50%">Пользователь</th>
+						<th width="50%">Заметки</th>
+						</thead>
+						<tbody>
+						<tr ng-click="selectLoginItem()" ng-class="{'bg-danger':userData().id==userData().originalUserId}">
+							<td><i class="fa fa-check-square-o" ng-show="userData().id==userData().originalUserId"></i></td>
+							<td class="table-cell-reference">Мой эккаунт</td>
+							<td class="table-cell-string"></td>
+						</tr>
+						<tr ng-repeat="itemData in loginItems" ng-click="selectLoginItem(itemData)" ng-class="{'bg-danger':userData().id==itemData.data.loginAs.id}">
+							<td><i class="fa fa-check-square-o" ng-show="userData().id==itemData.data.loginAs.id"></i></td>
+							<td class="table-cell-reference">{{itemData.data.loginAs.firstName}} {{itemData.data.loginAs.lastName}}</td>
+							<td class="table-cell-string">{{itemData.data.notes}}</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				</tab>
+			</tabset>
+		</div>
+	</div>
+</div>
+

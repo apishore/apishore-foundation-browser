@@ -1,0 +1,85 @@
+
+$as-view-control-transition: all cubic-bezier(.25,.8,.25,1) .25s;
+$as-view-control-container-height: 52px;
+
+$as-view-control-font-size: 16px;
+$as-view-control-font-weight: bold;
+$as-view-control-padding: 2px;
+$as-view-control-height: 26px;
+
+$as-view-control-label-height: 22px;
+$as-view-control-label-font-size: $as-view-control-font-size;
+$as-view-control-label-font-size-focus: 12px;
+$as-view-control-label-color: map-get($as-palette-black, dark);
+
+$as-view-control-border-width: 1px;
+$as-view-control-border-color: map-get($as-palette-grey, 100);
+
+.as-view-control-label-in-between
+{
+	min-height: $as-view-control-container-height;
+	line-height: $as-view-control-container-height;
+	margin-top: 22px;
+	
+    padding: 2px;
+	padding-left: $as-gutter;
+	padding-right: $as-gutter;
+    font-size: 16px;
+    line-height: 26px;
+    color:map-get($as-palette-grey, 500);
+}
+.as-view-control-holder
+{
+	@extend .as-vbox;
+	@extend .as-cell-fixed;
+	position: relative;
+	margin-bottom: $as-view-control-height;
+	min-height: $as-view-control-container-height;
+}
+.as-view-control-label
+{
+	@extend .as-cell-fixed;
+	pointer-events: none;
+    -webkit-font-smoothing: antialiased;
+    
+	font-size: $as-view-control-label-font-size;
+    font-weight: normal;
+    
+    padding: $as-view-control-padding;
+    padding-left: 0px;
+    color: 	$as-view-control-label-color;
+	position: absolute;
+	top: 0px;
+	font-size: $as-input-label-font-size-focus;
+	&.asa-small
+	{
+		top: 0px;
+		font-size: $as-view-control-label-font-size-focus;
+	}
+}
+
+.as-view-control-value
+{
+	@extend .as-cell-fixed;
+    margin: 0px;
+	margin-top: $as-view-control-label-height;
+	width: 100%;
+	min-width: 100%;
+	resize:vertical;
+	text-overflow: ellipsis;
+	
+	padding: $as-view-control-padding;
+	background-color: rgba(0,0,0,0.1);
+	
+	@include as-remove-outline();
+    background: 0 0;
+    padding: $as-view-control-padding;
+    padding-left: 0px;
+    font-size: $as-view-control-font-size;
+
+    line-height: $as-view-control-height;
+
+    border-radius: 0;
+	border:none;
+	border-bottom: solid $as-view-control-border-width transparent;
+}

@@ -1,0 +1,259 @@
+.as-card
+{
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	margin: $as-baseline-grid;
+	box-shadow: $as-card-box-shadow;
+	background-color: #fff;
+	&.asa-compact
+	{
+		@extend .as-hbox;
+	}
+	.as-card-header
+	{
+		padding: $as-card-padding;
+		display: flex;
+		flex-direction: row;
+		&:first-child
+		{
+			.as-card-avatar
+			{
+				margin-right: 12px;
+			}
+		}
+
+		&:last-child
+		{
+			.as-card-avatar
+			{
+				margin-left: 12px;
+			}
+		}
+
+		.as-card-avatar
+		{
+			width: 40px;
+			height: 40px;
+
+			.as-user-avatar,
+			.as-icon
+			{
+				border-radius: 50%;
+			}
+
+			.as-icon
+			{
+				padding: 8px;
+			}
+
+      & + .as-card-header-text {
+        max-height: 40px;
+
+        .as-title {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .as-card-header-text {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+
+      .as-subhead {
+        font-size: 14px;
+      }
+    }
+  }
+
+  > img,
+  > :not(.as-card-content) img {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .as-card-title {
+    padding: 3 * $as-card-padding / 2 $as-card-padding $as-card-padding;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+
+    & + .as-card-content {
+      -padding-top: 0;
+    }
+
+    .as-card-title-text {
+      flex: 1;
+      flex-direction: column;
+      display: flex;
+
+      .as-subhead {
+        padding-top: 0;
+        font-size: 14px;
+      }
+
+      &:only-child {
+        .as-subhead {
+          padding-top: 3 * $as-card-padding / 4;
+        }
+      }
+    }
+
+    .as-card-title-media {
+      margin-top: - $as-card-padding / 2;
+
+      .as-media-sm {
+        height: 80px;
+        width: 80px;
+      }
+      .as-media-md {
+        height: 112px;
+        width: 112px;
+      }
+      .as-media-lg {
+        height: 152px;
+        width: 152px;
+      }
+    }
+  }
+
+  .as-card-content {
+    display: block;
+    padding: $as-card-padding;
+	&.asa-compact
+	{
+		@extend .as-cell-wide;
+		padding: $as-card-padding / 2;
+		.as-input-holder
+		{
+			margin: 0px;
+		}
+	}
+
+    & > p {
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .as-media-xl {
+      height: 240px;
+      width: 240px;
+    }
+  }
+
+  .as-card-actions
+  {
+    margin: $as-baseline-grid;
+	&.asa-compact
+	{
+		@extend .as-cell-fixed;
+		margin-top: $as-gutter * 2;
+	}
+
+    &.layout-column {
+      .as-button {
+        &:not(.as-icon-button) {
+          margin: $as-baseline-grid / 4 0;
+
+          &:first-of-type {
+            margin-top: 0;
+          }
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+
+        &.as-icon-button {
+          margin-top: 3 * $as-baseline-grid / 4;
+          margin-bottom: 3 * $as-baseline-grid / 4;
+        }
+      }
+    }
+
+    .as-card-icon-actions {
+      flex: 1;
+      justify-content: flex-start;
+      display: flex;
+      flex-direction: row;
+    }
+
+    &:not(.layout-column) .as-button {
+      &:not(.as-icon-button) {
+        margin: 0 $as-baseline-grid * .5;
+		&.asa-right
+		{
+			float: right;
+		}
+        &:first-of-type {
+          margin-left: 0;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+
+      &.as-icon-button {
+        margin-left: 3 * $as-baseline-grid / 4;
+        margin-right: 3 * $as-baseline-grid / 4;
+
+        &:first-of-type {
+          margin-left: 3 * $as-baseline-grid / 2;
+        }
+
+        &:last-of-type {
+          margin-right: 3 * $as-baseline-grid / 2;
+        }
+      }
+
+      & + .as-card-icon-actions {
+        flex: 1;
+        justify-content: flex-end;
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+
+  .as-card-footer {
+    margin-top: auto;
+    padding: $as-card-padding;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .as-card {
+    border: 1px solid #fff;
+  }
+}
+
+.as-card-image
+{
+	background-size: cover;
+	height: 200px;
+}
+.as-card-list
+{
+	margin-left: $as-gutter;
+	margin-right: $as-gutter;
+	.as-card-list-column
+	{
+		width: 350px;
+		margin-right: $as-gutter;
+	}
+	.as-card
+	{
+		width: 350px;
+		float:left;
+	}
+}

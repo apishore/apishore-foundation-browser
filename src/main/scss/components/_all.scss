@@ -1,0 +1,89 @@
+@import "integration/all-top";
+@import "navigation/all-top";
+@import "bg/all-top";
+
+@import "$common/all";
+
+.table-scrollable {
+    overflow: auto;
+}
+
+.wrapper {
+	padding: 15px;
+}
+
+///
+/// DESKTOP
+///
+.as-device-wide-desktop,
+.as-device-desktop,
+.as-device-tablet
+{
+	$as-appbar-height: $as-appbar-height-tablet;
+	$as-sidebar-width: 300px;
+
+	$apishore-shift-menu-inner-width: 300px;
+
+	$as-sidebar-padding-top: $as-sidebar-padding-top-tablet;
+	$as-sidebar-padding-bottom: $as-sidebar-padding-bottom-tablet;
+	$as-apptitle-breadcrumbs-margin-left: $as-gutter;
+	@import "all-responsive";
+}
+.as-device-phone-portrait
+{
+	$as-appbar-height: $as-appbar-height-phone-portrait;
+	$as-infobar-header-bg-color: map-get($as-palette-primary, 500);
+
+	$as-sidebar-padding-top: $as-sidebar-padding-top-tablet;
+	$as-sidebar-padding-bottom: $as-sidebar-padding-bottom-tablet;
+	$as-apptitle-breadcrumbs-margin-left: $as-gutter;
+	@import "all-responsive";
+	@import "dialog/as-dialog-phone";
+	.as-infobar-holder
+	{
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		background-color: #fff;
+		z-index: 1000;
+	}
+}
+.as-device-phone-landscape
+{
+	$as-appbar-height: $as-appbar-height-phone-landscape;
+	$as-infobar-header-bg-color: map-get($as-palette-primary, 500);
+	$as-apptitle-breadcrumbs-margin-left: $as-gutter;
+	@import "all-responsive";
+	@import "dialog/as-dialog-phone";
+	.as-infobar-holder
+	{
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		background-color: #fff;
+		z-index: 1000;
+	}
+}
+
+html
+{
+	overflow:hidden;
+	-webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+     -webkit-font-smoothing: antialiased;
+}
+body
+{
+	overflow:hidden;
+}
+
+.as-panel-tools
+{
+	min-height: $as-gutter * 2;
+	background-color: #e6e6e6;
+}

@@ -1,0 +1,140 @@
+.as-apptitle
+{
+	width: 30%;
+	overflow: hidden;
+}
+
+.as-apptitle-push
+{
+	z-index: $as-z-index-menu-parent;
+}
+.as-apptitle-breadcrumbs
+{
+	margin-left: $as-apptitle-breadcrumbs-margin-left; 
+}
+.as-apptitle-breadcrumb
+{
+	@include user-select(none);
+	a
+	{
+		text-decoration:none;
+		color: map-get($as-palette-grey, 600);
+		&:hover
+		{
+			color: map-get($as-palette-primary, 500);
+		}
+	}
+	&.asa-expanded
+	{
+		a.as-apptitle-breadcrumb-title
+		{
+			color: map-get($as-palette-primary, 800);
+		}
+	}
+}
+.as-apptitle-breadcrumb-inner
+{
+	font-size: 16px;
+	line-height: $as-appbar-height;
+	a
+	{
+		display: inline-block;
+		line-height: $as-appbar-height;
+	}
+}
+.as-apptitle-breadcrumb-menu-bg
+{
+	position: fixed;
+	left:0px;
+	top: 0px;
+	right:0px;
+	bottom:0px;
+	z-index: $as-z-index-menu-bg;
+	display:none;
+	&.asa-expanded
+	{
+		display:block;
+	}
+}
+.as-apptitle-breadcrumb-menu
+{
+	position: absolute;
+	left: -10px;
+	top: $as-appbar-height - 4px;
+	min-width: 400px;
+	max-height: 60vh;
+	background-color: #FFF;
+	border-top: solid 3px map-get($as-palette-primary, 500);
+	box-shadow: 3px 3px 10px map-get($as-palette-black, light);
+	display:none;
+	
+	&.asa-expanded
+	{
+		z-index: $as-z-index-menu;
+		display: flex;
+	}
+}
+.as-apptitle-breadcrumb-menu-header
+{
+	background-color: map-get($as-palette-black, lighter);
+}
+.as-apptitle-breadcrumb-menu-title
+{
+	font-size: 16px;
+	color: map-get($as-palette-grey, 400);
+	line-height: $as-appbar-height;
+	padding-left: $as-gutter;
+}
+.as-apptitle-breadcrumb-menu-close
+{
+	line-height: $as-appbar-height;
+	margin-right: $as-gutter;
+}
+
+.as-apptitle-breadcrumb-menu-items
+{
+	position: relative;
+}
+.as-apptitle-breadcrumb-menu-item
+{
+	display: block;
+	padding-top: $as-gutter / 2;
+	padding-bottom: $as-gutter / 2;
+	border-left: solid 3px transparent;
+	&:hover
+	{
+		border-left: solid 3px map-get($as-palette-primary, 600);
+		.as-apptitle-breadcrumb-menu-item-title
+		{
+			color:map-get($as-palette-primary, 600);
+		}
+		.as-apptitle-breadcrumb-menu-item-subtitle
+		{
+			color: map-get($as-palette-black, dark);
+		}
+	}
+}
+.as-apptitle-breadcrumb-menu-item-title
+{
+	padding-left: $as-gutter - 3px;
+	display: block;
+	font-size: 16px;
+	color: map-get($as-palette-black, darker);
+}
+.as-apptitle-breadcrumb-menu-item-subtitle
+{
+	padding-left: $as-gutter - 3px;
+	display: block;
+	font-size: 12px;
+	color: map-get($as-palette-black, dark);
+}
+.as-apptitle-debug
+{
+	position: absolute;
+	top: 100px;
+	right: 0px;
+	min-width: 300px;
+	min-height: 300px;
+	background-color: red;
+	display:none;
+}

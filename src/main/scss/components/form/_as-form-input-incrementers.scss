@@ -1,0 +1,9 @@
+.as-input-incrementers
+{
+	position: absolute;
+	bottom: 2px;
+	right: $as-gutter / 2;
+	cursor: pointer;
+	border: solid 1px map-get($as-palette-grey, 50);
+	@include user-select(none);
+}

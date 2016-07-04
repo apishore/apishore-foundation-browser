@@ -1,0 +1,8 @@
+///@group components.dialog
+
+///@label Dialog padding
+///@fieldset dimension
+///@editor dimension
+$as-dialog-padding: $as-baseline-grid * 3;
+
+@import "as-dialog";

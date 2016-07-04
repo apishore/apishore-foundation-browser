@@ -1,0 +1,100 @@
+$asq-scenario-report-height: 50px;
+$asq-scenario-report-border-color: #eee;
+
+.asq-scenario-report
+{
+	width: 100%;
+	thead
+	{
+		th
+		{
+			height: $asq-scenario-report-height;
+			background-color: #eee;
+			color: map-get($as-palette-fg, light);
+			color:#333
+		}
+	}
+	.asq-col
+	{
+		border-bottom: solid 1px map-get($as-palette-grey, 700);
+		height: $asq-scenario-report-height;
+		vertical-align: top;
+		padding: $as-gutter;
+		&.asa-status
+		{
+			width: 0px;
+			.material-icons
+			{
+				font-size: 24px;
+				height: 24px;
+			}
+			span
+			{
+				line-height: 24px;
+			}
+			line-height: $asq-scenario-report-height;
+			padding-left: $as-gutter;
+			.asa-success
+			{
+				color: map-get($as-palette-green, 800);
+			}
+			.asa-error
+			{
+				color: map-get($as-palette-red, 800);
+			}
+		}
+		&.asa-details
+		{
+			width: 30%;
+			min-width: 30%;
+			background-color: map-get($as-palette-grey, 600);
+			border-bottom: solid 1px map-get($as-palette-grey, 600);
+			color: #fff;
+			padding: $as-gutter;
+			padding-left: $as-gutter *4 ;
+			img
+			{
+			}
+		}
+	}
+}
+
+.asq-screenshot
+{
+	position: relative;
+	display: inline-block;
+	margin: $as-gutter;
+	margin-left: 0px;
+	padding: $as-gutter;
+	background-color: map-get($as-palette-grey, 800);
+	@extend .as-whiteframe-5dp;
+	@include as-transition($as-swift-ease-in-out);
+	&:hover
+	{
+		@extend .as-whiteframe-15dp;
+	}
+	> .material-icons
+	{
+		position: absolute;
+		top: $as-gutter;
+		right: $as-gutter;
+		color: #fff;
+		background-color: rgba(0,0,0,0.5);
+		@include as-transition($as-swift-ease-in-out);
+	}
+	&:hover
+	{
+		> .material-icons
+		{
+			background-color: #000;
+		}
+	}
+}
+.asq-screenshot-label
+{
+	height: $as-icon-size;
+	line-height: $as-icon-size;
+	right: $as-icon-size;
+	color: #fff;
+	font-weight: bold;
+}

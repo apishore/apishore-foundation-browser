@@ -1,0 +1,14 @@
+.as-grid
+{
+	&.asa-page-header
+	{
+		border-bottom: solid 4px map-get($as-palette-primary, 500);
+	}
+}
+.as-grid-cell
+{
+	>.as-text-panel
+	{
+		padding-top: $as-gutter;
+	}
+}

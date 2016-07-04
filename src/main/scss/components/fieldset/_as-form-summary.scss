@@ -1,0 +1,8 @@
+.as-form-summary
+{
+	background-color: map-get($as-palette-grey, 300);
+	margin-left: -$as-gutter;
+	padding-left: $as-gutter;
+	margin-right: -$as-gutter;
+	padding-right: $as-gutter;
+}

@@ -1,0 +1,92 @@
+$recent-list-date-width: 150px;
+$recent-avatar-size: 36px;
+$recent-avatar-border-width: 2px;
+
+.recent-list-vline
+{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	width: 2px;
+	left: $recent-list-date-width;
+	background-color: map-get($as-palette-grey, 200);
+}
+.recent-list-item
+{
+	position: relative;
+	padding: $as-gutter;
+	min-height: $as-gutter*4;
+	.recent-list-vline
+	{
+		background-color: map-get($as-palette-grey, 500);
+	}
+	&:last-child
+	{
+		padding-bottom: 20px;
+	}
+}
+
+.recent-list-item-date,
+.recent-list-item-time
+{
+	position: absolute;
+	width: $recent-list-date-width - ($recent-avatar-size) / 2 +$as-gutter/2;
+	left: 0px;
+	text-align:right;
+	padding-right: $as-gutter;
+}
+.recent-list-item-date
+{
+	top: $as-gutter;
+	font-size: 12px;
+	color: map-get($as-palette-grey, 500);
+}
+.recent-list-item-time
+{
+	top: $as-gutter * 2;
+	font-size: 14px;
+	color: map-get($as-palette-grey, 600);
+}
+.recent-list-item-user-avatar
+{
+	position: absolute;
+	left: $recent-list-date-width - ($recent-avatar-size - $recent-avatar-border-width) / 2;
+	background-color: #fff;
+	border-radius: $recent-avatar-size;
+	border: solid $recent-avatar-border-width map-get($as-palette-grey, 500);
+	width: $recent-avatar-size;
+	height: $recent-avatar-size;
+	cursor: default;
+	@include user-select(none);
+}
+.recent-list-item-user-avatar-letter
+{
+	position: absolute;
+	width: $recent-avatar-size - $recent-avatar-border-width*2;
+	height: $recent-avatar-size - $recent-avatar-border-width*2;
+	text-align: center;
+	font-size: 18px;
+	text-transform: capitalize;
+	color: map-get($as-palette-grey, 500);
+	line-height: $recent-avatar-size;
+}
+.recent-list-item-title,
+.recent-list-item-subtitle
+{
+	display: block;
+	padding-left: $recent-list-date-width + ($recent-avatar-size / 2) + $as-gutter / 2;
+}
+.recent-list-item-title
+{
+	color: map-get($as-palette-primary, 800);
+	text-decoration:none;
+	&:hover
+	{
+		color: map-get($as-palette-primary, 600);
+	}
+}
+.recent-list-item-subtitle
+{
+	font-size: 12px;
+	color: map-get($as-palette-grey, 600);
+}

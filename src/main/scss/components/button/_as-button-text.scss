@@ -1,0 +1,20 @@
+.as-button-text
+{
+	@extend .as-cell-wide;
+	text-decoration:none;
+	align-items: center;
+	text-align: center;
+	padding-top: 2px;
+	line-height: $as-button-line-height - 2px;
+	background: transparent;
+	white-space: nowrap;
+	// override for FAB, icon buttons, etc.
+	// Always uppercase buttons
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: $as-body-font-size-base;
+	font-style: inherit;
+	font-variant: inherit;
+	font-family: inherit;
+	text-decoration: none;
+}

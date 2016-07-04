@@ -1,0 +1,71 @@
+.as-button
+{
+	@extend .as-hbox;
+	display: inline-flex;
+	align-items: center;
+	@include user-select(none);
+	position: relative; //for child absolute-positioned <canvas>
+	border-radius: $as-button-border-radius;
+	outline: none;
+	border: 0;
+	margin: $as-button-margin;
+	cursor: pointer;
+	padding: $as-button-padding;
+	min-height: $as-button-line-height;
+	min-width: $as-button-min-width;
+	background-color: transparent;
+	overflow: hidden;   // for ink containment
+	text-decoration:none;
+	transition: box-shadow $as-swift-ease-out-duration $as-swift-ease-out-timing-function,
+              background-color $as-swift-ease-out-duration $as-swift-ease-out-timing-function;
+	
+	&:focus
+	{
+		outline: none;
+	}
+	
+	&:hover, &:focus
+	{
+    	text-decoration: none;
+  	}
+
+	&.ng-hide, &.ng-leave
+	{
+    	transition: none;
+	}
+
+    &:not([disabled]) {
+    	&:hover,
+    	&:focus
+    	{
+    		background-color: map-get($as-palette-grey, 100);
+    	}
+    }
+
+  &.as-icon-button {
+    margin: 0 $as-icon-button-margin;
+    height: $as-icon-button-height;
+    min-width: 0;
+    line-height: $as-icon-button-height;
+    padding-left: 0;
+    padding-right: 0;
+    width: $as-icon-button-width;
+    border-radius: $as-button-icon-border-radius;
+    .as-ripple-container {
+      border-radius: $as-button-icon-border-radius;
+      background-clip: padding-box;
+      overflow: hidden;
+      // The following hack causes Safari/Chrome to respect overflow hidden for ripples
+      -webkit-mask-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC');
+    }
+  }
+}
+
+///
+/// @private
+///
+.btn-actions-group
+{
+	display:inline-block;
+	float:left;
+}

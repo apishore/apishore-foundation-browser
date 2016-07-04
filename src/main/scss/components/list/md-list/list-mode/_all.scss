@@ -1,0 +1,42 @@
+@import "as-md-list-nav-row";
+@import "as-md-list-row";
+@import "as-md-list-column";
+@import "as-md-list-row-left-indicator";
+
+.as-md-list
+{
+}
+
+.as-md-list-header
+{
+	height: $as-md-list-header-height;
+	line-height: $as-md-list-header-height;
+	color: map-get($as-palette-grey, 500);
+	background-color: map-get($as-palette-grey, 100);
+	.material-icons
+	{
+		font-size: 16px;
+		height: $as-md-list-header-height;
+		line-height: $as-md-list-header-height;
+	}
+}
+.as-md-list-header-item
+{
+	padding-left: $as-md-list-gutter;
+	padding-right: $as-md-list-gutter;
+	cursor: default;
+	*
+	{
+		height: $as-md-list-header-height;
+		line-height: $as-md-list-header-height;
+	}
+	&:hover
+	{
+		background-color: map-get($as-palette-grey, 200);
+		color: map-get($as-palette-grey, 600);
+	}
+}
+
+.as-alert-icon
+{
+}

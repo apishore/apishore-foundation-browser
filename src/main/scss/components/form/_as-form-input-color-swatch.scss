@@ -1,0 +1,41 @@
+.as-input-color-swatch
+{
+	position: relative;
+	font-size: 12px;
+	padding-top: $as-gutter / 4;
+	@extend .as-hbox;
+	margin-top: 24px;
+	@include user-select(none);
+}
+.as-input-color-swatch-item
+{
+	@extend .as-cell-fixed;
+	margin-right: $as-gutter / 2;
+	padding: 2px;
+	opacity: 0.96;
+	font-size: 14px;
+	border: solid 2px map-get($as-palette-grey, 300);
+	border-radius: 3px;
+	
+	&:hover
+	{
+		opacity: 1;
+		border: solid 2px map-get($as-palette-primary, 500);
+	}
+	&.asa-active
+	{
+		opacity: 1;
+		border: solid 2px map-get($as-palette-primary, 600);
+	}
+}
+.as-input-color-swatch-item-inner
+{
+	display: block;
+	border-radius: 2px;
+	min-width: $as-gutter * 2;
+	min-height: $as-gutter * 2;
+	line-height: $as-gutter * 2;
+	padding: $as-gutter / 2;
+	font-size: 14px;
+	font-weight: bold;
+}

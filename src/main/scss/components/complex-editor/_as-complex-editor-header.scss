@@ -1,0 +1,24 @@
+.as-complex-editor-header
+{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	border-top: solid $as-gutter map-get($as-palette-grey, 100);
+	background-color: map-get($as-palette-grey, 100);
+	z-index: 1000;
+	@extend .as-hbox;
+}
+.as-complex-editor-header-title
+{
+	@extend .as-cell-fixed;
+	font-size: 18px;
+	padding-left: $as-gutter *2;
+	color: map-get($as-palette-grey, 500);
+}
+.as-complex-editor-header-actions
+{
+	@extend .as-cell-fixed;
+	@extend .as-hbox;
+	color: map-get($as-palette-grey, 100);
+	margin-right: $as-gutter;
+}

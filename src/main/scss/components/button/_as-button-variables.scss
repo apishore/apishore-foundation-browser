@@ -1,0 +1,83 @@
+///@group components.button.normal
+///@label Button radius
+///@fieldset dimension
+///@editor small-radius
+$as-button-border-radius: 2px !default;
+
+///@label Icon button radius
+///@fieldset dimension
+///@readonly
+///@editor radius
+$as-button-icon-border-radius: 2px;
+
+///@label Button line height
+///@fieldset dimension
+///@editor rem
+$as-button-line-height: rem(3.60) !default;
+
+///@label Button padding
+///@fieldset dimension
+///@editor rem-vh
+$as-button-padding: 0 rem(0.600) !default;
+
+///@label Button margin
+///@fieldset dimension
+///@editor rem-vh
+$as-button-margin: rem(0.600) rem(0.800) !default;
+
+///@label Button padding
+///@fieldset dimension
+///@editor rem
+$as-button-min-width: rem(8.800) !default;
+
+///@label Icon button height
+///@fieldset icon
+///@editor rem
+$as-icon-button-height: rem(4.800) !default;
+
+///@label Icon button width
+///@fieldset icon
+///@editor rem
+$as-icon-button-width: rem(4.800) !default;
+
+///@label Icon button margin
+///@fieldset icon
+///@editor rem
+$as-icon-button-margin: rem(0.600) !default;
+
+
+///@group components.button.fab
+///
+///
+///
+///
+
+///@label FAB button radius
+///@fieldset dimension
+///@readonly
+$as-button-fab-border-radius: 50% !default;
+
+///@label FAB button line height
+///@fieldset fab
+///@editor rem
+$as-button-fab-line-height: rem(5.600) !default;
+
+///@label FAB button width
+///@fieldset fab
+///@editor rem
+$as-button-fab-mini-width: rem(4.00) !default;
+
+///@label FAB button height
+///@fieldset fab
+///@editor rem
+$as-button-fab-mini-height: rem(4.00) !default;
+
+///@label FAB button line height
+///@fieldset fab
+///@editor rem
+$as-button-fab-mini-line-height: rem(4.00) !default;
+
+///@label Offset of FAB button for toast
+///@fieldset fab
+///@editor rem
+$as-button-fab-toast-offset: $as-button-fab-height * 0.75 !default;

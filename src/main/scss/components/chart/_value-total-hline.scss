@@ -1,0 +1,22 @@
+///@group components.charts.hline
+
+.as-chart-value-total-hline-cell
+{
+	margin-left: $as-gutter;
+	margin-right: $as-gutter;
+}
+
+.as-chart-value-total-hline-label
+{
+	color: map-get($as-palette-grey, 800);
+	margin-top: $as-gutter;
+}
+.as-chart-value-total-hline-line
+{
+	background-color: map-get($as-palette-grey, 100);
+}
+.as-chart-value-total-hline-line-inner
+{
+	background-color: map-get($as-palette-green, 500);
+	height: 8px;
+}

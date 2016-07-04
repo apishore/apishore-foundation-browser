@@ -1,0 +1,155 @@
+$as-grid-pin-bg: map-get($as-palette-grey, 100);
+$as-grid-pin-bg-hover: map-get($as-palette-grey, 300);
+.as-grid-settings-pin-title
+{
+	padding: $as-gutter;
+	padding-bottom: 0px;
+	font-weight: bold;
+	color: map-get($as-palette-white, dark);
+	background-color: $as-grid-pin-bg;
+}
+.as-grid-settings-pin-area
+{
+	background-color: $as-grid-pin-bg;
+}
+.as-grid-settings-pin-select-holder
+{
+	padding: $as-gutter;
+}
+.as-grid-settings-scroll-title
+{
+	padding: $as-gutter;
+	font-size: 16px;
+}
+.as-ordered-list-item-last
+{
+	height: 64px;
+	.as-ordered-list-item-inner
+	{
+		border-top: solid 2px transparent;
+	}
+	&.asa-drag-over
+	{
+		.as-ordered-list-item-inner
+		{
+			border-top: solid 2px #000;
+		}
+	}
+}
+.as-ordered-list-item
+{
+	min-height: 32px;
+	padding-left: $as-gutter - 6px;
+	padding-right: $as-gutter - 6px;
+	.as-ordered-list-item-inner
+	{
+		border-top: solid 2px transparent;
+		height: 32px;
+	}
+	&:hover
+	{
+		background-color: map-get($as-palette-grey, 300);
+		.as-ordered-list-pin
+		{
+			&.asa-off
+			{
+				.material-icons
+				{
+					&.asa-add { color: #000; text-shadow: 1px 1px 3px rgba(0,0,0,0.3); }
+				}
+			}
+			&.asa-on
+			{
+				.material-icons
+				{
+					&.asa-close { color: #000; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);}
+				}			
+			}
+		}
+	}
+	&.asa-drag
+	{
+	}
+	&.asa-drag-over
+	{
+		.as-ordered-list-item-inner
+		{
+			border-top: solid 2px #000;
+		}
+	}
+	&.asa-pin
+	{
+		background-color: $as-grid-pin-bg;
+		&:hover
+		{
+			background-color: $as-grid-pin-bg-hover;
+		}
+	}
+	&.asa-last-pin
+	{
+		min-height: 64px;
+	}
+}
+.as-grid-settings-pin-bottom
+{
+	min-height: 32px;
+	background-color: $as-grid-pin-bg;
+	border-top: solid 2px transparent;
+	&.asa-drag-over
+	{
+		border-top: solid 2px #000;
+	}
+}
+.as-ordered-list-pin
+{
+	position: relative;
+	width: $as-gutter * 2;
+	cursor: default;
+	.material-icons
+	{
+		position: absolute;
+		left: 5px;
+		top: 2px;
+		color: transparent;
+	}
+	&.asa-on
+	{
+		.as-ordered-list-pin-inner
+		{
+		}
+	}
+}
+.as-ordered-list-pin-inner
+{
+	position: absolute;
+	left: $as-gutter;
+	width: 2px;
+	top: 0px;
+	bottom: 0px;
+}
+.as-ordered-list-title
+{
+	line-height: 32px;
+	padding-right: $as-gutter;
+	padding-left: $as-gutter / 2;
+	text-overflow: ellipsis;
+}
+.as-ordered-list-icon
+{
+	padding: (32px - 24px)/4;
+	i
+	{
+		color: map-get($as-palette-grey, 700);
+		&.asa-drag
+		{
+			color:transparent;
+		}
+	}
+	&:hover
+	{
+		i
+		{
+			color: map-get($as-palette-cyan, 500);
+		}
+	}
+}

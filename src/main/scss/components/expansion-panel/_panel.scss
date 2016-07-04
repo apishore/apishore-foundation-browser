@@ -1,0 +1,31 @@
+
+.as-expansion-panels
+{
+	.as-card
+	{
+		margin: 0px;
+		margin-bottom: $as-gutter;
+	}
+}
+
+.as-expansion-panel
+{
+	@extend .as-vbox;
+	box-shadow: $as-whiteframe-shadow-1dp;
+	border-bottom: solid 1px map-get($as-palette-black, lighter);
+	&:last-child
+	{
+		border-bottom:none;
+	}
+	&.asa-expanded
+	{
+		margin: $as-expansion-panel-expanded-margin 0px;
+		.as-expansion-panel-collapsed-header {display:none;}
+		border-bottom:none;
+	}
+	&.asa-focused,
+	&:focus
+	{
+		background-color: map-get($as-palette-grey, 200);
+	}
+}

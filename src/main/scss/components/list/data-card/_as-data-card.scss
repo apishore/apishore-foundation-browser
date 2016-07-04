@@ -1,0 +1,75 @@
+.as-data-card-list
+{
+	padding: $as-gutter / 2;
+}
+.as-data-card
+{
+	position: relative;
+	margin: $as-gutter / 2;
+	background-color: #fff;
+	border: 1px solid rgba(0,0,0,0.10);
+	border-bottom: 3px solid rgba(0,0,0,0.10);
+	max-width: 350px;
+	min-height: 300px;
+	width: 30%;
+	display: inline-block;
+	&:hover,
+	&:focus
+	{
+		.as-data-card-inner
+		{
+			background-color: map-get($as-palette-primary, 50);
+		}
+	}
+	&.asa-selected
+	{
+		.as-data-card-inner
+		{
+			border-top: solid 4px map-get($as-palette-primary, 500);
+		}
+	}
+}
+.as-data-card-image
+{
+	background-size: cover;
+	margin: -$as-gutter;
+	margin-bottom: $as-gutter;
+	height: 200px;
+}
+.as-data-card-inner
+{
+	padding: $as-gutter;
+}
+.as-data-card-title,
+.as-data-card-subtitle,
+.as-data-card-title-text
+{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	min-width: 0;
+}
+.as-data-card-title
+{
+	font-size: 16px;
+	color: map-get($as-palette-fg, darker);
+}
+.as-data-card-subtitle
+{
+	padding-top: 0px;
+	font-size: 14px;
+	padding-bottom: 20px;
+	color: map-get($as-palette-fg, dark);
+}
+.as-data-card-info-action
+{
+	position: absolute;
+	top: $as-gutter+3px;
+	right: $as-gutter+3px;
+	font-size: 18px;
+	color: map-get($as-palette-black, light);
+	&:hover,
+	&:focus
+	{
+		color: map-get($as-palette-primary, 500);
+	}
+}

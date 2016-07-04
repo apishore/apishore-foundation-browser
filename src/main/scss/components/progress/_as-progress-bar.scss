@@ -1,0 +1,38 @@
+$as-progress-bar-height: 20px;
+
+.as-progress-bar
+{
+	position: relative;
+	height: $as-progress-bar-height;
+	background-color: map-get($as-palette-white, darker);
+}
+.as-progress-bar-inner
+{
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	height: $as-progress-bar-height;
+	line-height: $as-progress-bar-height;
+	
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: $as-gutter / 2;
+	&.asa-success
+	{
+		background-color: map-get($as-palette-green, 500);
+	}
+	&.asa-info
+	{
+		background-color: map-get($as-palette-blue, 500);
+	}
+	&.asa-warning
+	{
+		background-color: map-get($as-palette-pink, 500);
+	}
+	&.asa-danger
+	{
+		background-color: map-get($as-palette-red, 500);
+	}
+}

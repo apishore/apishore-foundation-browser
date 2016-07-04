@@ -1,0 +1,245 @@
+///@group components.navigation.bottom_sheet
+///@fieldset-def base{label:"Font and color"}
+///@fieldset-def list{label:"List style"}
+///@fieldset-def grid{label:'Grid-style bottom sheet with icons'}
+/// Bottom navigation provides quick navigation between top-level views of an app.
+/// It is primarily designed for use on mobile.
+/// Larger displays, like desktop, may achieve a similar effect by using side navigation.
+/// For instance, the compact “rail” treatment displays navigational icons by default.
+///
+///
+
+///@label Default font size of bottom sheet
+///@fieldset base
+///@editor font-size
+$as-bottom-sheet-font-size: dp(16);
+///@label Text color
+///@fieldset base
+///@editor color
+$as-bottom-sheet-color: map-get($as-palette-fg, darker);
+///@label Text color of pressed item
+///@fieldset base
+///@editor color
+$as-bottom-sheet-selected-color: map-get($as-palette-primary, 500);
+///@label Title color
+///@fieldset base
+///@editor color
+$as-bottom-sheet-title-color: map-get($as-palette-fg, dark);
+///@label Title height
+///@fieldset base
+///@editor dimension
+$as-bottom-sheet-title-height: 56px;
+///@label Default bottom sheet background fill
+///@fieldset base
+///@editor color
+$as-bottom-sheet-bgcolor: #fff;
+///@label Transparent overlay fill
+///@fieldset base
+///@editor color
+$as-bottom-sheet-transparent-overlay-fill: map-get($as-palette-black, 20);
+
+
+///@label Screen edge left &amp; right margins
+///@fieldset list
+///@editor dimension
+$as-bottom-sheet-list-style-hpadding: 16px;
+///@label Top and bottom margins
+///@fieldset list
+///@editor dimension
+$as-bottom-sheet-list-style-vpadding: 8px;
+///@label List-item height
+///@fieldset list
+///@editor dimension
+$as-bottom-sheet-list-style-item-height: 48px;
+///@label List icons size
+///@fieldset list
+///@editor dimension
+$as-bottom-sheet-list-style-icon-size: 24px;
+///@label Padding of text associated with icon
+///@fieldset list
+///@editor dimension
+$as-bottom-sheet-list-style-icon-right-padding: 32px;
+///@label Divider line height
+///@fieldset list
+///@editor dimension
+$as-bottom-sheet-list-style-divider-line-height: 1px;
+///@label Space below the top list
+///@fieldset list
+///@editor dimension
+$as-bottom-sheet-list-style-space-below-top-list: 7px;
+///@label Space above second bottom sheet
+///@fieldset list
+///@editor dimension
+$as-bottom-sheet-list-style-space-above-second-list: 8px;
+///@label List title height
+///@fieldset list
+///@editor dimension
+$as-bottom-sheet-list-style-title-height: 56px;
+
+///@label Screen edge left & right margins
+///@fieldset grid
+///@editor dimension
+$as-bottom-sheet-grid-style-padding: 24px;
+///@label Vertical space between grid lists
+///@fieldset grid
+///@editor dimension
+$as-bottom-sheet-grid-style-row-margin: 16px;
+///@label Label height
+///@fieldset grid
+///@editor dimension
+$as-bottom-sheet-grid-style-label-height: 16px;
+///@label Label font size
+///@fieldset grid
+///@editor dimension
+$as-bottom-sheet-grid-style-label-font-size: 12px;
+///@label Grids list icon size
+///@fieldset grid
+///@editor dimension
+$as-bottom-sheet-grid-style-icon-size: 48px;
+///@label Bottom sheet shadow
+///@fieldset grid
+///@editor dimension
+$as-bottom-sheet-shadow: $as-whiteframe-shadow-2dp;
+
+.as-device-wide-desktop,
+.as-device-desktop,
+.as-device-tablet,
+.as-device-phone-portrait,
+.as-device-phone-landscape
+{
+	.as-bottom-sheet-contaner
+	{
+		position:absolute;
+		left:0px; right:0px; bottom:0px;
+		height: 0px;
+		background-color: $as-bottom-sheet-transparent-overlay-fill;
+		overflow: hidden;
+		&.asa-opened
+		{
+			height: 100%;
+			.as-bottom-sheet-bar
+			{
+				
+			}
+		}
+	}
+	.as-bottom-sheet-bar
+	{
+		position:absolute;
+		left:0px; right:0px; bottom:0px;
+		background-color: $as-bottom-sheet-bgcolor;
+		font-size: $as-bottom-sheet-font-size;
+		color: $as-bottom-sheet-color;
+		box-shadow:$as-bottom-sheet-shadow;
+		&.asa-list
+		{
+			padding: $as-bottom-sheet-list-style-vpadding $as-bottom-sheet-list-style-hpadding;
+		}
+		&.asa-grid
+		{
+			padding-left: $as-bottom-sheet-grid-style-padding;
+			padding-right: $as-bottom-sheet-grid-style-padding;
+			padding-bottom: $as-bottom-sheet-grid-style-padding;
+		}
+	}
+	.as-bottom-sheet-header
+	{
+		font-size: $as-bottom-sheet-font-size;
+		color: $as-bottom-sheet-title-color;
+		margin-top: -$as-bottom-sheet-list-style-vpadding;
+		height: $as-bottom-sheet-title-height;
+		line-height: $as-bottom-sheet-title-height;
+	}
+	.as-bottom-sheet-list-item
+	{
+		@extend .as-hbox;
+		height: $as-bottom-sheet-list-style-item-height;
+		@include user-select(none);
+		&:hover,
+		&:focus,
+		&.asa-selected
+		{
+			.as-bottom-sheet-list-item-icon,
+			.as-bottom-sheet-list-item-label
+			{	
+				color: $as-bottom-sheet-selected-color;
+			}
+		}		
+	}
+	.as-bottom-sheet-list-item-icon
+	{
+		@extend .as-cell-fixed;
+		height: $as-bottom-sheet-list-style-item-height;
+		color: $as-bottom-sheet-color;
+		padding-right: $as-bottom-sheet-list-style-icon-right-padding;
+		padding-top: ($as-bottom-sheet-list-style-item-height - $as-bottom-sheet-list-style-icon-size) / 2;
+	}
+	.as-bottom-sheet-list-item-label
+	{
+		@extend .as-cell-wide;
+		color: $as-bottom-sheet-color;
+		height: $as-bottom-sheet-list-style-item-height;
+		line-height: $as-bottom-sheet-list-style-item-height;		
+	}
+	.as-bottom-sheet-grid-row
+	{
+		@extend .as-hbox;
+		padding-top: $as-bottom-sheet-grid-style-row-margin;
+	}
+	.as-bottom-sheet-grid-item
+	{
+		@extend .as-vbox;
+		@extend .as-cell-wide;
+		flex-grow: 1;
+	    flex-basis: 0;
+		@include user-select(none);
+		&:hover,
+		&:focus,
+		&.asa-selected
+		{
+			.as-bottom-sheet-grid-item-icon,
+			.as-bottom-sheet-grid-item-label
+			{	
+				color: $as-bottom-sheet-selected-color;
+			}
+		}		
+		&:first-child
+		{
+			.as-bottom-sheet-grid-item-icon,
+			.as-bottom-sheet-grid-item-label
+			{
+				text-align:left;
+			}
+		}
+		&:last-child
+		{
+			.as-bottom-sheet-grid-item-icon,
+			.as-bottom-sheet-grid-item-label
+			{
+				text-align: right;
+			}
+		}
+	}
+	.as-bottom-sheet-grid-item-icon
+	{
+		@extend .as-cell-fixed;
+		height: $as-bottom-sheet-grid-style-icon-size;
+		line-height: $as-bottom-sheet-grid-style-icon-size;
+		color: $as-bottom-sheet-color;
+		
+		text-align: center;
+		>.material-icons
+		{
+			font-size: $as-bottom-sheet-grid-style-icon-size;
+		}
+	}
+	.as-bottom-sheet-grid-item-label
+	{
+		@extend .as-cell-wide;
+		color: $as-bottom-sheet-color;
+		text-align:center;
+		font-size:$as-bottom-sheet-grid-style-label-font-size;
+		height: $as-bottom-sheet-grid-style-label-height;
+		line-height: $as-bottom-sheet-grid-style-label-height;		
+	}
+}

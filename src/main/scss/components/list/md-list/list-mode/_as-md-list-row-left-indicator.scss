@@ -1,0 +1,25 @@
+.as-md-list-row-left-indicator
+{
+	.as-avatar-outer
+	{
+		margin: $as-gutter;
+		margin-left: 0px;
+		margin-right: $as-gutter / 2;
+		width: 30px;
+		height: 30px;
+		border-width: 2px;
+		background-color: #fefefe;
+	}
+	.as-avatar-img
+	{
+		position: absolute;
+		width: 26px;
+		height: 26px;
+	}
+	.as-avatar-inner
+	{
+		position: absolute;
+		width: 26px;
+		height: 26px;
+	}
+}

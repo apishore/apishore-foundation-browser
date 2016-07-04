@@ -1,0 +1,35 @@
+///@group components.bars.buttons
+///
+/// <h1>Buttons</h1>
+///
+
+@import "as-button-variables";
+@import "as-button";
+
+///
+/// modifiers
+///
+.as-button
+{
+	///@skip
+	$as-button-flat-color: #000;
+	
+	@import "asa-button-raised";
+	@import "asa-button-cornered";
+	@import "asa-button-rounded";
+	@import "asa-button-fab";
+	@import "asa-button-raised";
+	@import "asa-button-flat";
+	@import "asa-button-mini";
+	@import "asa-selected";
+	@import "asa-ripple-container";
+	@import "as-button-icon";
+	@import "as-button-text";
+}
+@import "as-button-group";
+@import "as-button-theme";
+@import "as-ms-high-contrast";
+@import "as-button-in-toast";
+@import "as-button-delimiter";
+@import "as-dark-theme";
+

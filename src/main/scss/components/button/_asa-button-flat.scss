@@ -1,0 +1,45 @@
+&.asa-flat
+{
+	&:not([disabled])
+	{
+		.as-button-text
+ 		{
+ 			color: #000;
+		}
+		&.asa-primary
+		{
+			.as-button-text
+ 			{
+				color: map-get($as-palette-primary, 500);
+			}
+		}
+ 	
+		&:hover,
+		&:focus,
+		&.asa-hover,
+		&.asa-focused
+		{
+			background-color: transparentize(#999999, 0.80);
+		}
+		&.asa-pressed,
+		&:active
+		{
+			background-color: transparentize(#999999, 0.60);
+		}
+		&.as-icon-button:hover
+		{
+			background-color: transparent;
+		}
+	}
+	
+	&[disabled],
+	&.asa-disabled,
+	&:disabled
+	{
+		.as-button-text,
+		.as-button-icon
+ 		{
+			color: transparentize(#000000, 0.74);
+		}
+	}
+}

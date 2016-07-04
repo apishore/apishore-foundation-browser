@@ -1,0 +1,9 @@
+.as-button-icon
+{
+	@extend .as-cell-fixed;
+	min-width: $as-button-line-height;
+	.material-icons
+	{
+		margin-top: 5px;
+	}
+}

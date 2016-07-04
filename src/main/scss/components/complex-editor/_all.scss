@@ -1,0 +1,11 @@
+///@group components.complexeditor
+
+///@label Gutter of complex editor summary panel
+///@fieldset dimension
+///@editor gutter
+$as-complex-editor-summary-gutter: $as-gutter * 1.5;
+
+@import "as-complex-editor";
+@import "as-complex-editor-header";
+@import "as-complex-editor-selection-summary";
+@import "as-complex-editor-body";

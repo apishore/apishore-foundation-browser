@@ -1,0 +1,24 @@
+.as-card-indicator
+{
+	margin: $as-gutter / 2;
+	margin-right: $as-gutter;
+}
+.as-card-indicator-item-icon
+{
+	&.asa-ok
+	{
+		color: map-get($as-palette-green, 300);
+	}
+	&.asa-normal
+	{
+		color: map-get($as-palette-grey, 300);
+	}
+	&.asa-warn
+	{
+		color: map-get($as-palette-yellow, 300);
+	}
+	&.asa-critical
+	{
+		color: map-get($as-palette-red, 300);
+	}
+}

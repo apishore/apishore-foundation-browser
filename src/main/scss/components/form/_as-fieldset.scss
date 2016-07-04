@@ -1,0 +1,61 @@
+
+.as-fieldset-top
+{
+	margin:0px;
+	&:last-child
+	{
+		height: 50vh;
+	}
+}
+.as-fieldset-top-delimiter
+{
+	display:block;
+	margin:0px;
+	padding:1px;
+	height: 15px;
+	clear:both;
+}
+.as-fieldset-legend-top
+{
+	position:relative;
+	width: 100%;
+	margin:0px;
+	margin-bottom: $as-gutter;
+	border:none;
+	padding:0px;
+	height: 18px;
+	line-height: 18px;
+	&.stick
+	{
+		position:absolute;
+		left:0px;
+		right:0px;
+		top:0px;
+		display:none;
+		&.active
+		{
+			display:block;
+			span
+			{
+				left:0px;
+				right:0px;
+				background-color: map-get($as-palette-grey, 500);
+				color:#fff;
+			}
+		}
+	}
+	span
+	{
+		display:block;
+		padding-left: $as-gutter;
+		font-size: 12px;
+		font-weight: bold;
+		background-color: #eee;
+		color: #666;
+		position:absolute;
+		top:0px;
+		bottom:0px;
+		left:-$as-gutter;
+		right:-$as-gutter;
+	}
+}

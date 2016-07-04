@@ -1,0 +1,56 @@
+///@group components.expansionpanel
+///
+///
+
+$as-expansion-panel-bg: #fff;
+$as-expansion-panel-collapsed-header-height: 48px;
+$as-expansion-panel-expanded-header-height: 64px;
+$as-expansion-panel-icon-size: 24px;
+$as-expansion-panel-left-padding: 24px;
+$as-expansion-panel-right-padding: 8px;
+$as-expansion-panel-header-item-padding: 16px;
+$as-expansion-panel-expanded-margin: 16px;
+$as-expansion-panel-content-margin: 16px;
+$as-expansion-panel-action-height: 36px;
+
+@import "panel";
+@import "collapsed-header";
+@import "expanded-header";
+
+
+.as-expansion-panel-expanded-content
+{
+	padding: $as-expansion-panel-left-padding;
+	padding-top: 0px;
+	padding-bottom: $as-expansion-panel-content-margin;
+	font-size: dp(15);
+	color: map-get($as-palette-black, dark);
+	background-color: $as-expansion-panel-bg;
+}
+.as-expansion-panel-expanded-actions
+{
+	background-color: $as-expansion-panel-bg;
+	text-align: right;
+	padding-left: $as-expansion-panel-right-padding;
+	padding-right: $as-expansion-panel-right-padding;
+	padding-top: $as-expansion-panel-content-margin;
+	padding-bottom: $as-expansion-panel-content-margin;
+	border-top: solid 1px map-get($as-palette-black, lighter);
+	.as-button
+	{
+		margin: 0px;
+		margin-left: $as-expansion-panel-right-padding;
+		height: $as-expansion-panel-action-height;
+		line-height: $as-expansion-panel-action-height;
+		&.as-float-left
+		{
+			margin: 0px;
+			margin-right: $as-expansion-panel-right-padding;
+		}
+		*
+		{
+			height: $as-expansion-panel-action-height;
+			line-height: $as-expansion-panel-action-height;
+		}
+	}
+}

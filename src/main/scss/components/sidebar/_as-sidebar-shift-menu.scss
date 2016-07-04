@@ -1,0 +1,201 @@
+$apishore-menu-color: #888;
+
+.apishore-shift-container
+{
+	position:absolute;
+	left:0px;
+	top:0px;
+	right:0px;
+	bottom:0px;
+}
+.apishore-shift-container-inner
+{
+	position:absolute;
+	left:0px;
+	top:0px;
+	right:0px;
+	bottom:0px;
+	//hbox
+	display:flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	align-items: stretch;
+}
+.as-device-tablet
+{
+	.apishore-shift-menu
+	{
+		--box-shadow:2px 0px 10px rgba(0, 0, 0, 0.35);
+		z-index:1;
+	}
+}
+.apishore-shift-menu
+{
+	position:relative;
+	background-color: #4b4b4b;
+	width: $as-sidebar-width-desktop;
+	min-width: $as-sidebar-width-desktop;
+	max-width: $as-sidebar-width-desktop;
+	display:none;
+	&.apishore-shift-menu-expanded
+	{
+		display: block;
+		position: fixed;
+		left:0px;
+		top:0px;
+		right:0px;
+		bottom:0px;
+		max-width:none;
+		width:100%;
+		z-index: $as-zlevel-sidebar;
+		background-color: rgba(#fff, 0.5);
+		.apishore-shift-menu-inner-closer
+		{
+			position: absolute;
+			top:0px;
+			left:0px;
+			bottom:0px;
+			right:0px;
+		}
+		.apishore-shift-menu-inner
+		{
+			position: absolute;
+			top:0px;
+			left:0px;
+			bottom:0px;
+			width: $apishore-shift-menu-inner-width;
+			min-width: 220px;
+			background-color: #4b4b4b;
+			box-shadow:2px 0px 15px rgba(0, 0, 0, 0.35);
+		}
+	}
+    @media (min-width: $screen-sm-min) {
+      width: $as-sidebar-width-desktop;
+      min-width: $as-sidebar-width-desktop;
+      max-width: $as-sidebar-width-desktop;
+      display:block;
+    }
+    @media (min-width: $screen-md-min) {
+      width: $as-sidebar-width-desktop;
+      min-width: $as-sidebar-width-desktop;
+      max-width: $as-sidebar-width-desktop;
+    }
+    @media (min-width: $screen-lg-min) {
+      width: $as-sidebar-width-desktop;
+      min-width: $as-sidebar-width-desktop;
+      max-width: $as-sidebar-width-desktop;
+    }
+    .apishore-shift-menu-inner
+    {
+    	height: 100%;
+    	@extend .as-panel;
+    	@extend .as-vbox;
+    	border-right: solid 1px map-get($as-palette-grey, 400);
+    }
+    .apishore-shift-menu-group
+	{
+		color: #888;
+		font-size: 14px;
+		font-weight: 300;
+		letter-spacing: 1px;
+		padding: 8px;
+		padding-left: 15px;
+		margin-top: 1px;
+		margin-bottom: 1px;
+		text-align: left;
+  		background: repeating-linear-gradient(
+   			45deg,
+   			#f0f0f0 0px,
+    		#f0f0f0 10px,
+    		#f8f8f8 10px,
+   			#f8f8f8 20px
+  		);
+  		&:first-child
+  		{
+  			margin-top:0px;
+  		}
+	}
+  }
+.apishore-shift-menu-disabled
+{
+	display:none;
+}
+
+.apishore-shift-menu-back
+{
+	display: block;
+	height: 48px;
+	a
+	{
+		display: block;
+		height: 48px;
+		padding: 0px;
+		@include clearfix();
+	}
+	@include clearfix();
+	i
+	{
+		display: block;
+		float:left;
+		margin-top: 14px;
+		margin-left: 16px;
+		width: 24px;
+		font-size: 22px;
+		overflow: hidden;
+	}
+	span
+	{
+		display: inline-block;
+		float:left;
+		margin-top: 15px;
+		margin-left: 3px;
+		font-size: 14px;
+	}
+	&:hover
+	{
+		background-color: #DEF7EC;
+	}
+}   
+.apishore-shift-content
+{
+	position:relative;
+	flex-grow:1;
+	.view-entry-panel, .create-entry-panel, .edit-entry-panel, .table-entry-panel, .delete-entry-panel
+	{
+	}
+	.tabbed-table-entry-panel
+	{
+		border-top:none;
+	}
+}
+.apishore-shift-content-inner
+{
+	position: absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	border-left: solid 1px map-get($as-palette-grey, 100);
+}
+.apishore-shift-content-enabled
+{
+  	.container
+  	{
+  	  @media (min-width: $screen-sm-min) {
+       width: $container-sm - $as-sidebar-width-desktop;
+      }
+      @media (min-width: $screen-md-min) {
+       width: $container-md - $as-sidebar-width-desktop;
+      }
+      @media (min-width: $screen-lg-min) {
+        width: $container-lg - $as-sidebar-width-desktop;
+      }
+  	}
+  }
+  .apishore-shift-menu-enabled
+  {
+  	.container
+  	{
+   		width: auto;
+   	}
+  }

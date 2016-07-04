@@ -1,0 +1,25 @@
+input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px white inset;
+    -webkit-text-fill-color: #333;
+}
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: #fff, 0 0 0 50px white inset;
+    -webkit-text-fill-color: #333;
+}
+
+.as-login-form-header
+{
+	height: 60px;
+	background-color: map-get($as-palette-grey, 100);
+	box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+}
+.as-login-form-logo
+{
+	width: 150px;
+}
+.as-error
+{
+  margin-bottom: 26px;
+  font-size: 12px;
+  color: map-get($as-palette-error, 300);
+}

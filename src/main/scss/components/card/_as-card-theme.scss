@@ -1,0 +1,36 @@
+
+.as-card
+{
+  background-color: map-get($as-palette-bg, darker);
+  border-radius: $as-card-border-radius;
+
+  .as-card-image
+  {
+    border-radius: $as-card-border-radius $as-card-border-radius 0 0;
+  }
+
+  .as-card-header {
+    .as-card-avatar {
+      .as-icon {
+        color: map-get($as-palette-bg, darker);
+        background-color: map-get($as-palette-fg, darker);
+      }
+    }
+
+    .as-card-header-text {
+      .as-subhead {
+        color: map-get($as-palette-fg, dark);
+      }
+    }
+  }
+
+  .as-card-title {
+    .as-card-title-text {
+      &:not(:only-child) {
+        .as-subhead {
+          color: map-get($as-palette-fg, dark);
+        }
+      }
+    }
+  }
+}

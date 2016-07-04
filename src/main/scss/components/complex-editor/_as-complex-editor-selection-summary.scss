@@ -1,0 +1,70 @@
+.as-complex-editor-selection-summary
+{
+	border-bottom: solid 1px map-get($as-palette-grey, 100);
+	background-color: map-get($as-palette-grey, 100);
+	@include transition(all 0.5s ease);
+	&.asa-hidden
+	{
+		height: 0px;
+		overflow: hidden;
+	}
+}
+.as-complex-editor-selection-summary-inner
+{
+	position: relative;
+	padding: $as-complex-editor-summary-gutter;
+	font-size: 13px;
+	color: map-get($as-palette-grey, 600);
+	min-height: 100px;
+	overflow: scroll;
+}
+.as-complex-editor-selection-summary-content
+{
+	a
+	{
+    	color: map-get($as-palette-indigo, 500);
+    	text-decoration: none;
+    	&:hover
+		{
+			color: map-get($as-palette-red, 500);
+		}
+	}
+  h1
+  {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+  }
+  h2
+  {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    color: map-get($as-palette-grey, 700);
+  }
+}
+.as-complex-editor-selection-summary-actions
+{
+	position: relative;
+	padding-left: 20px;
+	margin-top: $as-complex-editor-summary-gutter;
+	margin-left: -$as-complex-editor-summary-gutter;
+	margin-right: -$as-complex-editor-summary-gutter;
+	margin-bottom: -$as-complex-editor-summary-gutter;
+	background-color: map-get($as-palette-grey, 200);
+	border-top: solid 1px map-get($as-palette-grey, 300);
+	&:after
+	{
+		content:"";
+		position: absolute;
+		top: -20px;
+		left: 34px;
+		width: 0px;
+		height: 0px;
+		border-color: transparent transparent map-get($as-palette-grey, 400) transparent;
+		border-width: 10px;
+		border-style: solid
+	}
+}

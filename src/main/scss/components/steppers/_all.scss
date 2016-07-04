@@ -1,0 +1,46 @@
+@import "all_variables";
+
+.as-steppers-holder
+{
+}
+.as-stepper-circle
+{
+  position:relative;
+  @include user-select(none);
+  width: $as-stepper-circle-size;
+  height: $as-stepper-circle-size;
+  border-radius: $as-stepper-circle-size / 2;
+  text-align: center;
+  line-height: $as-stepper-circle-size;
+  &.asa-active
+  {
+    background-color: map-get($as-palette-primary, 500);
+    color: #fff;
+  }
+  &.asa-inactive
+  {
+    background-color: map-get($as-palette-black, 38);
+    color: #fff;
+  }
+}
+.as-stepper-circle-number
+{
+  position:relative;
+  @include user-select(none);
+  width: $as-stepper-circle-size;
+  height: $as-stepper-circle-size;
+  border-radius: $as-stepper-circle-size / 2;
+  text-align: center;
+  line-height: $as-stepper-circle-size;
+  font-size: dp(12);
+}
+.as-stepper-title
+{
+  position:relative;
+  font-size: dp(14);
+  color: map-get($as-palette-black, 38);
+  &.asa-active
+  {
+    color: map-get($as-palette-black, darker);
+  }
+}

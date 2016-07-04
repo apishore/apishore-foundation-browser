@@ -1,0 +1,174 @@
+html, body {
+  height: 100%;
+  color: rgba(0,0,0,0.87);
+  background: white;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+[tabindex='-1']:focus {
+  outline: none;
+}
+.inset {
+  padding: 10px;
+}
+
+button.as-no-style {
+  font-weight: normal;
+  background-color: inherit;
+  text-align: left;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+select,
+button,
+textarea,
+input {
+  vertical-align: baseline;
+}
+
+// Fix Android 4.0 button bugs
+input[type="reset"],
+input[type="submit"],
+html input[type="button"],
+button {
+  cursor: pointer;
+  -webkit-appearance: button;
+
+  &[disabled] {
+    cursor: default;
+  }
+}
+
+textarea {
+  vertical-align: top;
+  overflow: auto;
+}
+
+input {
+  &[type="search"] {
+    -webkit-appearance: textfield;
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+    }
+  }
+}
+
+.as-visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  text-transform: none;
+  width: 1px;
+}
+
+.as-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.as-shadow-bottom-z-1 {
+  @include as-shadow-bottom-z-1();
+}
+.as-shadow-bottom-z-2 {
+  @include as-shadow-bottom-z-2();
+}
+
+.as-shadow-animated.as-shadow {
+  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin as-control-transition()
+{
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*
+ * A container inside of a rippling element (eg a button),
+ * which contains all of the individual ripples
+ */
+.as-ripple-container {
+  pointer-events: none;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.55s $as-swift-ease-out-timing-function;
+}
+
+.as-ripple {
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0);
+  transform-origin: 50% 50%;
+  opacity: 0;
+  border-radius: 50%;
+  &.as-ripple-placed {
+    $sizeDuration: 0.45s * 2;
+    transition: margin $sizeDuration $as-swift-ease-out-timing-function,
+                border $sizeDuration $as-swift-ease-out-timing-function,
+                width $sizeDuration $as-swift-ease-out-timing-function,
+                height $sizeDuration $as-swift-ease-out-timing-function,
+                opacity $sizeDuration $as-swift-ease-out-timing-function,
+                transform $sizeDuration $as-swift-ease-out-timing-function;
+  }
+  &.as-ripple-scaled {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  &.as-ripple-active, &.as-ripple-full, &.as-ripple-visible {
+    opacity: 0.20;
+  }
+}
+
+.as-padding {
+  padding: 8px;
+}
+
+.as-margin {
+  margin: 8px;
+}
+
+.as-scroll-mask {
+  position: absolute;
+  background-color: transparent;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  > .as-scroll-mask-bar {
+    display: block;
+    position: absolute;
+    background-color: #fafafa;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: $as-z-index-scroll-mask;
+    box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.3)
+  }
+}
+
+@media (min-width: $as-layout-breakpoint-sm) {
+  .as-padding {
+    padding: 16px;
+  }
+}

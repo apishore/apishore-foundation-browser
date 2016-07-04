@@ -1,0 +1,126 @@
+///
+/// Holder of vertically aligned children
+///
+.as-vbox
+{
+	position:relative;
+	display:flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	align-items: stretch;
+}
+body.as-vbox
+{
+	min-height: 100vh;
+	overflow: hidden;
+}
+///
+/// Holder of horizontally aligned children
+///
+.as-hbox
+{
+	position:relative;
+	display:flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	align-items: stretch;
+}
+.as-cell-fixed
+{
+	position:relative;
+	/** Set `flex-shrink` to `0` to prevent Chrome, Opera, and Safari from
+ 	 *  letting these items shrink to smaller than their content's default
+ 	 *  minimum size.
+ 	 */
+	flex-shrink: 0;
+	&.asa-count-1
+	{
+		width: 100%;
+	}
+	&.asa-count-2
+	{
+		width: 50%;
+		padding-left: $as-gutter / 2;
+		padding-right: $as-gutter / 2;
+		&:first-child
+		{
+			padding-left: 0px;
+		}
+		&:last-child
+		{
+			padding-right: 0px;
+		}
+	}
+	&.asa-count-3
+	{
+		width: (100% / 3);
+	}
+	&.asa-count-4
+	{
+		width: 25%;
+	}
+	&.asa-1-of-2
+	{
+		width: 50%
+	}
+	&.asa-1-of-3
+	{
+		width: 1 * (100% / 3);
+	}
+	&.asa-2-of-3
+	{
+		width: 2 * (100% / 3);
+	}
+}
+.as-cell-wide
+{
+	position:relative;
+//	flex-grow:1;
+ 	flex: 1 0 auto;
+}
+.as-cell-default
+{
+	position:relative;
+//	flex-grow:1;
+ 	flex: 1 0 auto;
+}
+.as-gutter
+{
+	border: solid $as-gutter transparent;
+}
+.as-left-gutter
+{
+	padding-left: $as-gutter;
+}
+.as-right-gutter
+{
+	padding-right: $as-gutter;
+}
+.as-h-gutter
+{
+	padding-left: $as-gutter;
+	padding-right: $as-gutter;
+}
+
+.as-panel
+{
+	position:absolute;
+	left:0px;
+	top:0px;
+	right:0px;
+	bottom:0px;
+}
+.as-vscroll
+{
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+.as-hscroll
+{
+	overflow-x:auto;
+	overflow-y:hidden;
+}
+.as-scroll
+{
+	overflow:scroll;
+}

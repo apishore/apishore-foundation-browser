@@ -1,0 +1,464 @@
+$as-grid-left-gutter: 10px;
+$as-grid-row-height: 56px;
+$as-grid-filter-width: 300px;
+
+ag-grid-ng2
+{
+	display: inline-block;
+}
+.ag-root
+{
+	font-size: 14px;
+	cursor: default;
+	/* set to relative, so absolute popups appear relative to this */
+	position: relative;
+	/* disable user mouse selection */
+  	@include user-select(none);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/* was getting some 'should be there' scrolls, this sorts it out */
+	overflow: hidden;
+}
+.ag-no-scrolls
+{
+	white-space: nowrap;
+	display: inline-block;
+}
+.ag-scrolls
+{
+	height: 100%;
+}
+.ag-popup-backdrop
+{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+.ag-header
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	white-space: nowrap;
+	@include box-sizing(border-box);
+	overflow: hidden;
+	width: 100%;
+	//theme
+	padding-right: $as-data-table-column-padding;
+	color: map-get($as-palette-black, dark);
+	border-bottom: solid 1px map-get($as-palette-black, lighter);
+}
+.ag-header-cell-text
+{
+	padding-left: 4px;
+}
+.ag-pinned-header
+{
+	@include box-sizing(border-box);
+	display: inline-block;
+	overflow: hidden;
+	height: 100%;
+	@extend .as-grid-pinned-border;
+}
+.ag-header-viewport
+{
+	@include box-sizing(border-box);
+	display: inline-block;
+	overflow: hidden;
+	height: 100%;
+}
+.ag-scrolls
+{
+	.ag-header-container
+	{
+		@include box-sizing(border-box);
+		position: relative;
+		white-space: nowrap;
+		height: 100%;
+	}
+	.ag-header-container
+	{
+		white-space: nowrap;
+	}
+}
+.ag-header-cell
+{
+	@include box-sizing(border-box);
+	vertical-align: bottom;
+	text-align: left;
+	display: inline-block;
+}
+
+.ag-header-cell-grouped
+{
+  height: 50%;
+}
+
+.ag-header-cell-not-grouped
+{
+  height: 100%;
+}
+.ag-header-group
+{
+	@include box-sizing(border-box);
+	display: inline-block;
+	height: 100%;
+}
+.ag-header-group-cell
+{
+	@include box-sizing(border-box);
+	text-align: center;
+	height: 50%;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.ag-header-group-cell-label {
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.ag-header-cell-label
+{
+	padding-left: $as-grid-left-gutter;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.ag-header-cell-resize
+{
+  height: 100%;
+  width: 4px;
+  float: right;
+  cursor: col-resize;
+  &:hover
+  {
+  	background-color: map-get($as-palette-grey, 500);
+  }
+}
+.ag-header-cell-menu-button {
+  float: right;
+}
+.ag-overlay-panel {
+  display: table;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.ag-overlay-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.ag-body {
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ag-floating-top {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  white-space: nowrap;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.ag-pinned-floating-top {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+.ag-floating-top-viewport {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  height: 100%;
+}
+.ag-floating-top-container {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  white-space: nowrap;
+}
+.ag-floating-bottom {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  white-space: nowrap;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.ag-pinned-floating-bottom {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+.ag-floating-bottom-viewport {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  height: 100%;
+}
+.ag-floating-bottom-container {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  white-space: nowrap;
+}
+.ag-pinned-cols-viewport {
+  float: left;
+  position: absolute;
+  overflow: hidden;
+  @extend .as-grid-pinned-border;
+}
+.as-grid-pinned-border
+{
+	border-right: solid 1px map-get($as-palette-grey, 100);
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.05);
+}
+.ag-pinned-cols-container
+{
+	display: inline-block;
+	position: relative;
+	--background-color: map-get($as-palette-black, lighter);
+}
+.ag-body-viewport-wrapper {
+  height: 100%;
+}
+.ag-body-viewport {
+  overflow: auto;
+  height: 100%;
+}
+.ag-scrolls 
+{
+	.ag-body-container
+	{
+		position: relative;
+		display: inline-block;
+	}
+	
+	.ag-row
+	{
+		white-space: nowrap;
+		position: absolute;
+		width: 100%;
+		border-bottom: solid 1px map-get($as-palette-grey, 200);
+	} 
+}
+
+.agile-gird-row:hover {
+  background-color: #f0f8ff;
+}
+.ag-cell
+{
+	display: inline-block;
+	white-space: nowrap;
+	height: $as-grid-row-height;
+	line-height: $as-grid-row-height;
+	@include box-sizing(border-box);
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	padding-left: $as-grid-left-gutter;
+	float: left;
+}
+.ag-group-cell-entire-row {
+  width: 100%;
+  display: inline-block;
+  white-space: nowrap;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.ag-footer-cell-entire-row {
+  width: 100%;
+  display: inline-block;
+  white-space: nowrap;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.ag-large .ag-root {
+  font-size: 20px;
+}
+.ag-filter
+{
+	position: absolute;
+	z-index: $as-z-index-menu;
+	background-color: #fff;
+	box-shadow: $as-whiteframe-shadow-10dp;
+}
+.ag-filter-header-container
+{
+	background-color: map-get($as-palette-grey, 50);
+	label
+	{
+		margin: $as-gutter;
+		font-weight: normal;
+	}
+}
+
+.ag-filter-list-viewport
+{
+  overflow-x: auto;
+  height: 200px;
+  width: $as-grid-filter-width;
+  border-top: solid 1px map-get($as-palette-black, light);
+}
+.ag-filter-list-container
+{
+  position: relative;
+  overflow: hidden;
+}
+.ag-filter-item
+{
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	position: absolute;
+	padding: $as-gutter;
+	height: 20px;
+	line-height: 20px;
+}
+.ag-filter-filter
+{
+	width: $as-grid-filter-width - $as-gutter * 2;
+  	margin: $as-gutter;
+  	border: none;
+  	outline: none;
+  	font-size: 18px;
+  	color: #333;
+  	padding-bottom: 6px;
+	background-color: transparent;  	
+  	border-bottom: solid 1px map-get($as-palette-primary, 800);
+}
+.ag-filter-value
+{
+	font-weight: normal;
+	margin-left: $as-gutter / 2;
+}
+.ag-filter-select {
+  width: 110px;
+  margin: 4px 4px 0px 4px;
+}
+.ag-no-vertical-scroll .ag-scrolls {
+  height: unset;
+}
+.ag-no-vertical-scroll .ag-body {
+  height: unset;
+}
+.ag-no-vertical-scroll .ag-body-viewport-wrapper {
+  height: unset;
+}
+.ag-no-vertical-scroll .ag-body-viewport {
+  height: unset;
+}
+.ag-list-selection {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+.ag-tool-panel-container {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  width: 200px;
+}
+.ag-row-selected
+{
+	background-color: map-get($as-palette-grey, 100);
+}
+.ag-cell-focus
+{
+	width: $as-grid-row-height;
+}
+.ag-selection-checkbox
+{
+  position: relative;
+  display: block;
+  top: 0px;
+  left: 0px;
+  width: $as-checkbox-size;
+  height: $as-checkbox-size;
+  margin: 0px;
+  cursor: pointer;
+  outline: none;
+  &:before,
+  &:after
+  {
+		@include transition(all .3s ease-in-out);
+    
+		content: "";
+    
+		position: absolute;
+		left: 0px;
+		top: 0px;
+  
+		width: $as-checkbox-size;
+		height: $as-checkbox-size;
+		border: 1px solid $as-checkbox-unchecked-color;
+  }
+  &:after
+  {
+  	border-color:rgba($as-checkbox-checked-color,0);
+  }
+  &:before
+  {
+  	border-radius: 1px;
+  }
+  &:checked {
+  	&:before
+  	{
+  		background-color: $as-checkbox-checked-color;
+  		border-color: $as-checkbox-checked-color;
+  	}
+    &:after
+    {
+       	transform : rotate(-45deg);
+  		
+  		top: 0px;
+  		left: $as-checkbox-size *0.2;
+  		height: $as-checkbox-size *0.4;
+  		width: $as-checkbox-size *0.6;
+  		
+  		border-color: #ffffff;
+  		border-top-style: none;
+  		border-right-style: none;
+    } 
+  }
+}

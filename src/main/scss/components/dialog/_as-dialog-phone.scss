@@ -1,0 +1,23 @@
+.as-dialog-holder-inner
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	&.asa-auto
+	{
+		display: block;
+		justify-content: none;
+		align-items: top;
+	}
+}
+.as-dialog
+{
+	&.asa-login-form
+	{
+		min-width: 100%;
+		max-width: 100%;
+		box-shadow: none;
+	}
+}

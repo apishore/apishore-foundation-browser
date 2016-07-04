@@ -1,0 +1,103 @@
+.as-scrum-task-list-summary
+{
+	background-color: map-get($as-palette-blue-grey, 600);
+	color: #fff;
+	padding: $as-gutter;
+	font-size: 18px;
+}
+.as-scrum-task-list-summary-progress
+{
+	background-color: map-get($as-palette-blue-grey, 900);
+	height: $as-gutter + 4px;
+	padding: 2px;
+	border-radius: $as-gutter * 2;
+	margin-top: $as-gutter;
+	.as-scrum-task-list-summary-progress-inner
+	{
+		background-color: map-get($as-palette-cyan, 900);
+		height: $as-gutter;
+		border-radius: $as-gutter;
+	}
+}
+.as-scrum-task-line
+{
+	position: relative;
+	border-right: solid 1px map-get($as-palette-blue-grey, 300);
+	&:last-child
+	{
+		border:none;
+		
+		.as-scrum-task-line-summary
+		{
+			border:none;
+			margin-right: 0px;
+		}
+	}
+}
+.as-scrum-task-line-summary
+{
+	padding: $as-gutter / 2;
+	background-color: map-get($as-palette-blue-grey, 500);
+	color: map-get($as-palette-bg, dark);
+	border-right: solid 1px map-get($as-palette-bg, dark);
+	margin-right: -1px;
+}
+.as-scrum-task-line-content
+{
+	padding: $as-gutter / 2;
+	@extend .as-cell-wide;
+}
+.as-scrum-task-card
+{
+	box-shadow: $as-whiteframe-shadow-2dp;
+	margin: $as-gutter;
+	margin-bottom: $as-gutter * 2;
+	min-height: 150px;
+	&.asa-status-todo
+	{
+		.as-scrum-task-card-title
+		{
+			background-color: map-get($as-palette-red, 100);
+		}
+	}
+	&.asa-status-progress
+	{
+		.as-scrum-task-card-title
+		{
+			background-color: map-get($as-palette-blue, 100);
+		}
+	}
+	&.asa-status-completed
+	{
+		.as-scrum-task-card-title
+		{
+			background-color: map-get($as-palette-green, 100);
+		}
+	}
+}
+.as-scrum-task-card-title
+{
+	background-color: map-get($as-palette-blue-grey, 100);
+	padding: $as-gutter / 2;
+}
+.as-scrum-task-card-description
+{
+	padding: $as-gutter / 2;
+	font-size: 13px;
+	color: map-get($as-palette-grey, 700);
+}
+.as-scrum-task-card-estimation
+{
+	background-color: map-get($as-palette-grey, 100);
+	font-size: 12px;
+	line-height: 32px;
+	color: map-get($as-palette-grey, 700);
+	&>.asa-pert
+	{
+		padding-left: $as-gutter / 2;
+		display: inline-block;
+		font-size: 18px;
+		background-color: map-get($as-palette-grey, 200);
+		width: 30%;
+	}
+}

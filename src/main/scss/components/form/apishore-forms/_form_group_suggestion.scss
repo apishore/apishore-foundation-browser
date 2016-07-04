@@ -1,0 +1,39 @@
+.form-input-suggestion-group
+{
+	margin-bottom: 25px;
+	margin-top: 5px;
+	text-align: right;
+	&:before
+	{
+		content:"suggestion:";
+		margin-right: 10px;
+		font-size: $font-size-small;
+		color: #393;
+		font-weight: 600;
+	}
+}
+.form-input-suggestion
+{
+	font-size: $font-size-small;
+	font-style: italic;
+	color: #333;
+	position:relative;
+	margin-right: 6px;
+	padding-left: 12px;
+	padding-top: 4px;
+	cursor:pointer;
+	text-decoration:none;
+	&:hover
+	{
+		text-decoration:none;
+	}
+	&:after
+	{
+		content:"";
+		position: absolute;
+		bottom: 0px;
+		top: 6px;
+		left: 0px;
+		border-left: solid 1px #393;
+	}
+}

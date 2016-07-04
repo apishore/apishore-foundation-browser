@@ -1,0 +1,37 @@
+.as-md-chat-message-container
+{
+	margin-left: $as-gutter;
+	margin-right: $as-gutter;
+	margin-bottom: 0px;
+	.as-view-control-holder
+	{
+		margin: 0px;
+		height: auto;
+		.as-avatar-outer
+		{
+			width: 30px;
+			height: 30px;
+			border-width: 2px;	
+		}
+		.as-avatar-img
+		{
+			width: 28px;
+			height: 28px;	
+		}	
+		.as-avatar-inner
+		{
+			width: 28px;
+			height: 28px;	
+		}	
+	}
+}
+.as-md-chat-message-avatar-holder
+{
+	margin-right: $as-gutter;
+}
+.as-md-chat-sender-title
+{
+	font-weight: bold;
+	font-size: 12px;
+	color: map-get($as-palette-grey, 500);
+}

@@ -1,0 +1,59 @@
+.as-round-tabs
+{
+	background-color: #E6E6E6;
+	padding-left: $as-gutter / 2;
+	font-size: 0;
+	@include user-select(none);
+	&.asa-big
+	{
+		.as-round-tab
+		{
+			font-weight: bold;
+		}	
+	}
+	&.asa-dark
+	{
+		background-color: map-get($as-palette-grey, 600);
+		.as-round-tab
+		{
+			color: map-get($as-palette-white, darker);
+			&:hover,
+			&:focus,
+			&.active,
+			&.asa-active
+			{
+				background-color: map-get($as-palette-white, darker);
+				color: map-get($as-palette-grey, 500);
+				text-decoration:none;
+			}
+		}	
+	}
+}
+.as-round-tab
+{
+	display:inline-block;
+	user-select:none;
+	cursor: pointer;
+	margin: $as-gutter / 2;
+	margin-right: 0px;
+	padding: ($as-gutter / 8) $as-gutter;
+	text-decoration:none;
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 16px;
+	border-radius: 120px;
+	color: map-get($as-palette-grey, 600);
+	text-transform: uppercase;
+	@media (max-width: $screen-sm-min)
+	{
+		margin-right: 0;
+	}
+	&:hover,
+	&:focus,
+	&.active,
+	&.asa-active
+	{
+		text-decoration:none;
+		color: map-get($as-palette-grey, 900);
+	}
+}

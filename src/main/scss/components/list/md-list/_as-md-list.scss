@@ -1,0 +1,14 @@
+.as-device-wide-desktop-s,
+.as-device-desktop-s
+{
+	$as-md-list-panel-gutter: $as-gutter / 2;
+	.as-md-list-panel
+	{
+		left: $as-md-list-panel-gutter;
+		top: $as-md-list-panel-gutter;
+		right: $as-md-list-panel-gutter;
+		bottom: $as-md-list-panel-gutter;
+		border: map-get($as-palette-grey, 100);
+		box-shadow: $as-whiteframe-shadow-1dp;
+	}
+}

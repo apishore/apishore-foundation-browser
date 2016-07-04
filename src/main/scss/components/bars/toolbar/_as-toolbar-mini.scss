@@ -1,0 +1,79 @@
+.as-mini-toolbar
+{
+	position: relative;
+	@extend .as-hbox;
+	height: $as-minitoolbar-height;
+	background-color: map-get($as-palette-blue-grey, 500);
+	&:before
+	{
+		//		content: "";
+ 		position: absolute;
+		left: 0px;
+		width: 0px;
+		height: 0px;
+		top: 0px;
+		border-style: solid;
+		border-width: $as-minitoolbar-title-arrow-size 0 $as-minitoolbar-title-arrow-size $as-minitoolbar-title-arrow-size;
+		border-color: transparent transparent transparent map-get($as-palette-blue-grey, 700);
+	}
+	&:after
+	{
+		//content: "";
+		position: absolute;
+		left: 0px;
+		width: 0px;
+		height: 0px;
+		top: 0px;
+		border-style: solid;
+		border-width: $as-minitoolbar-title-arrow-size 0 $as-minitoolbar-title-arrow-size ($as-minitoolbar-title-arrow-size / 3);
+		border-color: transparent transparent transparent map-get($as-palette-blue-grey, 500);
+	}
+}
+.as-mini-toolbar-title
+{
+	position: relative;
+	height: $as-minitoolbar-height;
+	line-height: $as-minitoolbar-height;
+	padding-left: $as-gutter / 4 + $as-minitoolbar-title-arrow-size;
+	text-transform: uppercase;
+	color:map-get($as-palette-white, darker);
+
+}
+$as-mini-toolbar-tab-height: 16px;
+
+.as-mini-toolbar-tabs
+{
+	@extend .as-hbox;
+	height: $as-minitoolbar-height;
+}
+.as-mini-toolbar-tabs-delimiter
+{
+
+}
+.as-mini-toolbar-tab
+{
+	@extend .as-hbox;
+	font-size: 12px;
+	font-weight: bold;
+	color: #fff;
+	padding: ($as-minitoolbar-height - $as-mini-toolbar-tab-height) / 2;
+	padding-left: 2px;
+	padding-right: 2px;
+	&.asa-active
+	{
+		.as-mini-toolbar-tab-label
+		{
+			background-color: map-get($as-palette-white, dark);
+			color: map-get($as-palette-blue-grey, 500);
+		}
+	}
+}
+.as-mini-toolbar-tab-label
+{
+	height: $as-mini-toolbar-tab-height;
+	line-height: $as-mini-toolbar-tab-height;
+	border-radius: $as-mini-toolbar-tab-height;
+	padding-left: $as-gutter / 2;
+	padding-right: $as-gutter / 2;
+	color: map-get($as-palette-white, dark);
+}

@@ -1,0 +1,35 @@
+.entity-workflow-flat
+{
+	background-color: #E0E0E0;
+	position:relative;
+	height: 40px;
+	margin-bottom: 15px;
+	//cursor:pointer;
+	.entity-workflow-flat-title
+	{
+		padding-left: 15px;
+		color: #000;
+		font-size: 14px;
+		padding-right: 5px;
+		line-height: 40px;
+		display: inline-block;
+	}
+	.entity-workflow-flat-inner
+	{
+		display: inline-block;
+		.entity-workflow-flat-item
+		{
+			display: inline-block;
+			font-size: 14px;
+			font-weight: 600;
+			color: #333;
+			display:none;
+			padding-left: 20px;
+			padding-right: 20px;
+			&.active
+			{
+				display:block;
+			}
+		}		
+	}
+}

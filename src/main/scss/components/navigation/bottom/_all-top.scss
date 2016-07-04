@@ -1,0 +1,183 @@
+///@group components.navigation.bottom
+/// Bottom navigation provides quick navigation between top-level views of an app.
+/// It is primarily designed for use on mobile.
+/// Larger displays, like desktop, may achieve a similar effect by using side navigation.
+/// For instance, the compact “rail” treatment displays navigational icons by default.
+///
+///
+$as-bottom-navigation-phone-height: 56px;
+$as-bottom-navigation-large-width: 64px;
+$as-bottom-navigation-phone-hpadding: 12px;
+$as-bottom-navigation-phone-top-padding: 6px;
+$as-bottom-navigation-icon-size: 24px;
+
+$as-bottom-navigation-action-min-width: 80px;
+$as-bottom-navigation-action-max-width: 168px;
+
+$as-bottom-navigation-bgcolor: map-get($as-palette-grey, 100);
+$as-bottom-navigation-shadow: $as-whiteframe-shadow-2dp;
+$as-bottom-navigation-color: map-get($as-palette-grey, 500);
+$as-bottom-navigation-active-color: map-get($as-palette-primary, 500);
+
+.as-bottom-navigation-contaner
+{
+	@extend .as-panel;
+}
+.as-bottom-navigation-content
+{
+	@extend .as-cell-wide;
+}
+.as-bottom-navigation-bar
+{
+	@include user-select(none);
+}
+.as-bottom-navigation-bar-space
+{
+	background-color: $as-bottom-navigation-bgcolor;
+}
+.as-bottom-navigation-action
+{
+	color: $as-bottom-navigation-color;
+	background-color: $as-bottom-navigation-bgcolor;
+	padding-left: $as-bottom-navigation-phone-hpadding;
+	padding-right: $as-bottom-navigation-phone-hpadding;
+	padding-top: $as-bottom-navigation-phone-top-padding;
+	text-align:center;
+	min-width: $as-bottom-navigation-action-min-width;
+	cursor: pointer;
+	&:hover,
+	&.asa-selected
+	{
+		color: $as-bottom-navigation-active-color;
+		padding-top: 6px;
+		font-size: dp(14);
+		@include transition(all 0.3s ease);
+		.as-bottom-navigation-action-label
+		{
+			font-size: dp(14);
+		}
+	}
+}
+.as-bottom-navigation-action-icon
+{
+	
+}
+.as-bottom-navigation-action-label
+{
+	@include transition(all 0.3s ease);
+	font-size: dp(12);
+}
+
+.as-device-preview,
+.as-device-wide-desktop,
+.as-device-desktop
+{
+	.as-bottom-navigation-contaner
+	{
+		display: flex;
+	    flex-wrap: nowrap;
+		flex-direction: row-reverse;
+	    align-items: stretch;
+	}
+	.as-bottom-navigation-bar
+	{
+		@extend .as-vbox;
+		width: $as-bottom-navigation-large-width;
+	}
+	.as-bottom-navigation-action
+	{
+		@extend .as-cell-fixed;
+		width: $as-bottom-navigation-large-width;
+		min-width: $as-bottom-navigation-large-width;
+		height: $as-bottom-navigation-large-width;
+		padding-left: ($as-bottom-navigation-large-width - $as-bottom-navigation-icon-size) / 2;
+		padding-top: ($as-bottom-navigation-large-width - $as-bottom-navigation-icon-size) / 2;
+		cursor: pointer;
+		&:hover,
+		&.asa-selected
+		{
+			color: $as-bottom-navigation-active-color;
+			padding-left: ($as-bottom-navigation-large-width - $as-bottom-navigation-icon-size) / 2 + 2;
+			font-size: dp(14);
+			@include transition(all 0.3s ease);
+			.as-bottom-navigation-action-label
+			{
+				font-size: dp(14);
+			}
+		}
+	}	
+	.as-bottom-navigation-action
+	{
+		@extend .as-cell-fixed;
+		&:hover
+		{
+			.as-bottom-navigation-action-label
+			{
+				display:block;
+			}
+		}
+	}
+	.as-bottom-navigation-action-label
+	{
+		display:none;
+		position: absolute;
+		min-width: $as-bottom-navigation-large-width * 2;
+		left: $as-bottom-navigation-large-width + 2px;
+		top: $as-bottom-navigation-large-width / 2 - $as-gutter;
+		padding: $as-gutter / 2;
+		background-color: map-get($as-palette-grey, 800);
+		border-radius: 2px;
+		color: #fff;
+		pointer-events: none;
+		&:after {
+			right: 100%;
+			top: 50%;
+			border: solid transparent;
+			content: "";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-color: transparent;
+			border-right-color: map-get($as-palette-grey, 800);
+			border-width: 8px;
+			margin-top: -8px;
+		}
+	}
+	.as-bottom-navigation-action-icon
+	{
+		width: $as-bottom-navigation-icon-size;
+		height: $as-bottom-navigation-icon-size;
+	}
+	.as-bottom-navigation-bar-space
+	{
+		display:block;
+		@extend .as-cell-wide;
+		width: $as-bottom-navigation-large-width;
+	}
+}
+.as-device-tablet,
+.as-device-phone-portrait,
+.as-device-phone-landscape
+{
+	.as-bottom-navigation-contaner
+	{
+		@extend .as-vbox;
+	}
+	.as-bottom-navigation-bar
+	{
+		@extend .as-hbox;
+		box-shadow: $as-bottom-navigation-shadow;
+		height: $as-bottom-navigation-phone-height;
+	}
+	.as-bottom-navigation-action
+	{
+		@extend .as-cell-wide;
+		flex-grow: 1;
+	    flex-basis: 0;	
+	}
+	.as-bottom-navigation-bar-space
+	{
+		display: none;
+	}
+}

@@ -1,0 +1,15 @@
+.as-bg-dark
+{
+	background-color: map-get($as-palette-black, dark);
+}
+.as-bg-primary-dark
+{
+	background-color: map-get($as-palette-primary, 800);
+}
+.as-dark-theme
+{
+	*
+	{
+		color: map-get($as-palette-white, dark);
+	}
+}

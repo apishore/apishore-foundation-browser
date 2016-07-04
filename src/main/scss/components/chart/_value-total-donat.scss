@@ -1,0 +1,71 @@
+///@group components.charts.donat
+
+$as-chart-value-total-donat-size: 100px;
+$as-chart-value-total-donat-width: 10px;
+
+.as-chart-value-total-donat-row
+{
+	@extend .as-hbox;
+}
+.as-chart-value-total-donat-cell
+{
+	@extend .as-cell-fixed;
+	@extend .as-vbox;
+	margin-left: $as-gutter;
+	margin-right: $as-gutter;
+	width: $as-chart-value-total-donat-size + $as-chart-value-total-donat-width * 2;
+}
+.as-chart-value-total-donat-label
+{
+	@extend .as-cell-fixed;
+	color: map-get($as-palette-grey, 800);
+	position: relative;
+	text-align: center;
+}
+.as-chart-value-total-donat-circle
+{
+	@extend .as-cell-fixed;
+	position: relative;
+	width: $as-chart-value-total-donat-size + $as-chart-value-total-donat-width * 2;
+	height: $as-chart-value-total-donat-size + $as-chart-value-total-donat-width * 4;
+}
+.as-chart-value-total-donat-bg
+{
+	position: absolute;
+	left: $as-chart-value-total-donat-width;
+	top: $as-chart-value-total-donat-width;
+	width: $as-chart-value-total-donat-size;
+	height: $as-chart-value-total-donat-size;
+	border-radius: $as-chart-value-total-donat-size;
+	border: solid $as-chart-value-total-donat-width map-get($as-palette-grey, 100);
+}
+.as-chart-value-total-donat-value
+{
+	position: absolute;
+	left: $as-chart-value-total-donat-width;
+	top: $as-chart-value-total-donat-width;
+	width: $as-chart-value-total-donat-size;
+	height: $as-chart-value-total-donat-size;
+	border-radius: $as-chart-value-total-donat-size;
+	border: solid $as-chart-value-total-donat-width map-get($as-palette-green, 500);
+	transform: rotate(45deg);
+	border-color: transparent transparent transparent map-get($as-palette-green, 500);
+}
+.as-chart-value-total-donat-cover
+{
+	position: absolute;
+	left: $as-chart-value-total-donat-width;
+	top: $as-chart-value-total-donat-width;
+	width: $as-chart-value-total-donat-size;
+	height: $as-chart-value-total-donat-size;
+	border-radius: $as-chart-value-total-donat-size;
+	border: solid $as-chart-value-total-donat-width map-get($as-palette-grey, 100);
+	border-color: transparent transparent transparent map-get($as-palette-grey, 100);
+}
+.as-chart-value-total-donat-line-inner
+{
+	position: absolute;
+	bottom: 0px;
+	width: 8px;
+	background-color: map-get($as-palette-green, 500);
+}

@@ -1,0 +1,79 @@
+$state-success-text: map-get($as-palette-green, 500);
+$state-info-text: map-get($as-palette-blue, 500);
+$state-warning-text: map-get($as-palette-red, 500);
+$state-danger-text: map-get($as-palette-red, 500);
+
+.apishore-selected-value-help-text
+{
+	position:relative;
+	font-size: 12px;
+	padding: 8px;
+	border: solid 1px #eee;
+	margin-top: 10px;
+	margin-left: 50%;
+	border-radius: 4px;
+	pointer-events: none;
+	&:before
+	{
+		bottom: 100%;
+		right: 30px;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-color: rgba(136, 183, 213, 0);
+		border-bottom-color: #eee;
+		border-width: 10px;
+		margin-left: -10px;
+	}
+	&.apishore-selected-value-help-text-muted
+	{
+		color: #888;
+		border-color: #888;
+		&:before { border-bottom-color:#888;}
+	}
+	&.apishore-selected-value-help-text-primary
+	{
+		color: #333;
+		border-color: #aaa;
+		&:before { border-bottom-color:#aaa;}
+	}
+	&.apishore-selected-value-help-text-success
+	{
+		color: $state-success-text;
+		border-color: $state-success-text;
+		&:before { border-bottom-color: $state-success-text;}
+	}
+	&.apishore-selected-value-help-text-info
+	{
+		color: $state-info-text;
+		border-color: $state-info-text;
+		&:before { border-bottom-color:$state-info-text;}
+	}
+	&.apishore-selected-value-help-text-warning
+	{
+		color: $state-warning-text;
+		border-color: $state-warning-text;
+		&:before { border-bottom-color: $state-warning-text;}
+	}
+	&.apishore-selected-value-help-text-danger
+	{
+		color: $state-danger-text;
+		border-color: $state-danger-text;
+		&:before { border-bottom-color: $state-danger-text;}
+	}
+	&.apishore-selected-value-help-text-question
+	{
+		color: $state-warning-text;
+		border-color: $state-warning-text;
+		&:before { border-bottom-color: $state-warning-text;}
+	}
+	&.apishore-selected-value-help-text-suggestion
+	{
+		color: $state-success-text;
+		border-color: $state-success-text;
+		&:before { border-bottom-color: $state-success-text;}
+	}
+}

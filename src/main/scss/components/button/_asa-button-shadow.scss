@@ -1,0 +1,15 @@
+ &:not([disabled])
+ {
+    &.as-raised,
+    &.as-fab
+	{
+		&.as-focused
+		{
+			@include as-shadow-bottom-z-1();
+		}
+		&:active
+		{
+			@include as-shadow-bottom-z-2();
+		}
+	}
+}

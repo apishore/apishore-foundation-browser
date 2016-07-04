@@ -1,0 +1,233 @@
+$as-sidebar-menu-item-color: map-get($as-palette-primary,300) !default;
+$as-sidebar-menu-item-hover-color: #000 !default;
+$as-sidebar-menu-item-hover-bgcolor: map-get($as-palette-grey,300) !default;
+
+.as-sidebar-swipe
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	width: 10px;
+	z-index: 1000;
+}
+.as-sidebar-top-menu-place
+{
+	height: $as-appbar-height;
+	background-color: map-get($as-palette-sidebar, 50);
+}
+.as-sidebar-top-menu
+{
+	background-color: #4b4b4b;
+	background-image: $as-sidebar-top-menu-bg-image;
+	background-size: cover;
+	font-family: "Roboto";
+}
+.as-sidebar-top-menu-brand
+{
+	background-image: $as-brand-bg-image;
+	background-color: $as-brand-bg-color;
+	padding: $as-gutter;
+}
+.as-sidebar-top-menu-brand-logo
+{
+	min-height: $as-panel-header-height - $as-gutter * 2;
+	background-image: $as-brand-logo;
+	background-size: contain;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+.as-sidebar-top-menu-selector
+{
+	background-color: $as-sidebar-top-menu-selector-color;
+	display: block;
+	color: #fff;
+	text-decoration:none;
+}
+.as-sidebar-top-menu-selector-current
+{
+	color: #fff;
+	display: block;
+	padding: $as-gutter;
+	text-decoration:none;
+	border-left: solid 4px transparent;
+	&:hover,&:focus
+	{
+		text-decoration:none;
+	}
+	span
+	{
+		font-size: 16px;
+		vertical-align: top;
+		color: #fff;
+	}
+	i
+	{
+		float:right;
+		color: #fff;
+	}
+}
+.as-sidebar-menu-group-title
+{
+	color: map-get($as-palette-brand, 800);
+	text-transform: uppercase;
+	font-size: 14px;
+	
+	padding: $as-gutter;
+	padding-left: $as-gutter + 4px;
+}
+.as-sidebar-menu
+{
+	margin: 0;
+	padding: 1px;
+	padding-top: $as-gutter;
+	padding-bottom: $as-gutter * 4;
+	list-style: none;
+	@include clearfix();
+	display: block;
+	color: #333;
+}
+.as-sidebar-menu-item
+{
+	@include user-select(none);
+	display: block;
+	position: relative;
+	color: map-get($as-palette-primary, 800);
+	&.asa-primary
+	{
+		--background-color: map-get($as-palette-grey, 300);
+	}
+	&.asa-summary
+	{
+		--background-color: map-get($as-palette-grey, 300);
+	}
+	&.asa-level-2
+	{
+		>a
+		{
+			padding-left: $as-gutter*2;
+			font-size: 13px;
+		}
+	}
+	> a
+	{
+		padding: $as-gutter;
+		padding-top: $as-sidebar-padding-top;
+		padding-bottom: $as-sidebar-padding-bottom;
+		text-decoration:none;
+		display:block;
+		font-size: 12px;
+		font-weight: normal;
+		border-left: solid 4px transparent;
+		&:hover,&:focus
+		{
+			text-decoration:none;
+		}	
+	}
+	&.asa-light
+	{
+		color: #fff;
+		>a
+		{
+			color: #fff;
+		}
+		&:hover, &:focus
+		{
+			>a{ background-color: rgba(#000,0.5)};
+		}
+		&.active
+		{
+			>a
+			{
+				background-color: map-get($as-palette-primary, 300);
+			};
+		}
+	}
+	&.asa-dark
+	{
+		color: $as-sidebar-menu-item-color;
+		&.asa-secondary
+		{
+			color: #333;
+		}
+		>a
+		{
+			color: $as-sidebar-menu-item-color;
+		}
+		&:hover, &:focus
+		{
+			background-color: $as-sidebar-menu-item-hover-bgcolor;
+			>a
+			{
+				color: $as-sidebar-menu-item-hover-color;
+			};
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 3px;
+				bottom: 3px;
+				left: 5px;
+				width: 4px;
+				background-color: map-get($as-palette-grey,500);
+			}
+		}
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 3px;
+			bottom: 3px;
+			left: 5px;
+			width: 4px;
+			background-color: transparent;
+			transition: background-color 150ms ease;
+		}
+		&:active,
+		&.active
+		{
+			>a
+			{ 
+				color: $as-sidebar-menu-item-hover-color;
+			};
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 3px;
+				bottom: 3px;
+				left: 5px;
+				width: 4px;
+				background-color: map-get($as-palette-primary,500);
+			}
+		}
+	}
+}
+.as-sidebar-menu-item-title
+{
+	display: block;
+	font-size: 14px;
+	font-size: normal;
+	color:map-get($as-palette-black, darken);
+	&.asa-secondary
+	{
+		font-weight: normal;
+		font-size: 15px;
+	}
+}
+.as-sidebar-menu-item-subtitle
+{
+	display: block;
+	font-size: 13px;
+	font-weight: normal;
+	color:map-get($as-palette-black, dark);
+	&.asa-secondary
+	{
+		display: none;
+	}
+}
+.as-sidebar-menu-primary-list-footer
+{
+	border-bottom: solid 1px map-get($as-palette-grey, 400);
+	margin: 1px;
+}

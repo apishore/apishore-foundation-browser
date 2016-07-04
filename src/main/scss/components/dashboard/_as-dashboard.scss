@@ -1,0 +1,99 @@
+.as-dashboard
+{
+	min-height: 80px;
+	&.asa-dark
+	{
+		background-color: map-get($as-palette-blue-grey, 100);
+	}
+}
+.as-dashboard-actions
+{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	width: 48px;
+	background-color: map-get($as-palette-black, dark);
+
+	@include transition(All 0.5s ease);
+	-webkit-transition-delay: 0s; /* Safari */
+	transition-delay: 0s;
+	&.asa-opened,
+	&:hover
+	{
+		background-color: map-get($as-palette-black, dark);
+		-webkit-transition-delay: 1s; /* Safari */
+    	transition-delay: 1s;
+		.as-dashboard-settings-icon
+		{
+			span
+			{
+				color: map-get($as-palette-bg, light);
+				width: auto;
+			}
+		}
+	}
+}
+.as-dashboard-gadgets
+{
+	@extend .as-hbox;
+}
+.as-gadget
+{
+	margin: $as-gutter;
+	&.asa-wide
+	{
+		@extend .as-cell-wide;
+	}
+}
+.as-gadget-title
+{
+	color: $as-dashboard-text-color;
+	font-size: 16px;
+	line-height: 40px;
+}
+.as-gadget-chart
+{
+	width: 100%;
+	height: 180px;
+}
+.as-gadget-settings-holder
+{
+	@extend .as-hbox;
+	width: 100%;
+}
+.as-gadget-settings
+{
+	padding: $as-gutter;
+}
+.as-gadget-totals
+{
+	@extend .as-hbox;
+}
+.as-gadget-total
+{
+	margin: $as-gutter;
+	width: 200px;
+}
+.as-gadget-total-title
+{
+	color: $as-dashboard-text-color;
+	font-size: 16px;
+	line-height: 40px;
+}
+.as-gadget-total-value
+{
+	font-size: 24px;
+	&.asa-normal
+	{
+		color: map-get($as-palette-grey, 500);
+	}
+	&.asa-critical
+	{
+		color: map-get($as-palette-red, 500);
+	}
+	&.asa-good
+	{
+		color: map-get($as-palette-green, 500);
+	}
+}

@@ -1,0 +1,73 @@
+.as-input-thumbnail
+{
+	position: relative;
+	font-size: 12px;
+	padding-top: $as-gutter / 4;
+	@extend .as-hbox;
+	margin-top: 24px;
+	@include user-select(none);
+}
+.as-input-thumbnail-item
+{
+	@extend .as-cell-fixed;
+	margin-right: $as-gutter;
+	font-size: 14px;
+	box-shadow: $as-whiteframe-shadow-2dp;
+	border-radius: 3px;
+	
+	transition: all 0.3 ease;
+	&:hover
+	{
+		.as-input-thumbnail-item-label
+		{
+			background-color: map-get($as-palette-grey, 200);
+		}
+		.as-input-thumbnail-item-image
+		{
+			opacity: 1;
+		}
+	}
+	&.asa-active
+	{
+		.as-input-thumbnail-item-label
+		{
+			background-color: map-get($as-palette-primary, 500);
+			color: #fff;
+		}
+		.as-input-thumbnail-item-image
+		{
+			opacity: 1;
+		}
+	}
+}
+.as-input-thumbnail-item-inner
+{
+	display: block;
+	border-radius: 2px;
+	min-width: $as-gutter * 2;
+	min-height: $as-gutter * 2;
+	line-height: $as-gutter * 2;
+	font-size: 14px;
+	font-weight: bold;
+}
+.as-input-thumbnail-item-image
+{
+	@include transition(all .3s ease-in-out);
+	min-width: $as-gutter * 2;
+	min-height: $as-gutter * 2;
+	width: $as-gutter * 12;
+	height: $as-gutter * 12;
+	opacity: 0.5;
+}
+.as-input-thumbnail-item-label
+{
+	@include transition(all .3s ease-in-out);
+	display: block;
+	background-color: map-get($as-palette-grey, 100);
+	line-height: $as-gutter * 2;
+	padding: $as-gutter / 2;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+}
+

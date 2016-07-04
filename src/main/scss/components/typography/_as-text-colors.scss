@@ -1,0 +1,54 @@
+.as-color-primary
+{
+	color: map-get($as-palette-primary, 500);
+}
+.as-color-red
+{
+	color: map-get($as-palette-red, 500);
+}
+.as-color-green
+{
+	color: map-get($as-palette-green, 500);
+}
+.as-color-orange
+{
+	color: map-get($as-palette-orange, 500);
+}
+code
+{
+	background-color: #e8e8e8;
+	color: map-get($as-palette-orange, 900);
+	padding-left: $as-gutter / 4;
+	padding-right: $as-gutter / 4;
+	font-size: 14px;
+	padding-bottom: 2px;
+	border-radius: 0px;
+}
+dd
+{
+	padding-bottom: $as-gutter;
+}
+dt
+{
+	color: map-get($as-palette-accent, 800);
+}
+dd
+{
+	padding-top: $as-gutter / 2;
+}
+.as-article-header
+{
+	border-right: solid 4px map-get($as-palette-primary, 500);
+	text-align: right;
+	padding: $as-gutter;
+	color: map-get($as-palette-grey, 600);
+}
+.as-note
+{
+	background-color: map-get($as-palette-yellow, 50);
+	color: map-get($as-palette-primary, 600);
+	border-left: solid 4px map-get($as-palette-primary, 600);
+	margin:$as-gutter;
+	margin-left: 0px;
+	padding: $as-gutter * 2;
+}

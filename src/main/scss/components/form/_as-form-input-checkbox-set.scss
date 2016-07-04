@@ -1,0 +1,37 @@
+.as-input-checkbox-set-control
+{
+	@extend .as-cell-fixed;
+    margin: 0px;
+	margin-top: $as-input-label-height;
+	width: 100%;
+	
+	padding: $as-input-padding;
+	
+	@include as-remove-outline();
+    padding: $as-input-padding;
+    padding-left: 0px;
+    font-size: $as-input-font-size;
+    
+    line-height: $as-input-height;
+    -ms-flex-preferred-size: $as-input-height;
+
+    border-radius: 0;
+	border:none;
+	border-bottom: solid $as-input-border-width transparent;
+	&:focus,&.focused
+	{
+		padding-bottom: $as-input-border-width;
+		border-bottom: solid $as-input-padding $as-input-border-color-focus;
+	}
+	&:disabled
+	{
+		color: $as-input-color-disabled;
+		border-bottom: solid $as-input-border-width $as-input-border-color-disabled;
+	}
+}
+.as-input-checkbox-set-item
+{
+	font-weight:normal;
+	font-size: 13px;
+	padding-right: $as-gutter;
+}

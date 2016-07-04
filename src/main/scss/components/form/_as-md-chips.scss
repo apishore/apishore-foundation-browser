@@ -1,0 +1,101 @@
+///
+/// Holder of chips in view mode
+///
+.as-md-chips-viewer
+{
+	margin-top: 26px;
+}
+
+///
+/// Chip container
+///
+.as-md-chips-viewer-item
+{
+	margin: $as-gutter / 2;
+	margin-left: 0px;
+	display: inline-block;
+	white-space: nowrap;
+	border: solid 1px map-get($as-palette-grey, 500);
+	border-radius: $as-md-chips-editor-item-height;
+}
+
+///
+/// Chip content
+///
+.as-md-chips-viewer-item-content
+{
+	padding: $as-gutter / 4;
+	padding-left: $as-gutter / 2;
+	padding-right: $as-gutter / 2;
+}
+///
+/// Chip content title
+///
+.as-md-chips-viewer-item-content-title
+{
+	
+}
+///
+/// Chip content sub title
+///
+.as-md-chips-viewer-item-content-subtitle
+{
+	
+}
+
+///
+/// Holder of chips in editor mode
+///
+.as-md-chips-editor
+{
+	margin-top: 26px;
+}
+///
+/// Chip container
+///
+.as-md-chips-editor-item
+{
+	//
+	margin: $as-gutter / 2;
+	margin-left: 0px;
+	display: inline-block;
+	
+	cursor: default;
+	height: $as-md-chips-editor-item-height + 4px;
+	background-color: map-get($as-palette-grey, 200);
+	border: solid 2px map-get($as-palette-grey, 200);
+	border-radius: $as-md-chips-editor-item-height;
+	&:hover
+	{
+		border: solid 2px map-get($as-palette-grey, 300);
+	}
+}
+
+///
+/// Chip content
+///
+.as-md-chips-editor-item-content
+{
+	padding: $as-gutter / 4;
+	padding-left: $as-gutter / 2;
+}
+///
+/// Chip content title
+///
+.as-md-chips-editor-item-content-title
+{
+}
+.as-md-chips-view-item-remove-icon
+{
+	@include as-control-transition();
+	height: $as-md-chips-editor-item-height - 4px;
+	width: $as-md-chips-editor-item-height - 4px;
+	border-radius: $as-md-chips-editor-item-height;
+	margin: 2px;
+	background-color: map-get($as-palette-grey, 400);
+	&:hover
+	{
+		background-color: map-get($as-palette-primary, 500);
+		color: map-get($as-palette-white, darker);
+	}
+}

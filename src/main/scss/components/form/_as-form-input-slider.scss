@@ -1,0 +1,46 @@
+$as-input-select-transition: all cubic-bezier(.25,.8,.25,1) .25s;
+$as-input-slider-height: 24px;
+$as-input-slider-line-height: 2px;
+$as-input-slider-thumb-radius: 8px;
+$as-input-slider-thumb-radius-hover: 10px;
+$as-input-slider-thumb-radius-focus: 12px;
+
+.as-input-slider-holder
+{
+	position: relative;
+	@extend .as-cell-wide;
+    margin: 0px;
+	margin-top: $as-input-select-label-height;
+	height: $as-input-slider-height;
+	&:hover
+	{
+		.as-input-slider-thumb
+		{
+			height: $as-input-slider-thumb-radius-hover * 2;
+			width: $as-input-slider-thumb-radius-hover * 2;
+			margin-top: 0 - $as-input-slider-thumb-radius-hover;
+			margin-left: 0 - $as-input-slider-thumb-radius-hover;
+			border-radius: $as-input-slider-thumb-radius-hover;
+		}
+	}
+}
+.as-input-slider
+{
+	position: absolute;
+	left: $as-input-slider-height / 2;
+	right: $as-input-slider-height / 2;
+	top: ($as-input-slider-height - $as-input-slider-line-height ) / 2;
+	height: $as-input-slider-line-height;
+	background-color: map-get($as-palette-primary, 500);
+}
+.as-input-slider-thumb
+{
+	position: absolute;
+	top: $as-input-slider-line-height / 2;
+	height: $as-input-slider-thumb-radius * 2;
+	width: $as-input-slider-thumb-radius * 2;
+	margin-top: 0 - $as-input-slider-thumb-radius;
+	margin-left: 0 - $as-input-slider-thumb-radius;
+	border-radius: $as-input-slider-thumb-radius;
+	background-color: map-get($as-palette-primary, 500);
+}

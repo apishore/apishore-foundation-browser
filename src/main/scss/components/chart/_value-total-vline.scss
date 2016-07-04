@@ -1,0 +1,34 @@
+///@group components.charts.vline
+
+.as-chart-value-total-vline-row
+{
+	@extend .as-hbox;
+}
+.as-chart-value-total-vline-cell
+{
+	@extend .as-cell-fixed;
+	margin-left: $as-gutter;
+	margin-right: $as-gutter;
+}
+.as-chart-value-total-vline-label
+{
+	@extend .as-cell-fixed;
+	color: map-get($as-palette-grey, 800);
+	margin-top: $as-gutter / 2;
+	position: relative;
+}
+.as-chart-value-total-vline-line
+{
+	@extend .as-cell-fixed;
+	position: relative;
+	height: 120px;
+	background-color: map-get($as-palette-grey, 100);
+	width: 8px;
+}
+.as-chart-value-total-vline-line-inner
+{
+	position: absolute;
+	bottom: 0px;
+	width: 8px;
+	background-color: map-get($as-palette-green, 500);
+}

@@ -1,0 +1,26 @@
+.as-fieldset
+{
+	border:none;
+	&.asa-normal
+	{
+		margin: 0px;
+		padding: 0px;
+	}
+	&.asa-top-gutter
+	{
+		margin: 0px;
+		padding: 0px;
+		margin-top: $as-gutter * 1.5;
+	}
+}
+.as-fieldset-legend
+{
+	margin:0px;
+	padding:0px;
+	margin-bottom: $as-gutter;
+	padding-top: $as-gutter;
+	border:none;
+	font-size: 14px;
+	font-weight: bold;
+	color: map-get($as-palette-grey, 500);
+}

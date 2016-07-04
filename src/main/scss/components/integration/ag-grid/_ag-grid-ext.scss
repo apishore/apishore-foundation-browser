@@ -1,0 +1,46 @@
+$as-grid-column-menu: 300px;
+
+$as-grid-column-menu-item-height: 32px;
+$as-grid-column-menu-item-padding: 24px;
+
+.as-grid-column-menu
+{
+	width: $as-grid-column-menu;
+	height: $as-grid-column-menu;
+	
+	position: absolute;
+	z-index: $as-z-index-menu;
+	background-color: #fff;
+	box-shadow: $as-whiteframe-shadow-10dp;	
+}
+
+.as-grid-column-menu-inner
+{
+	padding-top: $as-gutter / 2;
+	padding-bottom: $as-gutter / 2;
+}
+.as-grid-column-menu-items
+{
+	
+}
+.as-grid-column-menu-item
+{
+	font-size: 16px;
+	padding-left: $as-grid-column-menu-item-padding;
+	padding-right: $as-grid-column-menu-item-padding;
+	height: $as-grid-column-menu-item-height;
+	line-height: $as-grid-column-menu-item-height;
+	display: block;
+	text-decoration:none;
+	&:hover
+	{
+		background-color: map-get($as-palette-grey, 100);
+	}
+}
+.as-grid-column-menu-delimiter
+{
+	height: 1px;
+	margin-top: 8px;
+	margin-bottom: 7px;
+	background-color:map-get($as-palette-grey, 100);
+}

@@ -1,0 +1,35 @@
+///@group components.image.avatar
+
+///@label Avatar size
+///@fieldset dimension
+///@editor dimension
+$as-avatar-size: 48px;
+
+///@label Big avatar size
+///@fieldset dimension
+///@editor dimension
+$as-avatar-size-big: 48px;
+
+///@label Avatar broder size
+///@fieldset dimension
+///@editor dimension
+$as-avatar-border-size: 4px;
+
+.as-avatar-outer
+{
+	width: $as-avatar-size + $as-avatar-border-size * 2;
+	height: $as-avatar-size + $as-avatar-border-size * 2;
+	border: solid $as-avatar-border-size map-get($as-palette-grey, 500);
+	border-radius: $as-avatar-size;
+}
+.as-avatar-img
+{
+	width: $as-avatar-size;
+	height: $as-avatar-size;
+	border-radius: $as-avatar-size;
+}
+.as-avatar-inner
+{
+	width: $as-avatar-size;
+	height: $as-avatar-size;
+}

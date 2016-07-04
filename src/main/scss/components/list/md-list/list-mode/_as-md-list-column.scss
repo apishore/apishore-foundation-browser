@@ -1,0 +1,24 @@
+.as-md-list-column
+{
+	line-height: $as-md-list-row-height;
+	font-size: 16px;
+	color: map-get($as-palette-fg, dark);
+	width: 100px;
+	padding-left: $as-gutter;
+	padding-right: $as-gutter;
+	&.asa-icon
+	{
+		width: $as-md-list-row-height;
+		padding: 0px;
+		text-align: center;
+		padding-top: 6px;
+	}
+	&.asa-right
+	{
+		text-align: right;
+	}
+}
+.as-md-list-column-annotation
+{
+	font-size: 12px;
+}

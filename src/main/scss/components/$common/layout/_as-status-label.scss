@@ -1,0 +1,25 @@
+.as-status-label
+{
+	padding: 4px;
+	font-size: 12px;
+	font-weight: bold;
+	color: map-get($as-palette-bg, darker);
+	@include user-select(none);
+	border-radius: 4px;
+	&.asa-success
+	{
+		background-color: map-get($as-palette-green, 500);
+	}
+	&.asa-info
+	{
+		background-color: map-get($as-palette-blue, 500);
+	}
+	&.asa-warning
+	{
+		background-color: map-get($as-palette-pink, 500);
+	}
+	&.asa-danger
+	{
+		background-color: map-get($as-palette-red, 500);
+	}
+}
