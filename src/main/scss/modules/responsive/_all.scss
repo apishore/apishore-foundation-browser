@@ -1,0 +1,42 @@
+.asd-phone { display:none; }
+.asd-phone-portrait { display:none; }
+.asd-phone-landspace { display:none; }
+.asd-tablet { display:none; }
+.asd-tablet-portrait { display:none; }
+.asd-tablet-landspace { display:none; }
+.asd-desktop { display:none; }
+.asd-wide-desktop { display:none; }
+
+.as-device-phone
+{
+	.asd-phone { display:block; }
+}
+.as-device-phone-portrait
+{
+	.asd-phone-portrait { display:block; }
+}
+.as-device-phone-landscape
+{
+	.asd-phone-landscape { display:block; }
+}
+
+.as-device-tablet
+{
+	.asd-tablet { display:block; }
+}
+.as-device-tablet-portrait
+{
+	.asd-tablet-portrait { display:block; }
+}
+.as-device-tablet-landscape
+{
+	.asd-tablet-landscape { display:block; }
+}
+.as-device-desktop
+{
+	.asd-desktop { display:block; }
+}
+.as-device-wide-desktop
+{
+	.asd-wide-desktop { display:block; }
+}
