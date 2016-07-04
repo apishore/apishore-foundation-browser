@@ -84,23 +84,6 @@ body.as-vbox
 //	flex-grow:1;
  	flex: 1 0 auto;
 }
-.as-gutter
-{
-	border: solid $as-gutter transparent;
-}
-.as-left-gutter
-{
-	padding-left: $as-gutter;
-}
-.as-right-gutter
-{
-	padding-right: $as-gutter;
-}
-.as-h-gutter
-{
-	padding-left: $as-gutter;
-	padding-right: $as-gutter;
-}
 
 .as-panel
 {

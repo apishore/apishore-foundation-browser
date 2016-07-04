@@ -1,0 +1,30 @@
+.as-gutter
+{
+	border: solid $as-gutter transparent;
+}
+.as-left-gutter
+{
+	border-left: solid $as-gutter transparent;
+}
+.as-right-gutter
+{
+	border-right: solid $as-gutter transparent;
+}
+.as-top-gutter
+{
+	border-top: solid $as-gutter transparent;
+}
+.as-bottom-gutter
+{
+	border-bottom: solid $as-gutter transparent;
+}
+.as-h-gutter
+{
+	border-left: solid $as-gutter transparent;
+	border-right: solid $as-gutter transparent;
+}
+.as-v-gutter
+{
+	border-top: solid $as-gutter transparent;
+	border-bottom: solid $as-gutter transparent;
+}
