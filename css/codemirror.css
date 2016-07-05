@@ -1,6 +1,6 @@
 .CodeMirror {
 	font-family: monospace;
-	max-height: 300px;
+	--max-height: 300px;
 	color: black;
 	font-size: 16px;
 }
