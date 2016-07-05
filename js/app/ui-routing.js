@@ -23,18 +23,18 @@ docs.config([
 			//
 			$stateProvider.state('root', {
 				url : "/docs",
-				templateUrl : '/root.html',
+				templateUrl : window.apishoreConfig.webappRoot+'/root.html',
 				defaultChild: "introduction",
 				data: {breadcrumbTitle : 'ACSS'}
 			});
 			$stateProvider.state('root.introduction', {
 				url : "/introduction",
-				templateUrl : '/introduction.html',
+				templateUrl : window.apishoreConfig.webappRoot+'/introduction.html',
 				data: {breadcrumbTitle : 'Introduction'}
 			});
 			$stateProvider.state('root.structure', {
 				url : "/structure",
-				templateUrl : '/structure.html',
+				templateUrl : window.apishoreConfig.webappRoot+'/structure.html',
 				data: {breadcrumbTitle : 'Framework structure'}
 			});
 			$stateProvider.state('root.core', {
@@ -45,12 +45,12 @@ docs.config([
 			});
 			$stateProvider.state('root.core.normalize', {
 				url : "/normalize",
-				templateUrl : '/core-modules/normalize.html',
+				templateUrl : window.apishoreConfig.webappRoot+'/core-modules/normalize.html',
 				data: {breadcrumbTitle : 'Normalize'}
 			});
 			$stateProvider.state('root.core.palette', {
 				url : "/palette",
-				templateUrl : '/core-modules/palette.html',
+				templateUrl : window.apishoreConfig.webappRoot+'/core-modules/palette.html',
 				data: {breadcrumbTitle : 'Material palettes'}
 			});
 //
