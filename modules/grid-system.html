@@ -1,3 +1,104 @@
 <div class="as-panel as-vscroll"><div class="as-text-panel">
-<h1 class="as-color-primary">TODO:</h1>
+<h1 class="as-color-primary">Grid system</h1>
+<p>
+Our grid system is based on flexbox. It is not well suited for manual coding, but made in respect of code generation.
+</p>
+<p>
+Grid system supports any count of columns between 2 and 16. If you project require more or less count of possible grid systems, modify $as-grid-max-cols variable.
+</p>
+
+<h3>Sample</h3>
+<p>
+You can mix rows with different grid systems if you need.
+</p>
+<div class="as-grid-container as-grid-container-demo">
+	<div class="as-grid-row" ng-repeat="col in [1,2,3,4]">
+	  <div class="as-grid-cell asa-{{col}}-of-12 as-grid-cell-demo">
+	  {{col}}/12
+	  </div>
+	  <div class="as-grid-cell asa-{{12-col}}-of-12 as-grid-cell-demo">
+	  {{12-col}}/12
+	  </div>
+	</div>
+	<div class="as-grid-row" ng-repeat="col in [6,5,4,3]">
+	  <div class="as-grid-cell asa-{{col}}-of-7 as-grid-cell-demo">
+	  {{col}}/7
+	  </div>
+	  <div class="as-grid-cell asa-{{7-col}}-of-7 as-grid-cell-demo">
+	  {{7-col}}/7
+	  </div>
+	</div>
+	<div class="as-grid-row">
+		<div class="as-grid-cell asa-2-of-7 as-grid-cell-demo">
+			2/7</div>
+		<div class="as-grid-cell asa-2-of-9 as-grid-cell-demo">
+			2/9</div>
+		<div class="as-grid-cell asa-wide as-grid-cell-demo">
+			takes rest of width</div>
+	</div>
+	<div class="as-grid-row asa-grid-break-on-tablet">
+		<div class="as-grid-cell asa-2-of-7 as-grid-cell-demo">
+			2/7</div>
+		<div class="as-grid-cell asa-by-content as-grid-cell-demo">
+			content defines width</div>
+		<div class="as-grid-cell asa-wide as-grid-cell-demo">
+			takes rest of width</div>
+	</div>
+</div>
+
+<h2>Breaking the grid</h2>
+<p>
+				Responsive design dictate that layout must change to respect device capabilities.
+				Other grid systems allows to define cell width in depends on device mode.
+				However, most of real life cases use it to break row with big number of elements into
+				sub-rows. 
+				<p>
+				This demo shows how this approach works. Click on buttons to change local device mode. 
+				<div ng-init="deviceMode='desktop'">
+					<a ng-click="deviceMode='desktop'" class="as-button" ng-class="{'asa-primary': (deviceMode == 'desktop')}"><span class="as-button-text">Desktop mode</span></a>
+					<a ng-click="deviceMode='tablet'" class="as-button" ng-class="{'asa-primary': (deviceMode == 'tablet')}"><span class="as-button-text">Tablet mode</span></a>
+					<a ng-click="deviceMode='phone'" class="as-button" ng-class="{'asa-primary':(deviceMode == 'phone')}"><span class="as-button-text">Phone mode</span></a>
+				</div>
+				<div class="as-device-{{deviceMode}}" ng-style="{width: (deviceMode=='desktop' ? '' : deviceMode=='tablet' ? '800px' : '600px' )}">
+					Should break on tablet and phone
+					<p>
+					<div class="as-grid-container as-grid-container-demo">
+						<div class="as-grid-row asa-grid-break-on-tablet" ng-repeat="col in [3,4]">
+							<div class="as-grid-cell asa-{{col}}-of-7 as-grid-cell-demo">
+								{{col}}/7</div>
+							<div class="as-grid-cell asa-{{7-col}}-of-7 as-grid-cell-demo">
+								{{7-col}}/7</div>
+						</div>
+					</div>
+					<p>
+					Should break on phone
+					<p>
+					<div class="as-grid-container as-grid-container-demo">
+						<div class="as-grid-row asa-grid-break-on-phone" ng-repeat="col in [3,4]">
+							<div class="as-grid-cell asa-{{col}}-of-7 as-grid-cell-demo">
+								{{col}}/7</div>
+							<div class="as-grid-cell asa-{{7-col}}-of-7 as-grid-cell-demo">
+								{{7-col}}/7</div>
+						</div>
+					</div>
+					<p>
+					More complex sample of nested grids. Top grid row breaks in tablet mode, nested in phone mode.
+					<p>
+					<div class="as-grid-container as-grid-container-demo">
+						<div class="as-grid-row asa-grid-break-on-tablet">
+							<div class="as-grid-cell asa-3-of-7 as-grid-cell-demo">
+								Full name</div>
+							<div class="as-grid-cell asa-4-of-7">
+								<div class="as-grid-row asa-grid-break-on-phone">
+									<div class="as-grid-cell asa-3-of-7 as-grid-cell-demo">
+										Title</div>
+									<div class="as-grid-cell asa-4-of-7 as-grid-cell-demo">
+										Age
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
 </div></div>
