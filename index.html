@@ -156,10 +156,10 @@
 
 <script>
 window.apishoreConfig = {
-		clientId : 'null',
-		localUrl : '/apishore-foundation-browser',
+		clientId : 'anonymous',
+		localUrl : window.location.hostname == "localhost" ? "" : "/apishore-foundation-browser",
 		appName : 'docs',
-		webappRoot : '/apishore-foundation-browser',
+		webappRoot : window.location.hostname == "localhost" ? "" : "/apishore-foundation-browser",
 		appPath : ''
 	};
 </script>
