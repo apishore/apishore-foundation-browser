@@ -1,0 +1,45 @@
+<div class="as-panel as-vscroll"><div class="as-text-panel">
+<h1 class="as-color-primary">Box module</h1>
+
+<p>Simple flex based layout system allows to easily create different layouts.
+Primary use is the cases when grid system is too complex to use.</p>
+
+<h2>Horizontal box</h2>
+<p>
+Sample
+</p>
+<div class="as-hbox">
+  <div class="as-cell-fixed"><div class="as-bgcolor-green-100 as-gutter">Cell takes width of content</div></div>
+  <div class="as-cell-wide"><div class="as-bgcolor-blue-100 as-gutter">Cell takes the rest of width</div></div>
+</div>
+
+<p>
+Source code
+</p>
+<textarea ui-codemirror ui-codemirror-opts="codemirror.html">
+<div class="as-hbox">
+  <div class="as-cell-fixed">Cell take width of content</div>
+  <div class="as-cell-wide">Cell takes the rest of width</div>
+</div>
+</textarea>
+
+<h2>Verical box</h2>
+<p>
+Sample
+</p>
+<div class="as-vbox" style="height:200px;">
+  <div class="as-cell-fixed"><div class="as-bgcolor-green-100 as-gutter">Cell takes height of content</div></div>
+  <div class="as-cell-wide"><div class="as-bgcolor-blue-100 as-panel as-gutter">Cell takes the rest of height</div></div>
+</div>
+<p>
+Source code
+</p>
+<textarea ui-codemirror ui-codemirror-opts="codemirror.html">
+<div class="as-hbox">
+  <div class="as-cell-fixed">Cell take width of content</div>
+  <div class="as-cell-wide">Cell takes the rest of width</div>
+</div>
+</textarea>
+
+</div>
+</div>

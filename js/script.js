@@ -16085,6 +16085,43 @@ docs.config([
 				templateUrl : window.apishoreConfig.webappRoot+'/core-modules/palette.html',
 				data: {breadcrumbTitle : 'Material palettes'}
 			});
+			$stateProvider.state('root.modules', {
+				url : "/modules",
+				defaultChild: "box",
+				template : '<div ui-view></div>',
+				data: {breadcrumbTitle : 'Modules'}
+			});
+			$stateProvider.state('root.modules.box', {
+				url : "/box",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/box.html',
+				data: {breadcrumbTitle : 'Box'}
+			});
+			$stateProvider.state('root.modules.floating', {
+				url : "/floating",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/floating.html',
+				data: {breadcrumbTitle : 'floating'}
+			});
+			$stateProvider.state('root.modules.gridsystem', {
+				url : "/grid-system",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/grid-system.html',
+				data: {breadcrumbTitle : 'grid-system'}
+			});
+			$stateProvider.state('root.modules.gutter', {
+				url : "/gutter",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/gutter.html',
+				data: {breadcrumbTitle : 'gutter'}
+			});
+			$stateProvider.state('root.modules.responsive', {
+				url : "/responsive",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/responsive.html',
+				data: {breadcrumbTitle : 'responsive'}
+			});
+			$stateProvider.state('root.modules.scrollable', {
+				url : "/scrollable",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/scrollable.html',
+				data: {breadcrumbTitle : 'scrollable'}
+			});
+
 //
 //			//redirects
 			$urlRouterProvider.otherwise('/docs');

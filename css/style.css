@@ -462,10 +462,10 @@ textarea {
 .as-bgcolor-red-A700 {
   background-color: #D50000; }
 
-.as-color-$map-name {
+.as-color-red {
   color: #F44336; }
 
-.as-bgcolor-$map-name {
+.as-bgcolor-red {
   background-color: #D32F2F; }
 
 .as-color-pink-50 {
@@ -552,10 +552,10 @@ textarea {
 .as-bgcolor-pink-A700 {
   background-color: #C51162; }
 
-.as-color-$map-name {
+.as-color-pink {
   color: #E91E63; }
 
-.as-bgcolor-$map-name {
+.as-bgcolor-pink {
   background-color: #C2185B; }
 
 .as-color-purple-50 {
@@ -642,10 +642,10 @@ textarea {
 .as-bgcolor-purple-A700 {
   background-color: #AA00FF; }
 
-.as-color-$map-name {
+.as-color-purple {
   color: #9C27B0; }
 
-.as-bgcolor-$map-name {
+.as-bgcolor-purple {
   background-color: #7B1FA2; }
 
 .as-color-deep-purple-50 {
@@ -732,10 +732,10 @@ textarea {
 .as-bgcolor-deep-purple-A700 {
   background-color: #6200EA; }
 
-.as-color-$map-name {
+.as-color-deep-purple {
   color: #673AB7; }
 
-.as-bgcolor-$map-name {
+.as-bgcolor-deep-purple {
   background-color: #512DA8; }
 
 .as-color-indigo-50 {
@@ -822,10 +822,10 @@ textarea {
 .as-bgcolor-indigo-A700 {
   background-color: #304FFE; }
 
-.as-color-$map-name {
+.as-color-indigo {
   color: #3F51B5; }
 
-.as-bgcolor-$map-name {
+.as-bgcolor-indigo {
   background-color: #303F9F; }
 
 .as-color-blue-50 {
@@ -912,10 +912,10 @@ textarea {
 .as-bgcolor-blue-A700 {
   background-color: #2962FF; }
 
-.as-color-$map-name {
+.as-color-blue {
   color: #2196F3; }
 
-.as-bgcolor-$map-name {
+.as-bgcolor-blue {
   background-color: #1976D2; }
 
 .as-color-indigo-50 {
@@ -1002,10 +1002,10 @@ textarea {
 .as-bgcolor-indigo-A700 {
   background-color: #304FFE; }
 
-.as-color-$map-name {
+.as-color-indigo {
   color: #3F51B5; }
 
-.as-bgcolor-$map-name {
+.as-bgcolor-indigo {
   background-color: #303F9F; }
 
 .as-color-light-blue-50 {
@@ -1092,10 +1092,10 @@ textarea {
 .as-bgcolor-light-blue-A700 {
   background-color: #0091EA; }
 
-.as-color-$map-name {
+.as-color-light-blue {
   color: #03A9F4; }
 
-.as-bgcolor-$map-name {
+.as-bgcolor-light-blue {
   background-color: #0288D1; }
 
 .as-color-cyan-50 {
@@ -1182,10 +1182,10 @@ textarea {
 .as-bgcolor-cyan-A700 {
   background-color: #00B8D4; }
 
-.as-color-$map-name {
+.as-color-cyan {
   color: #00BCD4; }
 
-.as-bgcolor-$map-name {
+.as-bgcolor-cyan {
   background-color: #0097A7; }
 
 .as-color-teal-50 {
@@ -1272,10 +1272,10 @@ textarea {
 .as-bgcolor-teal-A700 {
   background-color: #00BFA5; }
 
-.as-color-$map-name {
+.as-color-teal {
   color: #009688; }
 
-.as-bgcolor-$map-name {
+.as-bgcolor-teal {
   background-color: #00796B; }
 
 .as-color-green-50 {
@@ -1362,10 +1362,10 @@ textarea {
 .as-bgcolor-green-A700 {
   background-color: #00C853; }
 
-.as-color-$map-name {
+.as-color-green {
   color: #4CAF50; }
 
-.as-bgcolor-$map-name {
+.as-bgcolor-green {
   background-color: #388E3C; }
 
 .as-color-light-green-50 {
@@ -1452,10 +1452,10 @@ textarea {
 .as-bgcolor-light-green-A700 {
   background-color: #64DD17; }
 
-.as-color-$map-name {
+.as-color-light-green {
   color: #8BC34A; }
 
-.as-bgcolor-$map-name {
+.as-bgcolor-light-green {
   background-color: #689F38; }
 
 .as-color-lime-50 {
@@ -1542,10 +1542,10 @@ textarea {
 .as-bgcolor-lime-A700 {
   background-color: #AEEA00; }
 
-.as-color-$map-name {
+.as-color-lime {
   color: #CDDC39; }
 
-.as-bgcolor-$map-name {
+.as-bgcolor-lime {
   background-color: #AFB42B; }
 
 .as-color-yellow-50 {
@@ -1632,10 +1632,10 @@ textarea {
 .as-bgcolor-yellow-A700 {
   background-color: #FFD600; }
 
-.as-color-$map-name {
+.as-color-yellow {
   color: #FFEB3B; }
 
-.as-bgcolor-$map-name {
+.as-bgcolor-yellow {
   background-color: #FBC02D; }
 
 .as-color-amber-50 {
@@ -1722,10 +1722,10 @@ textarea {
 .as-bgcolor-amber-A700 {
   background-color: #FFAB00; }
 
-.as-color-$map-name {
+.as-color-amber {
   color: #FFC107; }
 
-.as-bgcolor-$map-name {
+.as-bgcolor-amber {
   background-color: #FFA000; }
 
 .as-color-orange-50 {
@@ -1812,10 +1812,10 @@ textarea {
 .as-bgcolor-orange-A700 {
   background-color: #FF6D00; }
 
-.as-color-$map-name {
+.as-color-orange {
   color: #FF9800; }
 
-.as-bgcolor-$map-name {
+.as-bgcolor-orange {
   background-color: #F57C00; }
 
 .as-color-deep-orange-50 {
@@ -1902,10 +1902,10 @@ textarea {
 .as-bgcolor-deep-orange-A700 {
   background-color: #DD2C00; }
 
-.as-color-$map-name {
+.as-color-deep-orange {
   color: #FF5722; }
 
-.as-bgcolor-$map-name {
+.as-bgcolor-deep-orange {
   background-color: #E64A19; }
 
 .as-color-brown-50 {
@@ -1968,10 +1968,10 @@ textarea {
 .as-bgcolor-brown-900 {
   background-color: #3E2723; }
 
-.as-color-$map-name {
+.as-color-brown {
   color: #795548; }
 
-.as-bgcolor-$map-name {
+.as-bgcolor-brown {
   background-color: #5D4037; }
 
 .as-color-grey-50 {
@@ -2034,10 +2034,10 @@ textarea {
 .as-bgcolor-grey-900 {
   background-color: #212121; }
 
-.as-color-$map-name {
+.as-color-grey {
   color: #9E9E9E; }
 
-.as-bgcolor-$map-name {
+.as-bgcolor-grey {
   background-color: #616161; }
 
 .as-color-white-lighter {
@@ -2058,11 +2058,20 @@ textarea {
 .as-bgcolor-white-dark {
   background-color: rgba(255, 255, 255, 0.7); }
 
+.as-color-white-500 {
+  color: rgba(255, 255, 255, 0.7); }
+
+.as-bgcolor-white-500 {
+  background-color: rgba(255, 255, 255, 0.7); }
+
 .as-color-white-darker {
   color: white; }
 
 .as-bgcolor-white-darker {
   background-color: white; }
+
+.as-color-white {
+  color: rgba(255, 255, 255, 0.7); }
 
 .as-color-black-lighter {
   color: rgba(0, 0, 0, 0.12); }
@@ -2082,6 +2091,12 @@ textarea {
 .as-bgcolor-black-38 {
   background-color: rgba(0, 0, 0, 0.38); }
 
+.as-color-black-500 {
+  color: rgba(0, 0, 0, 0.38); }
+
+.as-bgcolor-black-500 {
+  background-color: rgba(0, 0, 0, 0.38); }
+
 .as-color-black-light {
   color: rgba(0, 0, 0, 0.26); }
 
@@ -2099,6 +2114,9 @@ textarea {
 
 .as-bgcolor-black-darker {
   background-color: rgba(0, 0, 0, 0.87); }
+
+.as-color-black {
+  color: rgba(0, 0, 0, 0.38); }
 
 /* angular-ui requirement for missed href */
 a {
@@ -20349,7 +20367,6 @@ body.as-vbox, .apishore-shift-menu body.apishore-shift-menu-inner, .as-device-pr
   .as-device-wide-desktop .CodeMirror,
   .as-device-desktop .CodeMirror,
   .as-device-tablet .CodeMirror {
-    border: solid 1px #E0E0E0;
     margin-top: 16px;
     margin-bottom: 16px; }
   .as-device-wide-desktop div.number-spin-btn-container,
@@ -27782,7 +27799,6 @@ body.as-vbox, .apishore-shift-menu body.apishore-shift-menu-inner, .as-device-pr
   .as-device-phone-portrait .as-http-method-doc-parameter-desc {
     padding: 16px; }
   .as-device-phone-portrait .CodeMirror {
-    border: solid 1px #E0E0E0;
     margin-top: 16px;
     margin-bottom: 16px; }
   .as-device-phone-portrait div.number-spin-btn-container {
@@ -34849,7 +34865,6 @@ body.as-vbox, .apishore-shift-menu body.apishore-shift-menu-inner, .as-device-pr
   .as-device-phone-landscape .as-http-method-doc-parameter-desc {
     padding: 16px; }
   .as-device-phone-landscape .CodeMirror {
-    border: solid 1px #E0E0E0;
     margin-top: 16px;
     margin-bottom: 16px; }
   .as-device-phone-landscape div.number-spin-btn-container {
