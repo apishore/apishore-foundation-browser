@@ -16024,7 +16024,7 @@ docs.directive("apishoreShiftMenuTop", function(apishoreAuth, $rootScope, $http,
 		restrict : 'E',
 		replace : true,
 		scope:{},
-		templateUrl : "/js/app/sidebar-top-menu.html",
+		templateUrl : window.apishoreConfig.webappRoot+"/js/app/sidebar-top-menu.html",
         link : function($scope) {
         }
 	};
