@@ -1,0 +1,72 @@
+<div>
+<div class="as-md-chips-editor"> 
+    <div ng-repeat="item in modelEmbedded.data" class="as-md-chips-editor-item"> 
+        <div class="as-hbox"> 
+            <div class="as-md-chips-editor-item-content as-cell-wide as-vbox"> 
+                <div class="as-md-chips-editor-item-content-title">
+                     {{item.data[asTitleField]}}
+                </div> 
+            </div> 
+            <a class="as-cell-fixed as-md-chips-view-item-remove-icon" ng-click="removeItem(itemData, $index, $event)"> 
+                <i class="material-icons">close</i> 
+            </a>
+        </div> 
+    </div> 
+</div> 
+<div class="as-dropdown-select-holder" ng-class="{'as-dropdown-select-popup-opened' : isOpened}">
+    <div class="as-dropdown-select-popup-outer">
+        <div class="as-dropdown-select-popup-bg" ng-click="cancel()">
+        </div>
+        <div class="as-dropdown-select-popup" ng-style="{left:popupRect.left,top:popupRect.top,width:popupRect.width}">
+            <div class="as-dropdown-select-popup-input-wrapper">
+                <input type="text"
+                       class="as-input-control asa-string-type"
+                       autocomplete="off"
+                       name="<?formInputId?>"
+                       ng-change="asChange()"
+                       ng-focus="asFocus()"
+                       ng-click="openPopupByClick()"
+                       ng-blur="asBlur()"
+                       ng-model="label"
+                       ng-keypress="keypress($event)"
+                       ng-keydown="keydown($event)"
+                >
+            </div>
+            <div class="as-dropdown-select-arrow"></div>
+            <div class="as-dropdown-select-popup-content">
+                <div class="as-progress-linear asa-in-popup" ng-class="{'asa-invisible': !searchInProgress}">
+                    <div class="as-container as-mode-indeterminate">
+                        <div class="as-dashed"></div>
+                        <div class="as-bar as-bar1"></div>
+                        <div class="as-bar as-bar2"></div>
+                    </div>
+                </div>
+                <div class="as-dropdown-select-popup-content-items">
+                    <div class="as-hbox">
+
+                        <div class="as-cell-wide">
+                            <div class="as-dropdown-select-popup-item" ng-if="undefinedMenuLabel"
+                                 ng-click="selectItem()"
+                                 ng-class="{'asa-selected': $index == selectedIndex}">
+                                <span class="as-dropdown-select-popup-item-title">{{undefinedMenuLabel}}</span>
+                            </div>
+                            <div class="as-dropdown-select-popup-item" ng-repeat="item in items | filter:label"
+                                 ng-click="selectItem(item)" item-id="{{item.data.id}}"
+                                 ng-class="{'asa-selected': $index == selectedIndex}">
+                                <span class="as-dropdown-select-popup-item-title">{{item.as_typeahead_item_title}}</span>
+                            </div>
+                        </div>
+
+                        <div class="as-cell-fixed as-dropdown-select-popup-filters" ng-show="filters">
+                            <div class="as-dropdown-select-popup-filter" ng-repeat="filter in filtersOptions"
+                                 ng-click="setFilter(filter.id)" filter-id="{{filter.id}}"
+                                 ng-class="{'asa-selected': currentFilter == filter.id}">
+                                <span class="as-dropdown-select-popup-filter-title">{{filter.text}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

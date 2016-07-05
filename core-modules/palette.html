@@ -1,0 +1,106 @@
+<div class="as-panel as-vscroll"><div class="as-text-panel">
+<h1 class="as-color-primary">Material palette code module</h1>
+
+<p>
+This core module defines set of SCSS variables designed to handle material palettes.
+</p>
+
+<a href="https://material.google.com/style/color.html">https://material.google.com/style/color.html</a>
+
+<h2>Palettes</h2>
+Framework defines all material palettes as maps.
+
+<ul>
+<li>$as-palette-red</li>
+<li>$as-palette-pink</li>
+<li>$as-palette-purple</li>
+<li>$as-palette-deep-purple</li>
+<li>$as-palette-indigo</li>
+<li>$as-palette-blue</li>
+<li>$as-palette-light-blue</li>
+<li>$as-palette-cyan</li>
+<li>$as-palette-teal</li>
+<li>$as-palette-green</li>
+<li>$as-palette-light-green</li>
+<li>$as-palette-lime</li>
+<li>$as-palette-yellow</li>
+<li>$as-palette-amber</li>
+<li>$as-palette-orange</li>
+<li>$as-palette-deep-orange</li>
+<li>$as-palette-brown</li>
+<li>$as-palette-grey</li>
+<li>$as-palette-blue-grey</li>
+<li>$as-palette-white</li>
+<li>$as-palette-black</li>
+</ul>
+
+<h2>Named palettes</h2>
+
+Most of framework classes do not use palettes directly. Instead of that use configurable aliases.
+
+Background and foreground
+<ul>
+<li>$as-palette-bg: $as-palette-white;</li>
+<li>$as-palette-fg: $as-palette-black;</li>
+</ul>
+Primary ui color
+<ul>
+<li>$as-palette-primary: $as-palette-red;</li>
+<li>$as-palette-primary-contrast: $as-palette-bg;</li>
+</ul>
+Accent ui color
+<ul>
+<li>$as-palette-accent: $as-palette-blue;</li>
+<li>$as-palette-accent-contrast: $as-palette-bg;</li>
+</ul>
+Messaging
+<ul>
+<li>$as-palette-success: $as-palette-green;</li>
+<li>$as-palette-success-contrast: $as-palette-bg;</li>
+<li>$as-palette-warn: $as-palette-pink;</li>
+<li>$as-palette-warn-contrast: $as-palette-bg;</li>
+<li>$as-palette-error: $as-palette-red;</li>
+<li>$as-palette-error-contrast: $as-palette-bg;</li>
+</ul>
+Branding
+<ul>
+<li>$as-palette-brand: $as-palette-blue;</li>
+<li>$as-palette-brand-contrast: $as-palette-fg;</li>
+<li>$as-palette-sidebar: $as-palette-blue-grey;</li>
+<li>$as-palette-sidebar-contrast: $as-palette-fg;</li>
+</ul>
+
+Usage
+
+<code>
+color: map-get($as-palette-grey, 500);
+</code>
+
+<h2>Named colors</h2>
+All material colors accompanied by handy classes
+
+<ul>
+<li><code>.as-color-{palette}-{variant}</code></li>
+<li><code>.as-bg-color-{palette}-{variant}</code></li>
+</ul>
+
+Also there are two generic colors for each palette
+
+<ul>
+<li><code>.as-color-{palette} : map-get($map, 500);</code></li>
+<li><code>.as-bgcolor-{palette}: map-get($map, 700);</code></li>
+</ul>
+
+Sample usage
+<textarea ui-codemirror ui-codemirror-opts="codemirror.html">
+<div class="as-bg-color-red as-color-white">
+</div>
+
+<div class="as-bg-color-red-200 as-color-white-dark">
+</div>
+
+<!--  Primary usage of these classes for angular directives like this-->
+<div class="as-color-red-{{level}}" ng-bind="percent"></div>
+</div>
+</textarea>
+</div></div>

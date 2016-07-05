@@ -1,0 +1,25 @@
+<div class="as-panel as-vscroll"><div class="as-text-panel">
+<h1 class="as-color-primary">Framework structure</h1>
+
+<p>Framework consist of core modules and component modules. You can disable or tune some of them via configuration variables.
+</p>
+
+<ul>
+	<li>init.scss</li>
+	<li>style.scss</li>
+</ul>
+
+<div ui-codemirror ui-codemirror-opts="codemirror.css">
+// Import initial variables like color palette, base units like $gutter, etc.
+@import "{path-to-foundation}/init.scss"
+
+// override default variables, configure grids and used modules
+$as-palette-primary: $as-palette-blue;
+$as-palette-primary-contrast: $as-palette-bg;
+
+@import "{path-to-foundation}/style.scss"
+
+// your css
+</div>
+
+</div></div>
