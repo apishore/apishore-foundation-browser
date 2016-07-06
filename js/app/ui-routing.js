@@ -89,10 +89,20 @@ docs.config([
 				templateUrl : window.apishoreConfig.webappRoot+'/modules/scrollable.html',
 				data: {breadcrumbTitle : 'scrollable'}
 			});
+			$stateProvider.state('root.modules.panel', {
+				url : "/panel",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/panel.html',
+				data: {breadcrumbTitle : 'scrollable'}
+			});
 			$stateProvider.state('root.modules.table_basic', {
 				url : "/table-basic",
-				templateUrl : window.apishoreConfig.webappRoot+'/modules/table-basic.html',
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/table/table-basic.html',
 				data: {breadcrumbTitle : 'Table: Basic'}
+			});
+			$stateProvider.state('root.modules.table_data', {
+				url : "/table-data",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/table/table-data.html',
+				data: {breadcrumbTitle : 'Table: Data'}
 			});
 
 //
