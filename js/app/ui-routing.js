@@ -89,6 +89,18 @@ docs.config([
 				templateUrl : window.apishoreConfig.webappRoot+'/modules/scrollable.html',
 				data: {breadcrumbTitle : 'scrollable'}
 			});
+			//TYPOGRAPHY
+			$stateProvider.state('root.modules.text_panel', {
+				url : "/text-panel",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/text-panel.html',
+				data: {breadcrumbTitle : 'Text panel'}
+			});
+			$stateProvider.state('root.modules.typography', {
+				url : "/typography",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/typography.html',
+				data: {breadcrumbTitle : 'Typography'}
+			});
+
 			$stateProvider.state('root.modules.panel', {
 				url : "/panel",
 				templateUrl : window.apishoreConfig.webappRoot+'/modules/panel.html',

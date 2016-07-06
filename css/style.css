@@ -6449,6 +6449,7 @@ body.as-vbox, .apishore-shift-menu body.apishore-shift-menu-inner, .as-device-pr
     margin-top: 5px; }
 
 .as-button .as-button-text {
+  letter-spacing: 0.010em;
   text-decoration: none;
   align-items: center;
   text-align: center;
@@ -7046,6 +7047,32 @@ body.as-vbox, .apishore-shift-menu body.apishore-shift-menu-inner, .as-device-pr
   from {
     -webkit-transform: rotate(360deg); } }
 
+.as-text-panel {
+  max-width: 1200px;
+  padding: 64px; }
+
+html, body {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+button,
+select,
+html,
+textarea,
+input {
+  font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+select,
+button,
+textarea,
+input {
+  font-size: 100%; }
+
 .as-device-wide-desktop .as-data-table {
   margin: 0px;
   padding: 0px;
@@ -7332,6 +7359,12 @@ body.as-vbox, .apishore-shift-menu body.apishore-shift-menu-inner, .as-device-pr
 
 .as-device-tablet .as-sidebar-top-menu-place {
   height: 64px; }
+
+.as-device-tablet .as-text-panel {
+  padding: 32px; }
+
+.as-device-phone .as-text-panel {
+  padding: 16px; }
 
 .as-device-phone-portrait .as-sidebar-top-menu-place {
   height: 56px; }
@@ -20253,11 +20286,6 @@ body.as-vbox, .apishore-shift-menu body.apishore-shift-menu-inner, .as-device-pr
   .as-device-desktop .as-document-title,
   .as-device-tablet .as-document-title {
     text-align: right; }
-  .as-device-wide-desktop .as-text-panel,
-  .as-device-desktop .as-text-panel,
-  .as-device-tablet .as-text-panel {
-    max-width: 1200px;
-    padding: 64px; }
   .as-device-wide-desktop .as-color-primary,
   .as-device-desktop .as-color-primary,
   .as-device-tablet .as-color-primary {
@@ -27672,9 +27700,6 @@ body.as-vbox, .apishore-shift-menu body.apishore-shift-menu-inner, .as-device-pr
     text-align: right; }
   .as-device-phone-portrait .as-document-title {
     text-align: right; }
-  .as-device-phone-portrait .as-text-panel {
-    max-width: 1200px;
-    padding: 64px; }
   .as-device-phone-portrait .as-color-primary {
     color: #2196F3; }
   .as-device-phone-portrait .as-color-red {
@@ -34611,9 +34636,6 @@ body.as-vbox, .apishore-shift-menu body.apishore-shift-menu-inner, .as-device-pr
     text-align: right; }
   .as-device-phone-landscape .as-document-title {
     text-align: right; }
-  .as-device-phone-landscape .as-text-panel {
-    max-width: 1200px;
-    padding: 64px; }
   .as-device-phone-landscape .as-color-primary {
     color: #2196F3; }
   .as-device-phone-landscape .as-color-red {
