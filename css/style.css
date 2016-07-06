@@ -7067,6 +7067,19 @@ body.as-vbox, .apishore-shift-menu body.apishore-shift-menu-inner, .as-device-pr
   max-width: 1200px;
   padding: 64px; }
 
+.as-text-left {
+  text-align: left; }
+
+.as-text-center {
+  text-align: center; }
+
+.as-text-right {
+  text-align: right; }
+
+.as-text-justify {
+  text-align: justify;
+  text-justify: inter-word; }
+
 html, body {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
@@ -20309,38 +20322,6 @@ input {
   .as-device-tablet .as-interactive-help-property-title {
     text-transform: none;
     font-weight: bold; }
-  .as-device-wide-desktop .as-text-left,
-  .as-device-desktop .as-text-left,
-  .as-device-tablet .as-text-left {
-    text-align: left; }
-  .as-device-wide-desktop .as-text-center,
-  .as-device-desktop .as-text-center,
-  .as-device-tablet .as-text-center {
-    text-align: center; }
-  .as-device-wide-desktop .as-text-right,
-  .as-device-desktop .as-text-right,
-  .as-device-tablet .as-text-right {
-    text-align: right; }
-  .as-device-wide-desktop .as-document-title,
-  .as-device-desktop .as-document-title,
-  .as-device-tablet .as-document-title {
-    text-align: right; }
-  .as-device-wide-desktop .as-color-primary,
-  .as-device-desktop .as-color-primary,
-  .as-device-tablet .as-color-primary {
-    color: #2196F3; }
-  .as-device-wide-desktop .as-color-red,
-  .as-device-desktop .as-color-red,
-  .as-device-tablet .as-color-red {
-    color: #F44336; }
-  .as-device-wide-desktop .as-color-green,
-  .as-device-desktop .as-color-green,
-  .as-device-tablet .as-color-green {
-    color: #4CAF50; }
-  .as-device-wide-desktop .as-color-orange,
-  .as-device-desktop .as-color-orange,
-  .as-device-tablet .as-color-orange {
-    color: #FF9800; }
   .as-device-wide-desktop code,
   .as-device-desktop code,
   .as-device-tablet code {
@@ -27728,22 +27709,6 @@ input {
   .as-device-phone-portrait .as-interactive-help-property-title {
     text-transform: none;
     font-weight: bold; }
-  .as-device-phone-portrait .as-text-left {
-    text-align: left; }
-  .as-device-phone-portrait .as-text-center {
-    text-align: center; }
-  .as-device-phone-portrait .as-text-right {
-    text-align: right; }
-  .as-device-phone-portrait .as-document-title {
-    text-align: right; }
-  .as-device-phone-portrait .as-color-primary {
-    color: #2196F3; }
-  .as-device-phone-portrait .as-color-red {
-    color: #F44336; }
-  .as-device-phone-portrait .as-color-green {
-    color: #4CAF50; }
-  .as-device-phone-portrait .as-color-orange {
-    color: #FF9800; }
   .as-device-phone-portrait code {
     background-color: #e8e8e8;
     color: #E65100;
@@ -34661,22 +34626,6 @@ input {
   .as-device-phone-landscape .as-interactive-help-property-title {
     text-transform: none;
     font-weight: bold; }
-  .as-device-phone-landscape .as-text-left {
-    text-align: left; }
-  .as-device-phone-landscape .as-text-center {
-    text-align: center; }
-  .as-device-phone-landscape .as-text-right {
-    text-align: right; }
-  .as-device-phone-landscape .as-document-title {
-    text-align: right; }
-  .as-device-phone-landscape .as-color-primary {
-    color: #2196F3; }
-  .as-device-phone-landscape .as-color-red {
-    color: #F44336; }
-  .as-device-phone-landscape .as-color-green {
-    color: #4CAF50; }
-  .as-device-phone-landscape .as-color-orange {
-    color: #FF9800; }
   .as-device-phone-landscape code {
     background-color: #e8e8e8;
     color: #E65100;

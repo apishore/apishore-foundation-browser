@@ -95,6 +95,11 @@ docs.config([
 				templateUrl : window.apishoreConfig.webappRoot+'/modules/text-panel.html',
 				data: {breadcrumbTitle : 'Text panel'}
 			});
+			$stateProvider.state('root.modules.text_align', {
+				url : "/text-align",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/text-align.html',
+				data: {breadcrumbTitle : 'Text alignment'}
+			});
 			$stateProvider.state('root.modules.typography', {
 				url : "/typography",
 				templateUrl : window.apishoreConfig.webappRoot+'/modules/typography.html',
