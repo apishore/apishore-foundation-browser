@@ -6895,6 +6895,18 @@ body.as-vbox, .apishore-shift-menu body.apishore-shift-menu-inner, .as-device-pr
     float: right;
     color: #fff; }
 
+.as-table-basic {
+  width: 100%; }
+  .as-table-basic > thead > tr > th {
+    border-bottom: solid 1px #E0E0E0;
+    padding: 8px;
+    color: #616161;
+    text-align: left; }
+  .as-table-basic > tbody > tr > td {
+    border-bottom: solid 1px #F5F5F5;
+    padding: 8px;
+    color: #616161; }
+
 .as-device-tablet .as-sidebar-top-menu-place {
   height: 64px; }
 

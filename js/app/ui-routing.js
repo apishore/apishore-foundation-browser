@@ -89,6 +89,11 @@ docs.config([
 				templateUrl : window.apishoreConfig.webappRoot+'/modules/scrollable.html',
 				data: {breadcrumbTitle : 'scrollable'}
 			});
+			$stateProvider.state('root.modules.table_basic', {
+				url : "/table-basic",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/table-basic.html',
+				data: {breadcrumbTitle : 'Table: Basic'}
+			});
 
 //
 //			//redirects

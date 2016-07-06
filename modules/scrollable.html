@@ -1,7 +1,10 @@
 <div class="as-panel as-vscroll">
 	<div class="as-text-panel">
-		<h1 class="as-color-primary">Scrollable</h1>
-		<table>
+		<h1 class="as-color-primary">Scrollable module</h1>
+		<p>
+		Module provides 3 scroll types.
+		</p>
+		<table class="as-table-basic">
 			<thead>
 				<tr>
 					<th>Class</th>
@@ -23,5 +26,21 @@
 				</tr>
 			</tbody>
 		</table>
+		
+		<h2>Modifiers</h2>
+		<p>
+		If you need custom scrollable, the best way is to create angular directive to handle custom scroll behavior.
+		</p>
+<textarea ui-codemirror ui-codemirror-opts="codemirror.javascript">
+angular.module("your-module").directive('asVscroll', function(taSelection, $timeout) {
+    return {
+        restrict : 'C',
+        scope: false,
+        link : function($scope, element, attrs) {
+            //TODO: configure custom scroll here
+        }
+    }
+});
+</textarea>
 	</div>
 </div>
