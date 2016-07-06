@@ -1,9 +1,12 @@
-<div class="as-panel as-vscroll" ng-init="common = {selectedId: null}">
+<div class="as-panel as-vscroll" ng-init="common = {selectedId: null}" ng-controller="tables">
 	<div class="as-text-panel">
 		<h1 class="as-color-primary">Data table module</h1>
 		<p>
 		Data table classes designed to provide high performance layout.
-		
+		</p>
+		<p>
+		Please note that samples below demonstrate CSS styles not generated components. Some helper javascript is injected to show 
+		behavior but real application will have own javascript to handle ui logic.
 		</p>
 		<h2>Simple data table</h2>
 		<p>
@@ -91,6 +94,42 @@
 				</tr>
 			</tbody>
 		</table>
-		</sample>		
+		</sample>
+		
+		<h2>Multi selection data table</h2>
+		<p>
+		Single selection data table shows checkboxes
+		</p>
+		<sample>
+		<table class="as-data-table" ng-init="sample3 = [{id:11, count: 12000, title:'Sample'},{id:12, count: 12123, title:'Sample'},{id:13, count: 87523, title:'Sample'}]">
+			<thead>
+				<tr class="as-data-table-thead-tr">
+					<td class="as-data-table-thead-th asa-checkbox">
+						<i class="material-icons as-data-table-not-selected-row-icon" ng-click="selectAll(sample3, true)" ng-if="!allSelected(sample3)">check_box_outline_blank</i>
+						<i class="material-icons as-data-table-selected-row-icon" ng-click="selectAll(sample3, false)" ng-if="allSelected(sample3)">check_box</i>
+					</td>
+					<th class="as-data-table-thead-th asa-left">ID</th>
+					<th class="as-data-table-thead-th asa-right">Count</th>
+					<th class="as-data-table-thead-th asa-left">Summary</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="as-data-table-tbody-tr"
+					ng-class="{'asa-selected': item.selected}"
+					ng-click="item.selected = !item.selected"
+					ng-repeat="item in sample3">
+					<td class="as-data-table-tbody-td asa-checkbox">
+						<i class="material-icons as-data-table-not-selected-row-icon" ng-if="!item.selected">check_box_outline_blank</i>
+						<i class="material-icons as-data-table-selected-row-icon" ng-if="item.selected">check_box</i>
+					</td>
+					<td class="as-data-table-tbody-td">#{{item.id}}</td>
+					<td class="as-data-table-tbody-td asa-right">{{item.count | number}}</td>
+					<td class="as-data-table-tbody-td">{{item.title}}</td>
+				</tr>
+			</tbody>
+		</table>
+		</sample>
+		
+			
 	</div>
 </div>
