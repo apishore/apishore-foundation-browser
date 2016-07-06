@@ -1,0 +1,11 @@
+<div>
+	<div class="as-hbox">
+		<a class="as-button asa-flat asa-primary" ng-click="sources = !sources">
+			<span class="as-button-text" ng-if="!sources">Show Sources</span>
+			<span class="as-button-text" ng-if="sources">Hide Sources</span>
+		</a>
+	</div>
+	<div class="source-code" ui-codemirror ng-model="code" ui-codemirror-opts="codemirror.html" ng-if="sources">
+	</div>
+	<div ng-transclude class="sample"></div>
+</div>

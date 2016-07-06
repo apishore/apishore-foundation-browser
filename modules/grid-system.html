@@ -8,9 +8,8 @@ Grid system supports any count of columns between 2 and 16. If you project requi
 </p>
 
 <h3>Sample</h3>
-<p>
 You can mix rows with different grid systems if you need.
-</p>
+<sample>
 <div class="as-grid-container as-grid-container-demo">
 	<div class="as-grid-row" ng-repeat="col in [1,2,3,4]">
 	  <div class="as-grid-cell asa-{{col}}-of-12 as-grid-cell-demo">
@@ -45,47 +44,7 @@ You can mix rows with different grid systems if you need.
 			takes rest of width</div>
 	</div>
 </div>
-
-<p>
-Source code
-</p>
-<textarea ui-codemirror ui-codemirror-opts="codemirror.html">
-<div class="as-grid-container as-grid-container-demo">
-	<div class="as-grid-row" ng-repeat="col in [1,2,3,4]">
-	  <div class="as-grid-cell asa-{{col}}-of-12 as-grid-cell-demo">
-	  {{col}}/12
-	  </div>
-	  <div class="as-grid-cell asa-{{12-col}}-of-12 as-grid-cell-demo">
-	  {{12-col}}/12
-	  </div>
-	</div>
-	<div class="as-grid-row" ng-repeat="col in [6,5,4,3]">
-	  <div class="as-grid-cell asa-{{col}}-of-7 as-grid-cell-demo">
-	  {{col}}/7
-	  </div>
-	  <div class="as-grid-cell asa-{{7-col}}-of-7 as-grid-cell-demo">
-	  {{7-col}}/7
-	  </div>
-	</div>
-	<div class="as-grid-row">
-		<div class="as-grid-cell asa-2-of-7 as-grid-cell-demo">
-			2/7</div>
-		<div class="as-grid-cell asa-2-of-9 as-grid-cell-demo">
-			2/9</div>
-		<div class="as-grid-cell asa-wide as-grid-cell-demo">
-			takes rest of width</div>
-	</div>
-	<div class="as-grid-row asa-grid-break-on-tablet">
-		<div class="as-grid-cell asa-2-of-7 as-grid-cell-demo">
-			2/7</div>
-		<div class="as-grid-cell asa-by-content as-grid-cell-demo">
-			content defines width</div>
-		<div class="as-grid-cell asa-wide as-grid-cell-demo">
-			takes rest of width</div>
-	</div>
-</div>
-</textarea>
-
+</sample>
 
 <h2>Breaking the grid</h2>
 <p>
@@ -94,7 +53,8 @@ Other grid systems allows to define cell width in depends on device mode.
 However, most of real life cases use it to break row with big number of elements into
 sub-rows. 
 <p>
-This demo shows how this approach works. Click on buttons to change local device mode. 
+This demo shows how this approach works. Click on buttons to change local device mode.
+<sample> 
 <div ng-init="deviceMode='desktop'">
 	<a ng-click="deviceMode='desktop'" class="as-button" ng-class="{'asa-primary': (deviceMode == 'desktop')}"><span class="as-button-text">Desktop mode</span></a>
 	<a ng-click="deviceMode='tablet'" class="as-button" ng-class="{'asa-primary': (deviceMode == 'tablet')}"><span class="as-button-text">Tablet mode</span></a>
@@ -141,23 +101,5 @@ This demo shows how this approach works. Click on buttons to change local device
 		</div>
 	</div>
 </div>
-<p>
-Source code
-</p>
-<textarea ui-codemirror ui-codemirror-opts="codemirror.html">
-<div class="as-grid-container as-grid-container-demo">
-		<div class="as-grid-row asa-grid-break-on-tablet">
-			<div class="as-grid-cell asa-3-of-7 as-grid-cell-demo">
-				Full name</div>
-			<div class="as-grid-cell asa-4-of-7">
-				<div class="as-grid-row asa-grid-break-on-phone">
-					<div class="as-grid-cell asa-3-of-7 as-grid-cell-demo">
-						Title</div>
-					<div class="as-grid-cell asa-4-of-7 as-grid-cell-demo">
-						Age
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+</sample>
 </div></div>
