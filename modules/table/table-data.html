@@ -1,11 +1,14 @@
-<div class="as-panel as-vscroll">
+<div class="as-panel as-vscroll" ng-init="common = {selectedId: null}">
 	<div class="as-text-panel">
 		<h1 class="as-color-primary">Data table module</h1>
 		<p>
 		Data table classes designed to provide high performance layout.
 		
 		</p>
-		
+		<h2>Simple data table</h2>
+		<p>
+		Simple data table shows data according material guidelines.
+		</p>
 		<sample>
 		<table class="as-data-table">
 			<thead>
@@ -16,23 +19,78 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr class="as-data-table-tbody-tr">
-					<td class="as-data-table-tbody-td">#1</td>
-					<td class="as-data-table-tbody-td asa-right">12,000</td>
-					<td class="as-data-table-tbody-td">Sample data</td>
-				</tr>
-				<tr class="as-data-table-tbody-tr">
-					<td class="as-data-table-tbody-td">#2</td>
-					<td class="as-data-table-tbody-td asa-right">1,249</td>
-					<td class="as-data-table-tbody-td">Sample data</td>
-				</tr>
-				<tr class="as-data-table-tbody-tr">
-					<td class="as-data-table-tbody-td">#3</td>
-					<td class="as-data-table-tbody-td asa-right">980,956</td>
-					<td class="as-data-table-tbody-td">Sample data</td>
+				<tr class="as-data-table-tbody-tr"
+					ng-class="{'asa-selected': common.selectedId == item.id}"
+					ng-click="common.selectedId = item.id"
+					ng-repeat="item in [{id:1, count: 12000, title:'Sample'},{id:2, count: 12123, title:'Sample'},{id:3, count: 87523, title:'Sample'}]">
+					<td class="as-data-table-tbody-td">#{{item.id}}</td>
+					<td class="as-data-table-tbody-td asa-right">{{item.count | number}}</td>
+					<td class="as-data-table-tbody-td">{{item.title}}</td>
 				</tr>
 			</tbody>
 		</table>
 		</sample>
+		
+		<h2>Single selection data table</h2>
+		<p>
+		Single selection data table shows checkboxes
+		</p>
+		<sample>
+		<table class="as-data-table">
+			<thead>
+				<tr class="as-data-table-tbody-tr">
+					<th class="as-data-table-thead-th asa-checkbox"></th>
+					<th class="as-data-table-thead-th asa-left">ID</th>
+					<th class="as-data-table-thead-th asa-right">Count</th>
+					<th class="as-data-table-thead-th asa-left">Summary</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="as-data-table-tbody-tr"
+					ng-class="{'asa-selected': common.selectedId == item.id}"
+					ng-click="common.selectedId = item.id"
+					ng-repeat="item in [{id:11, count: 12000, title:'Sample'},{id:12, count: 12123, title:'Sample'},{id:13, count: 87523, title:'Sample'}]">
+					<td class="as-data-table-tbody-td asa-checkbox">
+						<i class="material-icons as-data-table-not-selected-row-icon" ng-if="common.selectedId != item.id">check_box_outline_blank</i>
+						<i class="material-icons as-data-table-selected-row-icon" ng-if="common.selectedId == item.id">check_box</i>
+					</td>
+					<td class="as-data-table-tbody-td">#{{item.id}}</td>
+					<td class="as-data-table-tbody-td asa-right">{{item.count | number}}</td>
+					<td class="as-data-table-tbody-td">{{item.title}}</td>
+				</tr>
+			</tbody>
+		</table>
+		</sample>
+		
+		<h2>Single selection data table</h2>
+		<p>
+		Variation of table with radio buttons instead of checkboxes
+		</p>
+		<sample>
+		<table class="as-data-table">
+			<thead>
+				<tr class="as-data-table-tbody-tr">
+					<th class="as-data-table-thead-th asa-checkbox"></th>
+					<th class="as-data-table-thead-th asa-left">ID</th>
+					<th class="as-data-table-thead-th asa-right">Count</th>
+					<th class="as-data-table-thead-th asa-left">Summary</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="as-data-table-tbody-tr"
+					ng-class="{'asa-selected': common.selectedId == item.id}"
+					ng-click="common.selectedId = item.id"
+					ng-repeat="item in [{id:11, count: 12000, title:'Sample'},{id:12, count: 12123, title:'Sample'},{id:13, count: 87523, title:'Sample'}]">
+					<td class="as-data-table-tbody-td asa-checkbox">
+						<i class="material-icons as-data-table-not-selected-row-icon" ng-if="common.selectedId != item.id">radio_button_unchecked</i>
+						<i class="material-icons as-data-table-selected-row-icon" ng-if="common.selectedId == item.id">radio_button_checked</i>
+					</td>
+					<td class="as-data-table-tbody-td">#{{item.id}}</td>
+					<td class="as-data-table-tbody-td asa-right">{{item.count | number}}</td>
+					<td class="as-data-table-tbody-td">{{item.title}}</td>
+				</tr>
+			</tbody>
+		</table>
+		</sample>		
 	</div>
 </div>

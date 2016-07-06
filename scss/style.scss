@@ -1,0 +1,44 @@
+///
+/// Initial import of variables and mixins
+///
+@import "../../apishore-foundation-browser/init";
+
+///
+/// Override default variables to customize look and feel.
+///
+$as-palette-bg: $as-palette-white;
+$as-palette-fg: $as-palette-black;
+$as-palette-dev: $as-palette-red;
+$as-palette-sidebar: $as-palette-blue-grey;
+
+$as-palette-primary: $as-palette-blue;
+$as-palette-primary-contrast: $as-palette-bg;
+
+$as-palette-secondary: $as-palette-blue-grey;
+$as-palette-secondary-contrast: $as-palette-bg;
+
+$as-palette-brand: $as-palette-red;
+
+$as-palette-accent: $as-palette-blue;
+$as-palette-accent-contrast: $as-palette-bg;
+
+$as-palette-warn: $as-palette-pink;
+$as-palette-warn-contrast: $as-palette-bg;
+
+$as-palette-error: $as-palette-red;
+$as-palette-error-contrast: $as-palette-bg;
+
+$as-dialog-bg-color: map-get($as-palette-bg, darker);
+
+$brand-bg: map-get($as-palette-primary, 500);
+
+$as-appbar-bg-color: #fff;
+
+@debug "primary palette is #{map-get($as-palette-primary, 500)}";
+
+///
+/// All styles
+///
+@import "../../apishore-foundation-browser/style";
+
+@debug "primary palette is #{map-get($as-palette-primary, 500)}";
