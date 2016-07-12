@@ -146,17 +146,7 @@ docs.config([
 			$stateProvider.state('root.modules.button_dropdown', {
 				url : "/button-dropdown",
 				templateUrl : window.apishoreConfig.webappRoot+'/modules/button-dropdown.html',
-				data: {breadcrumbTitle : 'Buttons'}
-			});
-			$stateProvider.state('root.modules.button_dropdown', {
-				url : "/button-dropdown",
-				templateUrl : window.apishoreConfig.webappRoot+'/modules/button-dropdown.html',
-				data: {breadcrumbTitle : 'Buttons'}
-			});
-			$stateProvider.state('root.modules.button_fa', {
-				url : "/button-fa",
-				templateUrl : window.apishoreConfig.webappRoot+'/modules/button-fa.html',
-				data: {breadcrumbTitle : 'Floating actions'}
+				data: {breadcrumbTitle : 'Drop down buttons'}
 			});
 			$stateProvider.state('root.modules.button_fa', {
 				url : "/button-fa",
@@ -180,20 +170,10 @@ docs.config([
 				templateUrl : window.apishoreConfig.webappRoot+'/modules/chips.html',
 				data: {breadcrumbTitle : 'Chips'}
 			});
-			$stateProvider.state('root.modules.chips', {
-				url : "/chips",
-				templateUrl : window.apishoreConfig.webappRoot+'/modules/chips.html',
-				data: {breadcrumbTitle : 'Chips'}
-			});
 			$stateProvider.state('root.modules.control_checkbox', {
 				url : "/control-checkbox",
 				templateUrl : window.apishoreConfig.webappRoot+'/modules/control-checkbox.html',
-				data: {breadcrumbTitle : 'Chips'}
-			});
-			$stateProvider.state('root.modules.control_radio', {
-				url : "/control-radio",
-				templateUrl : window.apishoreConfig.webappRoot+'/modules/control-radio.html',
-				data: {breadcrumbTitle : 'Checkbox'}
+				data: {breadcrumbTitle : 'Checkboxes'}
 			});
 			$stateProvider.state('root.modules.control_radio', {
 				url : "/control-radio",
@@ -218,17 +198,7 @@ docs.config([
 			$stateProvider.state('root.modules.control_time', {
 				url : "/control-time",
 				templateUrl : window.apishoreConfig.webappRoot+'/modules/control-time.html',
-				data: {breadcrumbTitle : 'Date pickers'}
-			});
-			$stateProvider.state('root.modules.control_time', {
-				url : "/control-time",
-				templateUrl : window.apishoreConfig.webappRoot+'/modules/control-time.html',
 				data: {breadcrumbTitle : 'Time pickers'}
-			});
-			$stateProvider.state('root.modules.control_slider', {
-				url : "/control-slider",
-				templateUrl : window.apishoreConfig.webappRoot+'/modules/control-slider.html',
-				data: {breadcrumbTitle : 'Sliders'}
 			});
 			$stateProvider.state('root.modules.control_slider', {
 				url : "/control-slider",
@@ -258,17 +228,23 @@ docs.config([
 				templateUrl : window.apishoreConfig.webappRoot+'/modules/list.html',
 				data: {breadcrumbTitle : 'Normal lists'}
 			});
-			$stateProvider.state('root.modules.list-small', {
+			$stateProvider.state('root.modules.list_small', {
 				url : "/list-small",
 				templateUrl : window.apishoreConfig.webappRoot+'/modules/list-small.html',
 				data: {breadcrumbTitle : 'Small lists'}
 			});
 			//menus
-			$stateProvider.state('root.modules.menu-popup', {
+			$stateProvider.state('root.modules.menu_popup', {
 				url : "/menu-popup",
 				templateUrl : window.apishoreConfig.webappRoot+'/modules/menu-popup.html',
 				data: {breadcrumbTitle : 'Popup menus'}
 			});
+			$stateProvider.state('root.modules.menu_text_panel', {
+				url : "/menu-text-panel",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/menu-text-panel.html',
+				data: {breadcrumbTitle : 'Text panel top menu'}
+			});
+			
 			$stateProvider.state('root.modules.menu_bar', {
 				url : "/menu-context",
 				templateUrl : window.apishoreConfig.webappRoot+'/modules/menu-bar.html',
@@ -301,11 +277,6 @@ docs.config([
 				url : "/subheader",
 				templateUrl : window.apishoreConfig.webappRoot+'/modules/subheader.html',
 				data: {breadcrumbTitle : 'Subheaders'}
-			});
-			$stateProvider.state('root.modules.tab', {
-				url : "/tab",
-				templateUrl : window.apishoreConfig.webappRoot+'/modules/tab.html',
-				data: {breadcrumbTitle : 'Tabs'}
 			});
 			$stateProvider.state('root.modules.tab', {
 				url : "/tab",

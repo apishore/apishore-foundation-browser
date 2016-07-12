@@ -230,6 +230,11 @@
                         </a> 
                     </li>
                     <li class="as-sidebar-menu-item">
+                        <a ui-sref="root.modules.menu_text_panel">
+                            <span class="as-sidebar-menu-item-title">Text panel top menu</span> 
+                        </a> 
+                    </li>
+                    <li class="as-sidebar-menu-item">
                         <a ui-sref="root.modules.menu_bar">
                             <span class="as-sidebar-menu-item-title">Menu bar</span> 
                         </a> 
@@ -305,7 +310,27 @@
     </apishore-shift-menu> 
     <apishore-shift-content>
     	<div class="as-vbox as-panel">
-    		<div class=""></div>
+    		<div class="as-text-panel-top-menu as-hbox">
+    			<a class="as-text-panel-top-menu-icon asd-phone" ng-click="sidebar.toggle()">
+	    			<i class="material-icons">menu</i>
+    			</a>
+    			<div class="as-text-panel-top-menu-header as-cell-wide">
+    			{CSS Framework}
+    			</div>
+    			<!-- 
+    			<a class="as-text-panel-top-menu-icon" ng-click="forceMode('desktop')">
+	    			<i class="material-icons">desktop_mac</i>
+				</a>
+    			<a class="as-text-panel-top-menu-icon" ng-click="forceMode('tablet')">
+	    			<i class="material-icons">tablet</i>
+				</a>
+    			<a class="as-text-panel-top-menu-icon" ng-click="forceMode('phone-portrait')">
+	    			<i class="material-icons">smartphone</i>
+				</a>
+    			<a class="as-text-panel-top-menu-icon" ng-click="forceMode('phone-landscape')">
+	    			<i class="material-icons">smartphone</i>
+				</a> -->
+    		</div>
 	        <div class="ui-view as-cell-wide"></div> 
     	</div>
     </apishore-shift-content> 

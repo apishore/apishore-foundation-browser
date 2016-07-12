@@ -7065,7 +7065,25 @@ body.as-vbox, .apishore-shift-menu body.apishore-shift-menu-inner, .as-device-pr
 
 .as-text-panel {
   max-width: 1200px;
-  padding: 64px; }
+  padding: 64px;
+  padding-top: 32px; }
+
+.as-text-panel-top-menu {
+  max-width: 1200px; }
+
+.as-text-panel-top-menu-sidebar-icon {
+  display: none; }
+
+.as-text-panel-top-menu-icon {
+  width: 56px;
+  line-height: 56px;
+  text-align: center;
+  margin-left: 1px; }
+
+.as-text-panel-top-menu-header {
+  padding-top: 8px;
+  color: #F44336;
+  font-size: 18px; }
 
 .as-text-left {
   text-align: left; }
@@ -7418,14 +7436,43 @@ input {
 .as-device-desktop .as-data-table-tbody-tr:hover .as-data-table-tbody-td {
   background-color: #EEEEEE; }
 
+.as-device-desktop .as-text-panel-top-menu {
+  padding-left: 64px;
+  -border-bottom: solid 1px #F5F5F5;
+  height: 52px; }
+
+.as-device-desktop .as-text-panel-top-menu-header {
+  padding-top: 17px; }
+
 .as-device-tablet .as-sidebar-top-menu-place {
   height: 64px; }
 
 .as-device-tablet .as-text-panel {
   padding: 32px; }
 
+.as-device-tablet .as-text-panel-top-menu {
+  padding-left: 32px; }
+
 .as-device-phone .as-text-panel {
   padding: 16px; }
+
+.as-device-phone .as-text-panel-top-menu {
+  background-color: #F5F5F5; }
+
+.as-device-phone .as-text-panel-top-menu-sidebar-icon {
+  display: inline-block;
+  margin-right: 16px; }
+
+.as-device-phone .as-text-panel-top-menu-icon {
+  width: 52px;
+  line-height: 52px;
+  text-align: center;
+  margin-left: 1px; }
+
+.as-device-phone .as-text-panel-top-menu-header {
+  padding-top: 8px;
+  color: #F44336;
+  font-size: 18px; }
 
 .as-device-phone-portrait .as-sidebar-top-menu-place {
   height: 56px; }

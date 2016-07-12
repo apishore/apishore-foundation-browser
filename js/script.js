@@ -15873,6 +15873,9 @@ docs.run([ '$rootScope', '$state', '$stateParams','$location','$anchorScroll','a
         // active.
         window.scrollTo(0,1);
         var defaultSidebarShow = false;
+        $rootScope.topMenu = {
+        	title: ""
+        };
         $rootScope.$state = $state;
         $rootScope.$stateParams = $stateParams;
         $rootScope.stateParams = $stateParams;
@@ -16015,6 +16018,59 @@ docs.run([ '$rootScope', '$state', '$stateParams','$location','$anchorScroll','a
             $state.go('error.unknown');
         });
         $rootScope.$on("$stateChangeError", console.error.bind(console));
+        $rootScope.forceMode = function(mode)
+        {
+        	if(mode == 'default')
+        	{
+        		$rootScope.setMode();
+        		return;
+        	}
+        	var di = $rootScope.asDevice = {};
+        	var b = $('body');
+        	b.removeClass('as-device-phone as-device-tablet as-device-desktop as-device-wide-desktop as-device-phone-portrait as-device-phone-landscape');
+        	di.isPhone = false;
+        	di.isTablet = false;
+        	di.isDesktop = false;
+        	di.isPhoneLandscape = false;
+        	di.isPhonePortrait = false;
+        	switch(mode)
+        	{
+        		case 'desktop':
+        		{
+        	        b.addClass('as-device-desktop as-device-emulation');
+        	    	di.isDesktop = true;
+        	    	return;
+        		}
+        		case 'wide-desktop':
+        		{
+        	        b.addClass('as-device-wide-desktop as-device-emulation');
+        	    	di.isDesktop = true;
+        	    	return;
+        		}
+        		case 'tablet':
+        		{
+        	        b.addClass('as-device-tablet as-device-emulation');
+        	    	di.isTablet = true;
+        	    	return;
+        		}
+        		case 'phone-portrait':
+        		{
+        	        b.addClass('as-device-phone as-device-emulation');
+        	    	di.isPhone = true;
+        	    	di.isPhonePortrait = true;
+        	    	return;
+        		}
+        		case 'phone-landscape':
+        		{
+        	        b.addClass('as-device-phone as-device-emulation');
+        	    	di.isPhone = true;
+        	    	di.isPhonePortrait = true;
+        	    	return;
+        		}
+        	};
+    		$rootScope.setMode();
+        }
+        
     } ]);
 
 
@@ -16170,7 +16226,181 @@ docs.config([
 				templateUrl : window.apishoreConfig.webappRoot+'/modules/table/table-data.html',
 				data: {breadcrumbTitle : 'Table: Data'}
 			});
-
+			//navigation
+			$stateProvider.state('root.modules.bottom_navigation', {
+				url : "/bottom-navigation",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/bottom-navigation.html',
+				data: {breadcrumbTitle : 'Bottom navigation'}
+			});
+			$stateProvider.state('root.modules.bottom_sheets', {
+				url : "/bottom-sheets",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/bottom-sheets.html',
+				data: {breadcrumbTitle : 'Bottom navigation'}
+			});
+			$stateProvider.state('root.modules.sidebar', {
+				url : "/sidebar",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/sidebar.html',
+				data: {breadcrumbTitle : 'Sidebar'}
+			});
+			//actions
+			$stateProvider.state('root.modules.button', {
+				url : "/button",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/button.html',
+				data: {breadcrumbTitle : 'Buttons'}
+			});
+			$stateProvider.state('root.modules.button_dropdown', {
+				url : "/button-dropdown",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/button-dropdown.html',
+				data: {breadcrumbTitle : 'Drop down buttons'}
+			});
+			$stateProvider.state('root.modules.button_fa', {
+				url : "/button-fa",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/button-fa.html',
+				data: {breadcrumbTitle : 'Floating actions'}
+			});
+			//cards
+			$stateProvider.state('root.modules.card_layout', {
+				url : "/card-layout",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/card-layout.html',
+				data: {breadcrumbTitle : 'Card lyouts'}
+			});
+			$stateProvider.state('root.modules.card', {
+				url : "/card",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/card.html',
+				data: {breadcrumbTitle : 'Cards'}
+			});
+			//controls
+			$stateProvider.state('root.modules.chips', {
+				url : "/chips",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/chips.html',
+				data: {breadcrumbTitle : 'Chips'}
+			});
+			$stateProvider.state('root.modules.control_checkbox', {
+				url : "/control-checkbox",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/control-checkbox.html',
+				data: {breadcrumbTitle : 'Checkboxes'}
+			});
+			$stateProvider.state('root.modules.control_radio', {
+				url : "/control-radio",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/control-radio.html',
+				data: {breadcrumbTitle : 'Radio'}
+			});
+			$stateProvider.state('root.modules.control_input', {
+				url : "/control-input",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/control-input.html',
+				data: {breadcrumbTitle : 'Text input'}
+			});
+			$stateProvider.state('root.modules.control_select', {
+				url : "/control-select",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/control-select.html',
+				data: {breadcrumbTitle : 'Select/dropdown'}
+			});
+			$stateProvider.state('root.modules.control_date', {
+				url : "/control-date",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/control-date.html',
+				data: {breadcrumbTitle : 'Date pickers'}
+			});
+			$stateProvider.state('root.modules.control_time', {
+				url : "/control-time",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/control-time.html',
+				data: {breadcrumbTitle : 'Time pickers'}
+			});
+			$stateProvider.state('root.modules.control_slider', {
+				url : "/control-slider",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/control-slider.html',
+				data: {breadcrumbTitle : 'Sliders'}
+			});
+			//dialogs
+			$stateProvider.state('root.modules.dialog', {
+				url : "/dialog",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/dialog.html',
+				data: {breadcrumbTitle : 'Dialog'}
+			});
+			$stateProvider.state('root.modules.dialog_inplace', {
+				url : "/dialog-inplace",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/dialog-inplace.html',
+				data: {breadcrumbTitle : 'Inplace Dialog'}
+			});
+			//panels
+			$stateProvider.state('root.modules.expansion_panel', {
+				url : "/expansion-panel",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/expansion-panel.html',
+				data: {breadcrumbTitle : 'Expansion Panels'}
+			});
+			//lists
+			$stateProvider.state('root.modules.list', {
+				url : "/list",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/list.html',
+				data: {breadcrumbTitle : 'Normal lists'}
+			});
+			$stateProvider.state('root.modules.list_small', {
+				url : "/list-small",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/list-small.html',
+				data: {breadcrumbTitle : 'Small lists'}
+			});
+			//menus
+			$stateProvider.state('root.modules.menu_popup', {
+				url : "/menu-popup",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/menu-popup.html',
+				data: {breadcrumbTitle : 'Popup menus'}
+			});
+			$stateProvider.state('root.modules.menu_text_panel', {
+				url : "/menu-text-panel",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/menu-text-panel.html',
+				data: {breadcrumbTitle : 'Text panel top menu'}
+			});
+			
+			$stateProvider.state('root.modules.menu_bar', {
+				url : "/menu-context",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/menu-bar.html',
+				data: {breadcrumbTitle : 'Menu bar'}
+			});
+			//progress & activity
+			$stateProvider.state('root.modules.progress', {
+				url : "/progress",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/progress.html',
+				data: {breadcrumbTitle : 'Progress'}
+			});
+			$stateProvider.state('root.modules.activity', {
+				url : "/activity",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/activity.html',
+				data: {breadcrumbTitle : 'Activity'}
+			});
+			//workflows
+			$stateProvider.state('root.modules.stepper', {
+				url : "/stepper",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/stepper.html',
+				data: {breadcrumbTitle : 'Steppers'}
+			});
+			$stateProvider.state('root.modules.wizard', {
+				url : "/wizard",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/wizard.html',
+				data: {breadcrumbTitle : 'Wizards'}
+			});
+			//headers
+			$stateProvider.state('root.modules.subheader', {
+				url : "/subheader",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/subheader.html',
+				data: {breadcrumbTitle : 'Subheaders'}
+			});
+			$stateProvider.state('root.modules.tab', {
+				url : "/tab",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/tab.html',
+				data: {breadcrumbTitle : 'Tabs'}
+			});
+			$stateProvider.state('root.modules.toolbar', {
+				url : "/toolbar",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/toolbar.html',
+				data: {breadcrumbTitle : 'Toolbars'}
+			});
+			$stateProvider.state('root.modules.tooltip', {
+				url : "/tooltip",
+				templateUrl : window.apishoreConfig.webappRoot+'/modules/tooltip.html',
+				data: {breadcrumbTitle : 'Tooltips'}
+			});
+			
+			
+			
 //
 //			//redirects
 			$urlRouterProvider.otherwise('/docs');
