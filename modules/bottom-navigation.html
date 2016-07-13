@@ -1,7 +1,8 @@
 <div class="as-panel as-vscroll">
 	<div class="as-text-panel">
 		<h1 class="as-color-primary">Bottom navigation</h1>
-		<p>Module provides two panel classes</p>
+		<p>Module provides classes to support material styled <a href="https://material.google.com/components/bottom-navigation.html">bottom navigation</a>
+		component</p>
 		<table class="as-table-basic">
 			<thead>
 				<tr>
@@ -11,7 +12,7 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>.as-panel</td>
+					<td>.as-bottom-navigation-container</td>
 					<td>Takes entire width and height of parent</td>
 				</tr>
 				<tr>
@@ -20,5 +21,40 @@
 				</tr>
 			</tbody>
 		</table>
+		<sample>
+		<div class="as-bottom-navigation-container">
+			<div class="as-bottom-navigation-content asd-content-panel" style="height: 400px;">
+			Content
+			</div>
+			<div class="as-bottom-navigation-bar">
+				<div class="as-bottom-navigation-action">
+					<div class="as-bottom-navigation-action-icon">
+					<i class="material-icons">history</i>
+					</div>
+					<div class="as-bottom-navigation-action-label">
+					Recent
+					</div>
+				</div>
+				<div class="as-bottom-navigation-action asa-selected">
+					<div class="as-bottom-navigation-action-icon">
+					<i class="material-icons">favorite</i>
+					</div>
+					<div class="as-bottom-navigation-action-label">
+					Favorites
+					</div>
+				</div>
+				<div class="as-bottom-navigation-action">
+					<div class="as-bottom-navigation-action-icon">
+					<i class="material-icons">pets</i>
+					</div>
+					<div class="as-bottom-navigation-action-label">
+					Pets
+					</div>
+				</div>
+				<div class="as-bottom-navigation-bar-space">
+				</div>
+			</div>
+		</div>
+		</sample>
 	</div>
 </div>

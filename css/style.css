@@ -5964,11 +5964,7 @@ input {
 .as-scroll, .as-device-demo.as-device-desktop .as-device-demo-inner, .as-device-demo.as-device-tablet .as-device-demo-inner, .as-device-demo.as-device-phone-portrait .as-device-demo-inner, .as-device-demo.as-device-phone-landscape .as-device-demo-inner {
   overflow: scroll; }
 
-.as-vbox, .apishore-shift-menu .apishore-shift-menu-inner, .as-device-preview .as-bottom-navigation-bar,
-.as-device-wide-desktop .as-bottom-navigation-bar,
-.as-device-desktop .as-bottom-navigation-bar, .as-device-tablet .as-bottom-navigation-contaner,
-.as-device-phone-portrait .as-bottom-navigation-contaner,
-.as-device-phone-landscape .as-bottom-navigation-contaner, .as-device-wide-desktop .as-bottom-sheet-grid-item,
+.as-vbox, .apishore-shift-menu .apishore-shift-menu-inner, .as-device-wide-desktop .as-bottom-navigation-bar, .as-device-desktop .as-bottom-navigation-bar, .as-device-tablet .as-bottom-navigation-container, .as-device-phone .as-bottom-navigation-container, .as-device-wide-desktop .as-bottom-sheet-grid-item,
 .as-device-desktop .as-bottom-sheet-grid-item,
 .as-device-tablet .as-bottom-sheet-grid-item,
 .as-device-phone-portrait .as-bottom-sheet-grid-item,
@@ -5991,11 +5987,7 @@ input {
   flex-direction: column;
   align-items: stretch; }
 
-body.as-vbox, .apishore-shift-menu body.apishore-shift-menu-inner, .as-device-preview body.as-bottom-navigation-bar,
-.as-device-wide-desktop body.as-bottom-navigation-bar,
-.as-device-desktop body.as-bottom-navigation-bar, .as-device-tablet body.as-bottom-navigation-contaner,
-.as-device-phone-portrait body.as-bottom-navigation-contaner,
-.as-device-phone-landscape body.as-bottom-navigation-contaner, .as-device-wide-desktop body.as-bottom-sheet-grid-item,
+body.as-vbox, .apishore-shift-menu body.apishore-shift-menu-inner, .as-device-wide-desktop body.as-bottom-navigation-bar, .as-device-desktop body.as-bottom-navigation-bar, .as-device-tablet body.as-bottom-navigation-container, .as-device-phone body.as-bottom-navigation-container, .as-device-wide-desktop body.as-bottom-sheet-grid-item,
 .as-device-desktop body.as-bottom-sheet-grid-item,
 .as-device-tablet body.as-bottom-sheet-grid-item,
 .as-device-phone-portrait body.as-bottom-sheet-grid-item,
@@ -6015,9 +6007,7 @@ body.as-vbox, .apishore-shift-menu body.apishore-shift-menu-inner, .as-device-pr
   min-height: 100vh;
   overflow: hidden; }
 
-.as-hbox, .as-button, .as-device-tablet .as-bottom-navigation-bar,
-.as-device-phone-portrait .as-bottom-navigation-bar,
-.as-device-phone-landscape .as-bottom-navigation-bar, .as-device-wide-desktop .as-bottom-sheet-list-item,
+.as-hbox, .as-button, .as-device-tablet .as-bottom-navigation-bar, .as-device-phone .as-bottom-navigation-bar, .as-device-wide-desktop .as-bottom-sheet-list-item,
 .as-device-desktop .as-bottom-sheet-list-item,
 .as-device-tablet .as-bottom-sheet-list-item,
 .as-device-phone-portrait .as-bottom-sheet-list-item,
@@ -6100,9 +6090,7 @@ body.as-vbox, .apishore-shift-menu body.apishore-shift-menu-inner, .as-device-pr
   flex-direction: row;
   align-items: stretch; }
 
-.as-cell-fixed, .as-button .as-button-icon, .as-device-preview .as-bottom-navigation-action,
-.as-device-wide-desktop .as-bottom-navigation-action,
-.as-device-desktop .as-bottom-navigation-action, .as-device-wide-desktop .as-bottom-sheet-list-item-icon,
+.as-cell-fixed, .as-button .as-button-icon, .as-device-wide-desktop .as-bottom-navigation-action, .as-device-desktop .as-bottom-navigation-action, .as-device-wide-desktop .as-bottom-sheet-list-item-icon,
 .as-device-desktop .as-bottom-sheet-list-item-icon,
 .as-device-tablet .as-bottom-sheet-list-item-icon,
 .as-device-phone-portrait .as-bottom-sheet-list-item-icon,
@@ -6195,11 +6183,7 @@ body.as-vbox, .apishore-shift-menu body.apishore-shift-menu-inner, .as-device-pr
  	 */
   flex-shrink: 0; }
 
-.as-cell-wide, .as-button .as-button-text, .as-device-demo, .as-bottom-navigation-content, .as-device-preview .as-bottom-navigation-bar-space,
-.as-device-wide-desktop .as-bottom-navigation-bar-space,
-.as-device-desktop .as-bottom-navigation-bar-space, .as-device-tablet .as-bottom-navigation-action,
-.as-device-phone-portrait .as-bottom-navigation-action,
-.as-device-phone-landscape .as-bottom-navigation-action, .as-device-wide-desktop .as-bottom-sheet-list-item-label,
+.as-cell-wide, .as-button .as-button-text, .as-bottom-navigation-content, .as-device-wide-desktop .as-bottom-navigation-bar-space, .as-device-desktop .as-bottom-navigation-bar-space, .as-device-tablet .as-bottom-navigation-action, .as-device-phone .as-bottom-navigation-action, .as-device-demo, .as-device-wide-desktop .as-bottom-sheet-list-item-label,
 .as-device-desktop .as-bottom-sheet-list-item-label,
 .as-device-tablet .as-bottom-sheet-list-item-label,
 .as-device-phone-portrait .as-bottom-sheet-list-item-label,
@@ -6263,7 +6247,7 @@ body.as-vbox, .apishore-shift-menu body.apishore-shift-menu-inner, .as-device-pr
   position: relative;
   flex: 1 0 auto; }
 
-.as-panel, .apishore-shift-menu .apishore-shift-menu-inner, .as-device-demo.as-device-preview .as-device-demo-outer, .as-device-demo.as-device-preview .as-device-demo-inner, .as-bottom-navigation-contaner, .as-device-wide-desktop .as-grid-list-tile-bg,
+.as-panel, .apishore-shift-menu .apishore-shift-menu-inner, .as-bottom-navigation-container, .as-device-demo.as-device-preview .as-device-demo-outer, .as-device-demo.as-device-preview .as-device-demo-inner, .as-device-wide-desktop .as-grid-list-tile-bg,
 .as-device-desktop .as-grid-list-tile-bg,
 .as-device-tablet .as-grid-list-tile-bg, .as-device-wide-desktop .as-form,
 .as-device-desktop .as-form,
@@ -7120,6 +7104,37 @@ textarea,
 input {
   font-size: 100%; }
 
+.as-bottom-navigation-bar {
+  -webkit-user-select: none;
+  -webkit-user-select: none;
+  user-select: none; }
+
+.as-bottom-navigation-bar-space {
+  background-color: #F5F5F5; }
+
+.as-bottom-navigation-action {
+  color: #9E9E9E;
+  background-color: #F5F5F5;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 6px;
+  text-align: center;
+  min-width: 80px;
+  cursor: pointer; }
+  .as-bottom-navigation-action:hover, .as-bottom-navigation-action.asa-selected {
+    color: #2196F3;
+    padding-top: 6px;
+    font-size: 14px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .as-bottom-navigation-action:hover .as-bottom-navigation-action-label, .as-bottom-navigation-action.asa-selected .as-bottom-navigation-action-label {
+      font-size: 14px; }
+
+.as-bottom-navigation-action-label {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 12px; }
+
 .as-device-wide-desktop .as-data-table {
   margin: 0px;
   padding: 0px;
@@ -7277,6 +7292,67 @@ input {
 
 .as-device-wide-desktop .as-data-table-tbody-tr:hover .as-data-table-tbody-td {
   background-color: #EEEEEE; }
+
+.as-device-wide-desktop .as-bottom-navigation-container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row-reverse;
+  align-items: stretch; }
+
+.as-device-wide-desktop .as-bottom-navigation-bar {
+  width: 64px; }
+
+.as-device-wide-desktop .as-bottom-navigation-action {
+  width: 64px;
+  min-width: 64px;
+  height: 64px;
+  padding-left: 20px;
+  padding-top: 20px;
+  cursor: pointer; }
+  .as-device-wide-desktop .as-bottom-navigation-action:hover, .as-device-wide-desktop .as-bottom-navigation-action.asa-selected {
+    color: #2196F3;
+    padding-left: 22px;
+    font-size: 14px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .as-device-wide-desktop .as-bottom-navigation-action:hover .as-bottom-navigation-action-label, .as-device-wide-desktop .as-bottom-navigation-action.asa-selected .as-bottom-navigation-action-label {
+      font-size: 14px; }
+
+.as-device-wide-desktop .as-bottom-navigation-action:hover .as-bottom-navigation-action-label {
+  display: block; }
+
+.as-device-wide-desktop .as-bottom-navigation-action-label {
+  display: none;
+  position: absolute;
+  min-width: 128px;
+  left: 66px;
+  top: 16px;
+  padding: 8px;
+  background-color: #424242;
+  border-radius: 2px;
+  color: #fff;
+  pointer-events: none; }
+  .as-device-wide-desktop .as-bottom-navigation-action-label:after {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: transparent;
+    border-right-color: #424242;
+    border-width: 8px;
+    margin-top: -8px; }
+
+.as-device-wide-desktop .as-bottom-navigation-action-icon {
+  width: 24px;
+  height: 24px; }
+
+.as-device-wide-desktop .as-bottom-navigation-bar-space {
+  display: block;
+  width: 64px; }
 
 .as-device-desktop .as-data-table {
   margin: 0px;
@@ -7444,6 +7520,67 @@ input {
 .as-device-desktop .as-text-panel-top-menu-header {
   padding-top: 17px; }
 
+.as-device-desktop .as-bottom-navigation-container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row-reverse;
+  align-items: stretch; }
+
+.as-device-desktop .as-bottom-navigation-bar {
+  width: 64px; }
+
+.as-device-desktop .as-bottom-navigation-action {
+  width: 64px;
+  min-width: 64px;
+  height: 64px;
+  padding-left: 20px;
+  padding-top: 20px;
+  cursor: pointer; }
+  .as-device-desktop .as-bottom-navigation-action:hover, .as-device-desktop .as-bottom-navigation-action.asa-selected {
+    color: #2196F3;
+    padding-left: 22px;
+    font-size: 14px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .as-device-desktop .as-bottom-navigation-action:hover .as-bottom-navigation-action-label, .as-device-desktop .as-bottom-navigation-action.asa-selected .as-bottom-navigation-action-label {
+      font-size: 14px; }
+
+.as-device-desktop .as-bottom-navigation-action:hover .as-bottom-navigation-action-label {
+  display: block; }
+
+.as-device-desktop .as-bottom-navigation-action-label {
+  display: none;
+  position: absolute;
+  min-width: 128px;
+  left: 66px;
+  top: 16px;
+  padding: 8px;
+  background-color: #424242;
+  border-radius: 2px;
+  color: #fff;
+  pointer-events: none; }
+  .as-device-desktop .as-bottom-navigation-action-label:after {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: transparent;
+    border-right-color: #424242;
+    border-width: 8px;
+    margin-top: -8px; }
+
+.as-device-desktop .as-bottom-navigation-action-icon {
+  width: 24px;
+  height: 24px; }
+
+.as-device-desktop .as-bottom-navigation-bar-space {
+  display: block;
+  width: 64px; }
+
 .as-device-tablet .as-sidebar-top-menu-place {
   height: 64px; }
 
@@ -7452,6 +7589,17 @@ input {
 
 .as-device-tablet .as-text-panel-top-menu {
   padding-left: 32px; }
+
+.as-device-tablet .as-bottom-navigation-bar {
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  height: 56px; }
+
+.as-device-tablet .as-bottom-navigation-action {
+  flex-grow: 1;
+  flex-basis: 0; }
+
+.as-device-tablet .as-bottom-navigation-bar-space {
+  display: none; }
 
 .as-device-phone .as-text-panel {
   padding: 16px; }
@@ -7473,6 +7621,17 @@ input {
   padding-top: 8px;
   color: #F44336;
   font-size: 18px; }
+
+.as-device-phone .as-bottom-navigation-bar {
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  height: 56px; }
+
+.as-device-phone .as-bottom-navigation-action {
+  flex-grow: 1;
+  flex-basis: 0; }
+
+.as-device-phone .as-bottom-navigation-bar-space {
+  display: none; }
 
 .as-device-phone-portrait .as-sidebar-top-menu-place {
   height: 56px; }
@@ -7650,144 +7809,11 @@ input {
 .as-grid-container .asa-gutter .as-grid-cell-demo {
   border: none; }
 
-.as-bottom-navigation-bar {
-  -webkit-user-select: none;
-  -webkit-user-select: none;
-  user-select: none; }
-
-.as-bottom-navigation-bar-space {
-  background-color: #F5F5F5; }
-
-.as-bottom-navigation-action {
-  color: #9E9E9E;
-  background-color: #F5F5F5;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  text-align: center;
-  min-width: 80px;
-  cursor: pointer; }
-  .as-bottom-navigation-action:hover, .as-bottom-navigation-action.asa-selected {
-    color: #2196F3;
-    padding-top: 6px;
-    font-size: 14px;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
-    .as-bottom-navigation-action:hover .as-bottom-navigation-action-label, .as-bottom-navigation-action.asa-selected .as-bottom-navigation-action-label {
-      font-size: 14px; }
-
-.as-bottom-navigation-action-label {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  font-size: 12px; }
-
-.as-device-preview .as-bottom-navigation-contaner,
-.as-device-wide-desktop .as-bottom-navigation-contaner,
-.as-device-desktop .as-bottom-navigation-contaner {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row-reverse;
-  align-items: stretch; }
-
-.as-device-preview .as-bottom-navigation-bar,
-.as-device-wide-desktop .as-bottom-navigation-bar,
-.as-device-desktop .as-bottom-navigation-bar {
-  width: 64px; }
-
-.as-device-preview .as-bottom-navigation-action,
-.as-device-wide-desktop .as-bottom-navigation-action,
-.as-device-desktop .as-bottom-navigation-action {
-  width: 64px;
-  min-width: 64px;
-  height: 64px;
-  padding-left: 20px;
-  padding-top: 20px;
-  cursor: pointer; }
-  .as-device-preview .as-bottom-navigation-action:hover, .as-device-preview .as-bottom-navigation-action.asa-selected,
-  .as-device-wide-desktop .as-bottom-navigation-action:hover,
-  .as-device-wide-desktop .as-bottom-navigation-action.asa-selected,
-  .as-device-desktop .as-bottom-navigation-action:hover,
-  .as-device-desktop .as-bottom-navigation-action.asa-selected {
-    color: #2196F3;
-    padding-left: 22px;
-    font-size: 14px;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
-    .as-device-preview .as-bottom-navigation-action:hover .as-bottom-navigation-action-label, .as-device-preview .as-bottom-navigation-action.asa-selected .as-bottom-navigation-action-label,
-    .as-device-wide-desktop .as-bottom-navigation-action:hover .as-bottom-navigation-action-label,
-    .as-device-wide-desktop .as-bottom-navigation-action.asa-selected .as-bottom-navigation-action-label,
-    .as-device-desktop .as-bottom-navigation-action:hover .as-bottom-navigation-action-label,
-    .as-device-desktop .as-bottom-navigation-action.asa-selected .as-bottom-navigation-action-label {
-      font-size: 14px; }
-
-.as-device-preview .as-bottom-navigation-action:hover .as-bottom-navigation-action-label,
-.as-device-wide-desktop .as-bottom-navigation-action:hover .as-bottom-navigation-action-label,
-.as-device-desktop .as-bottom-navigation-action:hover .as-bottom-navigation-action-label {
-  display: block; }
-
-.as-device-preview .as-bottom-navigation-action-label,
-.as-device-wide-desktop .as-bottom-navigation-action-label,
-.as-device-desktop .as-bottom-navigation-action-label {
-  display: none;
-  position: absolute;
-  min-width: 128px;
-  left: 66px;
-  top: 16px;
-  padding: 8px;
-  background-color: #424242;
-  border-radius: 2px;
-  color: #fff;
-  pointer-events: none; }
-  .as-device-preview .as-bottom-navigation-action-label:after,
-  .as-device-wide-desktop .as-bottom-navigation-action-label:after,
-  .as-device-desktop .as-bottom-navigation-action-label:after {
-    right: 100%;
-    top: 50%;
-    border: solid transparent;
-    content: "";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: transparent;
-    border-right-color: #424242;
-    border-width: 8px;
-    margin-top: -8px; }
-
-.as-device-preview .as-bottom-navigation-action-icon,
-.as-device-wide-desktop .as-bottom-navigation-action-icon,
-.as-device-desktop .as-bottom-navigation-action-icon {
-  width: 24px;
-  height: 24px; }
-
-.as-device-preview .as-bottom-navigation-bar-space,
-.as-device-wide-desktop .as-bottom-navigation-bar-space,
-.as-device-desktop .as-bottom-navigation-bar-space {
-  display: block;
-  width: 64px; }
-
-.as-device-tablet .as-bottom-navigation-bar,
-.as-device-phone-portrait .as-bottom-navigation-bar,
-.as-device-phone-landscape .as-bottom-navigation-bar {
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
-  height: 56px; }
-
-.as-device-tablet .as-bottom-navigation-action,
-.as-device-phone-portrait .as-bottom-navigation-action,
-.as-device-phone-landscape .as-bottom-navigation-action {
-  flex-grow: 1;
-  flex-basis: 0; }
-
-.as-device-tablet .as-bottom-navigation-bar-space,
-.as-device-phone-portrait .as-bottom-navigation-bar-space,
-.as-device-phone-landscape .as-bottom-navigation-bar-space {
-  display: none; }
-
-.as-device-wide-desktop .as-bottom-sheet-contaner,
-.as-device-desktop .as-bottom-sheet-contaner,
-.as-device-tablet .as-bottom-sheet-contaner,
-.as-device-phone-portrait .as-bottom-sheet-contaner,
-.as-device-phone-landscape .as-bottom-sheet-contaner {
+.as-device-wide-desktop .as-bottom-sheet-container,
+.as-device-desktop .as-bottom-sheet-container,
+.as-device-tablet .as-bottom-sheet-container,
+.as-device-phone-portrait .as-bottom-sheet-container,
+.as-device-phone-landscape .as-bottom-sheet-container {
   position: absolute;
   left: 0px;
   right: 0px;
@@ -7795,11 +7821,11 @@ input {
   height: 0px;
   background-color: rgba(0, 0, 0, 0.2);
   overflow: hidden; }
-  .as-device-wide-desktop .as-bottom-sheet-contaner.asa-opened,
-  .as-device-desktop .as-bottom-sheet-contaner.asa-opened,
-  .as-device-tablet .as-bottom-sheet-contaner.asa-opened,
-  .as-device-phone-portrait .as-bottom-sheet-contaner.asa-opened,
-  .as-device-phone-landscape .as-bottom-sheet-contaner.asa-opened {
+  .as-device-wide-desktop .as-bottom-sheet-container.asa-opened,
+  .as-device-desktop .as-bottom-sheet-container.asa-opened,
+  .as-device-tablet .as-bottom-sheet-container.asa-opened,
+  .as-device-phone-portrait .as-bottom-sheet-container.asa-opened,
+  .as-device-phone-landscape .as-bottom-sheet-container.asa-opened {
     height: 100%; }
 
 .as-device-wide-desktop .as-bottom-sheet-bar,
@@ -8807,6 +8833,11 @@ input {
     margin: 8px;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
     background-color: #fff; }
+    .as-device-wide-desktop .as-card.asa-wide,
+    .as-device-desktop .as-card.asa-wide,
+    .as-device-tablet .as-card.asa-wide {
+      margin-left: 0px;
+      margin-right: 0px; }
     .as-device-wide-desktop .as-card .as-card-header,
     .as-device-desktop .as-card .as-card-header,
     .as-device-tablet .as-card .as-card-header {
@@ -12411,13 +12442,7 @@ input {
     font-size: 14px;
     font-weight: bold;
     color: #9E9E9E; }
-  .as-device-wide-desktop .as-cell-wide .asa-form-block, .as-device-wide-desktop .as-button .as-button-text .asa-form-block, .as-button .as-device-wide-desktop .as-button-text .asa-form-block, .as-device-wide-desktop .as-device-demo .asa-form-block, .as-device-wide-desktop .as-bottom-navigation-content .asa-form-block, .as-device-wide-desktop .as-device-preview .as-bottom-navigation-bar-space .asa-form-block, .as-device-preview .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block, .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block, .as-device-wide-desktop
-  .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block,
-  .as-device-desktop .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block, .as-device-wide-desktop .as-device-tablet .as-bottom-navigation-action .asa-form-block, .as-device-tablet .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block, .as-device-wide-desktop
-  .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block,
-  .as-device-phone-portrait .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block, .as-device-wide-desktop
-  .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block,
-  .as-device-phone-landscape .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block, .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block, .as-device-wide-desktop
+  .as-device-wide-desktop .as-cell-wide .asa-form-block, .as-device-wide-desktop .as-button .as-button-text .asa-form-block, .as-button .as-device-wide-desktop .as-button-text .asa-form-block, .as-device-wide-desktop .as-bottom-navigation-content .asa-form-block, .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block, .as-device-wide-desktop .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block, .as-device-desktop .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block, .as-device-wide-desktop .as-device-tablet .as-bottom-navigation-action .asa-form-block, .as-device-tablet .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block, .as-device-wide-desktop .as-device-phone .as-bottom-navigation-action .asa-form-block, .as-device-phone .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block, .as-device-wide-desktop .as-device-demo .asa-form-block, .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block, .as-device-wide-desktop
   .as-device-desktop .as-bottom-sheet-list-item-label .asa-form-block,
   .as-device-desktop .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block, .as-device-wide-desktop
   .as-device-tablet .as-bottom-sheet-list-item-label .asa-form-block,
@@ -12532,12 +12557,8 @@ input {
   .as-device-tablet .as-device-wide-desktop .as-snackbar-text .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-toolbar-section.asa-tabs .asa-form-block, .as-device-phone-portrait .as-device-wide-desktop .as-toolbar-section.asa-tabs .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-card .as-card-content.asa-compact .asa-form-block, .as-device-phone-portrait .as-card .as-device-wide-desktop .as-card-content.asa-compact .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-complex-editor-body .asa-form-block, .as-device-phone-portrait .as-device-wide-desktop .as-complex-editor-body .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-form-sentence .as-input-control .asa-form-block, .as-device-phone-portrait .as-form-sentence .as-device-wide-desktop .as-input-control .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-input-select-control-wrap .asa-form-block, .as-device-phone-portrait .as-device-wide-desktop .as-input-select-control-wrap .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .select2-container .selection .asa-form-block, .as-device-phone-portrait .select2-container .as-device-wide-desktop .selection .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-input-control-checkbox-label span .asa-form-block, .as-device-phone-portrait .as-input-control-checkbox-label .as-device-wide-desktop span .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-input-control-radio-label span .asa-form-block, .as-device-phone-portrait .as-input-control-radio-label .as-device-wide-desktop span .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-input-control-inline-radio-label span .asa-form-block, .as-device-phone-portrait .as-input-control-inline-radio-label .as-device-wide-desktop span .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-input-slider-holder .asa-form-block, .as-device-phone-portrait .as-device-wide-desktop .as-input-slider-holder .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-input-control-switch-label span .asa-form-block, .as-device-phone-portrait .as-input-control-switch-label .as-device-wide-desktop span .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-expansion-panel-collapsed-header-info .asa-form-block, .as-device-phone-portrait .as-device-wide-desktop .as-expansion-panel-collapsed-header-info .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-expansion-panel-expanded-header-title .asa-form-block, .as-device-phone-portrait .as-device-wide-desktop .as-expansion-panel-expanded-header-title .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-dialog.asa-huge .as-dialog-content .asa-form-block, .as-device-phone-portrait .as-dialog.asa-huge .as-device-wide-desktop .as-dialog-content .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-gadget.asa-wide .asa-form-block, .as-device-phone-portrait .as-device-wide-desktop .as-gadget.asa-wide .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-scrum-task-line-content .asa-form-block, .as-device-phone-portrait .as-device-wide-desktop .as-scrum-task-line-content .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-http-method-doc-parameter-desc .asa-form-block, .as-device-phone-portrait .as-device-wide-desktop .as-http-method-doc-parameter-desc .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-device-demo .asa-form-block, .as-device-phone-portrait .as-device-wide-desktop .as-device-demo .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-graph-node-title .asa-form-block, .as-device-phone-portrait .as-device-wide-desktop .as-graph-node-title .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-graph-node-reference input .asa-form-block, .as-device-phone-portrait .as-graph-node-reference .as-device-wide-desktop input .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-graph-node-reference span .asa-form-block, .as-device-phone-portrait .as-graph-node-reference .as-device-wide-desktop span .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-snackbar-text .asa-form-block, .as-device-phone-portrait .as-device-wide-desktop .as-snackbar-text .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-toolbar-section.asa-tabs .asa-form-block, .as-device-phone-landscape .as-device-wide-desktop .as-toolbar-section.asa-tabs .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-card .as-card-content.asa-compact .asa-form-block, .as-device-phone-landscape .as-card .as-device-wide-desktop .as-card-content.asa-compact .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-complex-editor-body .asa-form-block, .as-device-phone-landscape .as-device-wide-desktop .as-complex-editor-body .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-form-sentence .as-input-control .asa-form-block, .as-device-phone-landscape .as-form-sentence .as-device-wide-desktop .as-input-control .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-input-select-control-wrap .asa-form-block, .as-device-phone-landscape .as-device-wide-desktop .as-input-select-control-wrap .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .select2-container .selection .asa-form-block, .as-device-phone-landscape .select2-container .as-device-wide-desktop .selection .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-input-control-checkbox-label span .asa-form-block, .as-device-phone-landscape .as-input-control-checkbox-label .as-device-wide-desktop span .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-input-control-radio-label span .asa-form-block, .as-device-phone-landscape .as-input-control-radio-label .as-device-wide-desktop span .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-input-control-inline-radio-label span .asa-form-block, .as-device-phone-landscape .as-input-control-inline-radio-label .as-device-wide-desktop span .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-input-slider-holder .asa-form-block, .as-device-phone-landscape .as-device-wide-desktop .as-input-slider-holder .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-input-control-switch-label span .asa-form-block, .as-device-phone-landscape .as-input-control-switch-label .as-device-wide-desktop span .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-expansion-panel-collapsed-header-info .asa-form-block, .as-device-phone-landscape .as-device-wide-desktop .as-expansion-panel-collapsed-header-info .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-expansion-panel-expanded-header-title .asa-form-block, .as-device-phone-landscape .as-device-wide-desktop .as-expansion-panel-expanded-header-title .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-dialog.asa-huge .as-dialog-content .asa-form-block, .as-device-phone-landscape .as-dialog.asa-huge .as-device-wide-desktop .as-dialog-content .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-gadget.asa-wide .asa-form-block, .as-device-phone-landscape .as-device-wide-desktop .as-gadget.asa-wide .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-scrum-task-line-content .asa-form-block, .as-device-phone-landscape .as-device-wide-desktop .as-scrum-task-line-content .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-http-method-doc-parameter-desc .asa-form-block, .as-device-phone-landscape .as-device-wide-desktop .as-http-method-doc-parameter-desc .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-device-demo .asa-form-block, .as-device-phone-landscape .as-device-wide-desktop .as-device-demo .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-graph-node-title .asa-form-block, .as-device-phone-landscape .as-device-wide-desktop .as-graph-node-title .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-graph-node-reference input .asa-form-block, .as-device-phone-landscape .as-graph-node-reference .as-device-wide-desktop input .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-graph-node-reference span .asa-form-block, .as-device-phone-landscape .as-graph-node-reference .as-device-wide-desktop span .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-snackbar-text .asa-form-block, .as-device-phone-landscape .as-device-wide-desktop .as-snackbar-text .asa-form-block,
   .as-device-wide-desktop .as-cell-fixed .asa-form-block,
   .as-device-wide-desktop .as-button .as-button-icon .asa-form-block, .as-button
-  .as-device-wide-desktop .as-button-icon .asa-form-block,
-  .as-device-wide-desktop .as-device-preview .as-bottom-navigation-action .asa-form-block, .as-device-preview
-  .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block, .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block,
-  .as-device-wide-desktop
-  .as-device-desktop .as-bottom-navigation-action .asa-form-block,
-  .as-device-desktop
+  .as-device-wide-desktop .as-button-icon .asa-form-block, .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block,
+  .as-device-wide-desktop .as-device-desktop .as-bottom-navigation-action .asa-form-block, .as-device-desktop
   .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block, .as-device-wide-desktop .as-bottom-sheet-list-item-icon .asa-form-block,
   .as-device-wide-desktop
   .as-device-desktop .as-bottom-sheet-list-item-icon .asa-form-block,
@@ -13022,24 +13043,14 @@ input {
   .as-device-desktop .as-cell-wide .asa-form-block,
   .as-device-desktop .as-button .as-button-text .asa-form-block, .as-button
   .as-device-desktop .as-button-text .asa-form-block,
-  .as-device-desktop .as-device-demo .asa-form-block,
   .as-device-desktop .as-bottom-navigation-content .asa-form-block,
-  .as-device-desktop .as-device-preview .as-bottom-navigation-bar-space .asa-form-block, .as-device-preview
-  .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block,
-  .as-device-desktop
-  .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block,
-  .as-device-wide-desktop
+  .as-device-desktop .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block, .as-device-wide-desktop
   .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block, .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block,
   .as-device-desktop .as-device-tablet .as-bottom-navigation-action .asa-form-block, .as-device-tablet
   .as-device-desktop .as-bottom-navigation-action .asa-form-block,
-  .as-device-desktop
-  .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block,
-  .as-device-phone-portrait
+  .as-device-desktop .as-device-phone .as-bottom-navigation-action .asa-form-block, .as-device-phone
   .as-device-desktop .as-bottom-navigation-action .asa-form-block,
-  .as-device-desktop
-  .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block,
-  .as-device-phone-landscape
-  .as-device-desktop .as-bottom-navigation-action .asa-form-block,
+  .as-device-desktop .as-device-demo .asa-form-block,
   .as-device-desktop .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block, .as-device-wide-desktop
   .as-device-desktop .as-bottom-sheet-list-item-label .asa-form-block, .as-device-desktop .as-bottom-sheet-list-item-label .asa-form-block,
   .as-device-desktop
@@ -13308,11 +13319,7 @@ input {
   .as-device-desktop .as-cell-fixed .asa-form-block,
   .as-device-desktop .as-button .as-button-icon .asa-form-block, .as-button
   .as-device-desktop .as-button-icon .asa-form-block,
-  .as-device-desktop .as-device-preview .as-bottom-navigation-action .asa-form-block, .as-device-preview
-  .as-device-desktop .as-bottom-navigation-action .asa-form-block,
-  .as-device-desktop
-  .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block,
-  .as-device-wide-desktop
+  .as-device-desktop .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block, .as-device-wide-desktop
   .as-device-desktop .as-bottom-navigation-action .asa-form-block, .as-device-desktop .as-bottom-navigation-action .asa-form-block,
   .as-device-desktop .as-device-wide-desktop .as-bottom-sheet-list-item-icon .asa-form-block, .as-device-wide-desktop
   .as-device-desktop .as-bottom-sheet-list-item-icon .asa-form-block, .as-device-desktop .as-bottom-sheet-list-item-icon .asa-form-block,
@@ -13721,26 +13728,14 @@ input {
   .as-device-tablet .as-cell-wide .asa-form-block,
   .as-device-tablet .as-button .as-button-text .asa-form-block, .as-button
   .as-device-tablet .as-button-text .asa-form-block,
-  .as-device-tablet .as-device-demo .asa-form-block,
   .as-device-tablet .as-bottom-navigation-content .asa-form-block,
-  .as-device-tablet .as-device-preview .as-bottom-navigation-bar-space .asa-form-block, .as-device-preview
+  .as-device-tablet .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block, .as-device-wide-desktop
   .as-device-tablet .as-bottom-navigation-bar-space .asa-form-block,
-  .as-device-tablet
-  .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block,
-  .as-device-wide-desktop
-  .as-device-tablet .as-bottom-navigation-bar-space .asa-form-block,
-  .as-device-tablet
-  .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block,
-  .as-device-desktop
+  .as-device-tablet .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block, .as-device-desktop
   .as-device-tablet .as-bottom-navigation-bar-space .asa-form-block, .as-device-tablet .as-bottom-navigation-action .asa-form-block,
-  .as-device-tablet
-  .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block,
-  .as-device-phone-portrait
+  .as-device-tablet .as-device-phone .as-bottom-navigation-action .asa-form-block, .as-device-phone
   .as-device-tablet .as-bottom-navigation-action .asa-form-block,
-  .as-device-tablet
-  .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block,
-  .as-device-phone-landscape
-  .as-device-tablet .as-bottom-navigation-action .asa-form-block,
+  .as-device-tablet .as-device-demo .asa-form-block,
   .as-device-tablet .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block, .as-device-wide-desktop
   .as-device-tablet .as-bottom-sheet-list-item-label .asa-form-block,
   .as-device-tablet
@@ -14009,15 +14004,9 @@ input {
   .as-device-tablet .as-cell-fixed .asa-form-block,
   .as-device-tablet .as-button .as-button-icon .asa-form-block, .as-button
   .as-device-tablet .as-button-icon .asa-form-block,
-  .as-device-tablet .as-device-preview .as-bottom-navigation-action .asa-form-block, .as-device-preview
+  .as-device-tablet .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block, .as-device-wide-desktop
   .as-device-tablet .as-bottom-navigation-action .asa-form-block,
-  .as-device-tablet
-  .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block,
-  .as-device-wide-desktop
-  .as-device-tablet .as-bottom-navigation-action .asa-form-block,
-  .as-device-tablet
-  .as-device-desktop .as-bottom-navigation-action .asa-form-block,
-  .as-device-desktop
+  .as-device-tablet .as-device-desktop .as-bottom-navigation-action .asa-form-block, .as-device-desktop
   .as-device-tablet .as-bottom-navigation-action .asa-form-block,
   .as-device-tablet .as-device-wide-desktop .as-bottom-sheet-list-item-icon .asa-form-block, .as-device-wide-desktop
   .as-device-tablet .as-bottom-sheet-list-item-icon .asa-form-block,
@@ -14425,13 +14414,7 @@ input {
   .as-device-tablet .as-snackbar-actions .asa-form-block {
     padding-left: 16px;
     padding-right: 16px; }
-    .as-device-wide-desktop .as-cell-wide .asa-form-block:first-child, .as-device-wide-desktop .as-button .as-button-text .asa-form-block:first-child, .as-button .as-device-wide-desktop .as-button-text .asa-form-block:first-child, .as-device-wide-desktop .as-device-demo .asa-form-block:first-child, .as-device-wide-desktop .as-bottom-navigation-content .asa-form-block:first-child, .as-device-wide-desktop .as-device-preview .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-preview .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-wide-desktop
-    .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child,
-    .as-device-desktop .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-wide-desktop .as-device-tablet .as-bottom-navigation-action .asa-form-block:first-child, .as-device-tablet .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:first-child, .as-device-wide-desktop
-    .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-phone-portrait .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:first-child, .as-device-wide-desktop
-    .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-phone-landscape .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:first-child, .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block:first-child, .as-device-wide-desktop
+    .as-device-wide-desktop .as-cell-wide .asa-form-block:first-child, .as-device-wide-desktop .as-button .as-button-text .asa-form-block:first-child, .as-button .as-device-wide-desktop .as-button-text .asa-form-block:first-child, .as-device-wide-desktop .as-bottom-navigation-content .asa-form-block:first-child, .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-wide-desktop .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-desktop .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-wide-desktop .as-device-tablet .as-bottom-navigation-action .asa-form-block:first-child, .as-device-tablet .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone .as-bottom-navigation-action .asa-form-block:first-child, .as-device-phone .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:first-child, .as-device-wide-desktop .as-device-demo .asa-form-block:first-child, .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block:first-child, .as-device-wide-desktop
     .as-device-desktop .as-bottom-sheet-list-item-label .asa-form-block:first-child,
     .as-device-desktop .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block:first-child, .as-device-wide-desktop
     .as-device-tablet .as-bottom-sheet-list-item-label .asa-form-block:first-child,
@@ -14546,12 +14529,8 @@ input {
     .as-device-tablet .as-device-wide-desktop .as-snackbar-text .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-toolbar-section.asa-tabs .asa-form-block:first-child, .as-device-phone-portrait .as-device-wide-desktop .as-toolbar-section.asa-tabs .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-card .as-card-content.asa-compact .asa-form-block:first-child, .as-device-phone-portrait .as-card .as-device-wide-desktop .as-card-content.asa-compact .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-complex-editor-body .asa-form-block:first-child, .as-device-phone-portrait .as-device-wide-desktop .as-complex-editor-body .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-form-sentence .as-input-control .asa-form-block:first-child, .as-device-phone-portrait .as-form-sentence .as-device-wide-desktop .as-input-control .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-input-select-control-wrap .asa-form-block:first-child, .as-device-phone-portrait .as-device-wide-desktop .as-input-select-control-wrap .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .select2-container .selection .asa-form-block:first-child, .as-device-phone-portrait .select2-container .as-device-wide-desktop .selection .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-input-control-checkbox-label span .asa-form-block:first-child, .as-device-phone-portrait .as-input-control-checkbox-label .as-device-wide-desktop span .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-input-control-radio-label span .asa-form-block:first-child, .as-device-phone-portrait .as-input-control-radio-label .as-device-wide-desktop span .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-input-control-inline-radio-label span .asa-form-block:first-child, .as-device-phone-portrait .as-input-control-inline-radio-label .as-device-wide-desktop span .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-input-slider-holder .asa-form-block:first-child, .as-device-phone-portrait .as-device-wide-desktop .as-input-slider-holder .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-input-control-switch-label span .asa-form-block:first-child, .as-device-phone-portrait .as-input-control-switch-label .as-device-wide-desktop span .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-expansion-panel-collapsed-header-info .asa-form-block:first-child, .as-device-phone-portrait .as-device-wide-desktop .as-expansion-panel-collapsed-header-info .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-expansion-panel-expanded-header-title .asa-form-block:first-child, .as-device-phone-portrait .as-device-wide-desktop .as-expansion-panel-expanded-header-title .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-dialog.asa-huge .as-dialog-content .asa-form-block:first-child, .as-device-phone-portrait .as-dialog.asa-huge .as-device-wide-desktop .as-dialog-content .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-gadget.asa-wide .asa-form-block:first-child, .as-device-phone-portrait .as-device-wide-desktop .as-gadget.asa-wide .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-scrum-task-line-content .asa-form-block:first-child, .as-device-phone-portrait .as-device-wide-desktop .as-scrum-task-line-content .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-http-method-doc-parameter-desc .asa-form-block:first-child, .as-device-phone-portrait .as-device-wide-desktop .as-http-method-doc-parameter-desc .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-device-demo .asa-form-block:first-child, .as-device-phone-portrait .as-device-wide-desktop .as-device-demo .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-graph-node-title .asa-form-block:first-child, .as-device-phone-portrait .as-device-wide-desktop .as-graph-node-title .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-graph-node-reference input .asa-form-block:first-child, .as-device-phone-portrait .as-graph-node-reference .as-device-wide-desktop input .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-graph-node-reference span .asa-form-block:first-child, .as-device-phone-portrait .as-graph-node-reference .as-device-wide-desktop span .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-snackbar-text .asa-form-block:first-child, .as-device-phone-portrait .as-device-wide-desktop .as-snackbar-text .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-toolbar-section.asa-tabs .asa-form-block:first-child, .as-device-phone-landscape .as-device-wide-desktop .as-toolbar-section.asa-tabs .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-card .as-card-content.asa-compact .asa-form-block:first-child, .as-device-phone-landscape .as-card .as-device-wide-desktop .as-card-content.asa-compact .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-complex-editor-body .asa-form-block:first-child, .as-device-phone-landscape .as-device-wide-desktop .as-complex-editor-body .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-form-sentence .as-input-control .asa-form-block:first-child, .as-device-phone-landscape .as-form-sentence .as-device-wide-desktop .as-input-control .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-input-select-control-wrap .asa-form-block:first-child, .as-device-phone-landscape .as-device-wide-desktop .as-input-select-control-wrap .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .select2-container .selection .asa-form-block:first-child, .as-device-phone-landscape .select2-container .as-device-wide-desktop .selection .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-input-control-checkbox-label span .asa-form-block:first-child, .as-device-phone-landscape .as-input-control-checkbox-label .as-device-wide-desktop span .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-input-control-radio-label span .asa-form-block:first-child, .as-device-phone-landscape .as-input-control-radio-label .as-device-wide-desktop span .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-input-control-inline-radio-label span .asa-form-block:first-child, .as-device-phone-landscape .as-input-control-inline-radio-label .as-device-wide-desktop span .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-input-slider-holder .asa-form-block:first-child, .as-device-phone-landscape .as-device-wide-desktop .as-input-slider-holder .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-input-control-switch-label span .asa-form-block:first-child, .as-device-phone-landscape .as-input-control-switch-label .as-device-wide-desktop span .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-expansion-panel-collapsed-header-info .asa-form-block:first-child, .as-device-phone-landscape .as-device-wide-desktop .as-expansion-panel-collapsed-header-info .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-expansion-panel-expanded-header-title .asa-form-block:first-child, .as-device-phone-landscape .as-device-wide-desktop .as-expansion-panel-expanded-header-title .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-dialog.asa-huge .as-dialog-content .asa-form-block:first-child, .as-device-phone-landscape .as-dialog.asa-huge .as-device-wide-desktop .as-dialog-content .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-gadget.asa-wide .asa-form-block:first-child, .as-device-phone-landscape .as-device-wide-desktop .as-gadget.asa-wide .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-scrum-task-line-content .asa-form-block:first-child, .as-device-phone-landscape .as-device-wide-desktop .as-scrum-task-line-content .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-http-method-doc-parameter-desc .asa-form-block:first-child, .as-device-phone-landscape .as-device-wide-desktop .as-http-method-doc-parameter-desc .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-device-demo .asa-form-block:first-child, .as-device-phone-landscape .as-device-wide-desktop .as-device-demo .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-graph-node-title .asa-form-block:first-child, .as-device-phone-landscape .as-device-wide-desktop .as-graph-node-title .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-graph-node-reference input .asa-form-block:first-child, .as-device-phone-landscape .as-graph-node-reference .as-device-wide-desktop input .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-graph-node-reference span .asa-form-block:first-child, .as-device-phone-landscape .as-graph-node-reference .as-device-wide-desktop span .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-snackbar-text .asa-form-block:first-child, .as-device-phone-landscape .as-device-wide-desktop .as-snackbar-text .asa-form-block:first-child,
     .as-device-wide-desktop .as-cell-fixed .asa-form-block:first-child,
     .as-device-wide-desktop .as-button .as-button-icon .asa-form-block:first-child, .as-button
-    .as-device-wide-desktop .as-button-icon .asa-form-block:first-child,
-    .as-device-wide-desktop .as-device-preview .as-bottom-navigation-action .asa-form-block:first-child, .as-device-preview
-    .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:first-child, .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-wide-desktop
-    .as-device-desktop .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-desktop
+    .as-device-wide-desktop .as-button-icon .asa-form-block:first-child, .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:first-child,
+    .as-device-wide-desktop .as-device-desktop .as-bottom-navigation-action .asa-form-block:first-child, .as-device-desktop
     .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:first-child, .as-device-wide-desktop .as-bottom-sheet-list-item-icon .asa-form-block:first-child,
     .as-device-wide-desktop
     .as-device-desktop .as-bottom-sheet-list-item-icon .asa-form-block:first-child,
@@ -15036,24 +15015,14 @@ input {
     .as-device-desktop .as-cell-wide .asa-form-block:first-child,
     .as-device-desktop .as-button .as-button-text .asa-form-block:first-child, .as-button
     .as-device-desktop .as-button-text .asa-form-block:first-child,
-    .as-device-desktop .as-device-demo .asa-form-block:first-child,
     .as-device-desktop .as-bottom-navigation-content .asa-form-block:first-child,
-    .as-device-desktop .as-device-preview .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-preview
-    .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child,
-    .as-device-desktop
-    .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child,
-    .as-device-wide-desktop
+    .as-device-desktop .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-wide-desktop
     .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child,
     .as-device-desktop .as-device-tablet .as-bottom-navigation-action .asa-form-block:first-child, .as-device-tablet
     .as-device-desktop .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-desktop
-    .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-phone-portrait
+    .as-device-desktop .as-device-phone .as-bottom-navigation-action .asa-form-block:first-child, .as-device-phone
     .as-device-desktop .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-desktop
-    .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-phone-landscape
-    .as-device-desktop .as-bottom-navigation-action .asa-form-block:first-child,
+    .as-device-desktop .as-device-demo .asa-form-block:first-child,
     .as-device-desktop .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block:first-child, .as-device-wide-desktop
     .as-device-desktop .as-bottom-sheet-list-item-label .asa-form-block:first-child, .as-device-desktop .as-bottom-sheet-list-item-label .asa-form-block:first-child,
     .as-device-desktop
@@ -15322,11 +15291,7 @@ input {
     .as-device-desktop .as-cell-fixed .asa-form-block:first-child,
     .as-device-desktop .as-button .as-button-icon .asa-form-block:first-child, .as-button
     .as-device-desktop .as-button-icon .asa-form-block:first-child,
-    .as-device-desktop .as-device-preview .as-bottom-navigation-action .asa-form-block:first-child, .as-device-preview
-    .as-device-desktop .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-desktop
-    .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-wide-desktop
+    .as-device-desktop .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:first-child, .as-device-wide-desktop
     .as-device-desktop .as-bottom-navigation-action .asa-form-block:first-child, .as-device-desktop .as-bottom-navigation-action .asa-form-block:first-child,
     .as-device-desktop .as-device-wide-desktop .as-bottom-sheet-list-item-icon .asa-form-block:first-child, .as-device-wide-desktop
     .as-device-desktop .as-bottom-sheet-list-item-icon .asa-form-block:first-child, .as-device-desktop .as-bottom-sheet-list-item-icon .asa-form-block:first-child,
@@ -15735,26 +15700,14 @@ input {
     .as-device-tablet .as-cell-wide .asa-form-block:first-child,
     .as-device-tablet .as-button .as-button-text .asa-form-block:first-child, .as-button
     .as-device-tablet .as-button-text .asa-form-block:first-child,
-    .as-device-tablet .as-device-demo .asa-form-block:first-child,
     .as-device-tablet .as-bottom-navigation-content .asa-form-block:first-child,
-    .as-device-tablet .as-device-preview .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-preview
+    .as-device-tablet .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-wide-desktop
     .as-device-tablet .as-bottom-navigation-bar-space .asa-form-block:first-child,
-    .as-device-tablet
-    .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child,
-    .as-device-wide-desktop
-    .as-device-tablet .as-bottom-navigation-bar-space .asa-form-block:first-child,
-    .as-device-tablet
-    .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child,
-    .as-device-desktop
+    .as-device-tablet .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-desktop
     .as-device-tablet .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-tablet .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-tablet
-    .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-phone-portrait
+    .as-device-tablet .as-device-phone .as-bottom-navigation-action .asa-form-block:first-child, .as-device-phone
     .as-device-tablet .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-tablet
-    .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-phone-landscape
-    .as-device-tablet .as-bottom-navigation-action .asa-form-block:first-child,
+    .as-device-tablet .as-device-demo .asa-form-block:first-child,
     .as-device-tablet .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block:first-child, .as-device-wide-desktop
     .as-device-tablet .as-bottom-sheet-list-item-label .asa-form-block:first-child,
     .as-device-tablet
@@ -16023,15 +15976,9 @@ input {
     .as-device-tablet .as-cell-fixed .asa-form-block:first-child,
     .as-device-tablet .as-button .as-button-icon .asa-form-block:first-child, .as-button
     .as-device-tablet .as-button-icon .asa-form-block:first-child,
-    .as-device-tablet .as-device-preview .as-bottom-navigation-action .asa-form-block:first-child, .as-device-preview
+    .as-device-tablet .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:first-child, .as-device-wide-desktop
     .as-device-tablet .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-tablet
-    .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-wide-desktop
-    .as-device-tablet .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-tablet
-    .as-device-desktop .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-desktop
+    .as-device-tablet .as-device-desktop .as-bottom-navigation-action .asa-form-block:first-child, .as-device-desktop
     .as-device-tablet .as-bottom-navigation-action .asa-form-block:first-child,
     .as-device-tablet .as-device-wide-desktop .as-bottom-sheet-list-item-icon .asa-form-block:first-child, .as-device-wide-desktop
     .as-device-tablet .as-bottom-sheet-list-item-icon .asa-form-block:first-child,
@@ -16438,13 +16385,7 @@ input {
     .as-device-tablet .as-device-phone-landscape .as-snackbar-actions .asa-form-block:first-child, .as-device-phone-landscape
     .as-device-tablet .as-snackbar-actions .asa-form-block:first-child {
       padding-left: 0px; }
-    .as-device-wide-desktop .as-cell-wide .asa-form-block:last-child, .as-device-wide-desktop .as-button .as-button-text .asa-form-block:last-child, .as-button .as-device-wide-desktop .as-button-text .asa-form-block:last-child, .as-device-wide-desktop .as-device-demo .asa-form-block:last-child, .as-device-wide-desktop .as-bottom-navigation-content .asa-form-block:last-child, .as-device-wide-desktop .as-device-preview .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-preview .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-wide-desktop
-    .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child,
-    .as-device-desktop .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-wide-desktop .as-device-tablet .as-bottom-navigation-action .asa-form-block:last-child, .as-device-tablet .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:last-child, .as-device-wide-desktop
-    .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-phone-portrait .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:last-child, .as-device-wide-desktop
-    .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-phone-landscape .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:last-child, .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block:last-child, .as-device-wide-desktop
+    .as-device-wide-desktop .as-cell-wide .asa-form-block:last-child, .as-device-wide-desktop .as-button .as-button-text .asa-form-block:last-child, .as-button .as-device-wide-desktop .as-button-text .asa-form-block:last-child, .as-device-wide-desktop .as-bottom-navigation-content .asa-form-block:last-child, .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-wide-desktop .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-desktop .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-wide-desktop .as-device-tablet .as-bottom-navigation-action .asa-form-block:last-child, .as-device-tablet .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone .as-bottom-navigation-action .asa-form-block:last-child, .as-device-phone .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:last-child, .as-device-wide-desktop .as-device-demo .asa-form-block:last-child, .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block:last-child, .as-device-wide-desktop
     .as-device-desktop .as-bottom-sheet-list-item-label .asa-form-block:last-child,
     .as-device-desktop .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block:last-child, .as-device-wide-desktop
     .as-device-tablet .as-bottom-sheet-list-item-label .asa-form-block:last-child,
@@ -16559,12 +16500,8 @@ input {
     .as-device-tablet .as-device-wide-desktop .as-snackbar-text .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-toolbar-section.asa-tabs .asa-form-block:last-child, .as-device-phone-portrait .as-device-wide-desktop .as-toolbar-section.asa-tabs .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-card .as-card-content.asa-compact .asa-form-block:last-child, .as-device-phone-portrait .as-card .as-device-wide-desktop .as-card-content.asa-compact .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-complex-editor-body .asa-form-block:last-child, .as-device-phone-portrait .as-device-wide-desktop .as-complex-editor-body .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-form-sentence .as-input-control .asa-form-block:last-child, .as-device-phone-portrait .as-form-sentence .as-device-wide-desktop .as-input-control .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-input-select-control-wrap .asa-form-block:last-child, .as-device-phone-portrait .as-device-wide-desktop .as-input-select-control-wrap .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .select2-container .selection .asa-form-block:last-child, .as-device-phone-portrait .select2-container .as-device-wide-desktop .selection .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-input-control-checkbox-label span .asa-form-block:last-child, .as-device-phone-portrait .as-input-control-checkbox-label .as-device-wide-desktop span .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-input-control-radio-label span .asa-form-block:last-child, .as-device-phone-portrait .as-input-control-radio-label .as-device-wide-desktop span .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-input-control-inline-radio-label span .asa-form-block:last-child, .as-device-phone-portrait .as-input-control-inline-radio-label .as-device-wide-desktop span .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-input-slider-holder .asa-form-block:last-child, .as-device-phone-portrait .as-device-wide-desktop .as-input-slider-holder .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-input-control-switch-label span .asa-form-block:last-child, .as-device-phone-portrait .as-input-control-switch-label .as-device-wide-desktop span .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-expansion-panel-collapsed-header-info .asa-form-block:last-child, .as-device-phone-portrait .as-device-wide-desktop .as-expansion-panel-collapsed-header-info .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-expansion-panel-expanded-header-title .asa-form-block:last-child, .as-device-phone-portrait .as-device-wide-desktop .as-expansion-panel-expanded-header-title .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-dialog.asa-huge .as-dialog-content .asa-form-block:last-child, .as-device-phone-portrait .as-dialog.asa-huge .as-device-wide-desktop .as-dialog-content .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-gadget.asa-wide .asa-form-block:last-child, .as-device-phone-portrait .as-device-wide-desktop .as-gadget.asa-wide .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-scrum-task-line-content .asa-form-block:last-child, .as-device-phone-portrait .as-device-wide-desktop .as-scrum-task-line-content .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-http-method-doc-parameter-desc .asa-form-block:last-child, .as-device-phone-portrait .as-device-wide-desktop .as-http-method-doc-parameter-desc .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-device-demo .asa-form-block:last-child, .as-device-phone-portrait .as-device-wide-desktop .as-device-demo .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-graph-node-title .asa-form-block:last-child, .as-device-phone-portrait .as-device-wide-desktop .as-graph-node-title .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-graph-node-reference input .asa-form-block:last-child, .as-device-phone-portrait .as-graph-node-reference .as-device-wide-desktop input .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-graph-node-reference span .asa-form-block:last-child, .as-device-phone-portrait .as-graph-node-reference .as-device-wide-desktop span .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-snackbar-text .asa-form-block:last-child, .as-device-phone-portrait .as-device-wide-desktop .as-snackbar-text .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-toolbar-section.asa-tabs .asa-form-block:last-child, .as-device-phone-landscape .as-device-wide-desktop .as-toolbar-section.asa-tabs .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-card .as-card-content.asa-compact .asa-form-block:last-child, .as-device-phone-landscape .as-card .as-device-wide-desktop .as-card-content.asa-compact .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-complex-editor-body .asa-form-block:last-child, .as-device-phone-landscape .as-device-wide-desktop .as-complex-editor-body .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-form-sentence .as-input-control .asa-form-block:last-child, .as-device-phone-landscape .as-form-sentence .as-device-wide-desktop .as-input-control .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-input-select-control-wrap .asa-form-block:last-child, .as-device-phone-landscape .as-device-wide-desktop .as-input-select-control-wrap .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .select2-container .selection .asa-form-block:last-child, .as-device-phone-landscape .select2-container .as-device-wide-desktop .selection .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-input-control-checkbox-label span .asa-form-block:last-child, .as-device-phone-landscape .as-input-control-checkbox-label .as-device-wide-desktop span .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-input-control-radio-label span .asa-form-block:last-child, .as-device-phone-landscape .as-input-control-radio-label .as-device-wide-desktop span .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-input-control-inline-radio-label span .asa-form-block:last-child, .as-device-phone-landscape .as-input-control-inline-radio-label .as-device-wide-desktop span .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-input-slider-holder .asa-form-block:last-child, .as-device-phone-landscape .as-device-wide-desktop .as-input-slider-holder .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-input-control-switch-label span .asa-form-block:last-child, .as-device-phone-landscape .as-input-control-switch-label .as-device-wide-desktop span .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-expansion-panel-collapsed-header-info .asa-form-block:last-child, .as-device-phone-landscape .as-device-wide-desktop .as-expansion-panel-collapsed-header-info .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-expansion-panel-expanded-header-title .asa-form-block:last-child, .as-device-phone-landscape .as-device-wide-desktop .as-expansion-panel-expanded-header-title .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-dialog.asa-huge .as-dialog-content .asa-form-block:last-child, .as-device-phone-landscape .as-dialog.asa-huge .as-device-wide-desktop .as-dialog-content .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-gadget.asa-wide .asa-form-block:last-child, .as-device-phone-landscape .as-device-wide-desktop .as-gadget.asa-wide .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-scrum-task-line-content .asa-form-block:last-child, .as-device-phone-landscape .as-device-wide-desktop .as-scrum-task-line-content .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-http-method-doc-parameter-desc .asa-form-block:last-child, .as-device-phone-landscape .as-device-wide-desktop .as-http-method-doc-parameter-desc .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-device-demo .asa-form-block:last-child, .as-device-phone-landscape .as-device-wide-desktop .as-device-demo .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-graph-node-title .asa-form-block:last-child, .as-device-phone-landscape .as-device-wide-desktop .as-graph-node-title .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-graph-node-reference input .asa-form-block:last-child, .as-device-phone-landscape .as-graph-node-reference .as-device-wide-desktop input .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-graph-node-reference span .asa-form-block:last-child, .as-device-phone-landscape .as-graph-node-reference .as-device-wide-desktop span .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-snackbar-text .asa-form-block:last-child, .as-device-phone-landscape .as-device-wide-desktop .as-snackbar-text .asa-form-block:last-child,
     .as-device-wide-desktop .as-cell-fixed .asa-form-block:last-child,
     .as-device-wide-desktop .as-button .as-button-icon .asa-form-block:last-child, .as-button
-    .as-device-wide-desktop .as-button-icon .asa-form-block:last-child,
-    .as-device-wide-desktop .as-device-preview .as-bottom-navigation-action .asa-form-block:last-child, .as-device-preview
-    .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:last-child, .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-wide-desktop
-    .as-device-desktop .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-desktop
+    .as-device-wide-desktop .as-button-icon .asa-form-block:last-child, .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:last-child,
+    .as-device-wide-desktop .as-device-desktop .as-bottom-navigation-action .asa-form-block:last-child, .as-device-desktop
     .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:last-child, .as-device-wide-desktop .as-bottom-sheet-list-item-icon .asa-form-block:last-child,
     .as-device-wide-desktop
     .as-device-desktop .as-bottom-sheet-list-item-icon .asa-form-block:last-child,
@@ -17049,24 +16986,14 @@ input {
     .as-device-desktop .as-cell-wide .asa-form-block:last-child,
     .as-device-desktop .as-button .as-button-text .asa-form-block:last-child, .as-button
     .as-device-desktop .as-button-text .asa-form-block:last-child,
-    .as-device-desktop .as-device-demo .asa-form-block:last-child,
     .as-device-desktop .as-bottom-navigation-content .asa-form-block:last-child,
-    .as-device-desktop .as-device-preview .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-preview
-    .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child,
-    .as-device-desktop
-    .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child,
-    .as-device-wide-desktop
+    .as-device-desktop .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-wide-desktop
     .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child,
     .as-device-desktop .as-device-tablet .as-bottom-navigation-action .asa-form-block:last-child, .as-device-tablet
     .as-device-desktop .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-desktop
-    .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-phone-portrait
+    .as-device-desktop .as-device-phone .as-bottom-navigation-action .asa-form-block:last-child, .as-device-phone
     .as-device-desktop .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-desktop
-    .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-phone-landscape
-    .as-device-desktop .as-bottom-navigation-action .asa-form-block:last-child,
+    .as-device-desktop .as-device-demo .asa-form-block:last-child,
     .as-device-desktop .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block:last-child, .as-device-wide-desktop
     .as-device-desktop .as-bottom-sheet-list-item-label .asa-form-block:last-child, .as-device-desktop .as-bottom-sheet-list-item-label .asa-form-block:last-child,
     .as-device-desktop
@@ -17335,11 +17262,7 @@ input {
     .as-device-desktop .as-cell-fixed .asa-form-block:last-child,
     .as-device-desktop .as-button .as-button-icon .asa-form-block:last-child, .as-button
     .as-device-desktop .as-button-icon .asa-form-block:last-child,
-    .as-device-desktop .as-device-preview .as-bottom-navigation-action .asa-form-block:last-child, .as-device-preview
-    .as-device-desktop .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-desktop
-    .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-wide-desktop
+    .as-device-desktop .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:last-child, .as-device-wide-desktop
     .as-device-desktop .as-bottom-navigation-action .asa-form-block:last-child, .as-device-desktop .as-bottom-navigation-action .asa-form-block:last-child,
     .as-device-desktop .as-device-wide-desktop .as-bottom-sheet-list-item-icon .asa-form-block:last-child, .as-device-wide-desktop
     .as-device-desktop .as-bottom-sheet-list-item-icon .asa-form-block:last-child, .as-device-desktop .as-bottom-sheet-list-item-icon .asa-form-block:last-child,
@@ -17748,26 +17671,14 @@ input {
     .as-device-tablet .as-cell-wide .asa-form-block:last-child,
     .as-device-tablet .as-button .as-button-text .asa-form-block:last-child, .as-button
     .as-device-tablet .as-button-text .asa-form-block:last-child,
-    .as-device-tablet .as-device-demo .asa-form-block:last-child,
     .as-device-tablet .as-bottom-navigation-content .asa-form-block:last-child,
-    .as-device-tablet .as-device-preview .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-preview
+    .as-device-tablet .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-wide-desktop
     .as-device-tablet .as-bottom-navigation-bar-space .asa-form-block:last-child,
-    .as-device-tablet
-    .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child,
-    .as-device-wide-desktop
-    .as-device-tablet .as-bottom-navigation-bar-space .asa-form-block:last-child,
-    .as-device-tablet
-    .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child,
-    .as-device-desktop
+    .as-device-tablet .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-desktop
     .as-device-tablet .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-tablet .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-tablet
-    .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-phone-portrait
+    .as-device-tablet .as-device-phone .as-bottom-navigation-action .asa-form-block:last-child, .as-device-phone
     .as-device-tablet .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-tablet
-    .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-phone-landscape
-    .as-device-tablet .as-bottom-navigation-action .asa-form-block:last-child,
+    .as-device-tablet .as-device-demo .asa-form-block:last-child,
     .as-device-tablet .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block:last-child, .as-device-wide-desktop
     .as-device-tablet .as-bottom-sheet-list-item-label .asa-form-block:last-child,
     .as-device-tablet
@@ -18036,15 +17947,9 @@ input {
     .as-device-tablet .as-cell-fixed .asa-form-block:last-child,
     .as-device-tablet .as-button .as-button-icon .asa-form-block:last-child, .as-button
     .as-device-tablet .as-button-icon .asa-form-block:last-child,
-    .as-device-tablet .as-device-preview .as-bottom-navigation-action .asa-form-block:last-child, .as-device-preview
+    .as-device-tablet .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:last-child, .as-device-wide-desktop
     .as-device-tablet .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-tablet
-    .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-wide-desktop
-    .as-device-tablet .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-tablet
-    .as-device-desktop .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-desktop
+    .as-device-tablet .as-device-desktop .as-bottom-navigation-action .asa-form-block:last-child, .as-device-desktop
     .as-device-tablet .as-bottom-navigation-action .asa-form-block:last-child,
     .as-device-tablet .as-device-wide-desktop .as-bottom-sheet-list-item-icon .asa-form-block:last-child, .as-device-wide-desktop
     .as-device-tablet .as-bottom-sheet-list-item-icon .asa-form-block:last-child,
@@ -22322,6 +22227,9 @@ input {
     margin: 8px;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
     background-color: #fff; }
+    .as-device-phone-portrait .as-card.asa-wide {
+      margin-left: 0px;
+      margin-right: 0px; }
     .as-device-phone-portrait .as-card .as-card-header {
       padding: 16px;
       display: flex;
@@ -24684,13 +24592,7 @@ input {
     font-size: 14px;
     font-weight: bold;
     color: #9E9E9E; }
-  .as-device-phone-portrait .as-cell-wide .asa-form-block, .as-device-phone-portrait .as-button .as-button-text .asa-form-block, .as-button .as-device-phone-portrait .as-button-text .asa-form-block, .as-device-phone-portrait .as-device-demo .asa-form-block, .as-device-phone-portrait .as-bottom-navigation-content .asa-form-block, .as-device-phone-portrait .as-device-preview .as-bottom-navigation-bar-space .asa-form-block, .as-device-preview .as-device-phone-portrait .as-bottom-navigation-bar-space .asa-form-block, .as-device-phone-portrait
-  .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block,
-  .as-device-wide-desktop .as-device-phone-portrait .as-bottom-navigation-bar-space .asa-form-block, .as-device-phone-portrait
-  .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block,
-  .as-device-desktop .as-device-phone-portrait .as-bottom-navigation-bar-space .asa-form-block, .as-device-phone-portrait .as-device-tablet .as-bottom-navigation-action .asa-form-block, .as-device-tablet .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block, .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block, .as-device-phone-portrait
-  .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block,
-  .as-device-phone-landscape .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block, .as-device-phone-portrait .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-bottom-sheet-list-item-label .asa-form-block, .as-device-phone-portrait
+  .as-device-phone-portrait .as-cell-wide .asa-form-block, .as-device-phone-portrait .as-button .as-button-text .asa-form-block, .as-button .as-device-phone-portrait .as-button-text .asa-form-block, .as-device-phone-portrait .as-bottom-navigation-content .asa-form-block, .as-device-phone-portrait .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-bottom-navigation-bar-space .asa-form-block, .as-device-phone-portrait .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block, .as-device-desktop .as-device-phone-portrait .as-bottom-navigation-bar-space .asa-form-block, .as-device-phone-portrait .as-device-tablet .as-bottom-navigation-action .asa-form-block, .as-device-tablet .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block, .as-device-phone-portrait .as-device-phone .as-bottom-navigation-action .asa-form-block, .as-device-phone .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block, .as-device-phone-portrait .as-device-demo .asa-form-block, .as-device-phone-portrait .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block, .as-device-wide-desktop .as-device-phone-portrait .as-bottom-sheet-list-item-label .asa-form-block, .as-device-phone-portrait
   .as-device-desktop .as-bottom-sheet-list-item-label .asa-form-block,
   .as-device-desktop .as-device-phone-portrait .as-bottom-sheet-list-item-label .asa-form-block, .as-device-phone-portrait
   .as-device-tablet .as-bottom-sheet-list-item-label .asa-form-block,
@@ -24800,15 +24702,9 @@ input {
   .as-device-phone-portrait .as-cell-fixed .asa-form-block,
   .as-device-phone-portrait .as-button .as-button-icon .asa-form-block, .as-button
   .as-device-phone-portrait .as-button-icon .asa-form-block,
-  .as-device-phone-portrait .as-device-preview .as-bottom-navigation-action .asa-form-block, .as-device-preview
+  .as-device-phone-portrait .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block, .as-device-wide-desktop
   .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block,
-  .as-device-phone-portrait
-  .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block,
-  .as-device-wide-desktop
-  .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block,
-  .as-device-phone-portrait
-  .as-device-desktop .as-bottom-navigation-action .asa-form-block,
-  .as-device-desktop
+  .as-device-phone-portrait .as-device-desktop .as-bottom-navigation-action .asa-form-block, .as-device-desktop
   .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block,
   .as-device-phone-portrait .as-device-wide-desktop .as-bottom-sheet-list-item-icon .asa-form-block, .as-device-wide-desktop
   .as-device-phone-portrait .as-bottom-sheet-list-item-icon .asa-form-block,
@@ -25288,13 +25184,7 @@ input {
   .as-device-phone-portrait .as-snackbar-actions .asa-form-block {
     padding-left: 16px;
     padding-right: 16px; }
-    .as-device-phone-portrait .as-cell-wide .asa-form-block:first-child, .as-device-phone-portrait .as-button .as-button-text .asa-form-block:first-child, .as-button .as-device-phone-portrait .as-button-text .asa-form-block:first-child, .as-device-phone-portrait .as-device-demo .asa-form-block:first-child, .as-device-phone-portrait .as-bottom-navigation-content .asa-form-block:first-child, .as-device-phone-portrait .as-device-preview .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-preview .as-device-phone-portrait .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-phone-portrait
-    .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child,
-    .as-device-wide-desktop .as-device-phone-portrait .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-phone-portrait
-    .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child,
-    .as-device-desktop .as-device-phone-portrait .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-phone-portrait .as-device-tablet .as-bottom-navigation-action .asa-form-block:first-child, .as-device-tablet .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:first-child, .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:first-child, .as-device-phone-portrait
-    .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-phone-landscape .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:first-child, .as-device-phone-portrait .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-bottom-sheet-list-item-label .asa-form-block:first-child, .as-device-phone-portrait
+    .as-device-phone-portrait .as-cell-wide .asa-form-block:first-child, .as-device-phone-portrait .as-button .as-button-text .asa-form-block:first-child, .as-button .as-device-phone-portrait .as-button-text .asa-form-block:first-child, .as-device-phone-portrait .as-bottom-navigation-content .asa-form-block:first-child, .as-device-phone-portrait .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-phone-portrait .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-desktop .as-device-phone-portrait .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-phone-portrait .as-device-tablet .as-bottom-navigation-action .asa-form-block:first-child, .as-device-tablet .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:first-child, .as-device-phone-portrait .as-device-phone .as-bottom-navigation-action .asa-form-block:first-child, .as-device-phone .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:first-child, .as-device-phone-portrait .as-device-demo .asa-form-block:first-child, .as-device-phone-portrait .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-portrait .as-bottom-sheet-list-item-label .asa-form-block:first-child, .as-device-phone-portrait
     .as-device-desktop .as-bottom-sheet-list-item-label .asa-form-block:first-child,
     .as-device-desktop .as-device-phone-portrait .as-bottom-sheet-list-item-label .asa-form-block:first-child, .as-device-phone-portrait
     .as-device-tablet .as-bottom-sheet-list-item-label .asa-form-block:first-child,
@@ -25404,15 +25294,9 @@ input {
     .as-device-phone-portrait .as-cell-fixed .asa-form-block:first-child,
     .as-device-phone-portrait .as-button .as-button-icon .asa-form-block:first-child, .as-button
     .as-device-phone-portrait .as-button-icon .asa-form-block:first-child,
-    .as-device-phone-portrait .as-device-preview .as-bottom-navigation-action .asa-form-block:first-child, .as-device-preview
+    .as-device-phone-portrait .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:first-child, .as-device-wide-desktop
     .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-phone-portrait
-    .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-wide-desktop
-    .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-phone-portrait
-    .as-device-desktop .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-desktop
+    .as-device-phone-portrait .as-device-desktop .as-bottom-navigation-action .asa-form-block:first-child, .as-device-desktop
     .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:first-child,
     .as-device-phone-portrait .as-device-wide-desktop .as-bottom-sheet-list-item-icon .asa-form-block:first-child, .as-device-wide-desktop
     .as-device-phone-portrait .as-bottom-sheet-list-item-icon .asa-form-block:first-child,
@@ -25891,13 +25775,7 @@ input {
     .as-device-phone-portrait .as-device-phone-landscape .as-snackbar-actions .asa-form-block:first-child, .as-device-phone-landscape
     .as-device-phone-portrait .as-snackbar-actions .asa-form-block:first-child {
       padding-left: 0px; }
-    .as-device-phone-portrait .as-cell-wide .asa-form-block:last-child, .as-device-phone-portrait .as-button .as-button-text .asa-form-block:last-child, .as-button .as-device-phone-portrait .as-button-text .asa-form-block:last-child, .as-device-phone-portrait .as-device-demo .asa-form-block:last-child, .as-device-phone-portrait .as-bottom-navigation-content .asa-form-block:last-child, .as-device-phone-portrait .as-device-preview .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-preview .as-device-phone-portrait .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-phone-portrait
-    .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child,
-    .as-device-wide-desktop .as-device-phone-portrait .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-phone-portrait
-    .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child,
-    .as-device-desktop .as-device-phone-portrait .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-phone-portrait .as-device-tablet .as-bottom-navigation-action .asa-form-block:last-child, .as-device-tablet .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:last-child, .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:last-child, .as-device-phone-portrait
-    .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-phone-landscape .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:last-child, .as-device-phone-portrait .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-bottom-sheet-list-item-label .asa-form-block:last-child, .as-device-phone-portrait
+    .as-device-phone-portrait .as-cell-wide .asa-form-block:last-child, .as-device-phone-portrait .as-button .as-button-text .asa-form-block:last-child, .as-button .as-device-phone-portrait .as-button-text .asa-form-block:last-child, .as-device-phone-portrait .as-bottom-navigation-content .asa-form-block:last-child, .as-device-phone-portrait .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-phone-portrait .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-desktop .as-device-phone-portrait .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-phone-portrait .as-device-tablet .as-bottom-navigation-action .asa-form-block:last-child, .as-device-tablet .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:last-child, .as-device-phone-portrait .as-device-phone .as-bottom-navigation-action .asa-form-block:last-child, .as-device-phone .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:last-child, .as-device-phone-portrait .as-device-demo .asa-form-block:last-child, .as-device-phone-portrait .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-portrait .as-bottom-sheet-list-item-label .asa-form-block:last-child, .as-device-phone-portrait
     .as-device-desktop .as-bottom-sheet-list-item-label .asa-form-block:last-child,
     .as-device-desktop .as-device-phone-portrait .as-bottom-sheet-list-item-label .asa-form-block:last-child, .as-device-phone-portrait
     .as-device-tablet .as-bottom-sheet-list-item-label .asa-form-block:last-child,
@@ -26007,15 +25885,9 @@ input {
     .as-device-phone-portrait .as-cell-fixed .asa-form-block:last-child,
     .as-device-phone-portrait .as-button .as-button-icon .asa-form-block:last-child, .as-button
     .as-device-phone-portrait .as-button-icon .asa-form-block:last-child,
-    .as-device-phone-portrait .as-device-preview .as-bottom-navigation-action .asa-form-block:last-child, .as-device-preview
+    .as-device-phone-portrait .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:last-child, .as-device-wide-desktop
     .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-phone-portrait
-    .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-wide-desktop
-    .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-phone-portrait
-    .as-device-desktop .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-desktop
+    .as-device-phone-portrait .as-device-desktop .as-bottom-navigation-action .asa-form-block:last-child, .as-device-desktop
     .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:last-child,
     .as-device-phone-portrait .as-device-wide-desktop .as-bottom-sheet-list-item-icon .asa-form-block:last-child, .as-device-wide-desktop
     .as-device-phone-portrait .as-bottom-sheet-list-item-icon .asa-form-block:last-child,
@@ -29239,6 +29111,9 @@ input {
     margin: 8px;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
     background-color: #fff; }
+    .as-device-phone-landscape .as-card.asa-wide {
+      margin-left: 0px;
+      margin-right: 0px; }
     .as-device-phone-landscape .as-card .as-card-header {
       padding: 16px;
       display: flex;
@@ -31601,13 +31476,7 @@ input {
     font-size: 14px;
     font-weight: bold;
     color: #9E9E9E; }
-  .as-device-phone-landscape .as-cell-wide .asa-form-block, .as-device-phone-landscape .as-button .as-button-text .asa-form-block, .as-button .as-device-phone-landscape .as-button-text .asa-form-block, .as-device-phone-landscape .as-device-demo .asa-form-block, .as-device-phone-landscape .as-bottom-navigation-content .asa-form-block, .as-device-phone-landscape .as-device-preview .as-bottom-navigation-bar-space .asa-form-block, .as-device-preview .as-device-phone-landscape .as-bottom-navigation-bar-space .asa-form-block, .as-device-phone-landscape
-  .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block,
-  .as-device-wide-desktop .as-device-phone-landscape .as-bottom-navigation-bar-space .asa-form-block, .as-device-phone-landscape
-  .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block,
-  .as-device-desktop .as-device-phone-landscape .as-bottom-navigation-bar-space .asa-form-block, .as-device-phone-landscape .as-device-tablet .as-bottom-navigation-action .asa-form-block, .as-device-tablet .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block, .as-device-phone-landscape
-  .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block,
-  .as-device-phone-portrait .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block, .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block, .as-device-phone-landscape .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-bottom-sheet-list-item-label .asa-form-block, .as-device-phone-landscape
+  .as-device-phone-landscape .as-cell-wide .asa-form-block, .as-device-phone-landscape .as-button .as-button-text .asa-form-block, .as-button .as-device-phone-landscape .as-button-text .asa-form-block, .as-device-phone-landscape .as-bottom-navigation-content .asa-form-block, .as-device-phone-landscape .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-bottom-navigation-bar-space .asa-form-block, .as-device-phone-landscape .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block, .as-device-desktop .as-device-phone-landscape .as-bottom-navigation-bar-space .asa-form-block, .as-device-phone-landscape .as-device-tablet .as-bottom-navigation-action .asa-form-block, .as-device-tablet .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block, .as-device-phone-landscape .as-device-phone .as-bottom-navigation-action .asa-form-block, .as-device-phone .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block, .as-device-phone-landscape .as-device-demo .asa-form-block, .as-device-phone-landscape .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block, .as-device-wide-desktop .as-device-phone-landscape .as-bottom-sheet-list-item-label .asa-form-block, .as-device-phone-landscape
   .as-device-desktop .as-bottom-sheet-list-item-label .asa-form-block,
   .as-device-desktop .as-device-phone-landscape .as-bottom-sheet-list-item-label .asa-form-block, .as-device-phone-landscape
   .as-device-tablet .as-bottom-sheet-list-item-label .asa-form-block,
@@ -31717,15 +31586,9 @@ input {
   .as-device-phone-landscape .as-cell-fixed .asa-form-block,
   .as-device-phone-landscape .as-button .as-button-icon .asa-form-block, .as-button
   .as-device-phone-landscape .as-button-icon .asa-form-block,
-  .as-device-phone-landscape .as-device-preview .as-bottom-navigation-action .asa-form-block, .as-device-preview
+  .as-device-phone-landscape .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block, .as-device-wide-desktop
   .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block,
-  .as-device-phone-landscape
-  .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block,
-  .as-device-wide-desktop
-  .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block,
-  .as-device-phone-landscape
-  .as-device-desktop .as-bottom-navigation-action .asa-form-block,
-  .as-device-desktop
+  .as-device-phone-landscape .as-device-desktop .as-bottom-navigation-action .asa-form-block, .as-device-desktop
   .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block,
   .as-device-phone-landscape .as-device-wide-desktop .as-bottom-sheet-list-item-icon .asa-form-block, .as-device-wide-desktop
   .as-device-phone-landscape .as-bottom-sheet-list-item-icon .asa-form-block,
@@ -32205,13 +32068,7 @@ input {
   .as-device-phone-landscape .as-snackbar-actions .asa-form-block, .as-device-phone-landscape .as-appbar-button .asa-form-block, .as-device-phone-landscape .as-toolbar-search-area .asa-form-block, .as-device-phone-landscape .as-card .as-card-actions.asa-compact .asa-form-block, .as-device-phone-landscape .as-chart-value-total-vline-cell .asa-form-block, .as-device-phone-landscape .as-chart-value-total-vline-label .asa-form-block, .as-device-phone-landscape .as-chart-value-total-vline-line .asa-form-block, .as-device-phone-landscape .as-chart-value-total-donat-cell .asa-form-block, .as-device-phone-landscape .as-chart-value-total-donat-label .asa-form-block, .as-device-phone-landscape .as-chart-value-total-donat-circle .asa-form-block, .as-device-phone-landscape .as-complex-editor-header-title .asa-form-block, .as-device-phone-landscape .as-complex-editor-header-actions .asa-form-block, .as-device-phone-landscape .as-input-holder .asa-form-block, .as-device-phone-landscape .as-input-label .asa-form-block, .as-device-phone-landscape .as-input-box-control .asa-form-block, .as-device-phone-landscape .as-input-control .asa-form-block, .as-device-phone-landscape .as-input-control-addon .asa-form-block, .as-device-phone-landscape .as-input-messages .asa-form-block, .as-device-phone-landscape .as-input-select-control .asa-form-block, .as-device-phone-landscape .select2-selection .asa-form-block, .as-device-phone-landscape .as-input-control-checkbox-label .asa-form-block, .as-device-phone-landscape .as-input-control-radio-label .asa-form-block, .as-device-phone-landscape .as-input-control-checkbox-holder .asa-form-block, .as-device-phone-landscape .as-input-checkbox-set-control .asa-form-block, .as-device-phone-landscape .as-input-color-swatch-item .asa-form-block, .as-device-phone-landscape .as-input-thumbnail-item .asa-form-block, .as-device-phone-landscape .as-input-control-switch-label .asa-form-block, .as-device-phone-landscape .as-input-control-switch-holder .asa-form-block, .as-device-phone-landscape .as-view-control-holder .asa-form-block, .as-device-phone-landscape .as-view-control-label .asa-form-block, .as-device-phone-landscape .as-view-control-value .asa-form-block, .as-device-phone-landscape .as-http-method-doc-parameter-name .asa-form-block, .as-device-phone-landscape .studio-view-tree-node-box .asa-form-block, .as-device-phone-landscape .studio-view-tree-node-nav .asa-form-block, .as-device-phone-landscape .as-graph-node-reference a.material-icons .asa-form-block, .as-device-phone-landscape .as-tree-light-node-box .asa-form-block, .as-device-phone-landscape .as-tree-light-node-nav .asa-form-block, .as-device-phone-landscape .as-snackbar-actions .asa-form-block {
     padding-left: 16px;
     padding-right: 16px; }
-    .as-device-phone-landscape .as-cell-wide .asa-form-block:first-child, .as-device-phone-landscape .as-button .as-button-text .asa-form-block:first-child, .as-button .as-device-phone-landscape .as-button-text .asa-form-block:first-child, .as-device-phone-landscape .as-device-demo .asa-form-block:first-child, .as-device-phone-landscape .as-bottom-navigation-content .asa-form-block:first-child, .as-device-phone-landscape .as-device-preview .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-preview .as-device-phone-landscape .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-phone-landscape
-    .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child,
-    .as-device-wide-desktop .as-device-phone-landscape .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-phone-landscape
-    .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child,
-    .as-device-desktop .as-device-phone-landscape .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-phone-landscape .as-device-tablet .as-bottom-navigation-action .asa-form-block:first-child, .as-device-tablet .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:first-child, .as-device-phone-landscape
-    .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-phone-portrait .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:first-child, .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:first-child, .as-device-phone-landscape .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-bottom-sheet-list-item-label .asa-form-block:first-child, .as-device-phone-landscape
+    .as-device-phone-landscape .as-cell-wide .asa-form-block:first-child, .as-device-phone-landscape .as-button .as-button-text .asa-form-block:first-child, .as-button .as-device-phone-landscape .as-button-text .asa-form-block:first-child, .as-device-phone-landscape .as-bottom-navigation-content .asa-form-block:first-child, .as-device-phone-landscape .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-phone-landscape .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-desktop .as-device-phone-landscape .as-bottom-navigation-bar-space .asa-form-block:first-child, .as-device-phone-landscape .as-device-tablet .as-bottom-navigation-action .asa-form-block:first-child, .as-device-tablet .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:first-child, .as-device-phone-landscape .as-device-phone .as-bottom-navigation-action .asa-form-block:first-child, .as-device-phone .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:first-child, .as-device-phone-landscape .as-device-demo .asa-form-block:first-child, .as-device-phone-landscape .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block:first-child, .as-device-wide-desktop .as-device-phone-landscape .as-bottom-sheet-list-item-label .asa-form-block:first-child, .as-device-phone-landscape
     .as-device-desktop .as-bottom-sheet-list-item-label .asa-form-block:first-child,
     .as-device-desktop .as-device-phone-landscape .as-bottom-sheet-list-item-label .asa-form-block:first-child, .as-device-phone-landscape
     .as-device-tablet .as-bottom-sheet-list-item-label .asa-form-block:first-child,
@@ -32321,15 +32178,9 @@ input {
     .as-device-phone-landscape .as-cell-fixed .asa-form-block:first-child,
     .as-device-phone-landscape .as-button .as-button-icon .asa-form-block:first-child, .as-button
     .as-device-phone-landscape .as-button-icon .asa-form-block:first-child,
-    .as-device-phone-landscape .as-device-preview .as-bottom-navigation-action .asa-form-block:first-child, .as-device-preview
+    .as-device-phone-landscape .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:first-child, .as-device-wide-desktop
     .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-phone-landscape
-    .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-wide-desktop
-    .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-phone-landscape
-    .as-device-desktop .as-bottom-navigation-action .asa-form-block:first-child,
-    .as-device-desktop
+    .as-device-phone-landscape .as-device-desktop .as-bottom-navigation-action .asa-form-block:first-child, .as-device-desktop
     .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:first-child,
     .as-device-phone-landscape .as-device-wide-desktop .as-bottom-sheet-list-item-icon .asa-form-block:first-child, .as-device-wide-desktop
     .as-device-phone-landscape .as-bottom-sheet-list-item-icon .asa-form-block:first-child,
@@ -32808,13 +32659,7 @@ input {
     .as-device-phone-landscape .as-device-phone-portrait .as-snackbar-actions .asa-form-block:first-child, .as-device-phone-portrait
     .as-device-phone-landscape .as-snackbar-actions .asa-form-block:first-child, .as-device-phone-landscape .as-appbar-button .asa-form-block:first-child, .as-device-phone-landscape .as-toolbar-search-area .asa-form-block:first-child, .as-device-phone-landscape .as-card .as-card-actions.asa-compact .asa-form-block:first-child, .as-device-phone-landscape .as-chart-value-total-vline-cell .asa-form-block:first-child, .as-device-phone-landscape .as-chart-value-total-vline-label .asa-form-block:first-child, .as-device-phone-landscape .as-chart-value-total-vline-line .asa-form-block:first-child, .as-device-phone-landscape .as-chart-value-total-donat-cell .asa-form-block:first-child, .as-device-phone-landscape .as-chart-value-total-donat-label .asa-form-block:first-child, .as-device-phone-landscape .as-chart-value-total-donat-circle .asa-form-block:first-child, .as-device-phone-landscape .as-complex-editor-header-title .asa-form-block:first-child, .as-device-phone-landscape .as-complex-editor-header-actions .asa-form-block:first-child, .as-device-phone-landscape .as-input-holder .asa-form-block:first-child, .as-device-phone-landscape .as-input-label .asa-form-block:first-child, .as-device-phone-landscape .as-input-box-control .asa-form-block:first-child, .as-device-phone-landscape .as-input-control .asa-form-block:first-child, .as-device-phone-landscape .as-input-control-addon .asa-form-block:first-child, .as-device-phone-landscape .as-input-messages .asa-form-block:first-child, .as-device-phone-landscape .as-input-select-control .asa-form-block:first-child, .as-device-phone-landscape .select2-selection .asa-form-block:first-child, .as-device-phone-landscape .as-input-control-checkbox-label .asa-form-block:first-child, .as-device-phone-landscape .as-input-control-radio-label .asa-form-block:first-child, .as-device-phone-landscape .as-input-control-checkbox-holder .asa-form-block:first-child, .as-device-phone-landscape .as-input-checkbox-set-control .asa-form-block:first-child, .as-device-phone-landscape .as-input-color-swatch-item .asa-form-block:first-child, .as-device-phone-landscape .as-input-thumbnail-item .asa-form-block:first-child, .as-device-phone-landscape .as-input-control-switch-label .asa-form-block:first-child, .as-device-phone-landscape .as-input-control-switch-holder .asa-form-block:first-child, .as-device-phone-landscape .as-view-control-holder .asa-form-block:first-child, .as-device-phone-landscape .as-view-control-label .asa-form-block:first-child, .as-device-phone-landscape .as-view-control-value .asa-form-block:first-child, .as-device-phone-landscape .as-http-method-doc-parameter-name .asa-form-block:first-child, .as-device-phone-landscape .studio-view-tree-node-box .asa-form-block:first-child, .as-device-phone-landscape .studio-view-tree-node-nav .asa-form-block:first-child, .as-device-phone-landscape .as-graph-node-reference a.material-icons .asa-form-block:first-child, .as-device-phone-landscape .as-tree-light-node-box .asa-form-block:first-child, .as-device-phone-landscape .as-tree-light-node-nav .asa-form-block:first-child, .as-device-phone-landscape .as-snackbar-actions .asa-form-block:first-child {
       padding-left: 0px; }
-    .as-device-phone-landscape .as-cell-wide .asa-form-block:last-child, .as-device-phone-landscape .as-button .as-button-text .asa-form-block:last-child, .as-button .as-device-phone-landscape .as-button-text .asa-form-block:last-child, .as-device-phone-landscape .as-device-demo .asa-form-block:last-child, .as-device-phone-landscape .as-bottom-navigation-content .asa-form-block:last-child, .as-device-phone-landscape .as-device-preview .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-preview .as-device-phone-landscape .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-phone-landscape
-    .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child,
-    .as-device-wide-desktop .as-device-phone-landscape .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-phone-landscape
-    .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child,
-    .as-device-desktop .as-device-phone-landscape .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-phone-landscape .as-device-tablet .as-bottom-navigation-action .asa-form-block:last-child, .as-device-tablet .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:last-child, .as-device-phone-landscape
-    .as-device-phone-portrait .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-phone-portrait .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:last-child, .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:last-child, .as-device-phone-landscape .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-bottom-sheet-list-item-label .asa-form-block:last-child, .as-device-phone-landscape
+    .as-device-phone-landscape .as-cell-wide .asa-form-block:last-child, .as-device-phone-landscape .as-button .as-button-text .asa-form-block:last-child, .as-button .as-device-phone-landscape .as-button-text .asa-form-block:last-child, .as-device-phone-landscape .as-bottom-navigation-content .asa-form-block:last-child, .as-device-phone-landscape .as-device-wide-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-phone-landscape .as-device-desktop .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-desktop .as-device-phone-landscape .as-bottom-navigation-bar-space .asa-form-block:last-child, .as-device-phone-landscape .as-device-tablet .as-bottom-navigation-action .asa-form-block:last-child, .as-device-tablet .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:last-child, .as-device-phone-landscape .as-device-phone .as-bottom-navigation-action .asa-form-block:last-child, .as-device-phone .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:last-child, .as-device-phone-landscape .as-device-demo .asa-form-block:last-child, .as-device-phone-landscape .as-device-wide-desktop .as-bottom-sheet-list-item-label .asa-form-block:last-child, .as-device-wide-desktop .as-device-phone-landscape .as-bottom-sheet-list-item-label .asa-form-block:last-child, .as-device-phone-landscape
     .as-device-desktop .as-bottom-sheet-list-item-label .asa-form-block:last-child,
     .as-device-desktop .as-device-phone-landscape .as-bottom-sheet-list-item-label .asa-form-block:last-child, .as-device-phone-landscape
     .as-device-tablet .as-bottom-sheet-list-item-label .asa-form-block:last-child,
@@ -32924,15 +32769,9 @@ input {
     .as-device-phone-landscape .as-cell-fixed .asa-form-block:last-child,
     .as-device-phone-landscape .as-button .as-button-icon .asa-form-block:last-child, .as-button
     .as-device-phone-landscape .as-button-icon .asa-form-block:last-child,
-    .as-device-phone-landscape .as-device-preview .as-bottom-navigation-action .asa-form-block:last-child, .as-device-preview
+    .as-device-phone-landscape .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:last-child, .as-device-wide-desktop
     .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-phone-landscape
-    .as-device-wide-desktop .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-wide-desktop
-    .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-phone-landscape
-    .as-device-desktop .as-bottom-navigation-action .asa-form-block:last-child,
-    .as-device-desktop
+    .as-device-phone-landscape .as-device-desktop .as-bottom-navigation-action .asa-form-block:last-child, .as-device-desktop
     .as-device-phone-landscape .as-bottom-navigation-action .asa-form-block:last-child,
     .as-device-phone-landscape .as-device-wide-desktop .as-bottom-sheet-list-item-icon .asa-form-block:last-child, .as-device-wide-desktop
     .as-device-phone-landscape .as-bottom-sheet-list-item-icon .asa-form-block:last-child,

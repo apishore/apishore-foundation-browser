@@ -1,11 +1,13 @@
 <div>
-	<div class="as-hbox">
-		<a class="as-button asa-flat asa-primary" ng-click="sources = !sources">
-			<span class="as-button-text" ng-if="!sources">Show Sources</span>
-			<span class="as-button-text" ng-if="sources">Hide Sources</span>
-		</a>
+	<div ng-transclude class="sample" style="position:relative; width: 100%;"></div>
+	<div class="as-card asa-wide">
+		<div class="as-card-actions">
+			<a class="as-button asa-flat asa-primary" ng-click="sources = !sources">
+				<span class="as-button-text" ng-if="!sources">Show Sources</span>
+				<span class="as-button-text" ng-if="sources">Hide Sources</span>
+			</a>
+		</div>
+		<div class="as-card-content source-code as-hscroll" ui-codemirror ng-model="code" ui-codemirror-opts="codemirror.html" ng-if="sources">
+		</div>
 	</div>
-	<div class="source-code" ui-codemirror ng-model="code" ui-codemirror-opts="codemirror.html" ng-if="sources">
-	</div>
-	<div ng-transclude class="sample"></div>
 </div>
