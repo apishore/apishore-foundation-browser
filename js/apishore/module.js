@@ -3,62 +3,7 @@ var apishore = angular.module('apishore', ['ngSanitize', 'ui.bootstrap', 'ui.mas
 
 apishore.run(['$window', '$rootScope', '$timeout', 'apishoreNumbers', function($window, $rootScope, $timeout, apishoreNumbers)
 {
-    var wnd = $($window);
-    var di = $rootScope.asDevice = {};
     $rootScope.apishoreNumbers = apishoreNumbers;
-    function setMode()
-    {
-        var md = new MobileDetect(window.navigator.userAgent);
-        var w = wnd.width(), h = wnd.height();
-
-        function variants()
-        {
-            di.isWide = di.isTablet || di.isDesktop;
-            di.isMobile = di.isPhone || di.isTablet;
-        }
-
-        $('body').removeClass('as-device-phone as-device-tablet as-device-desktop as-device-wide-desktop as-device-phone-portrait as-device-phone-landscape');
-        di.isPhone = false;
-        di.isTablet = false;
-        di.isDesktop = false;
-        di.isPhoneLandscape = false;
-        di.isPhonePortrait = false;
-        if(w < 600 || md.phone())
-        {
-            $('body').addClass('as-device-phone');
-            di.mode = "phone";
-            di.isPhone = true;
-            di.isPhoneLandscape = w > h;
-            di.isPhonePortrait = !di.isLandscape;
-            if(di.isPhoneLandscape) $('body').addClass('as-device-phone-landscape');
-            if(di.isPhonePortrait) $('body').addClass('as-device-phone-portrait');
-        }
-        else if(w < 960 || md.tablet())
-        {
-            $('body').addClass('as-device-tablet');
-            di.mode = "tablet";
-            di.isTablet = true;
-        }
-        else if(w < 1900 || md.tablet())
-        {
-            $('body').addClass('as-device-desktop');
-            di.mode = "desktop";
-            di.isDesktop = true;
-        }
-        else
-        {
-            $('body').addClass('as-device-wide-desktop');
-            di.mode = "desktop";
-            di.isDesktop = true;
-        }
-        variants();
-    }
-
-    setMode();
-    wnd.on('resize', function()
-    {
-        $rootScope.$apply(setMode)
-    });
 
     window.apishoreQA = {
         appReady: false,

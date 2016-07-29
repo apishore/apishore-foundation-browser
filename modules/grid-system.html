@@ -54,15 +54,11 @@ However, most of real life cases use it to break row with big number of elements
 sub-rows. 
 <p>
 This demo shows how this approach works. Click on buttons to change local device mode.
-<sample> 
-<div ng-init="deviceMode='desktop'">
-	<a ng-click="deviceMode='desktop'" class="as-button" ng-class="{'asa-primary': (deviceMode == 'desktop')}"><span class="as-button-text">Desktop mode</span></a>
-	<a ng-click="deviceMode='tablet'" class="as-button" ng-class="{'asa-primary': (deviceMode == 'tablet')}"><span class="as-button-text">Tablet mode</span></a>
-	<a ng-click="deviceMode='phone'" class="as-button" ng-class="{'asa-primary':(deviceMode == 'phone')}"><span class="as-button-text">Phone mode</span></a>
-</div>
-<div class="as-device-{{deviceMode}}" ng-style="{width: (deviceMode=='desktop' ? '' : deviceMode=='tablet' ? '800px' : '600px' )}">
-	Should break on tablet and phone
+
+<div class="device-sample">
 	<p>
+	L:Should break on tablet and phone
+	</p>
 	<div class="as-grid-container as-grid-container-demo">
 		<div class="as-grid-row asa-grid-break-on-tablet" ng-repeat="col in [3,4]">
 			<div class="as-grid-cell asa-{{col}}-of-7 as-grid-cell-demo">
@@ -73,7 +69,7 @@ This demo shows how this approach works. Click on buttons to change local device
 	</div>
 	<p>
 	Should break on phone
-	<p>
+	</p>
 	<div class="as-grid-container as-grid-container-demo">
 		<div class="as-grid-row asa-grid-break-on-phone" ng-repeat="col in [3,4]">
 			<div class="as-grid-cell asa-{{col}}-of-7 as-grid-cell-demo">
@@ -84,7 +80,7 @@ This demo shows how this approach works. Click on buttons to change local device
 	</div>
 	<p>
 	More complex sample of nested grids. Top grid row breaks in tablet mode, nested in phone mode.
-	<p>
+	</p>
 	<div class="as-grid-container as-grid-container-demo">
 		<div class="as-grid-row asa-grid-break-on-tablet">
 			<div class="as-grid-cell asa-3-of-7 as-grid-cell-demo">
@@ -101,5 +97,7 @@ This demo shows how this approach works. Click on buttons to change local device
 		</div>
 	</div>
 </div>
-</sample>
+
+
+</div>
 </div></div>

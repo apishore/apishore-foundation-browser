@@ -205,58 +205,6 @@ docs.run([ '$rootScope', '$state', '$stateParams','$location','$anchorScroll','a
             $state.go('error.unknown');
         });
         $rootScope.$on("$stateChangeError", console.error.bind(console));
-        $rootScope.forceMode = function(mode)
-        {
-        	if(mode == 'default')
-        	{
-        		$rootScope.setMode();
-        		return;
-        	}
-        	var di = $rootScope.asDevice = {};
-        	var b = $('body');
-        	b.removeClass('as-device-phone as-device-tablet as-device-desktop as-device-wide-desktop as-device-phone-portrait as-device-phone-landscape');
-        	di.isPhone = false;
-        	di.isTablet = false;
-        	di.isDesktop = false;
-        	di.isPhoneLandscape = false;
-        	di.isPhonePortrait = false;
-        	switch(mode)
-        	{
-        		case 'desktop':
-        		{
-        	        b.addClass('as-device-desktop as-device-emulation');
-        	    	di.isDesktop = true;
-        	    	return;
-        		}
-        		case 'wide-desktop':
-        		{
-        	        b.addClass('as-device-wide-desktop as-device-emulation');
-        	    	di.isDesktop = true;
-        	    	return;
-        		}
-        		case 'tablet':
-        		{
-        	        b.addClass('as-device-tablet as-device-emulation');
-        	    	di.isTablet = true;
-        	    	return;
-        		}
-        		case 'phone-portrait':
-        		{
-        	        b.addClass('as-device-phone as-device-emulation');
-        	    	di.isPhone = true;
-        	    	di.isPhonePortrait = true;
-        	    	return;
-        		}
-        		case 'phone-landscape':
-        		{
-        	        b.addClass('as-device-phone as-device-emulation');
-        	    	di.isPhone = true;
-        	    	di.isPhonePortrait = true;
-        	    	return;
-        		}
-        	};
-    		$rootScope.setMode();
-        }
         
     } ]);
 

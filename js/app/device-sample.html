@@ -1,0 +1,25 @@
+<div class="as-card asa-wide">
+	<div class="as-card-actions">
+		<a class="as-button asa-flat asa-primary" ng-click="sources = !sources">
+			<span class="as-button-text" ng-if="!sources">Show Sources</span>
+			<span class="as-button-text" ng-if="sources">Hide Sources</span>
+		</a>
+		<span>Device:</span>
+		<a ng-click="setDeviceMode('desktop')" class="as-button" ng-class="{'asa-primary': (deviceMode == 'desktop')}">
+			<span class="as-button-text">Desktop</span>
+		</a>
+		<a ng-click="setDeviceMode('tablet')" class="as-button" ng-class="{'asa-primary': (deviceMode == 'tablet')}">
+			<span class="as-button-text">Tablet</span>
+		</a>
+		<a ng-click="setDeviceMode('phone')" class="as-button" ng-class="{'asa-primary':(deviceMode == 'phone')}">
+			<span class="as-button-text">Phone</span>
+		</a>
+	</div>
+	<div class="as-card-content">
+		<div class="as-device-emulator">
+			<div class="as-device-emulator-content" ng-transclude></div>
+		</div>
+	</div>
+ 	<div class="as-card-content source-code as-hscroll" ui-codemirror ng-model="code" ui-codemirror-opts="codemirror.html" ng-if="sources">
+	</div>
+ </div>
